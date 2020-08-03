@@ -2,6 +2,18 @@
 
 # 20200727~20201218
 
+
+
+## markdown 사용법 정리하기
+
+`[마크다운 내용](./a_assist/a_markdown.md)`
+
+[마크다운 내용](./a_assist/a_markdown.md)
+
+___
+
+
+
 1. git 계정 생성하기
 
 # git 사용법
@@ -9,8 +21,9 @@
 1. github 가입
 2. new repository 생성
 3. git 자료를 복제
-   - 내 컴퓨터에서 git clone 생성한 repository
-
+   
+- 내 컴퓨터에서 git clone 생성한 repository
+   
 1. README.md 파일을 생성 및 내용 작성
 
 2. 보내기 전에 정확한 계정 연결
