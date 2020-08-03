@@ -333,3 +333,14 @@ ESC키 이후 ->
 
 
 
+`$ git add a_assist/` -> `$ git commit -m "설명"` 
+
+- `$ git commit -m` 중에 -m을 쓰지 않았을 때 상세하게 설명하라는 메시지가 뜸
+
+ESC키 이후 ->
+
+`:q!` 저장안하고 나가기
+
+`wq:` 저장하고 나가기 
+
+-> `$ git status` 초록색으로 변해있는지 확인-> `$ git push`
