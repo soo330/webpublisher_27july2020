@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<!-- a_base_code.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>웹 기초- 기본 코드내용 </title>
+
+  <!-- link: favicon -->
+  <link rel="shortcut icon" href="../img/icon_01.png" type="img/png">
+  <!-- link:touch -->
+  <link rel="apple-touch-icon" href="../img/icon_01.png">
+
+  <style>
+    /* h1 {font-size:10px;} */
+    div {border-width:5px; border-color:salmon; border-style:dotted;
+    background-color:aliceblue;}
+    #pageTitle {width:600px; margin:auto; border-width:2px;}
+    #pageParagraph {width:80%; margin:auto; background-color:#dfdfdf; border-radius:20px;}
+
+    span {background-color:#f77; color:white; margin-bottom:20px; border-width:2px;}
+
+    .shadow_box {width:70%; margin:auto; margin-bottom:50px; box-shadow:5px 5px 5px rgba(10,10,10,0.7);}
+
+    .margin_top { background-color:#fa0; border:0; font-size:1.2rem; transition:all 1000ms ease;}
+    .margin_top:hover {background-color:#07a; color:#fff; font-size: 1.5rem;}
+    span {background-color:#f77; color: white;}
+  </style>
+</head>
+<body>
+  <!--
+    1. 제목 : 웹 페이지에서 가장 대표 title 형식으로 heading 의미
+    2. 내용 : 단락/ 본문의 의미를 가진다
+    3. 영역 : 큰 의미 없음, 역할의 구분을 하기위한 형태
+    4. 목록 : 여러내용을 나열할 때 씀
+    5. 링크/이미지 : 클릭 시 필요한 페이지로 이동하거나 원하는 이미지를 보게만들거나 나타나게 한다.
+    6. 링크/이미지 : br (단순 줄바꿈), hr (위/ 하위내용 구분)
+  -->
+
+  <!-- h1 ~ h6 
+      반드시 의미로 구분하자
+     -->
+  
+  <div id="pageTitle">
+  <h1>하나의 웹문서에서 가장 중요한 제목, 하나의 문서에 한번만 사용가능</h1>
+  <h2>문서에서 <span>두번 째</span>로 중요한 제목</h2>
+  <h3>문서에서 세번 째 중요한 내용</h3>
+  <h4>문서에서 네번 째 중요한 내용</h4>
+  <h5>문서에서 다섯번 째 중요한 내용</h5>
+  <h6>문서에서 제목으로 구분되는 요소중에서 가장 하위 형태</h6>
+  </div>
+  <hr />
+
+  <div id="pageParagraph">
+  <p>내용을 작성하는 요소로서, 단락(paragraph)라는 의미</p>
+  <p>웹문서에서는 띄어쓰기를 여러번하거나, 엔터를 이용하여 <br />
+    줄바꿈 처리하는 것은 띄어쓰기 한칸으로 인지하며, <br />
+    만약 줄바꿈을 처리해서 구분하고자 한다면, &lt;br /&gt; 작성해야한다</p>
+  <pre>직접 띄어쓰기를 하건, 줄바꿈을 하거나 원하는대로
+    처리하고자 한다면 pre 요소를 사용하면 되나,
+    실제로는 매우 불편함, 코드내용을 표현하는 형태가 아닌경우에는 사용률 적다</pre>
+  </div>
+
+  <div class="shadow_box">
+    <q>q요소는 인용문의 형태를 의미, 한줄의 내용을 작성하는 경우에 주로 사용</q>
+  <blockquote cite="인용 내용의 원본첨부">
+    <p>인용문들의 집합코드</p>
+     <q>너 왜그래?</q> <br />
+     <q>내가뭘</q> <br />
+     <q>언제쉬는데</q> <br />
+     <q>지금쉬지뭐</q> <br />
+  </blockquote>
+  
+  <cite>작품명:물위를 거닐다</cite>
+
+  <address>
+    이곳은 사이트의 주소, 연락처등을 입력하는곳
+    <p>주소 내용</p>
+    <p>사업자번호</p>
+    <p>연락처</p>
+  </address>
+  </div>
+  
+  <div class="shadow_box margin_top">
+  <!-- 내용 2 : 크기를 가질 수 없는 inline 요소들에 대한 내용-->
+  <p>
+    내용을 작성할 때에는, 때로 강조를 하고자 할 때도 있다 <br />
+    굵은글씨를 사용하거나 <b></b>굵은글씨를 사용하거나, <br />
+    기울임을 쓰거나, <i>기울임을 쓰거나,</i> <br />
+    밑줄을 표기한거나, <u>밑줄을 표기한거나,</u> <br />
+    취소선을 넣거나 <s>취소선을 넣거나</s> <br />
+    등을 넣고싶을 때 코드를 작성하는 기능이지만 <br /><br />
+    <h2> &uarr; &uparrow; &UpArrow; &ShortUpArrow; <br />
+      위 내용은 모두 강조의 의미가 아니다.</h2>
+  </p>
+
+  <p>
+    웹문서에서 강조의 의미는 말 그대로 그 뜻을 전달 가능해야한다. <br />
+    <strong><u>매우 중요 즉</u>, 위험과 유사한 중요한 강조를 뜻하는 코드</strong>, <br />
+    <em>중요한 의미이지만, 강요보다는 권유의 성격을 띄고있는 코드 </em> <br />
+    <ins>강조 처리되는 기능으로 재확인의 의미, 기억의 의미</ins> <br />
+    <del>이미 처리가 되어 현재 내용을 더이상 사용할 수 없다라는 의미delete는 취소선 삽입 </del> <br /> <br /><br />
+
+    i 요소는 감정의 표현이라는 의미를 가지므로 주로 아이콘, 이모티콘을 쓰는 용도로 현재 사용중 <br />
+    s요소(strike)는 html5에서 완전히 삭제되어진 요소임으로 더이상 쓸 수 없다.
+  </p>
+
+  <p>
+    내용 상 용어를 사용할 경우, 우리는 요약형태를 사용하는 경우가 많다 <br />
+    <abbr title="버스카드 충전">버카충</abbr>,
+    <abbr title="Hiper Text Markup language">html</abbr>
+  </p>
+</div>
+  <hr />
+  <!-- 영역구분은 크게 2가지
+        div(block요소의 분할), span(inline요소의 분할)
+        div와 span은 단순히 각자의 영역을 구분하는 기능이 있지만, 의미는 없다
+  -->
+
+  <div>
+    <h2>목록의 형태 파악</h2>
+    <!-- 목록(나열) 3가지
+    순서가 없는 형태 (ul) -unorder list (자식으로 li만 첨부)
+    순서가 있는 형태 (ol) - order list (자식으로 li만 첨부)
+    순서에 대한 제목이 있는 형태 (dl) -data list (제목을 뜻하는 dt, 내용을 뜻하는 dd로 구분)
+    -->
+    <h3>순서가 없는 리스트</h3>
+    <ul>
+      <li>순서 없는 리스트 1</li>
+      <li>순서 없는 리스트 2</li>
+      <li>순서 없는 리스트 3</li>
+    </ul>
+
+    <h3>순서가 있는 리스트</h3>
+    <ol>
+      <li>순서가 있는 리스트1</li>
+      <li>순서가 있는 리스트2</li>
+      <li>순서가 있는 리스트3</li>
+    </ol>
+
+    <h3>제목을 가지고 있는 리스트</h3>
+    <dl>
+      <dt>리스트 내용에 대한 제목</dt>
+      <dd>제목에 대한 내용 1</dd>
+      <dd>제목에 대한 내용 2</dd>
+      <dd>제목에 대한 내용 3</dd>
+      <dd>제목에 대한 내용 4</dd>
+
+      <dt>리스트 제목2</dt>
+      <dd>리스트 제목에 대한 내용 2-1</dd>
+      <dd>리스트 제목에 대한 내용 2-2</dd>
+      <dd>리스트 제목에 대한 내용 2-3</dd>
+      <dd>리스트 제목에 대한 내용 2-4</dd>
+    </dl>
+    </div>
+
+  <div>
+    <h2>여러 중첩 처리되는 리스트 형식 다단리스트 </h2>
+    <ul>
+      <li>
+        <dl>
+        <dt>콘서트 명</dt>
+        <dd>싸이 흠뻑쇼!</dd>
+        <dd>그래서 준비했습니다. 온라인으로 참석하세요</dd>
+      </li>
+      <li>부제명: 나도 가보고 싶다</li>
+      <li>일시 : 2020년 9월 18일</li>
+        <dl>
+          <dt>일시</dt>
+          <dd>2020월 9월 18일</dd>
+          <dd>저녁 11시</dd>
+          <dd>
+            <ol>
+              <li>1부: 신나게 즐겨보기</li>
+              <li>2부: 미친듯 정줄놓기</li>
+            </ol>
+          </dd>
+        </dl>
+      </li>
+      <li>시간: 오후 11시 (1부, 2부)</li>
+      <li>
+        <dl>
+          <dt>채널</dt>
+          <dd><abbr title="seoul broadcast system">sbs</abbr>방송></dd>
+        </dl>
+      </li>
+    </ul>
+  </div>
+
+  <div>
+    <h2>클릭 시 페이지 이동, 이미지 불러오기</h2>
+    <h3>클릭 시 페이지 이동</h3>
+    <p>
+      페이지 이동에 관한 요소는 인라인 요소이므로, 반드시 블록으로 감싸 주어야한다 <br />
+    <a href="https:://naver.com">naver로 현재에서 이동</a>
+  </p>
+  <p><a href="https://www.google.com/" target="_blank">google</a>로 새 텝 페이지이동</p>
+
+    <div>
+      <img src="../img/icon_01.png" alt="불러온 이미지에 대해 이해 가능한설명" />
+      <img src="../img/icon_02.png" alt="불러온 이미지에 대한 설명" />
+    </div>
+    <p>
+      <a href="http://w3.sbs.co.kr/commPopup/map.html?div=pc_map">sbs 찾아가는 
+      <img src="../img/sbs_suwon.png"
+      alt="sbs 수원지사 주소:
+      수원시 팔달구 효원로 295이며, 연락처 031-234-4670 입니다." />
+      </a>
+    </p>
+  </div>
+
+  <!-- a요소의 속성중 taget 4가지
+      _self : 기본 속성으로, 현재 페이지에서 이동
+      _blank : 새창에서 이동
+      _top : iframe요소에서 외부 페이지를 담을때, 페이지 이동을 일부 영역이 아닌 곳에서 이동
+      _parent : iframe 요소에서 동작 처리하는 기능
+
+      inline요소는 기본 블록 요소 내부에 처리되어야하는 기능을 가지고 있으며,
+      inline요소 내부에는 블록 요소를 담지 않는다는 규칙이 있으나,
+      하지만 a요소는 특수한 기능을 가지고 있는 요소로 block요소를 내부에 담을 수 있다.
+
+      단, a요소 내부에 a요소를 담거나, a요소 내부에 버튼의 기능을 가진 요소를 담는 것은 불가능.
+  -->
+
+  <!--
+    제목: h1~h6
+    내용: p, pre, blockquote, address
+          q, cite, em, ins, del, abbr
+  -->
+
+    <!-- entity code : 특수문자를 브라우저에 올바르게 글자로 표현하고 싶을때
+      < : $lt;
+      > : &gt;
+      & : &amp;
+      copy아이콘 : &copy;
+      $ : $dollar;
+      한국통화: &#8361;
+    -->
+</body>
+</html>

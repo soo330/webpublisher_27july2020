@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>첫번째 웹 문서 만들기</title>
+    <style>
+/* 스타일 안에서 필요한 내용작성: 주석달기 */
+
+
+    body { background-color:#9A08E4; }
+    p { background-color:#E4CB08 ; color: white;}
+    .box { font-size: 2rem; }
+    div { width:100px; height:200px; background-color:salmon; margin-bottom:5px;}
+    #box { border-radius: 40px; }
+    .one { color: #fac;}
+    .two { text-decoration:underline; }
+    .three { text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.5); }
+    .and:hover{ color:#fff; }
+
+    .alpha { font-size:3rem; text-shadow: 0.1rem 0.1rem 0.1rem rgba(0,0,0,0.5); }
+    .alpha:hover { color:#fff; }
+    </style>
+<!-- -->
+  </head>
+
+
+  <body>
+    <h1 class="box one two three and">웹문서 처음으로 만들어보기!</h1>
+    <p class="box">
+    웹문서를 처음으로 만들어 보았다. <br />
+    재밌다
+    </p>
+    <div id="box"></div>
+    <div class="alpha">Do Somthing AmAzing</div>
+    <div></div>
+    <div></div>
+    <div></div>
+    <p class="p2">
+하쿠나마타타</p>
+
+<!--  ==========================================설명, 내용, 누군가에게 지시, 작성날짜, 등등 "주석달기이다"=================================  -->
+
+
+  <script>
+    // 한줄 주석으로써 줄바꿈되면, 주석이 자동으로 풀린다
+    /* 여러줄 주석
+     추가설명이 가능하다 (줄바꿈도 인식)
+- 자바스크립트에서 숫자는 1이아니라 0부터 시작한다*/
+
+    var myP1 = document.getElementsByTagName('p')[0];
+    // myP1.addEventListener( 'click', function( ){ } );
+
+    var myP2 = document.getElementsByTagName('p')[1];
+
+    myP1.addEventListener( 'click', function( ){
+
+     console.log( myP1.style.backgroundColor );
+
+      if( myP1.style.backgroundColor === "rgb(0, 0, 0)" ){
+        myP1.style.backgroundColor = "#f00";
+      }else{
+       myP1.style.backgroundColor = "#000";
+      }
+    } );
+
+  </script>
+  </body>
+</html>
+
+
+
+
+
+
+
+
