@@ -1,0 +1,44 @@
+@charset "utf-8";
+
+/* selector_01.css */
+body { background-color: #fafafa;}
+
+h1 {width: 400px; height: 40px; background-color: #caa;}
+ul>li {border-width: 1px; border-style:solid; border-color:#f7a;}
+
+ol li { background-image:linear-gradient(#cfa, #ca7);}
+
+li a {color:#ff0;}
+div > a {color:#afa}
+a {background-color: #333; color:#fff;}
+
+div.wrap {width:80%; background-color: #ccc; border:2px solid #7fa;}
+
+/* 선택자는 기본: 나중에 작성한 내용을 기준으로 처리된다
+  하지만, 기본 타입 선택자보다는
+  class선택자가 우선
+  id 선택자
+  자손 또는 자식 선택자가 우선
+  즉,
+  "기본타입 선택자 < class < id < 자손 또는 자식 선택자"
+  
+  자식과 자손 선택자는 같은 레벨로 쓰므로, 나중에 처리된 선택자를 기준으로 설정된다
+
+div태그 안에 class와 id가 동시에 들어갈 수 있으나
+id 자체는 유일한것으로 불러올때 .class#id형식이 아닌
+#형식으로만 불러온다
+
+div
+.box
+#box
+div div
+div #box
+<<<<<<<<<<<<inline 선택자(js를 통한 선택자)
+
+
+*/
+
+.nth {width: 100px; height: auto;}
+.nth>li:nth-child(2n+1) {background-color: #ccc;}
+
+ss[href="#"]{text-decoration: underline;}
