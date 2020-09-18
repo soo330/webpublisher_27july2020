@@ -78,17 +78,17 @@ background-color:#ad6fdd;}
 #content {width: 100%; height: auto;}
 #content > h3 {width: 0; height: 0; overflow: hidden;}
 
-.content_01 { float:right;width: 30%; height: 500px;
-  background-color: #ff7259;}
+  .content_02 {float:left; width: 70%; height: 150px;
+  background-color: #27294d;}
   
-  .content_02 {float:right; width: 70%; height: 200px;
-    background-color: #27294d;}
+  .content_03 {float:left; width: 70%; height: 350px;
+    background-color: #ad6fdd;}
+
+  .content_01 {float:left; width: 30%; height: 500px;
+      margin-top: -150px; background-color: #ff7259;}
     
-    .content_03 {float:right; width: 70%; height: 300px;
-      background-color: #ad6fdd; clear:left;}
-      
-      #content:after,
-      #content::after {content:""; display:block; clear:both;}
+#content:after,
+#content::after {content:""; display:block; clear:both;}
       
 /* #content ============================ */
 
