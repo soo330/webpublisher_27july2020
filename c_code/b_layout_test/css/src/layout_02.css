@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* layout_02.css */
+
+html, body {margin:0;}
+/* html과 body는 브라우저마다 다른데 마진값이 자동으로 설정되기때문에 먼저 설정해주어야 한다 */
+#wrap {width: 960px; height: 1200px;
+margin: 0; padding: 0;}
+
+#headBox {width: 100%; height: 120px;
+background-color: #83138E;}
+
+/* =============headBox============= */
+
+#viewBox {
+  width: 100%; height: 450px;
+  background-color: #0D2BBB;}
+
+h1, h2 {margin: 0; padding:0;}
+/* =============viewBox============= */
+#contentBox {width: 100%; height: 500px;
+  background-color: #287036;}
+  
+  .content_01{float:left;
+    width: 200px; height: 500px;
+  background-color: #7E8683;}
+
+  .content_02{float:left;
+    width: 760px; height: 200px;
+  background-color: #545D7B;}
+
+  .content_01 li {height: 100px;
+  margin: 20px; list-style: none;}
+  .content_03{width: 760px; height: 300px;
+  background-color: #4B707F;}
+  
+/* =============contentBox============= */
+  #footBox {width: 100%; height: 130px;
+background-color: #7E00D7;}
