@@ -1,0 +1,191 @@
+@charset "UTF-8";
+/* float.css */
+
+#wrap {
+  width: 800px; height: 2000px;
+  background-color: #add;
+  margin: auto;
+}
+
+.float_01 {
+  width: 100%; height: 400px;
+  background-color: #ccf;
+}
+
+.sample_01 {
+  width: 90%; height: 350px;
+  margin: auto; border: 1px solid #333;
+  overflow-x:hidden; overflow-y: scroll;}
+
+.img_sam {float: left; margin: 10px;
+  width:100px; height: 100px;
+}
+/* 이미지가 있는상태에서 이미지를 텍스트가 감싸는 형식으로 텍스트가 깔려야하는 상황에서만 float을 한번만 적용한다 형제 적용x */
+.img_sam > img {
+  border: none;
+  width: 100%; height: auto;
+}
+
+.img_sam>p {
+  margin: 0;
+  width: 100%; height: auto;
+  background-color: #fc7;
+}
+
+/* --------float_01-------------------- */
+
+.float_02 {
+  width: 100%; height: 250px;
+  background-color: #ccf;
+}
+
+.sample_02 {float: right;
+  width: 90%; height: 200px; border: 1px solid #333;
+}
+
+.sample_02>div {
+  width: 100px; height: 70px; border: 2px solid #fa0;
+}
+
+.f1_01 {background-color: #fca;}
+.f1_02 {background-color: #aff;}
+.f1_03 {background-color: #faf;}
+.f1_04 {background-color: #afc;}
+
+.sample_02 >div:nth-of-type(1) {float:left;}
+.sample_02 >div:nth-of-type(2) {float:right;}
+.sample_02 >div:nth-of-type(3) {float:left;}
+.sample_02 >div:nth-of-type(4) {float:right;}
+
+/* --------float_02-------------------- */
+
+.flaot_03 {
+  width: 100%; height: 300px;
+  background-color: #ffc;
+}
+.sample_03 {width: 90%; height: 250px; border: 1px solid #333;}
+
+.sample_03>ul { float:right;
+  margin: 0; padding:0; list-style: none;
+  width: auto; height: 50px;
+  background-color: #fff;
+}
+/* 가로width값이 100이면 어차피 이동할 곳이 없음으로 수정해주어야 한다 */
+/* {float:right; width: auto;}일때 전체를 오른쪽으로 옮기고 거기서 오토로 맞춰라라는 뜻으로 더이상 늘어나지않는다 */
+
+.sample_03 li { float:left;
+  width: 76px; height: 48px; border: 2px solid #777;
+}
+
+/* -------- float_03 -------------------- */
+.float_04 {
+  width: 100%; height: 700px;
+  background-color: #dda;
+}
+
+.sample_04 {
+  width: 600px; height: 650px;
+  border: 1px solid #333;
+}
+
+.sample_04> div {
+  width: 180px; height: 50px;
+  border: 2px solid #0ac;
+  text-align: center; line-height: 50px;
+}
+/* ctrl+shift+p > >random color */
+.f1_02_01 {
+  float: left;
+  background-color: #25A013}
+.f1_02_02 {
+  float: left;
+  background-color: #CE2C46}
+.f1_02_03 {
+  float: left;
+  background-color: #808A50}
+.f1_02_04 {
+  float: left;
+  background-color: #E6743E}
+.f1_02_05 {
+  float: left;
+  background-color: #3CD373}
+.f1_02_06 {
+  clear: both;
+  background-color: #F3AF69}
+
+  /* clear:both;
+  를 써주면 그 순서부터 끊어준다는 의미가 된다
+  보통 가장 마지막에 들어가나 경우에 따라서 순서가 바뀜
+  */
+
+.f1_02_07 {
+  float: left; 
+  margin-top: 20px;
+  background-color: #BB6AE9}
+.f1_02_08 {
+  float: left; 
+  margin-top: 20px;
+  background-color: #074DC5}
+.f1_02_09 {
+  float: left; 
+  margin-top: 20px;
+  background-color: #FDC2B2}
+.f1_02_10 {
+  float: left; background-color: #299B7F} 
+.f1_02_11 {
+  float: left; background-color: #EE4E81} 
+.f1_02_12 {
+  float: left; background-color: #E852A0}
+/* -------- float_04 -------------------- */
+
+.float_05 {
+  width: 100%; height: 1000px;
+  background-color: #acf;
+}
+
+.sample_05 {
+  width: 600px; height: auto;
+  border:2px solid #555;
+}
+
+.sample_05> div {
+  float:left;
+  width: 300px; height: 100px;
+}
+
+.sam_01 {background-color: #56A193;}
+.sam_02 {background-color: #0F0402;}
+.sam_03 {background-color: #67D404;}
+.sam_04 {background-color: #30430C;}
+.sam_05 {background-color: #210E6C;}
+.sam_06 {background-color: #7A2079;}
+
+.sample_05>.clear_sample {
+  float: none; clear:both; width: 100%; height: 50px;
+  background-color: #fff;
+}
+/* float:none;과 clear:both;를 같이 쓸때는 float을 날린다는뜻이다 */
+.sample_06 {
+  width: 100%; height: 100px;
+  color: #fff;
+  background-color:#f53;
+}
+
+/* ::after에는 content가 꼭 붙는다 */
+.sample_05::after,
+.sample_05::after {
+  content:" ";
+  display:block; clear:both;
+}
+
+/*
+float이란 선택된 요소를다른 요소와 비교 처리하여,
+기본은 "옆으로 나열"이라는 의미
+
+ 1. 뒤에 다른 요소를 담아서 글자를 주변에 위치하도록 처리하거나
+ 2. 여러개의 형제 요소에 같이 사용하여, 옆으로 나란히 붙이도록 처리하거나
+ 3. 때로는 float처리되어 이를 강제로 취소처리 {float:none;} 하거나
+ 4. 여러개의 float처리된 요소들의 마지막에 float종료의 의미를 부여 {clear: both;} 할수 있는 기능들을 담고있다
+ 5. float 요소를 담으면, inline 또는 inline-block요소들은 모두 block으로 강제전환 처리된다.
+
+*/
