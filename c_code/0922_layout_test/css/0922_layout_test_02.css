@@ -1,0 +1,181 @@
+@charset "utf-8";
+/* 0922_layout_test_02.css */
+
+html, body {margin:0;}
+
+#warp { width: 1600px; height: 5020px; background-color: #999;}
+
+#headBox {width: 1600px; height: 150px;
+  padding-top:35px; box-sizing: border-box;
+  background-color: #fa0;}
+
+  /* headBox의 width값은 .logo때문에 준 padding값 가로x세로 20px이 있으므로 20px줄여주는 방법도 있다 */
+
+
+.logo {float:left; width: 250px; height: 80px;
+  margin:0; margin-left: 25px; 
+  background-color: #66f;}
+
+.middleNav {float: left;
+  width: 830px; height: 70px;
+  margin-left: 75px;
+  padding:5px;
+  background-color: #11f;}
+
+/* margin-left와 marign-right 값은
+원래 70px씩이지만
+부모인 headBox의 패딩값으로 가로가 줄어든 만큼
+가운데 위치한 middleNav값의 마진값을 조금씩 줄여줬다
+*/
+
+.mid_Nav_group{width: 100%; height: 100%;
+}
+
+.mid_Nav_group > div {float: left;
+width:150px; height:70px; margin-left:20px;
+background-color: #cc9;}
+.mid_Nav_group .mid_Nav_01{margin-left: 0;}
+
+/* 
+.mid_Nav_01 {float:left;  width: 150px; height: 70px;  background-color: #cc9;}
+.mid_Nav_02 {float:left;  width: 150px; height: 70px;  margin-left:20px; background-color: #cc9;}
+.mid_Nav_03 {float:left;  width: 150px; height: 70px;  margin-left:20px;  background-color: #cc9;}
+.mid_Nav_04 {float:left;  width: 150px; height: 70px;  margin-left:20px;  background-color: #cc9;}
+.mid_Nav_05 {float:left;  width: 150px; height: 70px;  margin-left:15px;  background-color: #cc9;} 
+*/
+
+.userNav { 
+  float:right; margin-right: 50px;  width: 250px; height: 80px;  background-color: #44f;}
+
+
+
+/* headBox======================= */
+
+
+
+
+#adView {width: 1600px; height: 750px;
+  padding-top: 28px; background-color: #aaa;}
+
+.view_outer {width: 1300px; height: 600px;
+  margin: auto; margin-top: 28px; margin-top: 28px;background-color: #cc9;}
+
+.view_indicator {width: 850px; height: 60px;
+  margin: auto; margin-top: 28px;
+  background-color: #cc9;}
+
+  .view_indi_group ul {width: 840px; height: 40px;
+    margin:0;
+    list-style: none;}
+
+  .view_indi_group ul li {
+    float:left; width: 120px; height: 40px;
+    margin: auto; margin-top: 10px;
+    background-color: #fa0;}
+
+/* adView======================== */
+
+#localNavBox {width: 1600px; height: 250px;
+  padding-top: 18px;
+  background-color: #555;}
+#localNavBox h2 {margin: 0;}
+
+.localNav {width: 1500px; height: 196px;
+  margin:auto;
+background-color: #fa0;}
+
+
+/* localNavBox==================== */
+
+
+
+
+#popularContentBox {width: 1600px; height: 600px; background-color: #ff9;}
+
+#popularContentBox h2 {margin-top: 50px;}
+
+.popcontent_title {width: 1300px; height: 50px;
+  margin: auto;
+background-color: #66f;}
+
+.pop_con_sect {width: 1300px; height: 470px;
+  margin: auto;
+margin-top: 30px; background-color: #44f;}
+
+/* popularContentBox=============== */
+
+#newContentBox {width: 1600px; height: 900px;
+  padding-top: 60px;
+background-color: #777;}
+
+#newContentBox h2 {margin: 0;}
+
+.new_con_title {width: 1300px; height: 50px;
+  margin: auto;
+background-color: #cc9}
+.new_con_sect {width: 1300px; height: 700px;
+  margin: auto; margin-top: 30px;
+background-color: #cc9}
+
+/* newContentBox =================== */
+
+
+
+
+#reckonCont {width: 1600px; height: 600px;
+background-color: #445;}
+
+#reckonCont h2 {margin: 0;}
+
+.reckon {width: 1300px; height: 50px;
+  margin: auto;
+background-color: #99f;}
+.reckon_con_sect {width: 1300px; height: 440px;
+  margin: auto; margin-top: 30px;
+background-color: #99f;}
+
+/* recokenC ======================== */
+
+
+
+
+#communityBox {width: 1600px; height: 800px;
+  padding-top: 60px;
+  background-color: #999;}
+
+#communityBox h2 {margin: 0;}
+
+.community_title {width: 1300px; height: 50px;
+  margin: auto;
+background-color: #cc9}
+.community_sect {width: 1300px; height: 600px;
+  margin: auto; margin-top: 30px;
+background-color: #cc9}
+
+/* communityBox======================  */
+
+
+
+
+
+#miniAdBox {width: 1600px; height: 400px;
+  padding-top: 40px;
+  background-color: #666;}
+#miniAdBox h2 {margin-top: 0px;}
+
+.miniAdBox {width: 1500px; height: 300px;
+  margin: auto; 
+  background-color: #dd8;}
+/* miniAdBox ========================= */
+
+
+
+
+#footBox {width: 1600px; height: 200px;
+  padding-top: 22px;
+background-color: #888;}
+
+#footBox h2 {margin: 0;}
+
+.footer {width: 1300px; height: 140px;
+  margin: auto; background-color: #cc9;}

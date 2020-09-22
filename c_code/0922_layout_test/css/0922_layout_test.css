@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+/* 0922_layout_test.css======== */
+
+html, body{margin: 0;}
+
+#wrap { width: 700px; height: 745px;
+  margin: auto;
+background-color: #1c3be9;}
+
+#headBox {width: 700px; height: 80px;
+background-color: #BAA910;}
+
+  h1 {width: 100px; height: 50px;
+    margin:0; padding: 0;}
+
+  #logo_sect {float: left; width: 100px; height: 50px; margin: 10px;
+  text-align: center;
+  background-color: #fff;}
+
+  #naviBox {float:right; width: auto; height: 30px; margin-top: 20px;}
+
+  .navi_01, .navi_02,
+  .navi_03, .navi_04 { float:left; width: 100px; height: 30px; margin: 10px; background-color: #fff;}
+
+
+/* ==============head=========== */
+
+#bannerBox {width: 100%; height: 250px;
+  margin: 0; padding: 0; background-color: #E51825}
+
+#bannerBox h2 {margin: 0; padding:0;
+  text-align: center;}
+
+
+/* ==============benner=========== */
+
+#aside {width: 100%; height: 34px;
+background-color:#4A96C2;}
+
+#aside h2 {margin: 0; padding: 0;
+text-align: center;}
+
+/* ==============aside=========== */
+
+#articleBox {
+  width: 100%; height: 300px;
+  margin: 0; padding:0;
+background-color: #536F6B;}
+
+#article_01 { float:left; width: 50%; height: 300px;
+  margin: 0; padding:0; background-color: #3287CB;}
+
+#article_01 ul {margin: auto; padding:0;
+  width: 320px; height: 300px;
+  list-style: none;
+  text-align: center;}
+
+.art_01 { float:left; width: 140px; height: 120px; margin-top: 20px; background-color: #fff; }
+
+.art_02 {float: left; width: 140px; height: 120px; margin: 20px; margin-top:20px;
+  background-color: #fff; }
+
+.art_03 {float: left; width: 140px;
+  height:120px; margin-top: 10px;
+  background-color: #fff;}
+.art_04 {float: left; width: 140px; height: 120px; margin-left: 20px; margin-top: 10px;
+  background-color: #fff;}
+/* article_01 end==================== */
+
+#article_02 {
+  float:left; width:50%; height: 300px; background-color: bisque;}
+
+#article_02 ul {width: 258px; height: 400px;
+  margin:0; padding:0; list-style: none;}
+
+.art_2_01 {width: 258px; height: 80px;
+  margin: 10px; margin-top: 20px;
+  margin-left: 50px;
+background-color: #fff;}
+.art_2_02 {width: 258px; height: 80px;
+  margin: 10px; margin-left: 50px;
+background-color: #fff;}
+.art_2_03 {width: 258px; height: 80px;
+  margin: 10px; margin-left: 50px;
+  text-align: center;
+background-color: #fff;}
+
+/* article_02 end=================== */
+
+#footBox h2 {margin: 0; padding: 20px;
+text-align: center;}
