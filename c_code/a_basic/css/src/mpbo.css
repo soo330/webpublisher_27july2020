@@ -1,0 +1,315 @@
+@charset "utf-8";
+
+/* mpbo.css=================== */
+
+/* 내용 진행에 앞 서, 기본 margin, padding 요소를 지우고 시작하기 */
+
+html, body,
+h1, h2, h3, h4, h5, h6,
+p,ul,hr {margin: 0; padding: 0;}
+
+#wrap {
+  width: 1100px; height: auto; min-height: 1200px; margin: auto;
+  padding-top: 20px;
+  background-color: #dfdfdf;}
+h1 {width: 300px; height: 40px; background-color: #aca;
+  margin: auto; margin-bottom: 20px;}
+
+
+.part {width: 100%; height: 700px;
+border: 1px solid #777;}
+
+.part > ul {width: 100%; height: 100%;
+margin: 0; padding: 0; list-style:none;}
+
+.part > ul > li { float: left;
+  width: 100px; height: 100px;
+  border: 1px solid #0af;
+  text-align: center; line-height: 100px;}
+
+/*
+margin>ul>li 자식선택
+margin li 자손선택
+
+margin은 영역 밖에서 부피가 생긴다.
+
+margin: 요소와 요소 사이의 거리 (눈에 보이는 공간)
+margin: 10px; 위 , 오른쪽, 아래, 왼쪽 4방향 모두 동일한 여백을 가진다
+margin: 10px 30px 위/아래(10), 좌/우(30)로 값을 각각 분배하여 여백을 가진다
+margin: 10px 30px 50px; 위(10) 좌/우(30) 아래 (50) 값분배하여 여백 가짐
+margin: 10px 30px 50px; 위(10) 좌(30) 아래 (50) 우(100) 시계방향으로 값을 나눠가진다
+
+margin-방향:50; 원하는 방향을 기준으로 여백을 가질 수 있다
+단, margin값을 중첩하여 사용할경우, 겹치는 부분이
+***나중에 작성한 부분으로 처리되므로, 주의하여 사용할 것.
+*/
+
+/* .marin 안에 있는 자손인 li의 n번째 오는 것 */
+.margin li:nth-child(1) {margin: 10px; }
+
+.margin li:nth-child(2) {margin: 10px 30px;}
+.margin li:nth-child(3) {margin: 10px 30px 50px;}
+.margin li:nth-child(4) {margin: 10px 30px 50px 100px;}
+.margin li:nth-child(5) {margin: 0 0 0 100px;}
+.margin li:nth-child(6) {margin-top: 100px; margin-left: 50px;}
+.margin li:nth-child(7) {margin: 20px; margin-top: 70px;}
+/* .margin li:nth-child(7) {margin-top: 70px; margin:20px;}
+는 70마진을 취소하고 마진값 20을 주겠다는 의미임으로 따로 특별하게
+설정 원하는 값을 꼭 뒤에 오도록 해야한다
+*/
+
+
+/* ======================================================= */
+
+.padding ul li {text-align: left; line-height: 20px;}
+.padding ul li:nth-child(2n-1) {background-color: #fa3;}
+.padding ul li:nth-child(2n) {background-color: #3af;}
+/* padding은 본질은 그대로 사이즈가 있을때,
+겉으로 부피가 늘어난 것. 패딩의 솜을 불어넣는 개념
+별도의 여백이 생기는 개념
+*/
+
+.padding_sample {
+  padding: 20px;
+  width: 300px; height: 150px;
+  background-color: #fa7;}
+
+.insert_p { width: 100%; height: 100%;
+    background-color: transparent;}
+
+
+/*
+padding: 요소의 부피를 키워서 공간을 확보하는 형태
+        width/height값의 실제는 변하지 않지만, 외부에서 보이기로는
+        width/heigth가 변한것처럼 보이도록 처리된다
+padding:20px; 위, 오른쪽,아래 왼쪽 으로 4방향 면적을 만든다
+padding:20px 40px 위/아래(20), 좌/우 (40)만큼의 면적을 만든다
+padding:10px 30px 100px; 위(10) 좌/우 (30) 아래(100) 면적
+padding:10px 20px 30px 40px 시계방향으로 각각 공간면적 만든다
+padding-방향: 50px 사용된 방향만 별도의 공간 면적을 가진다
+단, 전체의 값을 먼저 사용하고 일 부분을 나중에 사용하여야 필요한 형태로 제작가능
+        */
+.padding>ul>li:nth-child(1) {padding: 20px;}
+.padding>ul>li:nth-child(2) {padding: 20px 40px;}
+.padding>ul>li:nth-child(3) {padding: 10px 30px 100px;}
+.padding>ul>li:nth-child(4) {padding: 10px 20px 30px 40px;}
+.padding>ul>li:nth-child(5) {padding: 10px; padding-bottom:50px;}
+
+
+/* ======================================================= */
+
+
+.mp_sample {
+  width: 700px; height: 1000px; margin: auto; border: 2px solid #777;}
+.mp_sample p {
+  width: 70%; height: 80px; background-color: #aca; border-bottom: 1px solid #07f;}
+
+  /* margin:auto; 블록일때 margin:auto는 좌우 비율 맞춰 자동으로 둬라 (중간)으로 둬라 라는 값이다  */
+  
+.mp_sample p:nth-of-type(1) {
+    margin: auto; margin-top: 10px; margin-bottom: 30px;}
+.mp_sample p:nth-of-type(2) {margin-top:50px;}
+.mp_sample p:nth-of-type(4) {width:50%; margin-left: 50px; margin-top: -50px;}
+.mp_sample p:nth-of-type(5) {width:50%; height: 100px;
+  margin-left: 10%; margin-top:10%; background-color:  #fa0;}
+
+/* margin-top은 %로 주는것을 지양한다  */
+
+
+
+
+/* 위 아래 margin값이 겹칠때에는 **큰 값** 쪽만 먹는다/// */
+
+
+/* h1에 margin-top: 50px 줄때에는
+margin-top값을 사용할 경우에는 자신이 아닌
+*** 부모요소 (wrap)를 margin처리하게된다.
+*/
+
+/* =============================================== */
+
+/* border 외곽선
+
+*/
+.border ul li:nth-child(1) {
+  border-width: 10px;
+  border-style: solid;
+  border-color: #fa8;
+}
+
+/* solid 직선 dotted 점선(도트모양) dashed 쇄선(직사각형 점선)
+ridge 골(산골자기)을 만든다 길쭉 double 이중
+*/
+
+.border ul li:nth-child(2) {
+  border: 10px dotted #85f;
+}
+/* 위처럼 축약형으로 사용가능하다  */
+
+.border ul li:nth-child(3) {
+  background-color: #fc7;
+  border-width: 15px; border-top-width: 3px; border-left-width: 30px;
+  border-style: solid; border-right-style: dotted; border-bottom-style: ridge;
+  border-color: #f08; border-left-color: #fa9;
+}
+
+.border ul li:nth-child(4) {
+  background-color: #fca;
+  /* border: 30px ridge #fa0; */
+  border-top: 10px solid #fa0;
+  border-bottom: 10px solid #fff;
+  border-left: none; border-right: none;
+}
+/* border-top/bottom과 border-left/right 처럼
+선이 만나는 곳은 대각선으로 처리가되며
+만나지 않는곳은 선이 사라지는 것을 볼 수 있다 */
+
+.border ul li:nth-child(5){
+  border: 30px solid #0af;
+  border-top-color: #fff;
+}
+
+.border ul li:nth-child(6) {
+  width: 0px; height: 0px;
+
+  border: 30px solid #f03;
+  border-top-width: 0;
+  border-bottom-width: 50px;
+
+  border-top-color: transparent;
+  border-left-color: rgba(255,0,51,0);
+  border-right-color: hsla(360, 100%, 50%, 0);
+  
+  font-size: 0.5rem;
+  text-indent: -20px;
+  line-height: 70px;
+  color: #fff; font-weight: bold;
+}
+
+/* rgba (rgb와 alpha(투명도)값이며
+hsla(hue색조, saturation 채도, lightness명도, alpha 투명도)이다
+*** 0.0~1.0 사이값을 지정하고 0은 투명/ 1은 불투명을 뜻함
+*/
+
+.border ul li:nth-child(7){
+  border: 5px solid #f03;
+  border-left-color: transparent;
+  border-bottom-color:transparent;
+  transform: rotate(45deg);
+}
+/* 위는 박스 전체가 돌아간다 텍스트 포함
+그것을 방지하려면 html에서 <span>태그로 감싸준 뒤
+*** 아래처럼 따로 설정해주어야 한다
+*/
+.border ul li:nth-child(7) > span {
+  display:block; width: 100%; height: 100%;
+  transform:rotate(-45deg);}
+/* ===================================================== */
+
+.ouline ul li,
+.ouline ul li> button {width: auto; min-width: 100px; cursor: pointer;}
+/*
+border는 자기 부피만큼 다른 아이들을 밀어내고 만들어지나
+outline의 경우에는 자기 위치를 기준으로 외곽에 선을 만들어낸다
+
+1. ouline 속성은 margin, padding, border와는다르게
+다른 요소에 영향을 미치지 않는다
+2. ouline속성은 일부 방향성이 없다 (위/아래,좌/우 개념 없음)
+단, 기존 선의 위치에서 일부 공간을 만들어서 표기하는 형태만 존재
+3. 그 쓰임 위치는 대부분 focus를 처리하게 만드는 요소
+(a, button, form 내부의 요소)에서 주로 사용을 한다
+*/
+
+.outline li:nth-child(1){
+  /* outline-width: 10px;
+  outline-style: dotted;
+  outline-color: #0af; */
+  outline:10px solid #ff0;
+  outline-offset: 5px;
+}
+/* ouline-offset 값만큼 띄어서 속성이 생겨남 */
+
+/*
+.outline li:nth-child(2) > a {} 두번 째 li내부에 존재하는 a
+.outline li > 2:nth-child(2) {} li내부에 존재하는 두번째 a*/
+.outline li:nth-child(2) > a{
+  display: block; width: 100px; height: 100%;
+}
+.outline li:nth-child(2) > a:focus {
+  outline: 5px solid #fa0;
+}
+/*
+링크(a), 버튼(input or button), 입력창(input, select) 등의 환경에서,
+마우스가 아닌ㄴ 키보드로 위치를 찾아서 기능을 수행하고자 할때
+해당 위치에 선점한것을 체크하는 기능
+
+:focus기능은 키보드 Tab을 눌렀을 때 활성화 된다
+클릭해서 어디론가 이동하거나, 
+
+:focus 상태에서 border를 줬을 경우 살짝 밀릴 수가 있음 숙지
+*/
+
+.outline li:nth-child(3) > button{
+  display: block; width: 100px; height: 100%;
+  border: 0; background-color: transparent;
+}
+
+.outline li:nth-child(3) > button:focus {
+  outline:10px solid #f07;
+}
+
+.outline li:nth-child(4):focus {
+  outline: 20px solid #0f7;
+  cursor: pointer;
+}
+
+/* ================================================== */
+
+.box_sizing {width: 80%; height: 400px; margin:100px auto;
+}
+
+.box_sizing div { float: left;
+  width: 100px; height: 100px;
+  margin: 10px; padding: 15px;
+  border: 30px solid #777;
+  border-right-color: #0af;
+  background-color: #fa5;
+}
+
+.box_sizing div:nth-of-type(1){ box-sizing: content-box;}
+.box_sizing div:nth-of-type(2){ box-sizing: border-box;}
+
+/*
+box-sizing 하기전 (before) box-sizing:content-box;로서
+기본형으로 처리 box-sizing:content-box;를 할경우에는 
+
+
+box-sizing을 사용하면(after) box-sizing:border-box;로서
+border와 padding 모두 내부에 처리
+
+
+ box-sizing:content-box; 박스 바깥에 부피가 생기는 것
+ box-sizing:border-box;  박스 내부에 부피가 생기는 것
+  
+*/
+
+/* ================================================== */
+
+/* li 모두를 설정할 때 */
+.nth_01> li {
+  border-bottom: 1px solid #aaa;
+}
+
+.nth_01> li:nth-child(1){background-color: #fa0;}
+.nth_01> li:nth-child(4){background-color: #fff;}
+
+.nt {
+  padding-left: 1rem;
+  border-bottom: 1px solid #fa0;
+}
+
+.nt:nth-child(2) {background-color: #fac;}
+.nt:nth-child(5) {background-color: #acf;}
+
+.nth_02 p:nth-of-type(1){ background-color: #f00;}
+.nth_02 p:nth-of-type(7){ font-weight: bold;}
