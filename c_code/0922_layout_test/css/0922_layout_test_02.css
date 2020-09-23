@@ -64,13 +64,12 @@ background-color: #cc9;}
   margin: auto; margin-top: 28px;
   background-color: #cc9;}
 
-  .view_indi_group ul {width: 840px; height: 40px;
-    margin:0;
-    list-style: none;}
+  .view_indi_group ul {width: auto; height: auto;
+    margin:0; padding: 0; list-style: none;}
 
-  .view_indi_group ul li {
+  .view_indi_group li {
     float:left; width: 120px; height: 40px;
-    margin: auto; margin-top: 10px;
+    margin-top: 10px; margin-left: 20px;
     background-color: #fa0;}
 
 /* adView======================== */
@@ -81,8 +80,7 @@ background-color: #cc9;}
 #localNavBox h2 {margin: 0;}
 
 .localNav {width: 1500px; height: 196px;
-  margin:auto;
-background-color: #fa0;}
+  margin:auto; background-color: #fa0;}
 
 
 /* localNavBox==================== */
