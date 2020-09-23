@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<!-- mpbo.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/src/mpbo.css">
+  <title>Document</title>
+  <link rel="shortcut icon" href="../img/icon_01.png", type="image/png">
+  <link rel="apple-touch-icon" href="../img/icon_01.png">
+</head>
+<body>
+<!-- latout -->
+<div id="wrap">
+  <h2>nth-child</h2>
+  <p>연속되어진 요소를 선택할때 사용하는 선택자</p>
+  <ol class="nth_01">
+    <li>nth-c</li>
+    <li>nth-c</li>
+    <li>nth-c</li>
+    <li>nth-c</li>
+    <li>nth-c</li>
+  </ol>
+
+  <div class="nth_02">
+    <h2 class="nt">nth_01</h2>
+    <p class="nt">nth_02</p>
+    <p class="nt">nth_03</p>
+    <p class="nt">nth_04</p>
+    <p class="nt">nth_05 연속으로 되어있지 않은 요소를 선택할때 사용하는 선택자 nth-of-type</p>
+    <p class="nt">nth_06</p>
+    <div class="nt">nth_07</div>
+    <div class="nt">nth_08</div>
+    <div class="nt">nth_09</div>
+    <p class="nt">nth_010</p>
+  </div>
+
+  <h1><a href=".contents.html">웹기초</a></h1>  
+  <hr />
+  <h2>margin</h2>
+  <div class="part margin">
+    <ul>
+      <li>margin_01</li>
+      <li>margin_02</li>
+      <li>margin_03</li>
+      <li>margin_04</li>
+      <li>margin_05</li>
+      <li>margin_06</li>
+      <li>margin_07</li>
+      <li>margin_08</li>
+      <li>margin_09</li>
+      <li>margin_10</li>
+    </ul>
+  </div> <!-- // .part  -->
+  <!-- .part.padding>ul>li*7{padding_$$} -->
+  <div class="part padding">
+    <div class="padding_sample">
+      <div class="insert_p">내용작성</div>
+    </div>
+    <ul>
+      <li>padding_01</li>
+      <li>padding_02</li>
+      <li>padding_03</li>
+      <li>padding_04</li>
+      <li>padding_05</li>
+      <li>padding_06</li>
+      <li>padding_07</li>
+    </ul>
+  </div> <!--//.padding  -->
+
+  <div class="part mp_sample">
+      <p>margin과 padding의 쓰임새를 조금 더 파악해보자</p>
+      <p>하나의 요소 내에서 첫번 째 존재하는 요소가면<br />
+        float, position 처리되어 있지 않다면<br />
+        margin-top값을 사용할 경우에는 자신이 아닌<br /> 부모요소를 margin처리하게된다.</p>
+      
+      <p>margin값이 위아래 겹칠경우에는 큰 값 쪽만 처리가 된다 <br /> 단, float처리된 겹침은 제외 (좌/우 해당x)
+      </p>
+
+      <p>margin값은 눈에보이는 공간의 거리를 조절하는 기능이기에 + 값이 아닌 -값으로 처리된다</p>
+
+      <p>단, margin값은 auto, 좌위의 한해서 %값 처리가 가능하지만,
+        위/아래는 %로 사용하는 것은 지양<br />
+        위/아래는 명확한 값을 파악하기가 어렵다
+        (부모의 높이를 기준으로 보는것이 아니다)
+      </p>
+      <p>float기능과 margin기능을 같이 사용할 경우 margin:auto;는 좌/우 가운데 배치되지 않는다</p>
+  </div> <!-- // mp.sample  -->
+  <!-- .part.boder>ul>li*7{boder_$$} -->
+  <div class="part border">
+    <ul>
+      <li>border_01</li>
+      <li>border_02</li>
+      <li>border_03</li>
+      <li>border_04</li>
+      <li>border_05</li>
+      <li>border_06</li>
+      <li><span>border_07</span></li>
+    </ul>
+  </div> <!--// .border  -->
+  <!-- .part.outline>ul>li*4{outline_$$}  -->
+  <div class="part outline">
+    <ul>
+      <li>outline_01</li>
+      <li><a href="#">outline_02</a></li>
+      <li><button type="button">outline_03<button></li>
+      <li tabindex="0">outline_04</li>
+      <!-- 기본 li는 포커스가 잡히면 안되나 
+      예외적으로 focus줄때는 tabindex=""를주어야한다
+      tabindex="" 값은 -1/0/1 로 설정가능하다
+      -->
+      </ul>
+  </div> <!--outline  -->
+  <div class="part box_sizing">
+    <div>contnet_box</div>
+    <div>border_box</div>
+  </div> <!--box-sizing  -->
+</div> <!--wrap  -->
+</body>
+</html>
