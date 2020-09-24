@@ -1,14 +1,27 @@
 @charset "utf-8";
 /* Sep.23_ layout_03.css */
 
+
 /* reset. css 웹페이지 디자인 작업을 위해, 매번 처리해야하는 번거로운 작업을 미리 설정하여 초기화 시키는 처리 1단계 */
 html, body {margin: 0;}
 h1, h2, h3, h4, h5, h6, p, div {margin: 0; padding: 0;}
+ul, ol, li, dt, dd {margin: 0; padding: 0; list-style: none;}
 /* h1~h6까지 margin과 조금이라도 있을 padding을 미리 정리하고 시작한다 */
+
+/* varicable.css  */
+:root { --step2-color:#0af;
+--gray1:#ddd;
+--gray2: #ccc;}
+
+/* common.css */
+.clearfix:after,
+.clearfix::after {
+  content: " "; display: block; clear: both;}
 
 
 /* design */
-#wrap { width: 1600px; height: auto;  min-height: 500px; margin: auto;}
+#wrap {
+  width: 1600px; height: auto;  min-height: 500px; margin: auto;}
 
 
 #wrap>div {width: 100%;}
@@ -25,38 +38,91 @@ ctrl+shift+enter 윗쪽 줄바꿈
   .main_heading {
     float:left; width: 250px; height: 80px;
     margin-right: 75px;
-    background-color: #0af;}
-  .search_bar {
+    background-color: var(--step2-color);}
+  
+  
+  .navigation {
     float:left; width: 850px; height: 80px;
-    background-color: #0af;}
+    background-color: var(--step2-color);}
+    
+    .navigation> ul {width: 100%; height: auto;}
+    
+    /* .navigation>ul:after
+    .navigation>ul::after {
+      content: " "; display: block; clear: both;} */
+    
+    .navigation li {
+      float: left; width: 150px; height: 70px;
+      margin: 5px 10px;
+      background-color: #fc7;}
+  
   .member {
     float:right; width: 250px; height: 80px;
-    background-color: #0af;}
+    background-color: var(--step2-color);}
+
 
 /* adViewBox ==================*/
 #adViewBox{ 
   height: auto; min-height: 750px;
   padding: 28px 0; box-sizing: border-box;
   background-color: #bbb;}
-    .view_outer {
-      width: 1300px; height: 600px;
-      margin: auto;
-      background-color: #0af;}
+    
+  .view_outer {
+    width: 1300px; height: 600px;
+    margin: auto;
+    background-color: var(--step2-color);}
+    
     .view_indicator {
-      width: 850px; height: 60px;
+      width: 840px; height: auto;
       margin: auto; margin-top: 28px;
-      background-color: #0af;}
+      background-color: var(--step2-color);}
+      
+      /* .view_indicator ol {width: 100%; height: auto;}
+        .view_indicator ol :after,
+        .view_indicator ol::after {
+          content: ""; display: block; clear:both;} */
 
+
+/*
+부모의 값이 auto이거나/ float이 들어있다면 사용할 수있다***
+
+1. float기능을 정리하기 위해서는 clear:both를 사용해야한다
+2. li의 마지막에는 다른 요소가 들어갈 수 없으므로
+3. 가상의 존재는 ::after의 형태를 취하고 이는 반드시
+4. {content="";} 를 가지고 있어야한다
+
+html에서 <::after>라는 태그가 있다고 연상하고,
+       그 ::after는 사실상 css에서 만들어지는 가상의 태그이다 
+*/
+
+      .view_indicator li {
+        float: left; width: 120px; height: 40px;
+        margin: 10px;
+        background-color: #fc7;}
+
+      
 
 /* localNavBox ==================*/
 #localNavBox{
-  height: 250px;
-  margin-bottom:50px; padding: 20px 0;
+  height: auto;
+  margin-bottom:50px; padding: 30px 0;
   box-sizing: border-box; background-color: #aaa;}
   
   .local_nav_outer {
     width: 1500px; height: 100%;
-    margin:auto; background-color: #0af;}
+    margin:auto; background-color: var(--step2-color);
+    padding: 0 60px; box-sizing: border-box;}
+      
+      .local_nav_outer ul {
+        width: 100%; height: auto;}
+      .local_nav_outer li {
+        float: left; width:200px; height: 150px;
+        margin: 25px 15px;
+        background-color: #fc7;}
+
+
+
+
 
 /* == .content_area======================== */
 .content_area {height: auto;}
@@ -66,27 +132,70 @@ ctrl+shift+enter 윗쪽 줄바꿈
 .content_area h3 {
   width: 1300px; height: 50px;
   margin: auto; margin-bottom: 30px;
-  background-color: #0af;}
+  background-color: var(--step2-color);}
 .content_area .con_area {
   width: 1300px; height: auto;
   min-height: 400px; margin: auto;
-  background-color: #0af;}
+  background-color: var(--step2-color);}
+
+
+
+
 
 /* populaContentBox ==== */
-#populaContentBox{height: 600px; background-color: #ddd;}
+#popularContentBox{
+  height: auto;
+  background-color: #ddd;}
+
+  #popularContentBox .con_area {min-height: 470px;}
+
+
+
+
+
+
 
 
 /* newContentBox ==================*/
-#newContentBox{height: 900px; margin-bottom: 80px; background-color: #ccc;}
+#newContentBox{
+  height: auto;
+  margin-bottom: 80px; padding-top:60px;
+  background-color: #aaa;}
 
-/* recommendedContentBox ==================*/
-#recommendedContentBox{height: 600px; margin-bottom: 80px; background-color: #bbb;}
+  #newContentBox .con_area {min-height: 700px;}
 
+
+
+  /* recommendedContentBox ==================*/
+#recommendedContentBox{
+  height: auto;
+  margin-bottom: 80px; padding-top: 30px;
+  background-color: #bbb;}
+
+  .recommnededContentBox .con_area {min-height: 440px;}
 /* communityBox ==================*/
-#communityBox{height: 800px; margin-bottom: 80px; background-color: #ddd;}
+#communityBox{
+  height: auto;
+  margin-bottom: 80px; padding-top: 60px;
+  background-color: #ddd;}
+
+  #communityBox .con_area {min-height: 600px;}
 
 /* miniAdBox ==================*/
-#miniAdBox{height: 400px; margin-bottom: 80px; background-color: #bbb;}
+#miniAdBox{
+  height: auto;
+  margin-bottom: 80px; padding: 40px 0;
+  background-color: #bbb;}
 
+  .mini_ad_outer {
+    width: 1500px; height: 300px; margin: auto;
+  background-color: var(--step2-color);}
 /* footBox ==================*/
-#footBox{ height: 200px; background-color: #aaa;}
+#footBox{ margin-bottom: 500px;
+  height: auto; padding: 25px 0;
+  background-color: #aaa;}
+
+  .foot_outer {
+    width: 1300px; height: 140px;
+    margin: auto; 
+    background-color: var(--step2-color);}
