@@ -200,12 +200,34 @@ html에서 <::after>라는 태그가 있다고 연상하고,
       width: 630px; height: 400px; 
       background-color: #faf;}
 
-       .new_con_more_area p {width: 100%; height: 180px;
+       .new_con_more_area >div {width: 100%; height: 180px;
       background-color: #fc7;}
 
       .new_con_more_01{ margin-bottom: 40px;}
 
 
+      .new_more_01_left,
+      .new_more_02_left {
+        float: left;
+        width: 200px; height: 180px;
+        background-color: #f0a;}
+
+      .new_more_01_right,
+      .new_more_02_right {
+        float: right;
+        margin-top: 44px;
+        width: 380px; height: 136px;
+        background-color: #f0a;}
+
+        .new_cont_up {
+          width: 600px; height: 70px;
+          background-color: #f0a;
+        }
+        .new_cont_down {
+          margin-top: 30px;
+          width: 600px; height: 190px;
+          background-color: #f0a;
+        }
 
 /* recommendedContentBox ==================*/
 #recommendedContentBox{
@@ -227,6 +249,15 @@ html에서 <::after>라는 태그가 있다고 연상하고,
       .recon_part li:last-child {margin-right: 0;}
 
 
+      .recon_part li>div {
+        width: 300px; height: 200px;
+        box-sizing: border-box;
+        background-color: #fa0;
+      }
+
+      .re_con_text_2 {
+        padding: 15px;
+      }
 
 
   /* communityBox ==================*/
@@ -244,8 +275,32 @@ html에서 <::after>라는 태그가 있다고 연상하고,
 
   .community_area li:last-child {margin-bottom: 0;}
 
+    .img,
+    .img_02,
+    .img_03 {
+      float:left; margin-right: 30px;
+      width: 300px; height: 160px;
+      background-color: #faf;}
+    .img + dl,
+    .img_02 + dl,
+    .img_03 + dl {float: left;
+      margin: 0;
+      height: 100%;}
+      .img + dl dt,
+      .img_02 + dl dt,
+      .img_03 + dl dt {
+        margin-top: 20px;
+        width: 800px; height: 40px;
+        background-color: #faf;
+      }
 
-
+      .img + dl> dd,
+      .img_02 + dl> dd,
+      .img_03 + dl> dd{
+        margin-top: 23px;
+        width: 900px; height: 50px;
+        background-color: #faf;
+      }
 
 
 /* miniAdBox ==================*/
@@ -256,7 +311,30 @@ html에서 <::after>라는 태그가 있다고 연상하고,
 
   .mini_ad_outer {
     width: 1500px; height: 300px; margin: auto;
-  background-color: var(--step2-color);}
+    background-color: var(--step2-color);}
+
+    .mini_ad ul {width: 1450px; height: 300px;}
+
+    .mini_ad li { float: left;
+      height: 300px; margin-right: 25px;
+    }
+
+    .mini_ad li:first-child {
+      width: 750px;
+      background-color: #fc7;}
+    .mini_ad li:nth-child(2) {
+      float: left;
+      width: 350px;
+      background-color: #fc7;
+    }
+    .mini_ad li:last-child {
+      float: left;
+      width: 350px;
+      margin-right: 0;
+      background-color: #fc7;}
+
+
+
 /* footBox ==================*/
 #footBox{ margin-bottom: 500px;
   height: auto; padding: 25px 0;
@@ -266,3 +344,16 @@ html에서 <::after>라는 태그가 있다고 연상하고,
     width: 1300px; height: 140px;
     margin: auto; 
     background-color: var(--step2-color);}
+    
+    .foot li:first-child {
+      float: left;
+      width: 750px; height: 140px;
+      background-color: #fc7;}
+
+    .foot li:last-child {
+      float: right;
+      margin-top: 32px;
+      width: 280px; height: 76px;
+      background-color: #fc7;
+    }
+
