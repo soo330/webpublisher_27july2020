@@ -4,11 +4,15 @@
 <head>
   <meta charset="UTF-8">
   <link rel="stylesheet" href="../css/src/layout_02_result.css">
-  <title>Document</title>
-  <link rel="shortcut icon" href="", type="image/png">
-  <link rel="apple-touch-icon" href="">
   <!--[if IE]>
-   <link rel="shortcut icon" href="", type="image/png">
+    <script src="../ie/modernizr-custom.js"></script>
+  <![endif]-->
+  <title>layout_02_result</title>
+  <link rel="shortcut icon" href="../../a_basic/img/icon_01.png", type="image/png">
+  <link rel="apple-touch-icon" href="../../a_basic/img/icon_01.png">
+  <!--[if IE]>
+    
+   <link rel="shortcut icon" href="../../a_basic/img/icon_01.png./", type="image/png">
   <![endif]-->
 </head>
 <body>
@@ -20,7 +24,15 @@ html상에서 어느쪽에 시선이 순차적으로 이동하는지 고민하�
 <div id="wrap">
   <div id="headBox">
     <h1 class="main_heading">site name</h1>
-    <div class="search_bar">search</div>
+    <div class="navigation">
+      <ul class="clearfix">
+        <li>nav_01</li>
+        <li>nav_02</li>
+        <li>nav_03</li>
+        <li>nav_04</li>
+        <li>nav_05</li>
+      </ul>
+    </div> <!-- navigation  -->
     <div class="member">member</div>
   </div>
   <!-- // headBox================== -->
@@ -31,15 +43,33 @@ html상에서 어느쪽에 시선이 순차적으로 이동하는지 고민하�
       광고내용
     </div>
     <div class="view_indicator">
-      광고 순서 확인
+      <!-- 광고 "순서" 확인 -->
+      <ol class="clearfix">
+        <li>ad_indi_01</li>
+        <li>ad_indi_02</li>
+        <li>ad_indi_03</li>
+        <li>ad_indi_04</li>
+        <li>ad_indi_05</li>
+        <li>ad_indi_06</li>
+        <!-- <::after /> -->
+        <p class="clear"></p>
+      </ol>
     </div>
   </div>
   <!-- // adViewBox================== -->
 
 
   <div id="localNavBox">
+    <!-- localNavigation -->
     <div class="local_nav_outer">
-      local navigation outer
+       <ul class="clearfix">
+        <li>pop_01</li>
+        <li>pop_02</li>
+        <li>pop_03</li>
+        <li>pop_04</li>
+        <li>pop_05</li>
+        <li>pop_06</li>
+      </ul>
     </div>
   </div>
   <!-- // localNavBox================== -->
@@ -49,7 +79,8 @@ html상에서 어느쪽에 시선이 순차적으로 이동하는지 고민하�
   <!-- content  -->
   <div id="popularContentBox">
     <h3>인기 내용</h3>
-    <div class="con_area pop_con_area"></div>
+    <div class="con_area pop_con_area">
+    </div>
   </div>
   <!-- // populaContentBox============= -->
   
@@ -78,9 +109,17 @@ html상에서 어느쪽에 시선이 순차적으로 이동하는지 고민하�
 
 
 
-  <div id="miniAdBox"></div>
+  <div id="miniAdBox">
+    <div class="mini_ad_outer">
+
+    </div>
+  </div>
   <!-- // miniAdBox================== -->
-  <div id="footBox"></div>
+  
+  
+  <div id="footBox">
+    <div class="foot_outer"></div>
+  </div>
   <!-- // footBox================== -->
 </div>
 
