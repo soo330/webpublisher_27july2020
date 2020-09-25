@@ -3,8 +3,11 @@
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
   <link rel="stylesheet" href="../css/src/position_02.css">
-  <title>Document</title>
+  <title>웹 기초 - position_02</title>
+  <link rel="shortcut icon" href="../img/icon_01.png" type="image/png">
+  <link rel="apple-touch-icon" href="../img/icon_01.png">
 </head>
 <body>
   <!-- latout -->
@@ -16,8 +19,13 @@
     <div id="viewBox">
       <h2>광고영역</h2>
       <div class="view_indicator">indicator</div>
-      <div class="next_btn">다음</div>
-      <div class="prev_btn">이전</div>
+      
+    <div class="view_btn">
+      <button type="button" class="next_btn">다음</button>
+      <button type="button" class="prev_btn">이전</button>
+    <!-- button은 꼭 감싸는 요소가 있어야한다 -->
+    </div> <!-- button  -->
+
       <div class="view_area">광고
         <div class="adVer_01">adVer_01</div>
         <div class="adVer_02">adVer_02</div>
@@ -25,10 +33,9 @@
         <div class="adVer_04">adVer_04</div>
         <div class="adVer_05">adVer_05</div>
       </div>
-    </div>
+    </div> <!-- view_area -->
 
-<!-- 내가 적은거  -->
-<!-- 
+<!-- 내가 적은거
 
         <div class="view_img"></div>
           <div class="navi_group">

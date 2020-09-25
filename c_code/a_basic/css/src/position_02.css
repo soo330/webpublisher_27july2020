@@ -54,8 +54,11 @@ h1 {
      right: 30px; bottom: 50px;
      width: 200px; height: 30px;
      background-color: #777;}
-  
-  .next_btn {
+
+    /*
+    내가적은거
+    
+    .next_btn {
     position: absolute; z-index: 40;
     top: 50%; right: -25px;
     margin-top: -25px;
@@ -66,10 +69,27 @@ h1 {
     top: 50%; left: -25px;
     margin-top: -25px;
     width: 50px; height: 30px; 
-    background-color: #777;}
+    background-color: #777;} */
 
+/* 다음/이전 버튼 작업 시 요소를 감쌀때!!
+** 광고 영역에서 다음/이전 버튼을 생성할 때
+부모 요소를 설정하여, 영역 별 그룹을 처리하고 한다면,
+*버튼의 위치가 영역에서 각각 좌/우에 배치가 된다면
+** 반드시 부모의 높이 값은 0이 되어야 한다!!
+*그래야 내용을 선택, 이외의 기능을 처리 할 수 있다.
 
-
+*/
+  .view_btn {
+    position: absolute; z-index: 40;
+    top: 50%; margin-top: -25px;
+    width: calc(100%+50px); height: 0;}
+    .view_btn > button {
+      width: 50px; height: 30px;
+      border: 0; background-color: #777;
+      cursor: pointer;
+    }
+    .next_btn {float: right;}
+    .prev_btn {float: left;}
 
 .view_area {
   position: relative; z-index: 30;
@@ -86,13 +106,17 @@ h1 {
   .adVer_04 { z-index: 2;background-color: #347;}
   .adVer_05 { z-index: 1;background-color: #aaa;}
 
+  .adVer_01:hover {background-color: #fff;}
 /* ad는 1~5까지 순서대로 진행되어야 하기때문에
 z-index값을 역순(값)으로 정해준다 */
 
+/* position의 값은 padding과 border와는 상관이 없다 */
 
 
 
-/* #viewBox {
+/* 내가 적은거
+
+#viewBox {
   margin: auto; margin-top: -50px;
   width: 960px; height: 400px;
   background-color: #fa0;}
