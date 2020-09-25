@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!-- position_02.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/src/position_02.css">
+  <title>Document</title>
+</head>
+<body>
+  <!-- latout -->
+  <div id="wrap">
+    <div class="headBox">
+      <h1><a href="./contents.html">웹기초</a></h1>
+    </div>
+    
+    <div id="viewBox">
+      <h2>광고영역</h2>
+      <div class="view_indicator">indicator</div>
+      <div class="next_btn">다음</div>
+      <div class="prev_btn">이전</div>
+      <div class="view_area">광고
+        <div class="adVer_01">adVer_01</div>
+        <div class="adVer_02">adVer_02</div>
+        <div class="adVer_03">adVer_03</div>
+        <div class="adVer_04">adVer_04</div>
+        <div class="adVer_05">adVer_05</div>
+      </div>
+    </div>
+
+<!-- 내가 적은거  -->
+<!-- 
+
+        <div class="view_img"></div>
+          <div class="navi_group">
+            <div class="next">
+              <a href="#">next</a>
+            </div>
+            <div class="previous">
+              <a href="#">previous</a></div>
+            <div class="plusLink"><a href="#">plus</a></div>
+            <div class="stop"><a href="#">stop</div>
+          </div>
+    </div>
+-->
+
+    <div id="sideBox">
+      <div class="sample_fixed">한쪽으로 치우쳐저있는 요소의 위치</div>
+    </div><!-- sideBox -->
+
+    <div class="modal_window">
+      <div class="modal_message">
+        <h3>message</h3>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus similique autem eligendi natus esse dolore temporibus ipsam neque ullam soluta repellat ducimus, in itaque architecto laboriosam assumenda voluptatum qui nam?</p>
+      </div>
+    </div> <!-- modal_window-->
+
+    <div class="side">
+      우측에 붙이기
+    </div>
+  </div> <!-- wrap-->
+
+  <!-- script -->
+  <script src="https://unpkg.com/jquery"></script>
+  <script>
+    // console.log($.fn);
+    // $('.modal_window').on('click', function(){
+    //   $('.modal_window').slideToggle(300);
+    // });
+
+    // function(){
+
+    // }
+
+    var msg = document.getElementsByClassName('modal_message')[0];
+    var mwn = document.getElementsByClassName('modal_window')[0];
+    msg.addEventListener('click', function(){
+      mwn.style.display = 'none';
+    });
+  </script>
+</body>
+</html>

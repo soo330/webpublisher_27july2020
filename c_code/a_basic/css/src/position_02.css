@@ -1,0 +1,196 @@
+@charset "utf-8";
+/* position_02 */
+
+/* reset.css */
+html, body {margin: 0;}
+h1, h2, h3, h4, h5, h6, p {margin: 0;}
+ul, ol, li, dl, dt, dd {margin: 0; padding: 0;}
+/* common.css */
+
+.clearfix:after,
+.clearfix::after {
+  content: ""; display: block; clear: both;}
+
+
+/* layout.css */
+
+#wrap {width: 960px; height: 5000px; margin: auto;
+  padding-top: 200px;
+  
+  background-color: #dfdfdf;
+  background-image: linear-gradient(15deg,#caa, #0cf, #fc7);}
+
+.headBox {position: fixed; z-index: 1000;
+  /* headBox의 z-index:; 값을 많이주면
+  아래 viewBox 스크롤할때 굳이 튀어나오지 않는다 */
+  /* position: fixed; 는 브라우저 기준*/
+   top: 0; left: 0; right: 0;
+   /* 가급적 position 이용할 때는 left와 right값을 0;으로
+   포지션 값을 따로 주는 것이 좋다.
+   아랫쪽에 margin이나 padding값이 있기 때문에 */
+   margin: auto;
+   width: inherit; height: 150px;
+   border-bottom: 2px solid #555;
+   padding: 25px; box-sizing: border-box;
+   background-color: #7cf;}
+  /* inherit 가로값은 부모의 값을 따르라는 명령어 */
+
+h1 {
+  width: 90%; height: 100px;
+  background-color: #fff;}
+/*======================================== */
+
+#viewBox {
+  position: relative; z-index: 500;
+  width: 800px; height: 400px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+#viewBox>h2 {width: 0; height: 0; overflow: hidden;}
+
+  .view_indicator {
+     position: absolute; z-index: 50;
+     right: 30px; bottom: 50px;
+     width: 200px; height: 30px;
+     background-color: #777;}
+  
+  .next_btn {
+    position: absolute; z-index: 40;
+    top: 50%; right: -25px;
+    margin-top: -25px;
+    width: 50px; height: 30px; 
+    background-color: #777;}
+  .prev_btn {
+    position: absolute; z-index: 40;
+    top: 50%; left: -25px;
+    margin-top: -25px;
+    width: 50px; height: 30px; 
+    background-color: #777;}
+
+
+
+
+.view_area {
+  position: relative; z-index: 30;
+  width: 100%; height: 100%; background-color: #ddd;
+}
+/* view_area에 컬러를 띄워도  */
+  .view_area div {
+    position: absolute; top: 0; left: 0;
+    width: 100%; height: 100%; }
+  
+  .adVer_01 { z-index: 5;background-color: #9AD16D;}
+  .adVer_02 { z-index: 4;background-color: #F79B16;}
+  .adVer_03 { z-index: 3;background-color: #F8F4F3;}
+  .adVer_04 { z-index: 2;background-color: #347;}
+  .adVer_05 { z-index: 1;background-color: #aaa;}
+
+/* ad는 1~5까지 순서대로 진행되어야 하기때문에
+z-index값을 역순(값)으로 정해준다 */
+
+
+
+
+/* #viewBox {
+  margin: auto; margin-top: -50px;
+  width: 960px; height: 400px;
+  background-color: #fa0;}
+
+  .view_img {
+    position: static;
+    margin-left: 80px;
+    width: 800px; height: 400px;
+    background-color: #caa;}
+
+  .navi_group {
+    position: relative;
+    top: -10%; right: -55%;
+    width: 310px; height: 30px;
+    box-sizing: border-box;
+    background-color: #aaa;
+    }
+
+  .next {
+    float: right;
+    margin-right: 0px;
+    width: 50px; height: 30px;
+    background-color: #0cf;}
+
+
+
+  .previous {
+    float: right;
+    margin-right: 20px;
+    width: 80px; height: 30px;
+    background-color: #0cf;
+}
+
+  .plusLink {float: right;
+   margin-right: 30px;
+   width: 50px; height: 30px;
+   background-color: #0cf;}
+
+  .stop {float: right;
+   margin-right: 30px;
+   width: 50px; height: 30px;
+   background-color: #0cf;} */
+
+
+
+
+
+#sideBox{ display: none;
+  position: relative;
+  width: 500px; height: 150px; background-color: #fa0;
+  margin-left: 50%; margin-top: 200px;
+}
+
+.sample_fixed { display: none;
+  position: absolute; top: 0; left: 0; right: 0; margin: auto;
+  /* left/right를 써주지 않는다면 이 상황에서의 margin: auto;는
+  위치값이 없으므로 자기 멋대로 위치될 수 있으므로 반드시 top과 left/right
+  값을 주어야 한다 
+  */
+  width: 300px; height: 100px; background-color: #aaa;}
+
+  /* =========================================== */
+
+  .modal_window { display: none;
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%; background-color: rgba(51,51,51,0.3);}
+  
+  .modal_message {
+    position: absolute;
+    /* top: 0; bottom:0; left: 0; right: 0; margin: auto; */
+    /* top: calc(50%-125px); left: calc(50%-250px); */
+    /* bottom: 50%; right: 50%; margin-bottom: -125px;
+    margin-right: -250px; */
+    /* top: 50%; left: 50%;는 상대적으로
+    모니터 정 가운데의 0을 기준으로 50%씩 이라는 개념 */
+
+    /*
+    **** transform은 자신의 크기를 기준으로 %값을 가진다
+    top/bottom+left/right 부모 기준의 % */
+
+
+    /* top:50%; left: 50%; transform: translate(-50%,-50%); */
+    /* 아래에 있는 width 사이즈 값에 의해서
+    위의 top/bottom, left/right */
+    right:50%; bottom:50%;
+
+    width: 500px; height: 250px; background-color: #fff;
+    padding: 20px; box-sizing: border-box;
+    border-radius: 10px; box-shadow: 0 0 10px rgba(51,51,51,0.7);}
+    /* border-radius 박스 테두리의 각도 */
+
+    /*
+    left: 50% 일때는 모니터 상의 왼쪽 상단인 0을 기준으로
+    50% 떨어진 곳에 배치하라는 뜻임
+    */
+
+    .side {
+      position: fixed;
+      top: 50%; left: 50%; margin-left: 500px;
+      width: 150px; height: 400px;
+      background-color: #0cf;}
