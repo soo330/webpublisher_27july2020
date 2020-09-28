@@ -1,0 +1,24 @@
+@charset "utf-8";
+/* layout_02_result-07_footBox.css */
+
+/* footBox ==================*/
+#footBox{ margin-bottom: 500px;
+  height: auto; padding: 25px 0;
+  background-color: #aaa;}
+
+  .foot_outer {
+    width: 1300px; height: 140px;
+    margin: auto; 
+    background-color: var(--step2-color);}
+    
+    .foot li:first-child {
+      float: left;
+      width: 750px; height: 140px;
+      background-color: #fc7;}
+
+    .foot li:last-child {
+      float: right;
+      margin-top: 32px;
+      width: 280px; height: 76px;
+      background-color: #fc7;
+    }

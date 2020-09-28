@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* layout_02_result-06_miniAdBox.css */
+
+/* miniAdBox ==================*/
+#miniAdBox{
+  height: auto;
+  margin-bottom: 80px; padding: 40px 0;
+  background-color: #bbb;}
+
+  .mini_ad_outer {
+    width: 1500px; height: 300px; margin: auto;
+    background-color: var(--step2-color);}
+
+  .mini_ad ul {width: 1450px; height: 300px;}
+  .mini_ad li { float: left;
+    height: 300px; margin-right: 25px;
+  }
+
+  .mini_ad li:first-child {
+    width: 750px;
+    background-color: #fc7;}
+  .mini_ad li:nth-child(2) {
+    float: left;
+    width: 350px;
+    background-color: #fc7;
+  }
+  .mini_ad li:last-child {
+    float: left;
+    width: 350px;
+    margin-right: 0;
+    background-color: #fc7;}

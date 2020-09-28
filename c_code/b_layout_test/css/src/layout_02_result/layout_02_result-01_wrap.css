@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* layout_02_result-01_wrap.css */
+#wrap {
+  width: 100%; height: auto;  min-height: 500px; margin: auto;}
+
+
+#wrap>div {width: 100%;}
+
+/* ctrl+enter 아래쪽에 줄바꿈
+ctrl+shift+enter 윗쪽 줄바꿈
+*/

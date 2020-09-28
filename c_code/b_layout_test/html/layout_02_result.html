@@ -1,15 +1,31 @@
 <!DOCTYPE html>
-<!-- Sep.23_ layout_03. layout.html -->
+<!-- Sep.23_ layout_02 result.html -->
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/base/variable.css">
+
   <link rel="stylesheet" href="../css/src/layout_02_result.css">
+<!--
+  <link rel="stylesheet" href="../css/src/layout_02_result/layout_02_result-01_wrap.css">
+  <link rel="stylesheet" href="../css/src/layout_02_result/layout_02_result-02_headBox.css">
+  <link rel="stylesheet" href="../css/src/layout_02_result/layout_02_result-03_adViewBox.css">
+  <link rel="stylesheet" href="../css/src/layout_02_result/layout_02_result-04_localNavBox.css">
+  <link rel="stylesheet" href="../css/src/layout_02_result/layout_02_result-05_content_area.css">
+  <link rel="stylesheet" href="../css/src/layout_02_result/layout_02_result-06_miniAdBox.css">
+  <link rel="stylesheet" href="../css/src/layout_02_result/layout_02_result-07_footBox.css">
+-->
+
   <!--[if IE]>
     <script src="../ie/modernizr-custom.js"></script>
   <![endif]-->
   <title>layout_02_result</title>
   <link rel="shortcut icon" href="../../a_basic/img/icon_01.png", type="image/png">
-  <link rel="apple-touch-icon" href="../../a_basic/img/icon_01.png">
+  <link rel="apple-touch-icon" href="../../a_basic/img/icon_01.png", type="image/png">
+  
   <!--[if IE]>
     
    <link rel="shortcut icon" href="../../a_basic/img/icon_01.png./", type="image/png">
@@ -39,27 +55,63 @@ html상에서 어느쪽에 시선이 순차적으로 이동하는지 고민하�
   
   <div id="adViewBox">
     <!-- 광고 영역 -->
-    <div class="view_outer">
-      광고내용
+    <div class="view_btn">
+      <button type="button" class="next_view">
+        <i class="fas fa-chevron-right"></i>
+          <span class="hidden_context">next</span></button>
+      
+       <button type="button" class="prev_view">
+        <i class="fas fa-chevron-left"></i>
+          <span class="hidden_context">previous</span></button>
     </div>
+    
     <div class="view_indicator">
       <!-- 광고 "순서" 확인 -->
       <ol class="clearfix">
-        <li>ad_indi_01</li>
-        <li>ad_indi_02</li>
-        <li>ad_indi_03</li>
-        <li>ad_indi_04</li>
-        <li>ad_indi_05</li>
-        <li>ad_indi_06</li>
+        <li><a href="#" class="action">
+          <span class="hidden_context">
+            ad_indi_01</span></a></li>
+        <li><a href="#"><span class="hidden_context">ad_indi_02
+        </span></a></li>
+        <li><a href="#"><span class="hidden_context">ad_indi_03
+        </span></a></li>
+        <li><a href="#"><span class="hidden_context">ad_indi_04
+        </span></a></li>
+        <li><a href="#"><span class="hidden_context">ad_indi_05
+        </span></a></li>
+        <li><a href="#"><span class="hidden_context">ad_indi_06
+        </span></a></li>
         <!-- <::after /> -->
         <p class="clear"></p>
       </ol>
+    </div>
+
+    <div class="view_outer">
+      <!-- 광고내용 -->
+      <div class="view_area"> <!-- 광고 영역을 한번더 감싸서 position을 사용한다 * -->
+        <div class="view_01">광고 01</div>
+        <div class="view_02">광고 02</div>
+        <div class="view_03">광고 03</div>
+        <div class="view_04">광고 04</div>
+        <div class="view_05">광고 05</div>
+        <div class="view_06">광고 06</div>
+      </div>
     </div>
   </div>
   <!-- // adViewBox================== -->
 
 
   <div id="localNavBox">
+    <div class="localNav_btn">
+      <button type="button" class="next_local">
+        <i class="fas fa-chevron-right"></i>
+          <span class="hidden_context">next</span></button>
+      
+      <button type="button" class="prev_local">
+        <i class="fas fa-chevron-left"></i>
+          <span class="hidden_context">previous</span></button>
+  </div>
+  
     <!-- localNavigation -->
     <div class="local_nav_outer">
        <ul class="clearfix">

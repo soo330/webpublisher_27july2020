@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* layout_02_result-02_headBox.css */
+
+#headBox { position: relative;
+  height:150px; padding: 34px 50px 0;
+  box-sizing: border-box;
+  background-color: #ddd;}
+  
+  .main_heading {
+    float:left; width: 250px; height: 80px;
+    margin-right: 75px;
+    background-color: var(--step2-color);}
+  
+  
+  .navigation {/* float:left; */
+    position: absolute;
+    /* left:0; right: 0; margin: auto; */
+    /* left: 50%; margin-left: -425px; */
+    left: 50%; transform: translate(-50%);
+    top: 34px;
+
+    /* 부모의 패딩값이 먹지 않으므로 따로 부모의 정확한 값을 써서 위에서 끌어내려줘야한다 */
+    width: 850px; height:80px; background-color: var(--step2-color);}
+    
+  .navigation> ul {width: 100%; height: auto;}
+  
+  /* .navigation>ul:after
+  .navigation>ul::after {
+    content: " "; display: block; clear: both;} */
+    
+  .navigation li {
+    float: left; width: 150px; height: 70px;
+    margin: 5px 10px;
+    background-color: #fc7;}
+   .member {
+   float:right; width: 250px; height: 80px;
+   background-color: var(--step2-color);}
