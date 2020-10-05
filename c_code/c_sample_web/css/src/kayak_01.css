@@ -1,0 +1,143 @@
+@charset "uft-8";
+/* kayak_01.css */
+
+/* reset. css */
+
+html, body {margin: 0; padding: 0; font-family: sans-serif;}
+h1,h2,h3,h4,h5,h6,
+p,pre,div,ul,ol,li,dl,dt,dd,img,
+table,tr,th,td {margin: 0; padding: 0; border: 0; outline: 0;}
+
+ul, ol, li {list-style: none;}
+a {text-decoration: none; color: inherit;}
+button {
+  margin:0; padding:0; border: 0; background-color: transparent; cursor: pointer;}
+table, thead,tbody,tfoot,
+tr,th,td {
+  border: 1px solid #777; border-spacing: 0;
+  border-collapse: collapse;}
+caption {
+  width: 0; height: 0; overflow: hidden; position: absolute;
+  z-index: -1;}
+hr {margin: 0; padding: 0; border-bottom: 1px solid #333;}
+
+/* common.css */
+.clearfix:after,
+.clearfix::after {
+  content: " "; display: block; clear: both;}
+
+.hide {display: block; width: 0; height: 0; position: relative; z-index: -1; overflow: hidden;}
+
+/* varicable.css  */
+:root { 
+  --white: #fff;
+  
+  --logobg: #fa5f13;
+  --logohover: #cc4500;
+  
+  --click: #0b7b99;
+  --clickhover: #0a6078;
+
+  --text: #333f48;
+  --textactive: #dde5eb;}
+
+/* design. css */
+
+#wrap {width: 1600px; height:auto; min-height: 3500px; margin: auto;}
+/* wrap */
+
+#headBox {width: 1260px; height: 112px; margin: auto; 
+  text-align: center; line-height: 50px;
+  background-color: #fff;}
+
+#gnbBox {width: 1000px; height: 112px; margin-left: 260px;}
+
+.logo { float: left; width: 260px; height: 112px; background-color: #fa5f13;}
+
+.gbnGroup {float: left; width: 650px; height: 85px;}
+
+  .gbn>li {
+    float: left;
+    margin-top: 32px; margin-left: 16px;
+    text-align: center; font-size: 1rem;
+    width: 112px; height: 58; background-color: #b2b2b2;}
+
+  .gbn>li:first-child {
+    margin-left: 8px; margin-bottom: 0;
+    height: 80px; font-size: 1.5rem; line-height: 80px;
+    color: #fff; background-color: #434343;}
+
+  .gbn>li:nth-child(4) {width: 128px;}
+
+.loginOptions {float: right; width: 350px; height: 50px;}
+
+  .login>li {float:left;
+    margin-top: 32px; margin-left: 12px;
+    width: 75px; height: 50px; background-color: #ddd;}
+
+
+
+
+
+/* viewBox ================================================ */
+#viewbox {width: 100%; height: 2774px; margin: auto;}
+
+#search {
+  position: relative;
+  width: 1260px; height: 264px;
+  margin: auto; font-size: 1.5rem;
+  color: #fff;
+  background-image: url("../../img/airplane.jpg");
+  background-repeat: no-repeat;
+  background-position: 90% 40%;
+  background-size: cover;}
+#search>h3 {font-size: 2.3rem; text-indent: 280px;}
+
+.search_specific {
+  position: absolute; top: 80px; left: 160px;
+  width: 1002px; height: 150px; border: 1px solid #fff;}
+
+.personal {width: 580px; height: 44px;}
+
+.personal ul {
+  float: left; margin: 0 16px;
+  text-align: center; line-height: 40px;
+  width: 160px; height: 42px; overflow: hidden;
+  text-align: center; background-color: #777;}
+
+.place_date {width: 580px; height: 95px;}
+
+.search_place>div {
+  float:left; margin-top: 5px; margin-left: 20px;
+  width: 220px; height: 95px;
+  text-indent: 32px; line-height: 85px;
+  background-color: #bbb;}
+
+.search_place>div:nth-child(2) {width: 60px; height: 90px;}
+
+.search_date>div {
+  float: left; width: 220px; height: 95px;
+  margin: 5px 10px 0;
+  background-color: #bbb;}
+
+
+#covid19 {
+  width: 1100px; height: 384px;
+  margin: auto;
+  background-color: var(--text);}
+
+#top3 {width: 940px; height: 320px; background-color: #3aa3e9;}
+
+#subsc {width: 940px; height: 220px; background-color: #fa5f13;}
+
+#pop {width: 940px; height: 560px; background-color: #aaa;}
+
+#download {width: 880px; height: 160px; background-color: #999;}
+
+#reckon {width: 980px; height: 420px; background-color: #555;}
+
+#q_n_a {width: 940px; height: 446px; background-color: #888;}
+
+/* viewBox ================================================ */
+
+#footBox {width: 1260px; height: 572px; background-color: #212a30;}
