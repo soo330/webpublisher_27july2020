@@ -1,0 +1,172 @@
+@charset "utf-8";
+/* 1005 background_01 .css */
+
+/* reset.css */
+html, body {width:100%; height:100%; margin: 0; padding:0; }
+h1, h2, h3, h4, h5, h6, p, div {margin: 0; padding: 0;}
+ul, ol, li, dt, dd {margin: 0; padding: 0; list-style: none;}
+hr {width: 100%; height: 0; border-bottom: 2px solid #333;}
+
+/* common.css */
+.clearfix:after,
+.clearfix::after {
+  content: " "; display: block; clear: both;}
+
+ .hidden_context {display: block; width: 0; height: 0; position: relative; z-index: -1; overflow: hidden;}
+
+ /* varicable.css  */
+:root { --step2-color:#a9ddeb;}
+
+/* design.css */
+
+#wrap {
+  width: 960px; height: auto; margin: auto;
+  margin-bottom: 1000px;
+  background-color: #dfdfdf;}
+h1 {padding: 10px; background-color: #0ac; color: #fff; text-indent: 20px;}
+/* text-indent 들여쓰기 */
+
+h2 {width:100%; height: 25px;
+  font-size:20px; color: #171717; 
+  line-height: 25px;
+  background-color: #ccc;}
+
+.part {width: 100%; height: 500px; border-bottom: 2px solid #333;}
+h3 {width: 100%; height: 15px; font-size: 12px; margin: 0;background-color: #ccf;}
+
+.inner {width: 95%; height: 470px; margin: auto; border: 1px solid #333;}
+
+/* =========================== */
+
+.image .inner {font-size: 3rem; color: #fff;
+  text-shadow: 2px #333;
+  background-image:url("../../img/background_ex/pizza.png");}
+
+/* {background-image:url("___주소__")} 의 형태로 적어주는게 가장 안전함
+
+***img요소와 background-image 차이점
+1. background-image는 반복요소의 기능을 가진다
+2. 내부 요소와 배경이미지는 중첩사용 가능
+3. background-image는 이미지를 불러올경우
+  url()함수를 사용
+4. url() 내부에는 css 문서상의 상대경로로
+  이미지를 불러오며 "" 내부에 작성 권장 (절대경로도 가능하지만 상대경로 권장)
+5. background-image 사용시 이미지는 반복 처리되므로 이는 수정가능
+  background-repeat: repeat | repeat-x | repeat-y | no-repeat;
+6. background-position: 이미지의 위치를 설정하는 기능
+7. top, right, bottom, left, center 등의 속성을 사용가능하나
+권장하지 않는다 가급적 정확한 수치를 기재
+8. 0, 100%, 50% 등의 %수치값으로 7번 위치(위아래좌우)에 대한 설명을 대체 가능
+
+즉 background-position에서는 %좌표의 경우
+배경요소의 크기비율과, 이미지 속성의 크기 비율을 조합하여 배치한다
+
+9. % 이외의 수치를 가지고있는 좌표의 경우는
+이미지 속성의 왼쪽 상단을 기준으로 좌표값을 가진다
+
+10. background-size :이미지의 크기값 설정하는 기능
+{:가로x 세로y;}비율을 설정한다
+background-side: auto | cover(공백 제거하여 이미지 꽉차게) | contain (이미지 전부 보이기)
+| 가로값 세로값;
+
+11. :hover; :focus; :active; 등의 기능 사용 시 전후의 값 비교 가능하도록 처리해야 자연스럽게 처리
+
+12. background-clip: 배경이미지의 범위를 지정하는것
+
+background-clip:
+content-box | padding-box | border-box | text
+가 있으나 text는 아직까지 ie와 구 브라우저등에 지원되지 않음으로 사용지양
+
+background-clip: content-box 선, 패딩을 제외한
+background-clip: padding-box padding까지
+background-clip: border-box
+
+vender prefix란 외 prefix라고 통칭
+아직 지원하지 않는 css기능을 브라우저에 임시로 내장하여 강제로 쓸 수 있도록 처리하는 것으로
+속성 앞에 벤더 (  -브라우저명-  )형태로 해당
+지원 브라우저 타입을 따로 정의하여 사용한다
+
+background-image:는
+ex)
+background-image:-webkit-liner-gradient(#aaa, #a77); 의 형태로 사용
+-webkit-이 속성의 형태로 들어간다
+
+작성 요령은 -webkit-, -moz-, -ms-, -o- 벤더가 없는 형태 순으로 작업
+표준으로 권고되면 vender prefix 형태는 삭제해야한다
+
+ex)
+-webkit-box-sizing: border-box;
+-moz-box-sizing:    border-box;
+-ms-box-sizing:     border-box;
+-o-box-sizing:      border-box;
+
+13. background-attachment: 배경이미지를 스크롤에 따라 고정 or 스크롤 처리에 대한 설정
+
+background-attachment:
+scroll (기본, 스코롤해도 안움직임 이미지가 움직임) |
+fixed (스크롤하면 보임 이미지가 브라우저에 붙어서 요소를 따라가지않고 고정 프레임만 움직임 **많이 안씀)
+
+*/
+
+.repeat .inner {
+  background-image: url("../../img/background_ex/mario.jpg");
+  background-repeat: no-repeat;
+}
+
+/* background-repeat: reapeat-방향;
+반복할 방향을 제시할 수 있다
+*반복을 원하지 않는다면 :no-repeat;으로 사용가능
+*/
+
+.position .inner {
+  background-image: url("../../img/background_ex/eyes.png");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;}
+
+.size .inner {
+  background-image: url("../../img/background_ex/rave2.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 100% auto;
+  transition: all 500ms ease;}
+
+.size .inner:hover {background-size: 200% auto;}
+/* background-size: cover와 contain은 변형이 어렵다 */
+
+.clip .inner {
+  background-image: url("../../img/background_ex/poodle.jpg");
+  background-repeat: repeat;
+  background-position: 50% 50%;
+  background-size: 120% auto;
+  padding: 40px;
+  border: 50px dotted #fa0;
+  box-sizing: border-box;
+  font-size: 5rem; font-weight: 900;
+  overflow: hidden;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -ms-background-clip: text;
+  -o-background-clip: text;
+}
+
+/* background-clip 최근에 나온 기능으로
+ie나 구 브라우저는 사용이 불가할 수 있다
+-webkit-background-clip: text; (포토샵의 cliping mask 같은 기능)
+
+-moz-background-clip: text;
+-ms-background-clip: text;
+-o-background-clip: text;
+"-브라우저명-" 같은 옵션 vendor prefix라고 부른다
+*/
+
+.attachment .inner {
+  background-image: url("../../img/background_ex/no.jpg");
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 200% auto;
+  font-size: 3rem; color: #fff; text-indent: 20px;
+  background-attachment: fixed;
+
+}
