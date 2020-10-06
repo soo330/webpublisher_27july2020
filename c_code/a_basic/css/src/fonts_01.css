@@ -1,0 +1,57 @@
+@charset "UTF-8";
+ /* fonts_01.css  */
+
+.part {width: 800px; height: auto; padding: 15px; padding-left: 30px;
+ background-color: #fcd;}
+
+h3 {width: 300px; height: 50px;
+  line-height: 50px; text-align: center;
+  background-color: #fff;}
+
+ul {width: 100%; height: auto;}
+
+.fonts_01 ul li {list-style: decimal;}
+.fonts_01 li:nth-child(1) {font-style: italic;}
+.fonts_01 li:nth-child(2) {font-weight: 900;}
+.fonts_01 li:nth-child(3) {font-size: 16;}
+.fonts_01 li:nth-child(4) {background-color: #ff0; line-height: 300%;}
+.fonts_01 li:nth-child(5) {font-family: 'malgumGothic', dotum, '돋움', sans-serif;}
+.fonts_01 li:nth-child(6) {font-family: sans-serif;}
+.fonts_01 li:nth-child(7) {font-family: 'Sansita Swashed','Black Han Sans';}
+
+.fonts_01 li:nth-child(7) span:nth-of-type(1){font-weight: 300; color: var(--c-white);}
+.fonts_01 li:nth-child(7) span:nth-of-type(2){font-weight: 400; color: var(--c-primary);}
+.fonts_01 li:nth-child(7) span:nth-of-type(3){font-weight: 400; color: var(--c-point);}
+
+.fonts_01 li:nth-child(8) {
+  text-indent: 200px;}
+
+/* fonts
+1. font-style 기울기를 설정하는 것으로
+   normal | italic | oblic
+2. font-weight 굵기를 설정하는 것으로
+   normal (400) | light (300) | bold (600)
+   border (800) | black (900)
+   실제로는 normal, bold정도만 가지며
+   서체 디자인이 굵기를 가지고 있는 상태여야만 쓸 수 있다
+3. font-size 서체의 크기를 의미 (%, px, vw, vh ...)
+
+4. line-height 줄간격을 의미, 첫줄부터 적용되며
+ 해당 높이값의 가운데 배치된다
+
+5. font-family 서체의 종류를 입력하여
+  띄어쓰기 특수문자는 "" 감싸서 처리하며
+  우선 순위의 서체를 먼저 작성
+6. font-family 서체의 종류를 선택하는 기능일때,
+  우선순위를 명확하게 지정해야한다
+7. font-face를 이용하여 사용하는 webFont는
+  내 컴퓨터에 저장되어있는 서체 대신,
+  별도의 관리하는 공간에서 쓰도록 처리된 기술
+  
+  ** 
+  fonts.google.com이나 https://noonnu.cc/ 같은곳에서 사용가능하며
+  ie나 구 브라우저들은 <link>태그를 사용하는것이 좋다
+
+8. text-indent 첫줄 들여쓰기로 -값을 사용하면 왼쪽으로 이동한다
+
+   */
