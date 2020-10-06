@@ -1,6 +1,25 @@
 @charset "UTF-8";
  /* fonts_01.css  */
 
+ /* @font-face 서체정의 */
+
+ @font-face {
+   font-family: 'hfb';
+   src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/HeirofLightRegular.woff')
+   format('woff'); font-weight: normal; font-style: normal; }
+
+/* 웹에서 이해가능한 서체 확장자
+
+1. eot - IE 하위 버전용
+2. woff -ie 외 대부분 브라우저 적용가능
+3. woff2- ...
+
+ @font-face 영역은 사용할 서체에 관해 직접 내용을 설정/정의 하는 곳
+
+ font-family의 서체명과 font-weight나 font-style을 직접 설정할 수 있다.
+ (ex) malgumGothic-> 'mgG';)
+*/
+
 .part {width: 800px; height: auto; padding: 15px; padding-left: 30px;
  background-color: #fcd;}
 
@@ -24,8 +43,16 @@ ul {width: 100%; height: auto;}
 .fonts_01 li:nth-child(7) span:nth-of-type(3){font-weight: 400; color: var(--c-point);}
 
 .fonts_01 li:nth-child(8) {
+  font-family: hfb, sans-serif;
   text-indent: 200px;}
 
+.fonts_01 li:nth-child(9){letter-spacing: 1rem;}
+.fonts_01 li:nth-child(9)::first-letter {font-family: hfb; color: #f06; font-size: 2rem;}
+
+.fonts_01 li:nth-child(10){
+  word-spacing: 10px; font-style: normal;}
+.fonts_01 li:nth-child(10)::first-line{color: #fff; text-shadow: 0 0 5px var(--c-primary);}
+/* ::first-line은 반드시 ::두개로 시작해야한다 */
 /* fonts
 1. font-style 기울기를 설정하는 것으로
    normal | italic | oblic
@@ -35,6 +62,9 @@ ul {width: 100%; height: auto;}
    실제로는 normal, bold정도만 가지며
    서체 디자인이 굵기를 가지고 있는 상태여야만 쓸 수 있다
 3. font-size 서체의 크기를 의미 (%, px, vw, vh ...)
+
+-vw (vertical width)
+-vh (vertical height)
 
 4. line-height 줄간격을 의미, 첫줄부터 적용되며
  해당 높이값의 가운데 배치된다
@@ -53,5 +83,9 @@ ul {width: 100%; height: auto;}
   ie나 구 브라우저들은 <link>태그를 사용하는것이 좋다
 
 8. text-indent 첫줄 들여쓰기로 -값을 사용하면 왼쪽으로 이동한다
+9. letter-spacing 기본은 0 간격을 줄일 때는 -값을 주고
+  넓게할 경우 +값을 주면 된다
+10. word-spacing 기본은 0 간격을 줄일 때는 -값을 주고
+  넓게할 경우 +값을 주면 된다
 
-   */
+*/
