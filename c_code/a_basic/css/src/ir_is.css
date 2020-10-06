@@ -20,11 +20,11 @@ h2 {margin-bottom: 1rem;}
 .part ul {
   width: 100%; height: auto;
   margin: 0; padding: 0; list-style: none;}
-.part ul li {
+.part .ir li {
   margin-bottom: 1rem;
   width: 100px; height: 100px;}
 
-.part a {
+.ir a {
   display: block; width: 100%; height: 100%;
   border-radius: 100%; background-color: #fff;}
 /* ========================================== */
@@ -81,3 +81,62 @@ span {display:none;}은,
 */
 
 /* .hidden_text {position: relative; z-index: -1;} */
+
+/* =====================================----================= */
+.clearfix:after,
+.clearfix::after {content: ""; display: block; clear: both;}
+
+.is {width: 100%; height: auto; padding: 10px; box-sizing: border-box; background-color: #fcc;}
+
+
+.is li {float: left; margin: 5px;
+  width: 102px; height: 107px;
+  background-color: #fc5;}
+
+.is a {display: block; width: 100%; height: 100%;}
+.is button {
+  display: block; width: 100%; height: 100%;
+  cursor: pointer; border: 0;
+  background-color: transparent;}
+
+.is li:nth-child(n+1):nth-child(-n+5),
+.is li>a,
+.is li>button
+{background-image: url("../../img/background_ex/msicons.png");
+  background-repeat: no-repeat;
+  background-image: auto;}
+
+.is li:nth-child(1){background-position: 0 0;}
+.is li:nth-child(2){background-position: -247px 0;}
+.is li:nth-child(3){background-position: 0 -122px;}
+.is li:nth-child(4){background-position: -247px -244px;}
+.is li:nth-child(5){background-position: -494px -244px;}
+
+.is li:nth-child(6) a{background-position: -494px -122px;}
+.is li:nth-child(7) a{background-position: -494px -366px;}
+.is li:nth-child(8) a{background-position: -741px -488px;}
+
+.is li:nth-child(9) button {background-position: -987px -488px;}
+.is li:nth-child(10) button { background-position: -1234px -488px;}
+
+
+.hidden_wrap a {display: block; width: 100%; height: 100%;}
+.hidden_wrap a>span{display: block; width: 0; height: 0; overflow: hidden;}
+
+
+.is2 li {
+  float: left; margin: 10px;  width: 78px; height: 77px; background-color: #fc5;}
+.is2 li>a {
+  background-image: url("../../img/background_ex/ikonate_nor.jpg");
+  background-repeat: no-repeat;
+  background-size: auto;
+  border-radius: 10px;
+  background-color: #77f;}
+
+.is2 li:nth-child(1) >a{background-position: -266px -11px;}
+.is2 li:nth-child(2) >a{background-position: -475px -11px;}
+.is2 li:nth-child(3) >a{background-position: -684px -11px;}
+.is2 li:nth-child(4) >a{background-position: -371px -325px;}
+.is2 li:nth-child(5) >a{background-position: -686px -324px;}
+.is2 li:nth-child(6) >a{background-position: -686px -430px;}
+.is2 li:nth-child(7) >a{background-position: -686px -638px;}
