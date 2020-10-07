@@ -94,3 +94,57 @@ $ git pull
 git 컴퓨터 내 저장소 안에 꼭 추가로 파일을 만들어 데이터를 만든다. (아니면 .git 폴더안에서 계속 업데이트 됨)
 
 
+
+
+
+---
+
+---
+
+
+
+삭제할 떄도 마찬가지이다
+
+컴퓨터에 있는 파일을 삭제하고 github에서도 삭제를 원한다면
+
+
+
+컴퓨터 저장소에 있는 해당 파일을 삭제 후,
+
+gitbash로 `$git add 삭제된 파일명`을 적어서
+
+-> 이것은 삭제해서 없어진 파일을 동기화 한다는 개념이다
+
+
+
+so,
+
+ex>
+
+$git add index.html
+
+-> deleted
+
+여기서 또한 git commit으로 설명도 추가가 가능하다
+
+예를들어 $git commit -m "삭제된파일"로 추가설명을 더한 뒤
+
+
+
+git status로 상태를 확인하면
+
+```bash
+$ git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    index.html
+```
+
+이런 내용으로써 해당파일은 삭제 되어진 것을 확인 할 수 있다
+
+
+
+git push로 내보내기 하면 github 저장소의 내용도 사라지게 된다.
