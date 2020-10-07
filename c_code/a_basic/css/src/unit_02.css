@@ -1,0 +1,31 @@
+@charset "utf-8";
+/* unit_02.css */
+
+#wrap {
+  position: fixed;
+  top: 0; bottom: 0; left: 0; right: 0;
+  margin: auto;
+  width: 600px; height: 1000px; background-color: #ccc;}
+
+.vw {
+  position: absolute;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 50vw; height: 30vw;
+  /* 높이값에도 단위를 vw를 적용할 수 있다 */
+  margin: auto; background-color: #fa0;}
+
+.vh {
+  position: absolute;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 50vh; height: 20vh; background-color: #7af;}
+  /* 가로값에도 단위를 vh로 적용 가능 */
+
+.ch {
+  position: absolute;
+  left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 10ch; height: 5ch; background-color: #afa;
+  font-size: 5rem; font-weight: 900;
+  font-family: monospace;
+}
+
+/* ie 구 브라우저는 사용 불가하다 */
