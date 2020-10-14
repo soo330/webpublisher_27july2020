@@ -16,7 +16,6 @@
 
 # .gitignore안에 무시하고 싶은 파일의 경로를 모두 찾아써라
 
-b_design/
 c_code/a_basic/.vscode/**
 c_code/a_basic/css/src/fonts_02.css
 c_code/a_basic/fonts/
@@ -24,4 +23,7 @@ c_code/a_basic/html/fonts_02.html
 c_code/a_basic/img/background_ex/
 c_code/b_layout_test/fonts/
 c_code/b_layout_test/ie/
-# c_code/d_javascript/
+
+c_code/c_sample_web/img_kayak/
+c_code/c_sample_web/img_kayak/**/.DS_Store
+**/.DS_Store
