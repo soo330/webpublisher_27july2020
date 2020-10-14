@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<!-- 1014 form_02.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/src/form_02.css">
+  <title>Document</title>
+   <link rel="shortcut icon" href="../img/icon_01.png" type="image/png">
+   <link rel="apple-touch-icon" href="../img/incon_01.png">
+</head>
+<body>
+<!-- latout -->
+  <div id="wrap">
+    <h1><a href="./contents.html">웹기초</a></h1>
+    <hr />
+    <div class="form_area">
+      <form action="#" method="POST">
+      <!-- fieldset*7>legend{$$.} -->
+      <fieldset>
+        <legend>01. 입력의 기본형</legend>
+        <ul>
+          <li>
+            <label for="userId">ID 입력</label>
+            <input type="text" name="" id="userId" value=""
+                  maxlength="7" placeholder="ID" value="" required="required"/>
+          </li>
+
+          <li>
+            <label for="userPw">비밀번호</label>
+            <input type="password" name="userPw" id="userPw"
+                  placeholder="비밀번호" maxlength="12" value="" required />
+            <!-- placehoder에 보여지기 위한값을 써준다 -->
+          </li>
+
+          <li>
+            <label for="searchBar"><span>검색할 내용을 입력하세요</span></label>
+            <input type="search" name="searchBar" id="searchBar" value=""
+            placeholder="검색">
+          </li>
+
+          <li>
+            <label for="inputTel">사용자의 연락처를 입력하세요</label>
+            <input type="tel" name="inputTel" id="inputTel" value=""
+            placeholder="연락처">
+          </li>
+
+          <li>
+            <label for="userMail">이메일주소를 입력하세요</label>
+            <input type="email" name="userMail" id="userMail" value=""
+            placeholder="이메일">
+          </li>
+
+          <li>
+            <label for="linkPage">web페이지 주소를 입력하세요</label>
+            <input type="number" name="linkPage" id="linkPage" value=""
+            placeholder="웹주소">
+          </li>
+
+          <li>
+            <label for="countNum">구입할 수량을 입력하세요</label>
+            <input type="number" name="countNum" id="countNum" value=""
+            placeholder="수량" min="0" max="20" step="2">
+          </li>
+
+        </ul>
+      </fieldset>
+
+      <fieldset>
+        <legend>02. 입력의 기본형 2- 구형 브라우저에서 제한</legend>
+        <ul>
+          <li>
+            <label for="date">날짜선택</label>
+            <input type="date" name="date" id="date" value="" />
+          </li>
+          
+          <li></li>
+          <li></li>
+          <li></li>
+        </ul>
+      </fieldset>
+      
+      <fieldset>
+        <legend>03. 체크</legend>
+      </fieldset>
+
+      <fieldset>
+        <legend>04. 약간의 제한이 있는 크기</legend>
+      </fieldset>
+
+      <fieldset>
+        <legend>05. 버튼의 기능 </legend>
+      </fieldset>
+
+      <fieldset>
+        <legend>06. 멀티기능을가진 형태 및 기타</legend>
+        <button type="submit">확인 및 전송</button>
+      </fieldset>
+
+      <fieldset>
+        <legend>07. datalist</legend>
+      </fieldset>
+    </form>
+  </div>
+  </div>
+<!-- script-->
+  <script></script>
+
+</body>
+</html>

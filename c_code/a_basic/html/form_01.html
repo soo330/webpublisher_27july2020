@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<!-- 1014 form_01.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/src/form_01.css">
+  <title>Document</title>
+   <link rel="shortcut icon" href="../img/icon_01.png" type="image/png">
+   <link rel="apple-touch-icon" href="../img/incon_01.png">
+</head>
+<body>
+<!-- latout -->
+  <div id="wrap">
+    <h1><a href="./contents.html">웹기초</a></h1>
+    <hr />
+    <h2>form 이해</h2>
+    <p>정보를 입력하여, 제출하기 위하여 제작되는 형태로서, 사용자와   서버간의 상호작용(interective)한다<br />
+    주로 로그인, 회원가입, 게시판, 검색창 등의 형태를 띔</p>
+    <div class="form_area">
+      <form action="#" method="post">
+        <fieldset>
+          <legend>fieldset의 제목을 담는 곳</legend>
+          <label for="testInput">ID</label>
+          <input type="text" name="testInput" id="testInput"  value="" placeholder="Enter your Email" />
+          <button type="submit">전송</button>
+        </fieldset>
+
+        <fieldset></fieldset>
+        <fieldset></fieldset>
+        <!-- ======================================== -->
+      </form>
+    </div>
+</body>
+</html>
+<!-- action: data를 제출하기 위해 작성되거나,
+            입력된 기능을 수행하기 위해 연결하는 파일/서버의 매개체
+     method: data의 처리방법을 미리 정의 하는 것
+     (보안유지용, 수정용, 공개용, 삭제용, 생성용)
+(post(보안처리, 회원가입, 주문), get(검색))
+ 
+
+<fieldset>은 아무것도 쓰지않아도 칸이 생김
+  <legend>는 보더박스에 제목이 담기는 형태로 보여짐
+
+    <input type="" name="" id="" value="" />
+    싱글태그이며 타입 네임 아이디 값 /> 총 5가지 조건을 충족행한다
+
+    input요소는 반드시 label 요소와 함께 사용해야한다 (단, input이 버튼 역할인 경우 제외)
+
+    input속성: type - input요소의 기능
+              name - 입력/ 선택된 값의 저장 변수
+              id - label의 속성인 for값과 연결
+                    (접근성으로 반드시 써야함)
+              value - 전송될 값
+              placeholder - 입력창이 되어있을경우 힌트를 보이게만드는 역할
+              requried- 필수 입력사항을 체크
+
+ input type= 1. 입력
+                text
+                password
+                ----------ie↑--
+                email
+                url
+                tel
+                search
+                number
+                ------------
+                date
+                datetime
+                week
+
+            2. 체크
+                checkbox -> name
+                radio (하나만 선택하는 것) -> name
+
+                color
+                range
+
+            3. 버튼
+                submit
+                reset (취소)
+                image(사실상 submit)
+                        -우편번호
+                        - 일중번호
+                button
+                file
+
+            4. 종합  및 기타
+                hidden(input 속성)
+
+                -------------------
+                <textarea></..>
+
+                <select> ...
+                  <option1></option>(여러개)
+                  <option2></option>(여러개)
+                </select>
+
+                <button>
+                --------------------
+                <datalist>
+
+
+-->
+  </div>
+</div>
+<!-- script-->
+  <script></script>
+
+</body>
+</html>

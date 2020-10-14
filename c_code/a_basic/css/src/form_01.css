@@ -1,0 +1,15 @@
+@charset "utf-8";
+/* 1014 form_01.css */
+
+#wrap{
+  width: 960px; height: auto; margin: auto; padding: 10px 0; background-color: #ddd;
+}
+
+.form_area {
+  width: 95%; height: auto; min-height: 300px;
+  margin: auto; background-color: #ccc;
+  box-shadow: 0 0 5px rgba(12,9,9,0.5);
+}
+
+form { width: 100%; height: auto; min-height: 400px;
+  padding: 30px; background: #fff;}
