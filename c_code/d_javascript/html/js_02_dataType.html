@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<!--  1014 js_02_dataType.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+<!-- latout -->
+  <script>
+    var a = 2020;
+    var b = '20a20';
+    var c = parseInt(b); //강제로 숫자 변환
+
+    // console.log(a +1);
+    // console.log(b +1);
+    // console.log(c +1);
+
+    // typeof(a) 여기서 a는 첫번째 변수이므로 숫자의 타입을 묻는 말이 된다.
+    // console.log(typeof(a),a);
+    // console.log(typeof(b),b);
+    // console.log(typeof(c),c);
+
+    var d = String(a);
+    var typeD = typeof(d);
+    console.log(typeD, d);
+
+    // parseInt()는 강제로 숫자로 변화하는 기능으로
+    // 숫자 처리가 가능한 부분만 변환을 한다
+    // 처음부터 숫자로 변환되지 않으면 값이 도출되지 않음
+    // 값을 도출 할 수 없느 숫자가 생성 (NaN)
+
+    // ===================================================
+    var t = !false;
+    // !는 not 반대(opposite) !false 는 true를 의미, 최대 3개까지 사용가능하며, !!은 원래형태인 false가 된다
+    console.log(typeof(t),t);
+
+    var n = 0;
+    console.log(!!n);
+
+    var nn = typeof(n) == 'number';
+    console.log(nn);
+    // js에서 0은 false를, 1은 true를 의미하기도 한다
+    // ==은 같다를 의미, 비교할때 사용하는 형태이다
+
+    // ====================================================
+
+    var myName;
+    // console.log(myName); //값이 정해진 것이 없으므로 미정의
+    // console.log(typeof(myname)); //형타입 자체가 undefined
+    
+    myName = 100;
+    // console.log(myName);
+    // console.log(typeof(myName));
+
+    myName = '문자로 변경하여 대체';
+    // console.log(myName);
+    // console.log(typeof(myName));
+
+    myName = null;
+    // console.log(myName);
+    // ====================================================
+
+    // 새로 아파트를 짓는 것 ( 완전한 신축) undefined
+    // 기존 아파트를 싹 뜯어고치는 것 : remodeling = null
+
+
+    // 따로 아무것도 지정해주지 않은 형태를 undefined라고 함
+    
+    //=====================================================
+    
+    var arr = ['포도','사과','키위'];
+    arr [3] = '딸기';
+    arr [0] = '바나나';
+    
+    // console.log(arr[3]);
+
+    // js에서 숫자는 0부터 시작하므로 0번째, 1번째, 2번째 순이다 키위는 2번째
+    // console.log(arr); 명령하면 arr이 모두 나옴
+
+    var arr2 = [
+                ['귤', '달래', '포도'],
+                ['오렌지','키위'],
+              1, 100, null, false, ['배고파!']
+              ];
+    console.log(arr2[0][2]);
+    // 위 콘솔처럼 값을 주면 큰 괄호부터 적용이 된다 그래서 ['귤', '달래', '포도'] 그룹이 잡힘
+
+    //======================================================
+
+    var obj = {
+                '귤':'주황색',
+                '키위':'녹색',
+                '포도':'보라색',
+                'my Color':'#f06',
+                'lunch':'13:20'
+    };
+    console.log(obj['귤']);
+    console.log(obj['myColor']);
+    console.log(obj.lunch);
+    // object 즉, 객체는 순서가 존재하지 않는다
+    //=======================================================
+    // 함수는 형태를 먼저 만들고 이를 호출, 호출방법은 동일
+    // var myFn = function(){}; // 함수 표현식
+    // function myfn2(){}       // 함수 선언식
+
+    var FnTest = function(){
+      var n3 = 7;
+      return n3;
+    };
+    // console.log(n3);
+    // 파스칼 형식으로 변수의 이름의 첫글자를 대문자로 구분
+    // 결과를 도출(반환)하는 명령어 return /리턴 뒤에는 어떠한 명령어도 동작하지 않는다
+
+    var nResult = FnTest();
+    
+    var F2 = function(){
+      return (7+ 10 + 8)*2;
+    }
+    // console.log(F2());
+
+    var sum= function(a1, b1){
+      return a1 / b1;
+    };
+    // a1%b1은 5이며 나누기의 답인 0.5의 나머지인 5를 답으로 가진다 faction (나머지)
+    // 실제 %(percentage)로 사용을 원한다면 {return rel / base* 100 + ' %'}; 라고 적용해줘야함
+    // 또한 console.log(per(5,50)); 의 형태로 설정값을 주어야함
+    console.log( sum(5, 10) );
+  </script>
+
+<!-- script-->
+
+</body>
+</html>

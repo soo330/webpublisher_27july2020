@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<!-- 1014 js_insert.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <!-- [if IE]
+    <script></script>
+  [endif] -->
+
+  <link rel="stylesheet" href="css파일이름.css">
+  <title>Document</title>
+  <style></style>
+  <script>
+    // 1번째 script 작성하는 위치(head닫기 전) 아래> id는 단수이므로 Element로 쓴다
+    document.addEventListener('DOMContentLoaded', function(){
+      var wrap = document.getElementById('wrap');
+      wrap.style.backgroundColor = "#ccc";
+    });
+    // 첫번째 위치는 바로 작동x 브라우저 내용이 실행 후에 동작하도록 추가 내용을 작성해야한다
+    // js의 css 설정은 wrap.style.backgroundColor = "#ccc"; 이런식으로 작성하고 css 값은 CamelCase로 작성 (한 단어 대소문자구분)
+  </script>
+</head>
+<body>
+<!-- latout -->
+  <div id="wrap">
+    <header id="headBox">
+      <h1><a href="./contents.html">javascript</a></h1>
+    </header>
+    
+    <script>
+      // 2번째 script 작성하는 위치
+      // 매번 하나의 요소가 끝날 때 마다 작성해야하고 html 요소가 아니니 다른 언어를 포함하여
+      // 다소 구분하기 어렵다는 단점이 있다.
+    var headBox = document.getElementById('headBox');
+    headBox.style.backgroundColor ="#fac";
+    </script>
+
+    <section id="viewBox">
+      <h2>section</h2>
+    </section>
+
+    <article id="contentBox"></article>
+    </div>
+
+<!-- script-->
+  <script>
+    // 3번째 script 작성하는 위치 (body 끝나기 직전에)
+    // 가장 많이 쓰이는 파트 
+    var viewBox = document.getElementById('viewBox');
+    viewBox.style = "background-color:#777; color:#fff;";
+    // 위처럼 viewBox.style = "backgroundColor:#777; color:#fff; ";는 css문법을 따르겠다는 명령어로
+    // 중간을 나눠 줄 때는 ; 으로 구분
+  </script>
+  
+  
+<!--  script 작성 4번째 방법 
+      script 요소에 src 속성을 사용하여 외부의 파일을 불러오는 형식
+      단, 외부에서 불러올 경우에는 스크립트 내부에 글을 작성하면 동작하지 않는다 -->
+  <script src="../js/js_insert.js"></script>
+</body>
+</html>
