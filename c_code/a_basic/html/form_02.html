@@ -109,26 +109,122 @@
             <input type="checkbox" name="" id="movingType4" value="bus" />
             <label for="movingType4">버스</label>
           </li>
-          
-          <li></li>
+        </ul>
+        <hr />
+
+        <h3>선택 입력중 하나만 선택되는 사항</h3>
+        <p>다음 중 자신이 알고있는 가장 괜찮은 사람은</p>
+        <ul>
+          <li>
+            <input type="radio" id="radioSel_01" name="selectPeople" value="xido" checked="checked" />
+            <label for="radioSel_01">현재 보고있는 앞의 사람 (남자)</label>
+          </li>
+
+          <li>
+            <input type="radio" id="radioSel_02" name="selectPeople" value="xido" />
+            <label for="radioSel_02">xido</label>
+          </li>
+
+          <li>
+            <input type="radio" id="radioSel_03" name="selectPeople" value="xido" />
+            <label for="radioSel_03">현재 하루중에 가장 오래보는 남자</label>
+          </li>
+
+          <li>
+            <input type="radio" id="radioSel_04" name="selectPeople" value="xido" />
+            <label for="radioSel_04">현재 공간에서 가장 연장자</label>
+          </li>
+
         </ul>
       </fieldset>
-
+<!-- ==================================================== -->
       <fieldset>
         <legend>04. 약간의 제한이 있는 크기</legend>
+        <div>
+          <label for="selectColor">원하는 색상을 선택하세요</label>
+          <input type="color" id="selectColor" name="selectColor" value="">
+        </div>
+        <div>
+          <label for="lighting"></label>
+          <input type="text" id="lighting" name="lighting" value="" min="1" max="12" step="3">
+        </div>
       </fieldset>
-
+<!-- ==================================================== -->
       <fieldset>
         <legend>05. 버튼의 기능 </legend>
-      </fieldset>
+        <p>input 요소에 해당하는 버튼의 기능은 label을 작성할 필요가없다</p>
+        <input type="submit" name="ok"  value="확인 및 동의"/>
+        <input type="image" src="../img/icon_01.png" alt="동의용 이미지 첨부" name="imgOK" value="이미지로 동의" />
+        <input type="reset" name="cancel" value="취소" />
+        <br />
 
+        <label for="postMail">우편번호 검색</label>
+        <input type="button" name="mail" id="postMail" value="우편번호검색" />
+        <br />
+
+        <label for="dataFile">담을 파일선택</label>
+        <input type="file" name="dataFaile" id="dataFile" value="" />
+      </fieldset>
+<!-- ==================================================== -->
       <fieldset>
         <legend>06. 멀티기능을가진 형태 및 기타</legend>
         <button type="submit">확인 및 전송</button>
-      </fieldset>
+        <div class="input_data">
+          <label for="chat"></label>
+          <textarea name="chat" id="chat" cols="30" rows="10" readonly>
+            시승신청서
+          </textarea>
 
+        </div>
+
+        <div class="select_data">
+          <h3>여러 요소를 서랍형식으로 처리하여 만드는 요소</h3>
+          <label for="juice">음료선택</label>
+          <select name="juice" id="juice">
+            <option>선택하세요</option>
+            <optgroup label="coffee">
+              <option value="americano">아메리카노</option>
+              <option value="latte">라떼</option>
+              <option value="vl">바닐라라뗴</option>
+            </optgroup>
+            <!-- optgroup에서는 label도 속성으로 적용가능 -->
+            
+            <optgroup label="other">
+              <option value="hc">핫초코</option>
+              <option value="yogurt">요거트</option>
+              <option value="aid">에이드</option>
+            </optgroup>  
+            
+            <optgroup label="juice">
+              <option value="juice_1">포도주스</option>
+              <option value="juice_2">사과주스</option>
+              <option value="juice_3">오렌지주스</option>
+              <option value="juice_4">키위주스</option>
+            </optgroup>
+          </select>
+        </div>
+
+        <div class="btn_data"></div>
+          <h3>버튼의 간편한 형식</h3>
+          <button>속성을 사용하지 않으면 submit의 기능으로 처리됨</button>
+          <button type="submit">확인 및 전송</button>
+          <button type="reset">취소</button>
+          <button type="button">기능</button>
+      </fieldset>
+<!-- ==================================================== -->
       <fieldset>
         <legend>07. datalist</legend>
+        <p>메시지를 선택해주세요</p>
+
+        <label for="mySelect">내용선택</label>
+        <input type="text" list="select2" id="mySelect" name="mySelect" />
+        <!-- input type을 정해주지않으면 기본적으로 text로 설정됨 -->
+        <datalist id="select2">
+          <option value="경비실에 맡겨주세요"></option>
+          <option value="미리 연락주세요"></option>
+          <option value="노크 후 문 앞에 두세요"></option>
+          <!-- datalist 안에 자식으로써 들어가는 option 태그는 반드시 싱글 태그로써 사용해야한다 -->
+        </datalist>
       </fieldset>
     </form>
   </div>

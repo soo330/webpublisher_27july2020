@@ -22,3 +22,5 @@ fieldset {height: auto; min-height: 100px; margin-bottom: 20px; padding: 10px; b
 /*  1. form 내부에 들어가느 input, label ... inline-block
     2. form 내부에 p, hn, dl, ul, ol  다 가능
 */
+
+input[type="image"]{width: 50px; height: auto;}
