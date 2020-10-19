@@ -7,50 +7,66 @@ html, body {width: 100%; height: 100%;}
   width: 100%; height: 100%;}
 
 #headBox {
-  width: 100%; height: 100%; min-width: 1200px; min-height: 134px;
-
-}
+  width: 100%; height: 100%; min-width: 1200px;
+  }
 
 .head1 {
-  width: 100%; height: 48px; min-width: 1200px;
+  width: 100%; height: 48px; background-color: #dfdfdf;
+}
+
+#headBox h2 {
+  float: left;
+  margin-left: 35px;
+  width:  145px; height: 48px;
+  font-size: 14px; line-height: 48px; text-align: center;
+}
+
+.login {
+  float: right; margin-right: 45px ;
+  width: 147px; height: 48px;
+}
+
+  .login ul li {
+    float: left; margin-right: 10px;
+    line-height: 48px;
+  }
+/* ================ */
+
+.head2 {
+  width: 100%; height: 86px; min-width: 1200px;
+  background-color: #999;
+}
+h1 {
+  float: left;
+  margin-left: 15px;
+  width: 160px; height: 86px; }
+
+.gbn_group {
+  position: absolute; top: 10%; left: 30%;
+  margin-left: 30px;
+}
+
+.gbn_group ul {
+  float: left; margin-left: 30px;
+  width:  743px; height: 86px;
+  
+}
+
+.gbn_group ul li {
+  float: left; margin-right: 20px;
+  font-size: 1.3rem
+
+}
+/* ============================================ */
+
+#viewBox {
+  width: 100%; height: 1429px;
   background-color: #ddd;
 }
 
-
-  /* ========================================================= */
-.naviBox { 
-  width: 100%; height: 100%; min-width: 1200px; min-height: 86px;
-  background-color: #555;
+.mainImg {
+  width: 100%; height: 649px; background-color: #aaa;
 }
+/* ============================================ */
 
 
-
-
-
-
-/* ==================================================================== */
-
-#imgBox{
-  width: 100%; height: 100%; min-width: 1200px; min-height: 646px;
-  background-color: #777777;
-}
-
-#mainText {
-  width: 100%; height: 100%; min-width: 1200px; min-height: 465px;
-  background-color: #ddd;
-}
-
-.festivalImg {
-  width: 100%; height: 100%; min-width: 1200px; min-height: 315px;
-  background: #ccc;
-}
-
-#about_SDF {
-  width: 100%; height: 100%; min-width: 1200px; min-height: 324px;
-  background-color: #bbb;
-}
-
-#footBox {
-  width: 100%; height: 100%; min-width: 1200px; min-height: 669px;
-  background-color: #555;
-}
