@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* 1015 login_01.css */
+
+.hidden {width: 0; height: 0; display: none;}
+.clearfix:after,
+.clearfix::after {content: ""; display: block; clear: both;}
+
+/* design.css */
+
+#wrap {width: 258px; height: 285px;}
+h2 {text-indent: 40px;}
+
+.social_login>ul {list-style: none}
+.social_login>ul li {float: left;}
+
+
+input {width: 42px; height: 42px;}
+
+.loginSet {list-style: none;}
+label {font-size: 1rem;}
+
+.loginSet li:first-child,
+.loginSet li:nth-child(2) {position: relative; top: 2px; left: -45px;}
+.loginSet li:nth-child(3) {position: relative; top: -80px; left: 130px;}
+.loginSet li:nth-child(3) >button {height: 82px;}
+
+.loginSet li:last-child {position: relative; top: -70px; left: -40px;}
+
+.loginSet>li>input {width: 165px; height: 35px;}

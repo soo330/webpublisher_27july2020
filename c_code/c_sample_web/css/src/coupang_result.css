@@ -1,0 +1,154 @@
+@charset "utf-8";
+/* 1016 coupang_result.css */
+
+#wrap {
+  width: 580px; height: auto; min-height: 300px;
+  margin: auto; padding-top: 42px;
+  font-family: notoSansKR, sans-serif;
+}
+
+
+/* headBox===================================== */
+#headBox {
+  width: 100%; height: 54px; margin-bottom: 10px;
+}
+h1 {width: 202px; height: 100%; margin: auto;
+  }
+
+h1>a {
+  background-image: url("../../img/logo-coupang.20160902.svg");
+  background-position: 50% 50%; background-size: 99% auto;
+}
+
+/* loginBox===================================== */
+#loginBox {
+  width: 460px; height: auto; min-height:200px; 
+  margin:auto; margin-bottom: 20px;
+}
+
+form {width: 100%; height: auto; margin-bottom: 18px;}
+form + hr {margin-bottom: 18px;}
+
+fieldset {
+  width: 100%; height: auto; min-height: 20px;
+  margin-bottom: 14px;
+
+}
+
+fieldset:last-of-type {margin-bottom: 0;}
+
+  .login_info ul { width: 100%; height: auto;}
+  .login_info ul>li {
+    width: 100%; height: auto; margin-bottom: 13px;
+    line-height: 16px; font-size: 1rem;}
+
+  .login_info ul>li:last-child {margin-bottom: 0;}
+
+.input_wrap {
+  width: 100%; height: auto; border: 1px solid #777;
+  box-sizing: border-box;}
+
+.data_narr {display: none;
+  margin-top: 10px;
+  width: 100%; height: auto;
+  font-size: 0.875rem; font-weight: 300;
+  text-indent: 0.5rem; color: #f22;
+}
+
+.error {border-color: #f22;}
+.error + .data_narr {display: block;}
+
+
+.login_info label:first-of-type {
+  float: left; width: 45px; height: 48px;
+  border-right: 1px solid #777;
+  background-color: #ddd;
+  text-align: center; line-height: 55px;
+  color: #555; font-size: 1.2rem;}
+
+.login_info input:first-of-type {
+  float: left; height: 48px; border: 0;
+}
+
+
+/* form태그나 폰트의 경우 약간 여유있게 잡아줘야한다 */
+.login_info ul>li:nth-child(1) input {
+  width: 412px;
+}
+.login_info ul>li:nth-child(2) input {
+  width: 365px; 
+}
+
+label[for="checkPw"]{
+  float: right; width: 46px; height: 48px;
+  cursor: pointer;
+  font-size: 1.2rem; line-height: 55px; text-align: center;
+}
+
+label[for="checkPw"] > i:before,
+label[for="checkPw"] > i::before {content: "\f06e";}
+
+/* 13:05
+더이상 html <i>태그에서 <i class="fas ----">
+형식으로 불러오지않아도 되며
+위의 before의 형태로 불러올 수 있다
+*/
+
+#checkPw:checked + label {background-color: #0074e9;}
+#checkPw:checked + label >i:before,
+#checkPw:checked + label >i::before {content: "\f070";} 
+
+
+
+/* #checkPw {z-index: 10; width: 20px; height: 20px;} */
+  #checkPw:checked + label { background-color: #acf;}
+
+/* ======join_link============================= */
+
+.join_link {
+  width: 100%; height: 54px;}
+
+.join_link > a {
+  display: block; width: 100%; height: 100%;
+  border: 1px solid #777;
+  border-radius: 2px;
+  box-shadow: 0 1px 0 #555;
+  text-align: center; line-height: 54px;
+  font-size: 1.125rem; color: #0074e9;
+  font-weight: 900;
+  background-color: #fff;
+
+}
+/* justify 양쪽정렬 */
+
+.login_check input,
+.login_check label {float: left; height: 24px; line-height: 24px;}
+.login_check p {
+  float:right; display: inline; color: #0074e9;}
+
+  label[for="rememberLogin"]>:before,
+  label[for="rememberLogin"]>::before {content: "\f0c8"; color: #777;}
+
+  #rememberLogin:checked + label > i:before,
+  #rememberLogin:checked + label > i::before {
+    content: "\f14a"; color: #0074e9;}
+
+#rememberLogin:checked + label > i { color: #f00;}
+
+.login_confirm > input {
+  width: 100%; height: 50px; border-radius: 2px;
+  color: #fff; font-weight: 900; font-size: 1.125rem;
+  word-spacing: -0.4rem; box-shadow: 0 2px 0 #005599;
+  background-color: #0074e9; 
+}
+
+
+
+/* footBox===================================== */
+
+#footBox {width: 100%; height: auto; min-height: 50px;}
+
+#footBox > p  {
+  width: 100%; height: auto; text-align: center;
+}
+

@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* coupang_01.css */
+h1
+
+#wrap {
+  position: relative;
+  width: 656px; height: 500px;
+  background-color: #dfdfdf;
+  box-sizing: border-box; 
+}
+
+h2 {width: 210px; height: 55px; text-align: center; margin: auto;}
+
+
+.member_login {
+  width: 460px; height: 234px;
+  margin: auto;
+  padding: 0;
+  padding-top:10px; padding-left: 0;
+  padding-bottom: 18px;
+}
+
+[for="userId"]>img,
+[for="userPw"]>img {
+  float: left;
+  width: 45px; height: 50px;
+  border: 1px solid #333;}
+
+#userId { float: left; width: 415px; height: 46px;}
+
+#userPw {float: left; width: 380px; height: 46px;}
+
+.eyes {float:left; width: 25px; height: 46px;}
+.eyes> input[type="checkbox"] {width: 35px; height: 35px; margin: 0;
+}
+
+/* #testCheck:checked+label>i {color: #fa8;} */
+
+.autologin{clear: both; margin: 0; padding: 0;}
+
+.find{float: right;}
+
+.user_confirm>input {width: 470px; height: 54px;
+  font-weight:bold; color:#fff; background-color: #0075e9;}
+
+/* ================================================ */
+.signIn_area {
+  padding: 0;
+  margin:0;
+  margin: auto;
+  width: 470px; height: 86px;}
+
+.signIn_area>input[type="submit"] {
+  margin-top: 18px;
+  width: 470px; height: 52px; font-size: 1rem;
+  font-weight: bold; color: #0075e9;}
+
+.copyRight {text-align: center;}
