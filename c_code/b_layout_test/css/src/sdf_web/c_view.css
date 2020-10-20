@@ -1,0 +1,39 @@
+/* c_view.css */
+
+#viewBox{
+  width: 100%; height: 775px; background-color: #777;
+}
+
+/* ======================================================== */
+#festivalBox{
+  width: 100%; min-width: 1200px; max-width: 1600px; height: auto;
+  min-height: 300px; margin: auto; padding:90px 34px 65px; box-sizing: border-box;
+}
+
+/* 플롯만 준다면 어미의 높이값이 사라진다 큰부모에 clearfix*/
+/* %계산: 가로갚 나누기 1200px *100 = ? */
+.fest_summary_area {
+  float: right; width: 65%; min-width: 48.75rem; height: 22.5rem; background-color: #ddd;
+}
+/*  */
+.fest_attach_area {
+  float: left; width: 22.5%; min-width: 16.875rem; height: 22.5rem; background-color: #fcf;
+}
+/* ======================================================== */
+#cardImageBox{
+  position: relative;
+  width: 100%; height: 18.75rem; min-width: 18.75rem; background-color: #dfdfdf;
+}
+
+/* transform은 가로가 늘어날 때를 대비하여 margin대신 씀 */
+.card_indicator_area {
+  position: absolute; bottom: 3.125rem; left: 50%;
+  transform: translateX(-50%); overflow-x: hidden;
+  width: 17.1875rem; height: 1.25rem; background-color: #fff;
+}
+
+.card_image_area {
+  width: 300%; height: 154px; background-color: #ffa;
+}
+
+/* indicator를 하나 움직일때 2장씩 움직인다면 가로값보다 최소 2배로 늘어나있다는 말 사진의 갯수에 따라 달라진다 */

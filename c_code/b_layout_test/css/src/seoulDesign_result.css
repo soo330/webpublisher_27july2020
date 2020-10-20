@@ -1,0 +1,10 @@
+@charset "utf-8";
+/* seoulDesign_result.css  */
+@import url("../../fonts/fontawesome/css/all.css");
+@import url("./sdf_web/a_main_wrap.css");
+@import url("./sdf_web/b_header.css");
+@import url("./sdf_web/c_view.css");
+@import url("./sdf_web/d_sponsor.css");
+@import url("./sdf_web/e_footer.css");
+
+html {font-family: notoSansKR, 'notoSansKR', sans-serif;}

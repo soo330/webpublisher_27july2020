@@ -1,0 +1,75 @@
+/* b_header.css */
+
+#headBox{
+  position: absolute; top: 0; left: 0; z-index: 1000;
+  width: 100%; height: 128px; padding-top: 2.75rem;
+  box-sizing: border-box;
+  background-color: #aaa;
+}
+/* height값 auto에 padding을 주면 boxsizing이 필요없다 */
+
+.head_area {
+  position: relative;
+  width: 100%; height: 5.25rem; padding:20px 34px; box-sizing: border-box;
+   background-color: #000;
+}
+
+h1 {
+  float: left; width: 105px; height: 45px; background-color: #fff;
+}
+
+/* gnbBox의 top이 20px인 이유는 기준이되는 head_area의 top값이 20px이기때문
+trasform으로 x축이 줄어들때 가변성있도록 %로 쓴다
+width: 65.37 padding인 34px만큼 들어오기때문에
+식은 1200-34-34=1132 이고 가로740/1132=0.6537에서 100을 곱해주어 65.37% 
+*/
+#gnbBox {
+  position: absolute; top: 20px; left: 50%; transform: translateX(-50%);
+  width: 65.37%; max-width: 1200px; min-width: 740px; height: 45px; 
+}
+/* 부모와 같은값이라면 clearfix를 사용함과 같으므로 html에 clearfix */
+  .title_link {
+    width: 100%; height: auto; text-align: center; white-space: nowrap;}
+  .title_link > li {
+    position: relative; display: inline-block; height: 2.8125rem; margin-right: 1%;
+  }
+  .title_link > li:last-child {margin-right: 0;}
+  .title_link > li > a {
+    padding: 10px; line-height: 3.1rem;
+    font-size: 1.25rem; color: #fff;
+  }
+
+/*
+.vertical_center { position: relative;}
+.vertical_center span {display: block; position: absolute; top: 50%; transform: translateY(-50%);} */
+
+  .title_link>li::before {content: ""; display: block;
+    width: 1px; height: 70%; background-color: rgba(255,255,255,0.5);
+    position: absolute; top: 15%; right: -4%;}
+
+  .title_link>li:last-child::before {display: none;}
+
+    .sub_link {
+      display: none;
+      position: absolute; top: 100%; left: 0; padding: 10px;
+      background-color: #fff;}
+
+    /* a:hover하였을때 +뒤에오는 .sub_link를 display:block하여라 */
+    /* .title_link>li:hover a:hover + .sub_link, .title_link>li:hover a:focus > .sub_link
+    사실 위처럼 풀어서 css를 작성해햐하는것이 맞지만
+    는 focus기능 잡을때 서울디자인페스티벌을 잡고 세부메뉴를 잡을때 focus를 잡을 수 가 없으므로 아래와 같이 일단 설정해주고
+    나머지기능은 jQuery에서 설정해주어야함 
+    */
+    .title_link>li:hover > .sub_link {display: block;}
+/* -=================================== */
+#unbBox {
+  float: right; width: 10.9375rem; height: 2.8125rem;
+  background-color: #fa0;
+}
+
+.people_lang_area {
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 2.75rem; border-bottom: 1px solid #a4a4a4;
+  box-sizing: border-box; background-color: #fa0;
+}
+
