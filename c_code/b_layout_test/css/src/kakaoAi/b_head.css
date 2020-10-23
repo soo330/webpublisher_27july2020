@@ -1,0 +1,18 @@
+@charset "utf-8";
+
+#headBox {
+  width: 100%; min-width: 1440px; max-width: 1600px; height:60px; background-color: #dfdfdf;
+}
+
+h1 {
+  float: left;
+  width: 100px; height: 100%; background-color: #fa5;
+}
+.gnbBox {
+  float: left;
+  width: 320px; height: 100%; background-color: #faa;
+}
+#headBox div {
+  float: right;
+  width: 115px; height: 100%; background-color: #fa0;
+}

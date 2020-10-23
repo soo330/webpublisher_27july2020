@@ -1,0 +1,276 @@
+@charset "utf-8";
+/* mediaQuery_02.css */
+:root {
+  --headfooter:#333;
+  --article:#547d77;
+  --moreContent:#95d2e9;
+  --logo:#33b88f;
+  --newArea: #957de9;
+  --notice:#95abe9;
+  --view:#ba7;
+}
+
+
+/* 공통내용 */
+html, body {width: 100%; height: 100%;}
+#wrap {width: 100%; height: auto; min-width: 320px; background-color: #ccc;}
+#headBox {width: 100%; height: 60px;}
+.imp {width: 960px; height: 60px;}
+h1 {width: 250px; height: 45px;}
+.userX {width: 542px; height: 60px;}
+  .login {width: 50px; height: 30px;}
+  .gnb_group {width: 430px; height: 30px;}
+
+#viewBox {width: 100%; height: auto;}
+
+#contentBox {width: 100%; height: auto;}
+  .title_shape {width: 192px; height: 156px;}
+
+#infoBox {width: 100%; height: auto;}
+  .new_area { width: 320px; height: 540px;}
+  .notice_area { width: 320px; height: 540px;}
+  .more_content { width: 320px; height: 540px;}
+
+#footBox  {width: 100%; height: auto;}
+.logo_wrap {width: 960px; height: auto;}
+  h2 {width: 250px; height: 45px;}
+
+
+/* ============================================================ */
+/* ============================================================ */
+/* ============================================================ */
+
+
+/* mob_v.css */
+@media screen and (max-width:479px) {
+  #wrap {background-color: #aaa;}
+  #headBox {
+    width: 100%;
+    position: fixed; top: 0; left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--headfooter);}
+  .imp { width: auto; }
+  h1 {
+    float:left; margin: 10px;
+    margin-left: 12px; 
+    width: 100px; height: 30px; background-color: var(--logo);}
+  .userX {
+    float: right; margin-right: 12px;
+    width: 100px; height: inherit;}
+    .login {
+      float: left; margin-top: 5px; margin-left: 5px;
+      width: 24px; height: 25px; background-color: var(--logo);}
+  .gnb_group {
+    float: left; margin-top: 5px; margin-left: 5px;
+    width: 30px; height: 25px; background-color: var(--logo);}
+
+  #viewBox {
+    width: 100%; height: 540px; background-color: var(--view);}
+    
+    #contentBox {
+      padding-top: 30px;
+      margin: auto;
+      height: 480px; background-color: var(--article);}
+    .title_shape {
+      margin: 0 0 24px 20px;
+      width: 192px; height: 156px; background-color: var(--logo);}    
+    #infoBox {
+      margin: auto;
+      width: 320px; background-color: #ccc; }
+      .new_area {
+        width: 320px; height: 480px; background-color: var(--newArea);}
+      .notice_area { display: none;}
+      .more_content { display: none;}
+    
+    #footBox  {
+      padding-top: 17px;
+      width: 100%; height: 60px; background-color: var(--headfooter);}
+    .logo_wrap {
+      display: none;}
+    h2 {
+        margin-left: 20px;
+        width: 250px; height: 45px; background-color: var(--logo);}
+  
+} /* // mob.v.css ==============================*/
+
+
+/* mob_h.css */
+@media screen and (min-width:480px) and (max-width:767px) {
+  /* again 위에 공통적으로 들어가는 가로나 세로값이 있으므로 굳이 써주지 않아도 되며 따로 설정 원하는 값만 써준다 */
+  #wrap {width: 100%; height: auto; margin: auto; background-color: #ddd;}
+  #headBox {
+    width: 100%;
+    position: fixed; top: 0; left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--headfooter);}
+  
+    .imp {width: auto; height: 60px; margin: auto;}
+    h1 {
+      float:left; margin: 15px;
+      margin-left: 21px; 
+      width: 126px; height: 30px; background-color: var(--logo);}
+    .userX {
+      float: right; margin-right: 20px;
+      width: 100px; height: inherit;}
+  
+      .login {
+        float: left; margin-top: 15px; margin-left: 5px;
+        width: 36px; height: 38px; background-color: var(--logo);}
+      .gnb_group {
+        float: left; margin-top: 15px; margin-left: 10px;
+        width: 45px; height: 38px; background-color: var(--logo);}
+
+  #viewBox {
+      width: 100%; height: 540px; background-color: var(--view);}
+    
+    #contentBox {
+      padding-top: 30px;
+      margin: auto;
+      max-width: 480px; height: 720px; background-color: var(--article);}
+      .title_shape {
+         margin: 0 0 24px 20px;
+        width: 200px; height: 156px; background-color: var(--logo);}
+    
+    #infoBox {
+      margin: auto;
+      width: 480px; background-color: #ccc; }
+      .new_area {
+        width: 480px; height: 720px; background-color: var(--newArea);}
+      .notice_area { 
+        display: none;}
+      .more_content { display: none;}
+    
+    #footBox  {
+      padding-top: 17px;
+      width: 100%; height: 60px; background-color: var(--headfooter);}
+    .logo_wrap {
+      display: none;}
+    h2 {
+        margin-left: 20px;
+        width: 250px; height: 45px; background-color: var(--logo);}
+}/* // mob_h.css =================== ===========*/
+
+
+/* tab.css */
+@media screen and (min-width:768px) and (max-width:959px){
+  #wrap {width: 100%; margin: auto; background-color: #ddd;}
+  #headBox {
+    width: 100%;
+    position: fixed; top: 0; left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--headfooter);}
+  .imp {width:auto; min-width: 768px; max-width: 959px;}
+  h1 {
+    float:left; margin: 10px;
+    margin-left: 15px; 
+    width: 174px; height: 42px; background-color: var(--logo);}
+    .userX {
+      float: right; margin-right: 20px;
+      width: 100px; height: inherit;}
+
+      .login {
+        float: left; margin-top: 15px; margin-left: 5px;
+        width: 36px; height: 38px; background-color: var(--logo);}
+      .gnb_group {
+        float: left; margin-top: 15px; margin-left: 10px;
+        width: 45px; height: 38px; background-color: var(--logo);}
+
+  #viewBox {
+      height: 540px; background-color: var(--view);}
+    
+    #contentBox {
+      padding-top: 30px;
+      margin: auto;
+      max-width: 768px; height: 210px; background-color: var(--article);}
+      .title_shape {
+         margin: 0 0 24px 20px;
+        width: 200px; height: 156px; background-color: var(--logo);}
+    
+    #infoBox {
+      margin: auto;
+      width: 768px; height: 540px; background-color: #ccc; }
+      .new_area {
+        float: left;
+        width: 384px; height: 540px; background-color: var(--newArea);}
+      .notice_area {
+        float: left;
+        width: 384px; height: 540px; background-color: var(--notice);}
+      .more_content { display: none;}
+    
+    #footBox  {
+      padding-top: 17px;
+      width: 100%; height: 120px; background-color: var(--headfooter);}
+    .logo_wrap {
+      display: none;}
+    h2 {
+        margin-left: 20px;
+        width: 250px; height: 45px; background-color: var(--logo);}
+} /* // tap.css ==============================*/
+
+
+/* pc.css */
+@media screen and (min-width:960px) {
+  #wrap {
+    width: 100%; margin: auto;}
+  #headBox {
+    width: 100%;
+    position: fixed; top: 0; left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--headfooter);}
+    
+  .imp {width:auto; margin: auto;}
+    h1 {
+      float:left; margin: 7px;
+      margin-left: 20px; 
+      width: 243px; height: 45px; background-color: var(--logo);}
+    .userX {
+      float: right;
+      width: 542px; height: 60px;}
+
+      .login {
+        float: left; margin-top: 15px; margin-left: 22px;
+        width: 50px; height: 30px; background-color: var(--logo);}
+      .gnb_group {
+        float: left; margin: 15px 0 0 20px;
+        width: 430px; height: 30px; background-color: var(--logo);}
+    
+    #viewBox {
+      height: 540px; background-color: var(--view);}
+    
+    #contentBox {
+      padding-top: 30px;
+      margin: auto;
+      max-width: 960px; height: 210px; background-color: var(--article);}
+      .title_shape {
+         margin: 0 0 24px 20px;
+        width: 192px; height: 156px; background-color: var(--logo);}
+    
+    #infoBox {
+      margin: auto;
+      width: 960px; height: 540px; background-color: #ccc; }
+      .new_area {
+        float: left;
+        width: 320px; height: 540px; background-color: var(--newArea);}
+      .notice_area {
+        float: left;
+        width: 320px; height: 540px; background-color: var(--notice);}
+      .more_content {
+        float: left;
+        width: 320px; height: 540px; background-color: var(--moreContent);}
+    
+    #footBox  {
+      padding-top: 17px;
+      width: 100%; height: 120px; background-color: var(--headfooter);}
+    .logo_wrap {
+      width: 960px;
+      margin: auto; height: 120px;}
+      h2 {
+        margin-left: 20px;
+        width: 250px; height: 45px; background-color: var(--logo);}
+    
+    /* =========================================== */
+    
+  } /* // pc.css ==============================*/
+
+  
+/* ====vw는 소수점 6자리에서 반올림가능============ */

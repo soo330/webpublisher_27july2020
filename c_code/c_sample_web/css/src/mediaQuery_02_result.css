@@ -1,0 +1,54 @@
+@charset "utf-8";
+/* meadiaQuery_02_result.css */
+
+/* 공통내용 */
+html, body {width: 100%; height: 100%;}
+#wrap {
+  width: 100%; min-width: 15rem; height: auto; min-height: 2000px;
+  background-image: linear-gradient(45deg, #fa0 30%,#3af);}
+#headBox{
+  width: 100%; max-width: 75rem; box-sizing: border-box;
+  height: 2.5rem;  margin: auto; padding: 0.25rem 0.75rem;
+  background-color: #333;}
+  
+  .imp {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    width: 100%; height: auto;
+  }
+
+  h1 {float: left; width:100%; height: 100%; background-color: #333;}
+  .gnb_group {float: right; width:60px; height: 100%; background-color: #fff;}
+
+  /* #headBox::before {
+    content: ""; display: block; height: inherit;
+    position: absolute; top: 0; left: 50%; z-index: -1; transform: translate(-50%);
+    width: 100vw; height: inherit; background-color: inherit;
+  } */
+
+/* ============================================== */
+/* mob_v.css */
+@media screen and (max-width:29.9375rem){
+  #headBox {
+    padding: 1.25vw 3.75vw 1.875vw;
+    height: 12.5vw; min-height: 2.5rem;}
+  h1 {width: 31.25vw;}
+  .gnb_group {width: 18.75vw;}
+}
+/* 브라우저 320가로폭 기준으로 작업========================== */
+/* ============================================================= */
+/* mob_b.css */
+@media screen and (min-width:30rem) and (max-width:767x) {
+  #headBox {height: 3.75rem;}
+  
+}
+/* ============================================================= */
+/* tab.css */
+@media screen and (min-width:48rem) and (max-width:959px){
+  #headBox {height: 3.75rem;}
+}
+/* ============================================================= */
+/* pc.css */
+@media screen and (min-width:60rem) {
+  #headBox {height: 3.75rem;}
+}
+/* ============================================================= */
