@@ -1,0 +1,291 @@
+@charset "utf-8";
+/* all */
+@import url(//fonts.googleapis.com/earlyaccess/nanumgothic.css);
+.nanumgothic * {
+ font-family: 'Nanum Gothic', sans-serif;
+}
+:root{
+  --logo:#a30;
+  --red: #c00;
+  --hover:#fa0;
+  --button:#3dd;
+
+  --black:#171717;
+  --dgray:#656565;
+  --lgray:#bbb;
+  --white: #fff;
+}
+
+#wrap {
+  margin: auto;
+  width: auto; min-width: 1024px; height: auto; min-height: 768px;
+  background-color: #dfdfdf;
+} 
+
+#headBox {
+  /* position: absolute; top: 0; left: 0; */
+  width: 100%; height: 120px;
+  margin: auto;
+  background-color: #fff;
+}
+
+h1 {
+  float: left;
+  margin-left: 40px;
+  width: 220px; height: 120px; background-color: #fa5;
+}
+
+.gnbWrap {
+  float: right; margin-right: 44px;
+  width: 61.523437vw; height: 120px;
+  background-color: #49c004;
+}
+
+.gnbMenu {
+  width: 620px; height: 100%;
+  background-color: #0e81ec;
+}
+
+.gnbMenu ul {
+  float: right; margin:auto; width: 100%; height: 50px;}
+
+.gnbMenu>ul >li {
+  float:left; 
+  margin-top: 40px; margin-right: 20px;
+  width: 140px; height: 50px;
+  text-align: center;
+  background-color: #ddd;
+}
+.gnbMenu>ul >li:last-child {margin-right: 0;}
+
+/* =============================================== */
+#adBanner {
+  width: 100%; height: 1080px;
+  background-color: #fa9;
+}
+
+.adBanner_wrap {
+  position: relative;
+  width: 523px; height: 1080px;
+  background-color: #ddd;
+}
+
+.buttons {
+  position: absolute; top: 50%; left: 50%; z-index: 15;
+  transform: translateX(-50%);
+  width: 918px; height: 190px;
+  background-color: #bbb;
+}
+
+/* 로고&텍스트 큰박스 */
+.bannerTxt {
+  position: absolute; top: 330px; left: 122px; z-index: 10;
+  padding: 20px; 
+  width: 420px; height: 500px;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+/* dt dd감싸는 애 */
+.b_text {width: 100%; height: 100%;}
+
+.b_text dt {
+  width: 378px; height: 130px;
+  margin-bottom: 30px;
+  background-color: #777;}
+.b_text dd {width: 378px; height: 300px; background-color: #777;}
+
+/* =============================================== */
+#bestNew {
+  padding-top: 50px;
+  width: 100%; height: 1080px;
+  background-color: #777;
+}
+
+#bestWrap {
+  width: 100%; height: 100%;
+}
+
+.items {
+  margin: auto;
+  width: 940px; height: 950px;
+  background-color: #ec8ab1;
+}
+
+.items h2 {
+  margin-bottom: 30px;
+  width: 260px; height: 60px;
+  font-size: 50px;
+  background-color: #ccc;
+}
+
+.thumbs {width: 100%; height: 100%;} 
+
+.new_img_01 {
+  width: 220px; height: 260px;
+  background-color: #98c409;}
+ 
+.thumbs li {
+  float: left;
+  margin-right: 20px; margin-bottom: 60px;
+  width: 220px; height: 400px; background-color: #ddd;}
+
+  .thumbs li:nth-child(4){margin-right: 0;}
+
+  .thumbs li:nth-child(5),
+  .thumbs li:nth-child(6),
+  .thumbs li:nth-child(7){margin-bottom:0;}
+
+.thumbs dt {font-size: 22px;}
+.thumbs dd {font-size: 14px;}
+
+/* =============================================== */
+#monffeeNews {
+  width: 100%; height: 860px;
+  background-color: #b1a3a3;
+}
+
+.news_img {
+  padding-top: 264px;
+  width: auto; min-width: 1024px; height: 100%;
+}
+/* 777/1024*100 */
+.news_txt_area {
+  margin: auto;
+  width: 777px; height: 380px;
+  background-color: #fff;
+}
+
+
+.news_txt_area dt {
+  margin-bottom: 20px;
+  width: 257px; height: 50px;
+  background-color: #555;
+}
+.news_txt_area dd {
+  width: 777px; height: 311px;
+  background-color: #555;}
+
+/* =============================================== */
+#mixedRecipe {
+  padding-top: 115px;
+  width: 100%; height: 480px;
+  background-color: #777;
+}
+
+.recipes {
+  margin: auto; 
+  width: 938px; height: 265px;
+  background-color: #e692c4;
+}
+
+.recipes ul {
+  margin: auto;
+  width: 900px; height: 265px;}
+.recipes ul li {
+  float: left; margin-right: 60px;
+  width: 259px; height: 265px;
+  border-radius: 50%;
+  background-color: #dfdfdf;
+}
+
+.recipes ul li:last-child {margin-right: 0;}
+
+/* =============================================== */
+#location {
+  width: 100%; height: auto;
+  background-color: #fa0;
+}
+
+.content_text {
+  margin: auto; padding-top: 140px;
+  width: 100%; height: 600px;
+  background-color: #ddd;
+}
+
+.about_monffee {
+  margin: auto;
+  width: 778px; height: 362px;
+  background-color: #fa9;
+}
+
+.about_monffee dt {
+  margin-bottom: 50px;
+  width: 100%; height: 92px;
+  font-size: 65px; text-align: center;
+  background-color: #bbb;
+}
+.about_monffee dd {
+  width: 100%; height: 220px;
+  font-size: 22px; text-align: center;
+  background-color: #ccc;
+}
+/* ============================================ */
+.menuIcons {
+  width: 100%; height: 200px;
+  background-color: var(--logo);
+}
+
+.menuIcons_b
+
+
+.icons_wrap {
+  width: 778px; height: 135px;
+  background-color: #fa9;
+}
+
+/* =========================================== */
+.placeInfo {
+  margin: auto; padding-top: 132px;
+  width: 938px; height: auto;
+  background-color: #fff;
+}
+
+.placeInfo_wrap {
+  width: 100%; height: 850px;
+  box-sizing: border-box;
+}
+.map {
+  float: left;
+  width: 539px; height: 850px;
+  background-color: #ddd;
+}
+
+.storeInfo {
+  float: left;
+  margin-left: 20px;
+  width: 377px; height: 850px;
+  background-color: #ddd;
+}
+
+/* =============================================== */
+#footBox {
+  padding-top: 70px;
+  width: 100%; height: 400px;
+  background-color: #555;
+}
+
+.foot_content{
+  margin: auto; 
+  width: 938px; height: 140px;
+  background-color: #dfdfdf;
+}
+
+.foot_content h2 {
+  float: left;
+  width: 180px; height: 70px;
+  background-color: #333;
+}
+
+.snsGroup {
+  float: right;
+  width: 566px; height: 70px; 
+  background-color: #777;
+}
+/* =============================================== */
+
+/* small  */
+@media screen and (max-width:1024px){
+  
+}
+/* pc full */ 
+@media screen and (min-width:1025px){}
