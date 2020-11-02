@@ -1,0 +1,39 @@
+/* monffee_headBox.css */
+
+.headBox_wrap {
+  /*
+  position을 주는 이유는 해드박스를 스크롤해도 보이게하려고
+  absolute로 값을 주어도 되나 이때 wrap에 relative가 걸리면 안된다
+  */
+  position: fixed; top: 0; left: 0; z-index: 1000;
+  height: 120px;
+  box-shadow: 0 3px 5px rgba(0,0,0,0.5);}
+
+  #headBox {
+  position: relative;
+  width: 940px; height: auto; min-height: 120px; margin: auto;
+}
+ /*
+ headBox에 before를 쓴 이유는
+ navBox에서 before를 썼는데 위에서 가려버리니까
+ -----------------------------------------------
+ li:float, 높이 마우스 이벤트(hover)에 의해 변경됨 
+ ul:이미 clear:both처리가 되어있는 상태
+    -li높이에 의해 베경색이 추가로 보이거나 사라져야함(그래서 ::before를 사용함)
+--->
+but! (안에있는 애들이 커지니까 감싸는 애도 커져야함)
+   *** nav: 내부에 캐릭터위치함으로 이미지 display:block;처리
+   (그래서 ::before처리) (차후에 변경해야됨을 인지)
+    dd{display:none;}하면 nav는 그대로 남기 때문에 (=이미지)
+
+-->
+  #headBox: nav로 인해 배경색이 변경됨, 별도의 색깔을 추가해줘야함
+   무엇으로? ::before
+
+ */
+#headBox::before {
+  content: ""; display: block;
+  position: absolute; top: 0; left: 0; z-index: -1;
+  width: 100%; height: 120px;
+  background-color: var(--color-monffee-white);
+}

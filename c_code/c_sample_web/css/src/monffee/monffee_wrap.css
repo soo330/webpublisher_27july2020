@@ -1,0 +1,10 @@
+/* monffee_wrap.css */
+
+#wrap {
+  margin: auto;
+  width: 100%; min-width: 940px; /*좌우여백 생각해서 960->940*/
+  height: auto; min-height: 5000px; background-color: #dfdfdf;
+}
+
+.els_wrap { width: 100%; height: auto;
+  background-color: var(--color-monffee-white);}
