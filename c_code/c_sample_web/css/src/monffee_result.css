@@ -1,67 +1,29 @@
 @charset "utf-8";
 /* monffee result.css */
 
-/* 
-@import url('./monffee/);
-*/
+ 
+@import url('./monffee/monffee_wrap.css');
+@import url('./monffee/moffee_headBox.css');
+
+/*
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {display:none;} /* 크롬, 사파리 스크롤바 제거*/
+*/
 html, body {
   -ms-overflow-style:none; /* ie, edge 스크롤바 제거*/
   scrollbar-width:none; /* firefox 스크롤바 제거 */
 }
+
 /* 아직 공식적인 스크롤바 지우기가 아니므로 알아두기만 하자 */
 
-#wrap {
-  margin: auto;
-  width: 100%; min-width: 940px; /*좌우여백 생각해서 960->940*/
-  height: auto; min-height: 5000px; background-color: #dfdfdf;
-}
 
-.els_wrap { width: 100%; height: auto;
-  background-color: var(--color-monffee-white);}
 
-.headBox_wrap {
-  /*
-  position을 주는 이유는 해드박스를 스크롤해도 보이게하려고
-  absolute로 값을 주어도 되나 이때 wrap에 relative가 걸리면 안된다
-  */
-  position: fixed; top: 0; left: 0; z-index: 1000;
-  box-shadow: 0 3px 5px rgba(0,0,0,0.5);}
 
-  #headBox {
-  position: relative;
-  width: 940px; height: auto; min-height: 120px; margin: auto;
-}
- /*
- headBox에 before를 쓴 이유는
- navBox에서 before를 썼는데 위에서 가려버리니까
- -----------------------------------------------
- li:float, 높이 마우스 이벤트(hover)에 의해 변경됨 
- ul:이미 clear:both처리가 되어있는 상태
-    -li높이에 의해 베경색이 추가로 보이거나 사라져야함(그래서 ::before를 사용함)
---->
-but! (안에있는 애들이 커지니까 감싸는 애도 커져야함)
-   *** nav: 내부에 캐릭터위치함으로 이미지 display:block;처리
-   (그래서 ::before처리) (차후에 변경해야됨을 인지)
-    dd{display:none;}하면 nav는 그대로 남기 때문에 (=이미지)
-
--->
-  #headBox: nav로 인해 배경색이 변경됨, 별도의 색깔을 추가해줘야함
-   무엇으로? ::before
-
- */
-#headBox::before {
-  content: ""; display: block;
-  position: absolute; top: 0; left: 0; z-index: -1;
-  width: 100%; height: 120px;
-  background-color: var(--color-monffee-white);
-}
   h1 {
     float: left; position: relative; z-index: 100; width: 220px; height: 120px;
   }
   h1 a {
-    background-image: url('../../monffee/monfee/monfee/h1_logo.png');
+    background-image: url('../../img/monffee_img/h1_logo.png');
     background-position: 50% 50%;
     background-color: var(--color-monffee-primary);}
   /* a사이즈 주지말고 h1에 hidden_wrap으로 설정가능 */
@@ -94,7 +56,7 @@ text
       position: absolute; bottom: 25px; left: 20px;
       content: ""; display: block;
       width: 180px; height: 150px;
-      background-image: url('../../monffee/monfee/monfee/character.svg');
+      background-image: url('../../img/monffee_img/character.svg');
       background-repeat: no-repeat;
       background-size: contain;
       background-position: 50% 50%;
