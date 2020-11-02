@@ -58,7 +58,7 @@ but! (안에있는 애들이 커지니까 감싸는 애도 커져야함)
   background-color: var(--color-monffee-white);
 }
   h1 {
-    float: left; width: 220px; height: 120px;
+    float: left; position: relative; z-index: 100; width: 220px; height: 120px;
   }
   h1 a {
     background-image: url('../../monffee/monfee/monfee/h1_logo.png');
@@ -77,11 +77,12 @@ but! (안에있는 애들이 커지니까 감싸는 애도 커져야함)
   } /* headBox에 clearfix를 주면 before값이 자동으로 늘어난다 */
 
   #navBox ul {
-    width: 100%; height: auto; min-height: 120px; }
+    width: 100%; height: auto;}
+/* ul의 min-height는 지워준다 */
+
 /* ::before::after
 기능상의 차이는 없으나
-ex>
-
+ex)
 <div>
 ::before
 text
@@ -92,7 +93,11 @@ text
     #navBox ul::before {
       position: absolute; bottom: 25px; left: 20px;
       content: ""; display: block;
-      width: 180px; height: 150px; background-color: #777;
+      width: 180px; height: 150px;
+      background-image: url('../../monffee/monfee/monfee/character.svg');
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: 50% 50%;
     }
 
   #navBox li { /*부모가 auto에 민 100%라면 자식의 높이 100% 의미없음*/
@@ -101,20 +106,34 @@ text
     width: 100%; height: auto; min-height: 100%; }
   #navBox dt {
     /* dl이 %써서 높이값을 단위로 줘야함 */
-    width: 100%; height: 120px; }
+    position:relative; width: 100%; height: 120px; }
   #navBox dt>a {
     font-size: 1.8rem; text-transform: uppercase;
     display: block; width: 100%; height: 100%; text-align: center; line-height: 120px;
   }
+  #navBox dt>a:after {
+    content: ""; display: block; position: relative;
+    position: absolute; top: 50%; margin-top: 16px; left: 50%;
+    transform: translate(-50%);
+    width: 0; height: 3px; background-color: var(--color-monffee-primary);
+    transition: width 300ms ease;
+  }
+
+/* display:none;을 하면 이미지가 그대로 로고에 올라오니까
+h1에 position:relative를 주고 z-index를 많이 준다 
+*/
   #navBox dd {
-    display: none;
-    width: 100%; height: auto; padding: 16px 0; text-align: left; text-indent: 32px;
-    background-color: rgba(100,100,100,0.2);
+    /* display: none; */
+    width: 100%; height: auto; padding: 16px 0; text-align: left; text-indent: 32px; color: var(--color-monffee-white);
   }
   #navBox dd>a {
     display: block; width: 100%; height: auto;
     padding: 5px; margin-bottom: 5px;
   }
+
+
+
+  #navBox dt>a:hover::after {width: 80%;}
 /* headBox==================================== */
 #viewBox {
   width: 100%; height: 100vh; min-height: 800px;
