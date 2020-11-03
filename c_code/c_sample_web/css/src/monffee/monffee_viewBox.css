@@ -1,0 +1,57 @@
+#viewBox {
+  width: 100%; height: 100vh; min-height: 800px;
+  padding-top: 120px; box-sizing: border-box;
+  background-color: #fa8;
+}
+
+
+.slide_btn {
+  position: absolute; top: 50%; left: 50%; /* 중간에서부터 가로값80%*/
+  transform: translateX(-50%); z-index: 900;
+  width: 80%; max-width: 1600px; height: 0;
+}
+/* button은 높이값이 있으면 안된다 중간에 걸려서 눌림 */
+  .slide_btn>button {
+    float: left; width: 85px; height: 175px; /*transform: translate(-50%); */background-color: #77a;}
+  .slide_btn>button:first-of-type{float: right;}
+
+.slide_indecator {
+  position: absolute; bottom: 20%; left: 50%; margin-left: 90px;
+  z-index: 800; padding: 5px; border-radius: 50px;
+  width: 360px; height: 40px;
+}
+
+  .slide_indecator>ul { width: 100%; height: auto;}
+  .slide_indecator>ul>li { float: left; width: 40px; height: 40px; margin-right: 40px; }
+  .slide_indecator>ul>li:last-child { margin-right: 0;}
+  .slide_indecator a {
+    border-radius: 100%; box-sizing: border-box;
+    transform: rotate(45deg); border-bottom: 20px solid rgba(255,255,255,0.5);
+    display: block;
+    background-color: var(--color-monffee-light-gray); }
+  .slide_indecator li.action a {background-color: var(--color-monffee-primary);}
+
+  /* ======================================================== */
+
+.view_area {position: relative; width: 100%; height: 100%;}
+  .text_part {position: absolute; top: 0; left: 0; z-index: 500; 
+    width: 50%; height: 100%; background-color: var(--color-monffee-primary-opacity);}
+  
+    .text_part dl{position: absolute; top: 20%; right: 50px; width: 380px; height: auto;}
+  
+    .text_part dt{
+    width: 100%; height: 150px;
+    background-image: url('../../../img/monffee_img/h1_logo.png'); background-repeat: no-repeat; background-position: 50% 50%; background-size: contain;}
+    .text_part dd{width: 100%; height: auto; font-size: 1.2rem; color: #fff;}
+
+    /* back_img의 li가 5-1-2-3-4-5 순서이므로 총 600%여야한다 또한 하나의 크기만큼 밀어주어야함으로 margin-left:-100%로 밀어준다*/
+  .back_img {width: 600%; height: 100%; margin-left: -100%; background-color: #acd;}
+  /* 실제로 6개임으로 100/6=16.666667%  */
+  .back_img li {
+    float: left; width: 16.666667%;/* li가 5개 나누기 100%한 값임*/ height: 100%; font-size: 3rem; text-align: right; box-sizing: border-box; padding-top: 100px; padding-right: 50px;}
+
+  .back_img li.view_01{background-color: #4C5A41;}
+  .back_img li.view_02{background-color: #8B2A79;}
+  .back_img li.view_03{background-color: #3894A9;}
+  .back_img li.view_04{background-color: #A83C93;}
+  .back_img li.view_05{background-color: #85EF07;}
