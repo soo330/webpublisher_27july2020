@@ -10,7 +10,12 @@
   // console.log(backLi)
   var backLiLast = backLi.eq(-1).clone();
   backImg.prepend(backLiLast);
-  backImg.css({'marginLeft' : -100+'&'});
+  var reBackLi = backImg.find('li');
+
+  backImg.css({'marginLeft' : -100+ '%', 'width' : reBackLi.length * 100 + '%'});
+  reBackLi.css({'width': (100/ reBackLi.length) + '%'});
+
+  // console.log(backLi.length);
 })(jQuery);
 
 /*
