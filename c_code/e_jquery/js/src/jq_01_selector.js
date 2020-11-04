@@ -86,5 +86,46 @@
   // =============================================================
   //<이벤트 및 $(this)>
 
-  
+  // js는 .addEventListener라고 쓰며
+  // jq에서는 선택자이름.순번().on(  , function(e){기능})의 형태로 쓰임
+  var evt = $('.evt');
+  var evtLi = evt.children('li');
+
+  evtLi.eq(0).on('click', function(e){
+    e.preventDefault();
+    evtLi.css({'backgroundColor':'#aa7'});
+  });
+
+  evtLi.eq(1).on('mouseenter',function(e){
+    e.preventDefault();
+    evtLi.css({'backgroundColor':'transparent'});
+  })
+
+  // ======================================================================
+  // <$this>
+  // ↓↓↓li를 클릭하면 a가 존재하므로
+
+  evtLi.on('click', function(e){
+    e.preventDefault();
+    // ↓↓↓선택한 그것.을 제외한 나머지 li에 border-bottom을 적용하겠다
+    
+    $(this).css({'border':'0'});
+    $(this).siblings().css({'borderBottom':'5px solid #333'});
+    // 해당하는 그것에 보더를 0줘라
+
+    var thisI = $(this).index();
+    console.log(thisI);
+    // eq() -순서를 직접 언급 '특정의 어떤것 하나'
+    // index() - 순서 확인용 "목록에서 어디냐"
+  });
+  /*
+  click, dblclick, mousedown, mouseup, mousemove,
+  mouseenter, mouseleave, mouseover, mouseout
+
+  keypress, keydown, keyup
+  focus, blur(focus가 빠져나가는 개념),
+  touchstart, touchend, touchmove (사람손으로 인지됨)
+  scroll, resize(브라우저 크기가 변함)
+  */
+
 })(jQuery);
