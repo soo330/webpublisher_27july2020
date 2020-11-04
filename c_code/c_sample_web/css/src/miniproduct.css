@@ -1,0 +1,107 @@
+@charset "utf-8";
+/* miniProduct.css */
+html,body{margin: 0;}
+
+#wrap {
+  margin: auto; padding-top: 100px;
+  width: 100%; min-width: 940px; /*좌우여백 생각해서 960->940*/
+  height: auto; min-height: 5000px; background-color: #dfdfdf;}
+/* ======================================= */
+#miniProduct{
+  position:relative; width: 940px; height: 500px; margin: auto;
+  padding-bottom: 50px; box-sizing: border-box;
+  background-color: #777;
+}
+/* ======================================= */
+.indicator{
+  position: absolute; bottom: 20%; left: 50%;
+  transform: translateX(-50%);
+  margin-left: 45px;
+  z-index: 800; padding: 5px; border-radius: 50px;
+  width: 360px; height: 40px;
+}
+.indi_btn { width: 100%; height: auto;}
+
+.indi_btn>li {
+  float: left; width: 50px; height: 50px; margin-right: 50px; }
+
+.indi_btn>li:last-child { margin-right: 0;}
+
+.indi_btn a {
+    border-radius: 50%; box-sizing: border-box;
+    border-bottom: 50px solid rgba(255,255,255,0.5);
+    display: block; background-color: var(--color-monffee-light-gray); }
+
+.indi_btn li.action a {background-color: var(--color-monffee-primary);}
+/* ======================================= */
+.product{
+  position: relative; width: 100%; height: 100%;}
+
+.text_part {
+  overflow: hidden;
+  position: absolute; top: 0; left: 0; z-index: 500; 
+  width: 100%; height: 100%; background-color: var(--color-monffee-primary-opacity);}
+
+  .text_part>ul {
+    
+    position: absolute; top: 0; left: 0; z-index: 500; 
+    width: 400%; height: 100%; background-color: var(--color-monffee-primary-opacity);}
+    
+  .text_part>ul>li{
+    float: left;
+    width: 25%; height: 100%;
+    font-size:2rem; color: #fff;
+    }
+
+    .text_part>ul>li:nth-child(1){
+      background-image: url('../../img/monffee_img/adBanner/slide_01.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;}
+    .text_part>ul>li:nth-child(2){
+      background-image: url('../../img/monffee_img/adBanner/slide_02.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;
+    }
+    .text_part>ul>li:nth-child(3){
+      background-image: url('../../img/monffee_img/adBanner/slide_03.png');
+      background-repeat: no-repeat;
+      background-position: 50% 50%;
+      background-size: contain;}
+/* ======================================= */
+/* ======================================= */
+/* ======================================= */
+
+#miniProduct2{
+  position:relative; width: 940px; height: 500px;
+  margin: auto;
+  padding-bottom: 50px; box-sizing: border-box;
+  background-color: #777;}
+/* ============================================== */
+.indicator2{
+  position: absolute; top: 40%; left: 50%; /* 중간에서부터 가로값80%*/
+  transform: translateX(-50%); z-index: 900;
+  width: 80%; max-width: 1600px; height: 0;}
+
+  .indicator2>button{
+    float: left; width: 100px; height: 100px;
+    background-color: #77a;}
+  .indicator2>button:first-of-type{float: right;}
+
+
+/* ============================================== */
+.product_wrap{
+  position: absolute; top: 20%; left: 25%; z-index: 800;
+  margin-left:30px; padding: 5px; width: 400px; height: 300px;
+  background-color: #fff;
+}
+
+.product2 {
+  position: relative; z-index: 100;
+  width: 600%; height: 100%; margin-left: -100%;}
+.product2 li {
+  float: left; width:16.666667%; height: 100%; font-size: 3rem; text-align: right; box-sizing: border-box; padding-top: 100px; padding-right: 50px;}
+.product2 li:last-child{margin-right: 0;}
+.product2 a {}
+/* ============================================== */
