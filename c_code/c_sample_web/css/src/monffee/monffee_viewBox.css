@@ -15,21 +15,21 @@
     float: left; width: 85px; height: 175px; /*transform: translate(-50%); */background-color: #77a;}
   .slide_btn>button:first-of-type{float: right;}
 
-.slide_indecator {
+.slide_indicator {
   position: absolute; bottom: 20%; left: 50%; margin-left: 90px;
   z-index: 800; padding: 5px; border-radius: 50px;
   width: 360px; height: 40px;
 }
 
-  .slide_indecator>ul { width: 100%; height: auto;}
-  .slide_indecator>ul>li { float: left; width: 40px; height: 40px; margin-right: 40px; }
-  .slide_indecator>ul>li:last-child { margin-right: 0;}
-  .slide_indecator a {
+  .slide_indicator>ul { width: 100%; height: auto;}
+  .slide_indicator>ul>li { float: left; width: 40px; height: 40px; margin-right: 40px; }
+  .slide_indicator>ul>li:last-child { margin-right: 0;}
+  .slide_indicator a {
     border-radius: 100%; box-sizing: border-box;
     transform: rotate(45deg); border-bottom: 20px solid rgba(255,255,255,0.5);
     display: block;
     background-color: var(--color-monffee-light-gray); }
-  .slide_indecator li.action a {background-color: var(--color-monffee-primary);}
+  .slide_indicator li.action a {background-color: var(--color-monffee-primary);}
 
   /* ======================================================== */
 

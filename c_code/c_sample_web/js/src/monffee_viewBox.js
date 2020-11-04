@@ -4,7 +4,9 @@
   var viewBox = $('#viewBox');
 
   var backImg = viewBox.find('.back_img');
+  viewBox.css({'overflow':'hidden'}); // 가급적 css에서 처리하자
   var backLi = backImg.find('li');
+  var permission = true; // 워터슬라이드같은 개념 하나보내고 하나보냄
   //순서를 언급시에는 eq() method 사용 0~..., 뒤에서부터(역순)은 -1,-2...
   //복제의 기능은 clone() -> 복제된 기능을 원본처럼 수행하려면true 또는 매개변수 입력하면 된다
   // console.log(backLi)
@@ -27,13 +29,15 @@
   nextSlideBtn.on('click', function(e){
     // a 또는 button 요소처럼 이벤트 기능이 이미 내장된 요소는 미리 해당 기능을 제거하라는 옵션을 먼저 넣는다
     e.preventDefault();
-    slideN += 1; // 1씩 카운트를 올리겠다 함수의 바깥에서 선언해주면 내부에서 값을 변경했을때 안에있는 1이 위에 선언한식에서 1씩 더해주게 된다 그래서 slideN은 +1씩 늘어난다
+
+    if(permission){
+      permission = false;
+      slideN += 1; // 1씩 카운트를 올리겠다 함수의 바깥에서 선언해주면 내부에서 값을 변경했을때 안에있는 1이 위에 선언한식에서 1씩 더해주게 된다 그래서 slideN은 +1씩 늘어난다
     
     // backImg.css({'left': slideN * -100 + '%'});
     // backImg.stop().animate({'left': slideN * -100 + '%'},700,'easeInSine');
     //                                             여기있는 700은 속도 0.7ms를 뜻함
     // 'transition': 'left 400ms linear'}
-    
     
     //---------------------------------------------------------------
     //if*(){}else{} 콜백함수
@@ -45,19 +49,70 @@
         backImg.stop().css({'left': slideN * -100 + '%'});
         
       }
+      // permission=true;
+      // setTimeOut(function(){},시간); 뒤에있는 0.1초 시간 뒤에 함수를 시작하세요
+      setTimeOut(function(){
+        permission=true; //여기에 permission을 주면 
+      },100);
     });
+    indiLi.eq(slideN).siblings().removeClass('action');
+    indiLi.eq(slideN).addClass('action');}
   });
 
   
   prevSlideBtn.on('click', function(e){
     e.preventDefault();
-    slideN -=1;
-    backImg.stop().animate({'left': slideN * -100 + '%'},function(){
+    if(permission){
+      permission =false;
+      slideN -=1;
+      backImg.stop().animate({'left': slideN * -100 + '%'},function(){
       if(slideN <= -1 /*여기서의 -1이 순번째라고 이해하면 쉽다*/ ){
         slideN = backLi.length-1;
         backImg.stop().css({'left': slideN * -100 + '%'});
       };
+      setTimeOut(function(){permission=true;},1000);
     });
+    indiLi.eq(slideN).siblings().removeClass('action');
+    indiLi.eq(slideN).addClass('action'); //인디케이터도 같이넘어감}
+    };
+  });
+  // -----------------------------------------
+  // indicator 색깔바꾸기
+  var indicator = viewBox.find('.slide_indicator');
+  var indiLi = indicator.find('li');
+
+  // ↓↓↓↓ 선택한 li들중에서 라는 예문
+  indiLi.on('click', function(e){
+    e.preventDefault();
+    var its = $(this); ////$(this)는 click했을때 선택되는 것'들' 중복되는값
+    slideN = its.index(); //.index는 순서를 확인하는 아이
+    // console.log(itI);
+    backImg.stop().animate({'left': slideN * -100 + '%'});
+    // indiLi.removeClass('action');
+    /*↓↓권장*/
+    indiLi.eq(slideN).siblings().removeClass('action');
+    indiLi.eq(slideN).addClass('action');
+  });
+
+  // 내가 했던거  
+  // slideIndi.each(function(index){
+  //   $(this).on('click', function(){
+  //       $(this).addClass('active').siblings().removeClass('active');
+  //       slideIndiUl = index;
+  //       slideindiUlLi.animate({left: '-' + (listBoxWidth*index)+'px'}, 200);
+  //   });
+  //});
+
+  // ============================================================
+  // indicator 클릭시
+  indiLi.children('a').on('focus', function(e){
+    e.preventDefault();
+    var its= $(this); 
+    slideN = its.parent().index(); //li가 아닌 부모의 순서값을 가지고와야함
+    backImg.stop().animate({'left': slideN * -100 + '%'});
+    indiLi.eq(slideN).siblings().removeClass('action');
+    indiLi.eq(slideN).addClass('action');
+    //** 계속 반복문이 있으므로 함수도 생각해봐야함
   });
 })(jQuery);
 
@@ -103,3 +158,4 @@ jQuery에서 콜백함수란?
 })
 
 */
+

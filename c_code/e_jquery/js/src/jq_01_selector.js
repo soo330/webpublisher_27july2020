@@ -126,6 +126,10 @@
   focus, blur(focus가 빠져나가는 개념),
   touchstart, touchend, touchmove (사람손으로 인지됨)
   scroll, resize(브라우저 크기가 변함)
+
+
+  $(this) -> 이벤트를 시작하기 위한 
+  .find -> 자손선택자
   */
 
 })(jQuery);
