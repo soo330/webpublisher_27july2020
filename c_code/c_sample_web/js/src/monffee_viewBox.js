@@ -158,24 +158,47 @@
   var Start = function(){
     // setInterval 일정시간마다 ~실행해라
     startInterval = setInterval(function(){
-      // trigger() 기능 - 대신 처리하는 방아쇠
-      nextSlideBtn.trigger('click');
+      // 1. trigger() 기능 - 대신 처리하는 방아쇠
+      // nextSlideBtn.trigger('click');
+
+      //=============================================
+      //2 직접 카운트 처리하여 수행
+      slideN += 1;
+      backImg.stop().animate({'left': slideN * -100 + '%'},function(){
+        if(slideN >= backLi.length-1){
+          slideN = -1;
+          backImg.stop().css({'left': slideN * -100 + '%'});
+        }
+        
+      });
+      indiLi.eq(slideN).siblings().removeClass('action');
+      indiLi.eq(slideN).addClass('action');
     }, timed);
   };
+  Start();
 
   // 1. viewBox 마우스올리면 일시정지해라
   var StopSlide = function(){
     clearInterval(startInterval);
   };
-  viewBox.on('mouseenter', function(){
-    clearInterval(startInterval);
-    StopSlide();
-  });
+  // viewBox.on('mouseenter', function(){
+  //   clearInterval(startInterval);
+  //   StopSlide();
+  // });
 
   //2. viewBox 에서 마우스 벗어나면 재실행
 
-  viewBox.on('mouseleave', function(){
-    Start();
+  // viewBox.on('mouseleave', function(){
+  //   Start();
+  // });
+
+  // ============================================
+  // 1,2번 기능 통합 할때
+  // 객체 지향화
+
+  viewBox.on({
+    'mouseenter': StopSlide,
+    'mouseleave': Start
   });
 
   //jQuery End
