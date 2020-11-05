@@ -1,0 +1,14 @@
+/* slide_Qna.css */
+
+#wrap {
+  width: 60rem; height: auto;
+  margin: auto; background-color: #dfdfdf;
+}
+hr {margin-bottom: 1rem;}
+
+.qnaWrap{ width: 100%; height: auto; background-color: #ccc;}
+
+.qnaWrap dt {width: 100%; height: 1.5625rem;}
+.qnaWrap dd {width: 100%; height: 1.5625rem; overflow: hidden;}
+
+/* hint dd를 누르면+(뒤에오는)dd를 늘려라 */
