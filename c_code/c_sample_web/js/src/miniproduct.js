@@ -20,7 +20,5 @@
     indiBtnLi.eq(indiBtn).siblings().removeClass('action');
     indiBtnLi.eq(indiBtn).addClass('action');
 
-  });
-
-  
+  }); // product =======================================
 })(jQuery);

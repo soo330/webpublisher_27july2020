@@ -1,0 +1,62 @@
+@charset "utf-8";
+/* miniproduct2.css */
+
+#wrap {
+  margin: auto; padding-top: 100px;
+  width: 100%; min-width: 940px; /*좌우여백 생각해서 960->940*/
+  height: auto; min-height: 5000px; background-color: #dfdfdf;}
+
+  #miniProduct2 {
+    margin: auto;
+    width: 500px; height: 500px;
+    box-sizing: border-box;
+    background-color: #fa8;}
+  .slide_btn {
+    position: absolute; top: 30%; left: 50%;
+    transform: translate(-50%); z-index: 900;
+    width: 100%; max-width: 600px; height: 0;}
+    
+    .slide_btn>button {
+      float: left; width: 100px; height: 100px;
+      background-color: #77a;
+    }
+    .slide_btn>button:first-of-type{float: right;}
+
+  /* ===================================== */
+  .slide_indi{
+    position: absolute; bottom: 25%; left: 50%; transform: translateX(-50%);
+    z-index: 800; padding: 5px; border-radius: 50px;
+    width: 250px; height: 26px;
+    background-color: #777;}
+  
+  .indicator2 {width: 100%; height: auto;}
+
+    .indicator2> li {
+      float: left; width: 26px; height: 26px;
+      margin-left: 10px; margin-right: 16px;
+    }
+    .indicator2> li:last-child { margin-right: 0;}
+
+    .indicator2 a {
+      width: 26px; height: 26px;
+      border-radius: 100%; box-sizing: border-box;
+      display: block;
+      background-color: rgba(255,255,255,0.5);}
+
+    .indicator2 li.action a {background-color: #f05}
+  /* ===================================== */
+  .product_wrap {
+    overflow: hidden;
+    position: relative; width: 100%; height: 100%;}
+
+  .product2 {
+    position: relative; z-index: 100;
+    width: 500%; /*600%*/ height: 100%;
+    /* margin-left: -100%; */
+    background-color: #acd;
+  }
+/*100/6=16.666667% *//*li가 5개 나누기 100%한 값임*/
+  .product2>li{
+    float: left; width:20%;  height: 100%;
+    font-size: 2rem; text-align: right; box-sizing: border-box; padding-top: 100px; padding-right: 50px;}
+  /* ===================================== */
