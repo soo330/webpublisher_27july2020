@@ -52,7 +52,6 @@ html,body{margin: 0;}
     width: 25%; height: 100%;
     font-size:2rem; color: #fff;
     }
-
     .text_part>ul>li:nth-child(1){
       background-image: url('../../img/monffee_img/adBanner/slide_01.png');
       background-repeat: no-repeat;
@@ -73,35 +72,3 @@ html,body{margin: 0;}
 /* ======================================= */
 /* ======================================= */
 
-#miniProduct2{
-  position:relative; width: 940px; height: 500px;
-  margin: auto;
-  padding-bottom: 50px; box-sizing: border-box;
-  background-color: #777;}
-/* ============================================== */
-.indicator2{
-  position: absolute; top: 40%; left: 50%; /* 중간에서부터 가로값80%*/
-  transform: translateX(-50%); z-index: 900;
-  width: 80%; max-width: 1600px; height: 0;}
-
-  .indicator2>button{
-    float: left; width: 100px; height: 100px;
-    background-color: #77a;}
-  .indicator2>button:first-of-type{float: right;}
-
-
-/* ============================================== */
-.product_wrap{
-  position: absolute; top: 20%; left: 25%; z-index: 800;
-  margin-left:30px; padding: 5px; width: 400px; height: 300px;
-  background-color: #fff;
-}
-
-.product2 {
-  position: relative; z-index: 100;
-  width: 600%; height: 100%; margin-left: -100%;}
-.product2 li {
-  float: left; width:16.666667%; height: 100%; font-size: 3rem; text-align: right; box-sizing: border-box; padding-top: 100px; padding-right: 50px;}
-.product2 li:last-child{margin-right: 0;}
-.product2 a {}
-/* ============================================== */
