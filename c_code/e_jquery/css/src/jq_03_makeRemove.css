@@ -1,0 +1,7 @@
+/* jq_03_makeRemove.css */
+
+#wrap{
+  width: 60rem; height: auto; margin: auto; padding: 1rem; background-color: #ddd;}
+
+.part{width: 100%; height: auto; border: 0.0625rem solid #333;  box-sizing: border-box;}
+p {width: 90%; height: auto; margin-bottom: 0.5rem; background-color: #fc7; font-weight: bold;}
