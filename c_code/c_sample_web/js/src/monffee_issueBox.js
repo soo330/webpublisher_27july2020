@@ -7,6 +7,9 @@
   var issueIndicator = issueText.find('.issue_indicator');
   // 버튼
   var issueBtn = issueIndicator.find('.auto_slide_btn');
+  var autoPlay = issueBtn.children('.auto_play');
+  var autoPause = issueBtn.children('.auto_pause');
+
   // 인디케이터
   var issueIndiUl = issueIndicator.find('.check_indi');
   var issueIndiLl = issueIndiUl.find('li');
@@ -48,8 +51,11 @@
   var mySlideGo;
   var SlideGoFn =function(){
     mySlideGo = setInterval(function(){
+      autoPlay.removeClass('action');
+      autoPause.addClass('action');
+
       itIndex += 1;
-      if ( itIndex >= issueLiLen-1){
+      if ( itIndex > issueLiLen-1){
         itIndex = 0;
       }
       SlideFn(itIndex);
@@ -60,5 +66,15 @@
     clearInterval( mySlideGo );
   };
   SlideGoFn();
+
+  // auto Play --------------------------------
+  autoPause.on('click', function(e){
+    e.preventDefault();
+    SlideStopFn();
+  });
+  autoPlay.on('click',function(e){
+    e.preventDefault();
+    SlideGoFn();
+  })
   
 })(jQuery);
