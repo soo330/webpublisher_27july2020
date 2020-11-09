@@ -5,10 +5,12 @@
 @import url('./monffee/monffee_wrap.css');
 @import url('./monffee/monffee_headBox.css');
 @import url('./monffee/monffee_viewBox.css');
+@import url('./monffee/monffee_bestNews.css');
+@import url('./monffee/monffee_issueBox.css');
 /*
 html::-webkit-scrollbar,
 body::-webkit-scrollbar {display:none;} /* 크롬, 사파리 스크롤바 제거*/
-*/
+
 html, body {
   -ms-overflow-style:none; /* ie, edge 스크롤바 제거*/
   scrollbar-width:none; /* firefox 스크롤바 제거 */
@@ -18,21 +20,9 @@ html, body {
 
 
 /* js에서 viewBox의 높이를 컨트롤하거나 vh로 */
-/* viewBox==================================== */
-#bestNews {
-  width: 940px; height: 1080px; margin: auto;
-  background-color: #acf;}
 
-/* bestNews==================================== */
-#issueBox {width: 100%; height: 1340px;}
 
-  .issue_text {width: 100%; height: 860px; background-color: #caa;}
-  .issue_icon {
-    margin: auto;
-    width: 100%; max-width: 1260px; height: 480px;
-    background-color: #aca;
-  }
-/* issueBox==================================== */
+
 #conBox {
   width: 100%; height: auto; min-height: 1880px;}
 
