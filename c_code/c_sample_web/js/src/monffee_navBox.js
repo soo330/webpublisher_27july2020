@@ -48,8 +48,7 @@ var navBox =  [
     navBoxSelUl.append(navList);
     navDt = navBoxSelUl.children('li').eq(i).find('dt');
     navDd = navBoxSelUl.children('li').eq(i).find('dd');
-    tNav = navBox[i].titleNav;
-    
+    tNav = navBox[i].titleNav;    
   
 
     // $() jQuery에서의 선택자

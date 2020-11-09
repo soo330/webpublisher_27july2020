@@ -7,9 +7,11 @@
   //jQuery
   var headBox = $('#headBox');
   var viewBox = $('#viewBox');
+  var bestNews = $('#bestNews');
 
   headBox.load('./monffee/monffee_headBox.html');
   viewBox.load('./monffee/monffee_viewBox.html');
+  bestNews.append('<script src="../js/src/monffee_bestNews.js"></script>')
 })(jQuery);
 
 // jquery에서는 선택자의 형태는 css와 매우 유사
