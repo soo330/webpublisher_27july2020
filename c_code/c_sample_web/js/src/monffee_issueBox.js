@@ -12,7 +12,7 @@
 
   // 인디케이터
   var issueIndiUl = issueIndicator.find('.check_indi');
-  var issueIndiLl = issueIndiUl.find('li');
+  var issueIndiLi = issueIndiUl.find('li');
   // 내용영역
   var issueTextArea = issueText.find('.issue_text_area');
   var issueUl = issueTextArea.find('ul');
@@ -27,8 +27,8 @@
   // 함수 수행기능 별도로 처리
   var SlideFn = function( itIndex ){
     issueUl.stop().animate({'marginLeft': itIndex * -100 + '%'}, timed,function(){
-      issueIndiLl.eq(itIndex).addClass('action');
-      issueIndiLl.eq(itIndex).siblings().removeClass('action');
+      issueIndiLi.eq(itIndex).addClass('action');
+      issueIndiLi.eq(itIndex).siblings().removeClass('action');
 
       // permission = true;
       setTimeout(function(){
@@ -37,7 +37,18 @@
     });
   }
 
-  issueIndiLl.on('click', ['a'], function(e){
+  /*
+  issueIndiLi에 click되어진 그 'a'의 몇번째를 클릭하는지 알기 위해
+
+  여기서 itIndex는 아래 2. 자동 슬라이드 처리에서 정의해준 issueIndiLi
+  issueUl에 애니메이션을 주는데 marginLeft로 -100%씩 0.5초동안 미뤄라
+
+  issueIndiLi의 클릭 되어진 그 'a'에 class action을 더해주고
+  issueInd
+  */
+
+
+  issueIndiLi.on('click', ['a'], function(e){
     e.preventDefault();
     if(permission){
       permission = false;
