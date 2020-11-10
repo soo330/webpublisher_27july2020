@@ -26,7 +26,7 @@
   var timed = 500;
 
   // console.log($('button.next')[0]);
-/*
+
   // ↓↓↓↓ 1. 각각의 버튼을 분리하여 따로따로 처리하는 방법
 s_01_btn.children('.next').on('click', function(e){
   e.preventDefault();
@@ -63,7 +63,7 @@ s_01_btn.children('.prev').on('click', function(e){
     });
   }
 });
-*/
+
   // button 클릭 시 해당 요소 파악하기
 
   //초기화
