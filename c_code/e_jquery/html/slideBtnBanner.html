@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- slideBtnBanner.html -->
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+
+  <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
+  <link rel="stylesheet" href="../css/base/variable.css">
+
+  <link rel="stylesheet" href="../css/src/slideBtnBanner.css">
+
+   <link rel="shortcut icon" href="../img/pizza.png.lnk" type="image/png">
+   <link rel="apple-touch-icon" href="../img/pizza.png.lnk">
+
+  <title>slideBtnBanner</title>
+</head>
+<body>
+<!-- latout -->
+  <div id="wrap">
+    <h1><a href="./contents.html">jQuery</a></h1>
+    <hr />
+    <div class="part slide_01">
+      <h2>좌, 우 슬라이드 배너 만들기</h2>
+      <div class="slide_btn">
+        <button type="button" class="next">
+          <span class="hidden_context">다음내용</span><i class="fas fa-chevron-circle-right"></i></button>
+        <button type="button" class="prev">
+          <span class="hidden_context">이전내용</span><i class="fas fa-chevron-circle-left"></i></button>
+      </div> <!-- slide_btn-->
+
+      <div class="slide_wrap">
+        <ul>
+          <li class="cake_01"><a href="#">상품명_01</a></li>
+          <li class="cake_02"><a href="#">상품명_02</a></li>
+          <li class="cake_03"><a href="#">상품명_03</a></li>
+          <li class="cake_04"><a href="#">상품명_04</a></li>
+          <li class="cake_05"><a href="#">상품명_05</a></li>
+        </ul>
+      </div>
+    </div> <!--part slide_01-->
+  </div>
+<!-- script-->
+   <script src="../js/base/jquery-3.5.1.js"></script>
+   <script src="../js/base/jquery-ui.js"></script>
+   <script src="../js/src/slideBtnBanner.js"></script>
+
+</body>
+</html>
