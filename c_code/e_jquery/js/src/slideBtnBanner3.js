@@ -7,14 +7,26 @@
 
   var slideWrap = IHS.find('.slide_wrap');
   var slideUl = slideWrap.children('ul');
+  var slideLi = slideUl.children('li');
+  var slideLiLink = slideLi.children('a');
 
   var permission=true;
   var indiSIN=0;
   var timed = 500;
 
 
-  //indicator 클릭시 ul 이동
-  indiLi.children('a').on('click', function(e){
+  // ===============================================
+  // slide_wrap 내부 a에 focus기능 강제 비처리
+
+  slideLiLink.attr({'tabIndex': '-1'});
+
+  // =============================================================================
+  //indicator 클릭시 ul 이동 -> a에 focus 처리로 변경, 실제 배너에 a는 별도로 focus처리
+  // 클릭 기능 일단 보류
+  lidiLi.on('click', function(e){ e.preventDefault(); });
+
+
+  indiLi.children('a').on('focus', function(e){
     e.preventDefault();
     if(permission){
       permission = false;
