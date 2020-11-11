@@ -42,23 +42,42 @@ hasClass(); : ()안에있는 속성값이 있는지 확인하는 기능
   var SlideAction = function(){
     slideLi.eq(indexN).show();
     // z-idex값 하나 없어지면 된다
-    slideLi.eq(actionIndex).fadeOut(function(){
+    slideLi.eq(actionIndex).stop().fadeOut(timed/2, function(){
       // 1) 해당하는 eq번째에 addClass인 ('action')을 넣어줘라
       slideLi.eq(indexN).siblings().removeClass('action');
       // 1-2) 해당 eq번쨰아이의 형제들은 action값을 빼줘라
       slideLi.eq(indexN).addClass('action');
       // 1-3 eq번째의 li에 C action을 넣어주고
-    }); //fadeOut()
-  }
+      
+      // 5) setTimeout을 사용하여 permission true로
+      setTimeout(function(){
+        permission = true;
+      }, timed/5);
 
+    }); //fadeOut()
+  } //SlideAction()
+
+
+  //===========================================================
+  //===========================================================
+
+  //아래에 있는 prev/next버튼의 기능값을 위처럼 함수화하여 사용할 수 있다
   // -----------------------------------------------------------
 
   var indexN = 0;
+
+  // 4) permission을 사용하여 2번 클릭시에 뜨는 에러를 잡아본다
+  var permission = true;
+  var timed = 500; //0.5초
+
   slideBtn.on('click', function(e){
     e.preventDefault();
     MyActionIndex();
-    // button 클릭 시 
-    var it = $(this).attr('class');
+
+    if (permission){
+      // button 클릭 시 
+      permission = false;
+      var it = $(this).attr('class');
 
     if( it === 'next'){
       indexN += 1;
@@ -93,5 +112,7 @@ hasClass(); : ()안에있는 속성값이 있는지 확인하는 기능
     } // if (if === 'prev') End
     console.log(indexN);
 
+    } // if(permission)
+    
   }); // slideBtn.on('click') End
 })(jQuery);

@@ -30,7 +30,7 @@
           <span class="hidden_context">이전내용</span><i class="fas fa-chevron-circle-left"></i></button>
       </div> <!-- slide_btn-->
 
-      <div class="slide_wrap">
+      <div class="slide_wrap horizontal_slide">
         <ul>
           <li class="cake_01"><a href="#">상품명_01</a></li>
           <li class="cake_02"><a href="#">상품명_02</a></li>
@@ -40,11 +40,66 @@
         </ul>
       </div>
     </div> <!--part slide_01-->
+    <!-- ================================================= -->
+    <div class="part slide2">
+      <h2>좌, 우 슬라이드 배너 <br /> -fade처리되는 배너 만들기</h2>
+      <div class="slide_btn">
+
+        <button type="button" class="next">
+          <span class="hidden_context">다음내용</span><i class="fas fa-chevron-circle-right"></i></button>
+        <button type="button" class="prev">
+          <span class="hidden_context">이전내용</span><i class="fas fa-chevron-circle-left"></i></button>
+      </div> <!-- slide_btn-->
+
+      <div class="slide_wrap index_slide">
+        <ul>
+          <li class="cake_01 action"><a href="#">상품명_001</a></li>
+          <li class="cake_02"><a href="#">상품명_02</a></li>
+          <li class="cake_03"><a href="#">상품명_03</a></li>
+          <li class="cake_04"><a href="#">상품명_04</a></li>
+          <li class="cake_05"><a href="#">상품명_05</a></li>
+        </ul>
+      </div>
+    </div> <!--part slide_02-->
+    <!-- ================================================= -->
+    <div class="part indicator_horizontal_slide">
+      <h2> 인디케이터를 이용한 좌, 우 이동 <br /> 슬라이드 배너 만들기</h2>
+      <ul class="indicator">
+        <!-- <href, id를 이용하여 페이지 연결>
+          1. click 하면 해당 배너 나타나기
+          2. focus 하면 해당 배너 나타나기
+          3. hover 하면 해당 배너 나타나기 -> click 처리는 해당 배너로 focus 강제이동
+          4. 접근성(accessibility) 올려서 키보드 방향키로 인디케이터 이동하기
+        -->
+        <li class="action"><a href="#pr_01">
+          <span class="hidden_context">상품_1 요약설명</span></a></li>
+        <li><a href="#pr_02">
+          <span class="hidden_context">상품_2 요약설명</span></a></li>
+        <li><a href="#pr_03">
+          <span class="hidden_context">상품_3 요약설명</span></a></li>
+        <li><a href="#pr_04">
+          <span class="hidden_context">상품_4 요약설명</span></a></li>
+        <li><a href="#pr_05">
+          <span class="hidden_context">상품_5 요약설명</span></a></li>
+      </ul>
+
+      <div class="slide_wrap">
+        <ul>
+          <li class="cake_01"><a id="pr_01" href="#">상품명_01</a></li>
+          <li class="cake_02"><a id="pr_02" href="#">상품명_02</a></li>
+          <li class="cake_03"><a id="pr_03" href="#">상품명_03</a></li>
+          <li class="cake_04"><a id="pr_04" href="#">상품명_04</a></li>
+          <li class="cake_05"><a id="pr_05" href="#">상품명_05</a></li>
+        </ul>
+      </div>
+    </div> <!--part slide_03-->
+    
   </div>
 <!-- script-->
    <script src="../js/base/jquery-3.5.1.js"></script>
    <script src="../js/base/jquery-ui.js"></script>
    <script src="../js/src/slideBtnBanner.js"></script>
+   <script src="../js/src/slideBtnBanner2.js"></script>
 
 </body>
 </html>
