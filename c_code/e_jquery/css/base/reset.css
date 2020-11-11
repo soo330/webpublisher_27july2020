@@ -39,10 +39,10 @@ hr {border-bottom: 1px solid #333;}
 /* variable 지원 여부 파악 */
 
 @supports (--var:100%){
-  html, body {color: var(--color-font1);}
+  html, body {color: var(--c-font1);}
   a:hover, a:focus,
   button:hover, button:focus{
-    outline: 3px solid var(--color-point);}
+    outline: 3px solid var(--c-point);}
 }
 
 /* 일반언어형태
