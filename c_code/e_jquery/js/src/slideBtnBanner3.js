@@ -21,8 +21,24 @@
   slideLiLink.attr({'tabIndex': '-1'});
 
   var typeTest = function(evt){
-    console.log(evt)
+    // console.log(evt.type);
+    if(permission && evt.type === 'focus'){
+      permission= false;
+      console.log('포커스 처리되었음')
+    } else if(permission && evt.type === 'click'){
+      permission= false;
+      console.log('클릭되었음');
+    }else{
+      console.log('...');
+    }
+    // switch(evt.type){
+    //   case 'focus':
+    //     case 'click':
+    //       console.log('f');
+    //       console.log('c');
+    // }
   }
+  
 
   // =============================================================================
   //indicator 클릭시 ul 이동 -> a에 focus 처리로 변경, 실제 배너에 a는 별도로 focus처리
@@ -30,33 +46,34 @@
   // 기능 하나하나 먹기 때문에 충돌이 일어난다 그래서 함수화 해주는것이 중요하다
   indiLi.children('a').on('focus', function(e){
     e.preventDefault();
+
+    typeTest(e);
     
     permission = false;
     var theLi = $(this);
     indiSIN = theLi.parent().index();
 
-    slideUl.stop().animate({'marginLeft': indiSIN * -100 + '%'}, function(){
-      indiLi.eq(indiSIN).siblings().removeClass('action');
-      indiLi.eq(indiSIN).addClass('action');
-    });
-    setTimeout(function(){
-      permission=true;
-    }, timed/5);
+    indiLi.eq(indiSIN).siblings().removeClass('action');
+    indiLi.eq(indiSIN).addClass('action');
+    slideUl.stop().css({'marginLeft': indiSIN * -100 + '%'});
     
   }); //li.on function()
   // ==============================================================
   // 클릭 기능 수행
   indiLi.on('click', function(e){
     e.preventDefault();
+
+    typeTest(e);
+
     var theLi = $(this);
     var propertyLink = theLi.children('a').attr('href');
     var thatPosition = $(propertyLink);
 
+    indiLi.eq(indiSIN).siblings().removeClass('action');
+    indiLi.eq(indiSIN).addClass('action');
+
     // slideUl.stop().css({'marginLeft': indiSIN * -100 + '%'});
-    slideUl.stop().css({'marginLeft': indiSIN * -100 + '%'}, function(){
-      indiLi.eq(indiSIN).siblings().removeClass('action');
-      indiLi.eq(indiSIN).addClass('action');
-    });
+    slideUl.stop().css({'marginLeft': indiSIN * -100 + '%'});
     thatPosition.attr({'tabIndex':'1'});
     thatPosition.focus();
     // console.log(propertyLink);
