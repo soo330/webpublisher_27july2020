@@ -23,9 +23,6 @@
   // =============================================================================
   //indicator 클릭시 ul 이동 -> a에 focus 처리로 변경, 실제 배너에 a는 별도로 focus처리
   // 클릭 기능 일단 보류
-
-
-
   indiLi.children('a').on('focus', function(e){
     e.preventDefault();
     if(permission){
@@ -56,6 +53,7 @@
     // console.log(propertyLink);
   });
 
+  //click시 색깔을 바꿔라
     indiLi.on('click', ['a'], function(e){
     e.preventDefault();
     var theLi = $(this);
