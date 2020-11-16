@@ -64,7 +64,7 @@
     <!-- ================================================= -->
     <div class="part indicator_horizontal_slide">
       <h2> 인디케이터를 이용한 좌, 우 이동 <br /> 슬라이드 배너 만들기</h2>
-      <ul class="indicator">
+      <ul class="indicator hidden_wrap">
         <!-- <href, id를 이용하여 페이지 연결>
           1. click 하면 해당 배너 나타나기
           2. focus 하면 해당 배너 나타나기
@@ -92,7 +92,33 @@
           <li class="cake_05"><a id="pr_05" href="#">상품명_05</a></li>
         </ul>
       </div>
-    </div> <!--part slide_03-->
+    </div> <!--part indicator_horizontal_slide-->
+
+    <div class="part indicator_fade_slide">
+      <h2> 인디케이터를 이용한 fade 처리되는 <br /> 슬라이드 배너 만들기</h2>
+      <ul class="indicator4 hidden_wrap">
+        <li class="action"><a href="#pr_01">
+          <span class="hidden_context">상품_1 요약설명</span></a></li>
+        <li><a href="#pr_02">
+          <span class="hidden_context">상품_2 요약설명</span></a></li>
+        <li><a href="#pr_03">
+          <span class="hidden_context">상품_3 요약설명</span></a></li>
+        <li><a href="#pr_04">
+          <span class="hidden_context">상품_4 요약설명</span></a></li>
+        <li><a href="#pr_05">
+          <span class="hidden_context">상품_5 요약설명</span></a></li>
+      </ul>
+
+      <div class="slide_wrap">
+        <ul>
+          <li class="cake_01 action"><a id="pr_01" href="#">상품명_01</a></li>
+          <li class="cake_02"><a id="pr_02" href="#">상품명_02</a></li>
+          <li class="cake_03"><a id="pr_03" href="#">상품명_03</a></li>
+          <li class="cake_04"><a id="pr_04" href="#">상품명_04</a></li>
+          <li class="cake_05"><a id="pr_05" href="#">상품명_05</a></li>
+        </ul>
+      </div>
+    </div> <!--part indicator_fade_slide-->
     
   </div>
 <!-- script-->
@@ -101,6 +127,7 @@
    <script src="../js/src/slideBtnBanner.js"></script>
    <script src="../js/src/slideBtnBanner2.js"></script>
    <script src="../js/src/slideBtnBanner3.js"></script>
+   <script src="../js/src/slideBtnBanner4.js"></script>
 
 </body>
 </html>
