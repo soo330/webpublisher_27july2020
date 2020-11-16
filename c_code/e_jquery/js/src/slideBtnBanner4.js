@@ -50,7 +50,7 @@
             slideLi.eq(theLiIndex).stop().fadeIn(function(){
                 slideLi.not(actionLi).stop().hide();
             }); // slideLi fadeIn
-        } //if theLiIndex !==
-    }); //indiLi on
+        } // if theLiIndex !==
+    }); // indiLi on
     
 })(jQuery);
