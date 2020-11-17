@@ -52,10 +52,10 @@
   var galleryArea= galleryBox.children('.gallery_area');
   var close = galleryArea.find('.close');
   var bigImg = galleryArea.find('.big_img');
+  var pTag = bigImg.children('p');
 
   // var theBig = theLi.attr('data-big');
   var dataNarr;
-  var pTag = bigImg.children('p');
   var timed = 500;
     
 
@@ -88,14 +88,24 @@
     var mLibtn = modalLi.find('button');
     var span = mLibtn.find('span');
     var pTag = bigImg.children('p');
-		var indexCheck;
+    var indexCheck;
+    
+    galleryBox, galleryArea, close,bigImg, pTag;
 
     modalLi.children('button').on('click', function(e){
 			e.preventDefault();
 			var theLi = $(this).parent('li');
-			var theLiI = theLi.index();
-
+      var theLiI = theLi.index();
       indexCheck= theLiI;
+      // ====================================
+      modal.after(galleryCode);
+      galleryBox = $('.gallery_box');
+      galleryArea= galleryBox.children('.gallery_area');
+      close = galleryArea.find('.close');
+      bigImg = galleryArea.find('.big_img');
+      pTag = bigImg.children('p');
+      // ====================================
+      
       
       // thedataNarr = theLi.attr('data-narr');
 			// theBig = theLi.attr('data-big');      
@@ -113,15 +123,16 @@
 			});
       // bigImg.css({backgroundImage : 'url('+ url + theBig +')'});
     
-    }); //mLiBtn button fadeIn
-    
+        
     close.children('button').on('click', function(e){
       e.preventDefault();
       galleryBox.stop().fadeOut();
       modalLi.eq(indexCheck).find('button').focus();	
       pTag.removeClass('action');
-    }); //close
 
+      galleryBox.remove();// 자체를 지워라
+    }); //close
+  });//mLiBtn button fadeIn
 
 
 })(jQuery);
