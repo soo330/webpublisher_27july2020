@@ -8,33 +8,41 @@
       "title":"juice_01",
       "thumImg": "juice_small_01.jpg",
       "bigImg":"juice_big_01.jpg",
-      "content": "image_01 설명lorem2"
+      "content": "image_01 설명lorem2",
+      "text":"이미지_01",
+      "imgUrl":"'../../img/modal/juice_small_01.jpg'",
     },
     {
       "title":"juice_02",
       "thumImg": "juice_small_01.jpg",
       "bigImg":"juice_big_01.jpg",
-      "content": "image_02 설명lorem5"
+      "content": "image_02 설명lorem5",
+      "text":"이미지_02",
+      "imgUrl":"'../../img/modal/juice_small_01.jpg'",
     },
     {
       "title":"juice_03",
       "thumImg": "juice_small_01.jpg",
       "bigImg":"juice_big_01.jpg",
-      "content": "image_03 설명lorem10"
+      "content": "image_03 설명lorem10",
+      "text":"이미지_03",
+      "imgUrl":"'../../img/modal/juice_small_01.jpg'",
     },
     {
       "title":"juice_04",
       "thumImg": "juice_small_01.jpg",
       "bigImg":"juice_big_01.jpg",
-      "content": "image_04 설명lorem3"
+      "content": "image_04 설명lorem3",
+      "text":"이미지_04",
+      "imgUrl":"'../../img/modal/juice_small_01.jpg'",
     }
   ];
   //===============================================================
 
   var modalnCode = '<li><button type="button"><span></span></button></li>';
   var galleryCode = '<div class="gallery_box"><div class="gallery_area">\
-  <div class="close"><button type="button"><span>닫기\
-  </span></button></div><div class="big_img">/p></div></div></div>';
+  <div class="close"><button type="button"><span>닫기</span>\
+  </button></div><div class="big_img">/p></div></div></div>';
   
   //===============================================================
 
@@ -46,7 +54,8 @@
     modal.after(galleryCode); // 선택자 바로 뒤에
 
     var modalLi = modalUl.find('li');
-    var mLiBtn = modalLi.find('button');
+    var mLibtn = modalLi.find('button');
+    var span = mLibtn.find('span');
 
     
     var galleryBox = $('.gallery_box');
@@ -58,6 +67,20 @@
     var dataNarr;
     var pTag = bigImg.children('p');
     var timed = 500;
+
+
+    var i=0;
+    // modalUl.empty(); // 선택자 내부 지우기
+    for(; i < data.length ; i+=1){
+      modalUl.append(modalnCode);
+      modalLi=modalUl.find('li').eq(i);
+      modalLi.attr({'data-big' : data[i].bigImg});
+      modalLi.attr({'data-narr': data[i].thumImg});
+      span.text(data[i].text);
+
+    }
+    
+    
 
 
 
