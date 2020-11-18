@@ -60,8 +60,7 @@
 }); //win.on(){}
 
 
-
-
+/*
   topBtn.on('click', ['a'], function(e){
     e.preventDefault();
     var theA = $(this).find('a');
@@ -84,10 +83,44 @@
     var theNavOffset = $(theNavLiAttr).offset().top;
     $('html,body').animate({ scrollTop: theNavOffset});
   }); //navLi.on (){}
+*/
 
-  // ============================================
-  // ============================================
-  // 2. $('popup_dp') 닫기버튼 클릭 시 팝업 창 삭제
+
+//================================================================
+//================================================================
+//클릭시 처리되는 내용을 함수 처리하기
+
+var liScrollMove = function(e){
+  e.preventDefault();
+  var theA = $(this).find('a');
+  // a요소의 연결된 선택자 파악
+  var theAAtter = theA.attr('href');
+  // a요소의 href값의 상단에서 떨어져있는 양 체크
+  var theAOffset = $(theAAtter).offset().top;
+  // 브라우저를 이동시켜라(스크롤) -> theAOffset 으로 파악된 크기만큼
+  console.log(theAOffset);
+  $('html,body').animate({scrollTop: theAOffset});
+
+}; // scrollMove on (){}
+//-----------------------------------------------------------
+
+// topBtn.on('click', ['a'], liScrollMove );
+// navBtn.on('click', ['a'], liScrollMove );
+
+// js 선택자.forEach(function(배열요소 각각, 해당 배열 요소 순서){});
+// jq   배열.forEach(function(배열요소 순서, 순서에 맞는 배열요소 각각){});
+
+var btnCollection = [topBtn, navLi];
+$.each([topBtn, navLi], function(i, btn){
+  btn.on('click', ['a'], liScrollMove);
+}); //btnCollection = $each
+
+
+// =================================================================
+// =================================================================
+
+
+// 2. $('popup_dp') 닫기버튼 클릭 시 팝업 창 삭제
   var popupDp = $('.popup_dp');
   var popupBtn =popupDp.find('button');
   popupBtn.on('click', function(e){
