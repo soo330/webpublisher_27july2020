@@ -132,23 +132,11 @@ $.each([topBtn, navLi], function(i, btn){
 // ==================================================================
 // ==================================================================
 // //3. tab 메뉴 처리하기
-// var tabMenu = $('.tabMenu');
-// var tabUl = tabMenu.find('ul');
-// var tabLi = tabUl.find('li');
 
-// var ContentBox = $('.tab_content');
-// var tabCon = ContentBox.find('div');
-
-// tabUl.children('li').on('click',['a'], function(e){
-//   e.preventDefault();
-//   var theTabLi = $(this).find('a');
-//   var theTabLiAttr = theTabLi.attr('href');
-//   var theTabLiOffset = $(theTabLiAttr).offset().top;
-
-// }); //tabUl
-
-var tabLi = $('.tabMenu li');
-var tabCon = $('tab_content div');
+var tab = $('.tabMenu')
+var tabLi = tab.find('li');
+var tabConWrap = $('.tab_content'); //div
+var tabCon = tabConWrap.find('div');
 
 tabLi.on('click', ['a'], function(e){
   e.preventDefault();
@@ -156,10 +144,30 @@ tabLi.on('click', ['a'], function(e){
   var itI = it.index();
 
   tabCon.eq(itI).show();
-  tabeq.eq(itI).siblings().hide();
+  tabCon.eq(itI).siblings().hide();
 });
+// ====================================
+// conBox2
+var  TTS = $('.title_tab_style');
+var TTSdl = TTS.children('dl');
+var TTSdt = TTSdl.children('dt');
+var TTSdd = TTSdl.children('dd');
 
-  
+TTSdt.eq(0).addClass('action');
+TTSdt.on('click', ['a'], function(e){
+  e.preventDefault();
+  var thedt = $(this);
+
+  TTSdt.siblings('dt').removeClass('action');
+  thedt.addClass('action');
+
+  TTSdd.hide();
+  thedt.next('dd').show();
+
+  // TTSdd.eq(theddI).show();
+  // thedd.parent('dl').siblings().children('dd').hide();
+}); //TTSdl
+
 
   //jQuery end
 })(jQuery);
