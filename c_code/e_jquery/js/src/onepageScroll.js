@@ -32,7 +32,7 @@
   win.on('scroll', function(e){
     // win.scrollTop(); // 스크롤이 얼마나 움직였는지 이동한 위치 값 파악
     var winSt = win.scrollTop();
-    console.log(winSt);
+    // console.log(winSt);
 
     if( winSt >= headOffset ){
       headBox.css({"position":'fixed', 'top':0, 'zIndex':1500,});
@@ -129,8 +129,35 @@ $.each([topBtn, navLi], function(i, btn){
   }); //popupBtn (click){}
 
 
+// ==================================================================
+// ==================================================================
+// //3. tab 메뉴 처리하기
+// var tabMenu = $('.tabMenu');
+// var tabUl = tabMenu.find('ul');
+// var tabLi = tabUl.find('li');
 
+// var ContentBox = $('.tab_content');
+// var tabCon = ContentBox.find('div');
 
+// tabUl.children('li').on('click',['a'], function(e){
+//   e.preventDefault();
+//   var theTabLi = $(this).find('a');
+//   var theTabLiAttr = theTabLi.attr('href');
+//   var theTabLiOffset = $(theTabLiAttr).offset().top;
+
+// }); //tabUl
+
+var tabLi = $('.tabMenu li');
+var tabCon = $('tab_content div');
+
+tabLi.on('click', ['a'], function(e){
+  e.preventDefault();
+  var it = $(this);
+  var itI = it.index();
+
+  tabCon.eq(itI).show();
+  tabeq.eq(itI).siblings().hide();
+});
 
   
 
