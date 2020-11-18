@@ -48,10 +48,51 @@ body{overflow-x: hidden;}
   border-bottom: 1px solid #07a; color: #fff; font-size: 4rem;}
 /* ================================================== */
 #conBox_01{
-  width: 100%; height: 100rem; border-bottom: 1px solid #07a;
+  width: 100%; height: 100rem; padding-top: 10rem; border-bottom: 1px solid #07a;
   background-color: #fff;
   background-image: linear-gradient(60deg, #fa0, #acf, #fac);
 }
+
+/* === */
+  .tabMenu {
+    width: 80%; height: 3rem; margin: auto;
+  }
+  .conBox_01>h2 { width: 0; height: 0; text-align: center; }
+  .tabMenu ul {
+    
+    width: 100%; height: 100%; text-align: center;}
+  .tabMenu li {
+    position: relative; display: inline-block;
+    margin: 0 3rem; width: auto; height: 100%;}
+
+  .tabMenu li:after {
+    content: " "; display: block;
+    position: absolute; right: -2rem; top: 10%;
+    width: 1px; height: 80%; background-color: #333;}
+  .tabMenu li:last-child:after { display: none;}
+  
+    .tabMenu li a { display: block; width: 120px; height: 100%; line-height: 40px; background-color: #fff;}
+
+  .tabMenu li:last-child {margin-right: 0;}
+/* === */
+  .tab_content {
+    width: 90%; min-width: 500px; margin: auto; margin-top: 2rem;
+    padding-top: 2rem; padding: 1rem; box-sizing: border-box;
+    border: 1px solid #333;
+  }
+  .tab_content h3{  margin-top: 100px; width: 100%; height: 100%; border-bottom: 1px solid #333;}
+
+  .tab_content div {
+    display: none;
+    width: 100%; height: 100%; padding: 1rem;
+    box-sizing: border-box; margin-bottom: 3.125rem;
+    background-color: #fff;
+  }
+  .tab_content p {padding-top: 1rem; color: #077;}
+
+  .tab_content .tab_con_01{display: block;}
+
+
 /* ================================================== */
 #conBox_02{
   width: 100%; height: 31.25rem;
