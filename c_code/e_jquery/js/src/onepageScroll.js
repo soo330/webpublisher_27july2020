@@ -35,7 +35,7 @@
     // console.log(winSt);
 
     if( winSt >= headOffset ){
-      headBox.css({"position":'fixed', 'top':0, 'zIndex':1500,});
+      headBox.css({'position':'fixed', 'top':0, 'zIndex':1500});
     } // if
     else{
       headBox.removeAttr('style');
@@ -133,18 +133,18 @@ $.each([topBtn, navLi], function(i, btn){
 // ==================================================================
 // //3. tab 메뉴 처리하기
 
-var tab = $('.tabMenu')
+var tab = $('.tabMenu');
 var tabLi = tab.find('li');
 var tabConWrap = $('.tab_content'); //div
 var tabCon = tabConWrap.find('div');
 
 tabLi.on('click', ['a'], function(e){
   e.preventDefault();
-  var it = $(this);
-  var itI = it.index();
+  var theTabLi = $(this);
+  var theTabLiI = theTabLi.index();
 
-  tabCon.eq(itI).show();
-  tabCon.eq(itI).siblings().hide();
+  tabCon.eq(theTabLiI).show();
+  tabCon.eq(theTabLiI).siblings().hide();
 });
 // ====================================
 // conBox2
@@ -166,7 +166,7 @@ TTSdt.on('click', ['a'], function(e){
 
   // TTSdd.eq(theddI).show();
   // thedd.parent('dl').siblings().children('dd').hide();
-}); //TTSdl
+}); //TTSdt
 
 
   //jQuery end
