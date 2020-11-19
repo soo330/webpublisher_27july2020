@@ -35,36 +35,42 @@
   //브라우저의 최초 크기값 확인
   var win = $(window);
   var winW = win.outerWidth(true);
-  var myType;
-  // console.log(winW);
-  //-------------------------------------------
-  // if( winW <= deviceType[0].size ){
-  //   myType = deviceType[0]
-  // } //if
-  // else if(winW <= deviceType[1].size){
-  //   myType = deviceType[1]
-  // }
-  // else if(winW <= deviceType[2].size){
-  //   myType = deviceType[2]
-  // }
-  // else if(winW <= deviceType[3].size){
-  //   myType = deviceType[3]
-  // }else{
-  //   myType = deviceType[deviceType.length-1].type;
-  // }
-  // if문 for문으로 바꾸기====================
-  for(var i=0; i <deviceType.length; i+=1){
-    if( winW <= deviceType[i].size ){
-      myType = deviceType[i].type;
-      break;
-    } // if
-    else{
-      myType = deviceType[deviceType.length-1].type;
-    } // else
-  } // for
+  // 사이즈가 변경되기 이전의 가로값
+  var deviceCheck = function(){
+    var myType;
 
-  console.log(myType);
 
+    // console.log(winW);
+    //-------------------------------------------
+    // if( winW <= deviceType[0].size ){
+    //   myType = deviceType[0]
+    // } //if
+    // else if(winW <= deviceType[1].size){
+    //   myType = deviceType[1]
+    // }
+    // else if(winW <= deviceType[2].size){
+    //   myType = deviceType[2]
+    // }
+    // else if(winW <= deviceType[3].size){
+    //   myType = deviceType[3]
+    // }else{
+    //   myType = deviceType[deviceType.length-1].type;
+    // }
+    // if문 for문으로 바꾸기====================
+    for(var i=0; i <deviceType.length; i+=1){
+      if( winW <= deviceType[i].size ){
+        myType = deviceType[i].type;
+        break;
+      } // if
+      else{
+        myType = deviceType[deviceType.length-1].type;
+      } // else
+    } // for
+  
+    console.log(myType);
+  }; //deviceCheck
+
+  // resize ======================================
   win.on('resize', function(){
     var reWinW = win.outerWidth(true);
     console.log(reWinW);
