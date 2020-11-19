@@ -12,7 +12,7 @@
 
   headBox.load('./monffee/monffee_headBox.html');
   viewBox.load('./monffee/monffee_viewBox.html');
-  bestNews.append('<script src="../js/src/monffee_bestNews.js"></script>')
+  bestNews.append('<script src="../js/src/monffee_bestNews.js"></script>');
   issueBox.load('./monffee/monffee_issueBox.html');
 })(jQuery);
 
