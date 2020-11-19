@@ -84,7 +84,7 @@ var deviceSize = function(){
     win.on('resize', function(){
       var reWinW = win.outerWidth(true);
       var afterWinSize = deviceCheck(reWinW);
-      resultDevice - winSize;
+      resultDevice = winSize;
       
       // ----------------------------------
       //기존 디바이스 타입과 변경된 디바이스 타입이 다른경우에 새로고침 하겠다라는 명령어 /location이 window안에 들어가는 객체
@@ -96,7 +96,7 @@ var deviceSize = function(){
     return resultDevice;
     //jQuery end
   })(jQuery);
-  
+
   return resultDevice;
 } // deviceSize
 

@@ -1,5 +1,4 @@
 // rwdTemp_import_module.js
-// rwdTemp_import_module.js
 
 (function($){
   var nowW = deviceSize();
