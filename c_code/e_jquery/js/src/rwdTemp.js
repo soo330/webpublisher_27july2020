@@ -96,7 +96,7 @@ var deviceSize = function(){
     return resultDevice;
     //jQuery end
   })(jQuery);
-
+  
   return resultDevice;
 } // deviceSize
 
