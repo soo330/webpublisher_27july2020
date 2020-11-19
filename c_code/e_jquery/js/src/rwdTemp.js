@@ -21,6 +21,8 @@
 // ===========================================================
 
 var deviceSize = function(){
+  var resultDevice;
+
   (function($){
 
     //기준 치를 설정
@@ -39,7 +41,7 @@ var deviceSize = function(){
     // 사이즈가 변경되기 이전의 가로값
     var beforeWinW = win.outerWidth(true);
 
-    var resultDevice;  
+    
     //여기서 winW는 매개변수여서 아래 if문에서 값을 확인하기위한 용도
     var deviceCheck = function(winW){
       var myType;
@@ -73,7 +75,6 @@ var deviceSize = function(){
       } // for
       // console.log(myType);
       return myType;
-      return resultDevice;
     }; //deviceCheck();
   
     var winSize = deviceCheck(beforeWinW);
@@ -83,6 +84,7 @@ var deviceSize = function(){
     win.on('resize', function(){
       var reWinW = win.outerWidth(true);
       var afterWinSize = deviceCheck(reWinW);
+      resultDevice - winSize;
       
       // ----------------------------------
       //기존 디바이스 타입과 변경된 디바이스 타입이 다른경우에 새로고침 하겠다라는 명령어 /location이 window안에 들어가는 객체
@@ -90,9 +92,11 @@ var deviceSize = function(){
         location.reload(); // 현재 위치에서 새로고침
       }//if winSize
     }); // win.resize
-  
+
+    return resultDevice;
     //jQuery end
   })(jQuery);
-  
+
+  return resultDevice;
 } // deviceSize
 
