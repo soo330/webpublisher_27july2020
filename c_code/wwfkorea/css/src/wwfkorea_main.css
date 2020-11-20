@@ -4,7 +4,7 @@
 /* 공통 =============================== */
 
 #wrap {
-  width: 100%; height: 100%; margin: auto;
+  width: 100%; height: auto; margin: auto;
   background-color: #dfdfdf;
   }
 
@@ -42,35 +42,65 @@ h1 a {display: block; width: 100%; height: 100;}
 .mission_img { margin-top: 90px; margin: auto; width: 80%; height: 556px; background-color: #fff;}
 
 /* ========================================= */
-#newsBox{width: 100%; height: auto; min-height: 4750px; background-color: #84D919;}
+#newsBox{width: 100%; height: auto; min-height: 4650px; background-color: #84D919;}
 
 #newsBox h2 { margin: auto; padding-top: 35px; width: 80%; height: 45px; margin-bottom: 47px; text-align: center; border-bottom: 1px solid #333;}
-.news_area { margin-top: 48px; margin: auto; width: 80%; height: 4520px; background-color: #fff;}
+.news_area { margin-top: 48px; margin: auto; width: 80%; height: auto; background-color: #fff;}
 
-/* .news_area a {width: 80%; height: 100%;} */
 
+.news_area ul {width: 100%; height: 100%;}
+.news_area li {width: 100%; height: auto;}
+.news_area li:first-of-type {padding-top: 100px;}
+.news_area a {width: 80%; height: 100%; }
 .news_area div {
   margin: auto;
   width: 80%; height: auto; min-height: 326px; background-color: #777;}
-/* .news_img_02 {width: auto; min-width: 340px; height: auto; min-height: 326px; background-color: #479A28;}
-.news_img_03 {width: auto; min-width: 340px; height: auto; min-height: 326px; background-color: #FF2D62;}
-.news_img_04 {width: auto; min-width: 340px; height: auto; min-height: 326px; background-color: #4BA37E;}
-.news_img_05 {width: auto; min-width: 340px; height: auto; min-height: 326px; background-color: #16E6B4;}
-.news_img_06 {width: auto; min-width: 340px; height: auto; min-height: 326px; background-color: #F3EF3A;}
-.news_img_07 {width: auto; min-width: 340px; height: auto; min-height: 326px; background-color: #53FB79;}
-.news_img_08 {width: auto; min-width: 340px; height: auto; min-height: 326px; background-color: #8A4428;} */
 
+/* img part----------- */
 .news_area dl {
-  margin: auto; width: 80%; height: auto; min-height: 154px; background-color: #329A67;}
+  margin: auto; margin-bottom: 50px;
+  width: 80%; height: auto; min-height: 154px; background-color: #329A67;}
 .news_area dt {
    margin: auto; width: 80%; height: auto; min-height: 50px; background-color: #D092BF;}
 .news_area dd {
    margin: auto; width: 80%; height: auto; min-height: 90px; background-color: #3E2CA4;}
 
 /* ========================================= */
-#supprtBox{width: 100%; height: auto; min-height: 1180px; background-color: #D5C5E2;}
+#supportBox{width: 100%; height: auto; min-height: 1300px; background-color: #D5C5E2;}
+
+#supportBox h2 { margin: auto; padding-top: 35px; width: 80%; height: 55px; margin-bottom: 47px; text-align: center; border-bottom: 1px solid #333;}
+
+.supp_area { margin-top: 48px; margin: auto; width: 80%; height:100%; background-color: #fff;}
+
+.supp_area ul {width: 100%; height: 100%; padding-bottom: 50px;}
+.supp_area li {width: 100%; height: 100%;}
+.supp_area li:first-of-type {padding-top: 50px;}
+.supp_area a {width: 80%; height: 100%; }
+
+.supp_area div {
+  margin: auto;
+  width: 80%; height: auto; min-height: 326px; background-color: #777;}
+/* img part----------- */
+  .supp_area dl {
+    margin: auto;
+    width: 80%; height: auto; min-height: 154px; background-color: #329A67;}
+  .supp_area dt {
+      margin: auto; width: 80%; height: auto; min-height: 50px; background-color: #D092BF;}
+  .supp_area dd {
+      margin: auto; width: 80%; height: auto; min-height: 90px; background-color: #3E2CA4;}
 /* ========================================= */
 #subsBox {width: 100%; height: auto; min-height: 690px; background-color: #555;}
+
+#subsBox h2 { margin: auto; width: 80%; height: 50px; border-bottom: 1px solid #333;}
+
+.aboutUs_wrap {
+  width: 80%; height: auto; min-height: 527px;}
+
+.aboutUs_area {
+  /* float: left; */
+
+  width: 100px; height: 178px; background-color: #fff;}
+
 /* ========================================= */
 #footBox{width: 100%; height: auto; min-height: 854px; background-color: #BF981F;}
 /* ========================================= */
