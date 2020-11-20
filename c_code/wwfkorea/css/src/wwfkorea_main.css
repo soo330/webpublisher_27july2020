@@ -7,27 +7,18 @@
   width: 100%; height: 100%; margin: auto;
   background-color: #dfdfdf;
   }
-#viewBox {}
-#contentBox{}
-#newsBox{}
-#supprtBox{}
-#footBox{}
+#headBox {width: 100%; height: auto; min-height: 70px; background-color: #3255C0;}
 
-/* 480px=============================== */
-@media screen and (max-width: 479px)
-{
-
-}
-
-/* 1024px============================== */
-@media screen and (min-width: 480px )and( max-width: 1023px){
-
-}
-/* 1440px============================== */
-@media screen and (min-width: 1024px)and(max-width:1439px){
-
-}
-/* 1920px============================== */
-@media screen and (min-width: 1920px ){
-
-}
+/* ========================================= */
+#viewBox {width: 100%; height: auto; min-height: 720px; background-color: #38B4DC;}
+/* ========================================= */
+#contentBox{width: 100%; height: auto; min-height: 990px; background-color: #EBDB24;}
+/* ========================================= */
+#newsBox{width: 100%; height: auto; min-height: 4750px; background-color: #84D919;}
+/* ========================================= */
+#supprtBox{width: 100%; height: auto; min-height: 1180px; background-color: #D5C5E2;}
+/* ========================================= */
+#subsBox {width: 100%; height: auto; min-height: 690px; background-color: #555;}
+/* ========================================= */
+#footBox{width: 100%; height: auto; min-height: 854px; background-color: #BF981F;}
+/* ========================================= */
