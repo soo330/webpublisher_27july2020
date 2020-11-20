@@ -91,15 +91,17 @@ h1 a {display: block; width: 100%; height: 100;}
 /* ========================================= */
 #subsBox {width: 100%; height: auto; min-height: 690px; background-color: #555;}
 
-#subsBox h2 { margin: auto; width: 80%; height: 50px; border-bottom: 1px solid #333;}
+#subsBox h2 { margin: auto; padding-top: 132px; width: 80%; height: 50px; border-bottom: 1px solid #333;}
 
 .aboutUs_wrap {
+  margin: auto;
   width: 80%; height: auto; min-height: 527px;}
 
 .aboutUs_area {
   /* float: left; */
-
   width: 100px; height: 178px; background-color: #fff;}
+
+.subs_part{width: 80%;}
 
 /* ========================================= */
 #footBox{width: 100%; height: auto; min-height: 854px; background-color: #BF981F;}
