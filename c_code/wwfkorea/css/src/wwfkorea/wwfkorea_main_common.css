@@ -1,0 +1,240 @@
+
+/* 공통 =============================== */
+
+#wrap {
+  width: 100%; height: auto; margin: auto;
+  background-color: #dfdfdf;
+  }
+  
+
+/* ================================================ */
+#headBox {
+  position: relative;
+  width: 100%; height: auto; min-height: 70px; background-color: #3255C0;}
+
+  #headBox::before {
+    content: ""; display: block;
+    position: absolute; top: 0; left: 0; z-index: -1;
+    width: 100%; height: 120px;
+    background-color: #fa0;
+  }
+
+h1 {float: left; min-width: 38px; min-height: 48px;
+  width: 100%; height: 100%;
+  background-color: #fff;}
+h1 a {
+  display: block; width: 100%; height: 100%;
+  background-image: url('../../../img/wwf_informal_300x360.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: contain;
+  }
+.headWrap { margin: auto; width: 80%; height:70px; background-color: #fa0;}
+
+/* 상위메뉴란 디자인 -------------- */
+.menuIconWrap {float:right; width: 140px; height: 100%; background-color: #fff;}
+  /*검색 디자인 ------------- */
+  .searchIBox {float: left; width: 60px; height: 100%; background-color: #177636;
+  }
+  .search_btn{ width: 100%; height: 100%;}
+  .search_btn a {
+    display: block;
+    width: 100%; height: 100%;
+    background-image: url('../../../img/icons/loupe_white.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50%;}
+  
+  /* 메뉴버튼 디자인 --------------- */
+  .menuIBox {
+    float: right; width: 60px; height: 100%; background-color: #DE1DC1;
+  }
+  .menu_btn {width: 100%; height: 100%;}
+  .menu_btn button {
+    display: block; width: 100%; height: 100%;
+    background-image: url('../../../img/icons/menu_btn_white.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50%;
+  }
+
+  /* 메뉴안 닫기버튼 디자인 --------------- */
+  .close_btn {
+    position: absolute; top: 0; right: 0;
+    width: 34px; height: 34px;
+    
+  }
+
+  .close_btn button {
+    /* display: block; */
+    width: 100%; height: 100%;
+    background-image: url('../../../img/icons/delete.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 80%;
+  }
+  /* ----------------------- */
+
+.menu_area {
+  position: absolute; top: 0; left: 0;
+  margin: auto; padding-bottom: 80px;
+  width: 100%; height: auto; min-height: 460px;
+  background-color: #ddd;}
+
+  .menu_area ul{ margin: auto; width: 50%; height: auto;}
+  .menu_area li{
+    padding-top: 4.166666vw;
+    width: 100%; height: auto;}
+
+    /* .menu_area li:first-child {padding-top: 27.083333vw;} */
+
+  .menu_area dl {  width: 100%; height: auto;}
+  .menu_area dt {
+    padding-top: 30px;
+    width: 100%; height: auto; border-bottom: 1px solid #fff;
+    
+    font-weight: bold; font-size: 1.6875rem;}
+  .menu_area dd {width: 100%; font-size: 1.125rem;}
+  .menu_area a {display: block; padding-top: 20px;}
+
+
+  
+/* ========================================= */
+#viewBox {width: 100%; height: auto; min-height: 720px; background-color: #38B4DC;}
+.view_area {width: 100%; height: 720px;}
+
+  .img_part {width: 100%; height: 479px; background-color: #28AE83;}
+
+  .text_part {width: 100%; height: 240px; background-color: #DA0F1D;}
+    .text_part dl {padding-top: 58px; width: 80%; height: 125px; margin: auto;}
+    .text_part dt {width: 100%; height: 56px; background-color: #0777B7;}
+    .text_part dd {width: 100%; height: 84px; background-color: #A4C579;}
+
+/* ========================================= */
+#contentBox{width: 100%; height: auto; min-height: 990px; background-color: #EBDB24;}
+
+#contentBox h2 {padding-top: 110px; width: 80%; height: 43px; margin: auto; text-align: center; border-bottom: 1px solid #333;}
+#contentBox p {padding: 22px 0 92px; width: 80%; height: 53px; margin: auto;text-align: center; line-height: 53px;}
+
+.missionBox {margin: auto; width: 80%; height: 100%;}
+.mission_img { margin-top: 90px; margin: auto; width: 80%; height: 556px; background-color: #fff;}
+
+/* ========================================= */
+#newsBox{width: 100%; height: auto; min-height: 4650px; background-color: #84D919;}
+
+#newsBox h2 { margin: auto; padding-top: 35px; width: 80%; height: 45px; margin-bottom: 47px; text-align: center; border-bottom: 1px solid #333;}
+.news_area { margin-top: 48px; margin: auto; width: 80%; height: auto; background-color: #fff;}
+
+
+.news_area ul {width: 100%; height: 100%;}
+.news_area li {width: 100%; height: auto;}
+.news_area li:first-of-type {padding-top: 100px;}
+.news_area a {width: 80%; height: 100%; }
+.news_area div {
+  margin: auto;
+  width: 80%; height: auto; min-height: 326px; background-color: #777;}
+
+/* img part----------- */
+.news_area dl {
+  margin: auto; margin-bottom: 50px;
+  width: 80%; height: auto; min-height: 154px; background-color: #329A67;}
+.news_area dt {
+   margin: auto; width: 80%; height: auto; min-height: 50px; background-color: #D092BF;}
+.news_area dd {
+   margin: auto; width: 80%; height: auto; min-height: 90px; background-color: #3E2CA4;}
+
+/* ========================================= */
+#supportBox{width: 100%; height: auto; min-height: 1300px; background-color: #D5C5E2;}
+
+#supportBox h2 { margin: auto; padding-top: 35px; width: 80%; height: 55px; margin-bottom: 47px; text-align: center; border-bottom: 1px solid #333;}
+
+.supp_area { margin-top: 48px; margin: auto; width: 80%; height:100%; background-color: #fff;}
+
+.supp_area ul {width: 100%; height: 100%; padding-bottom: 50px;}
+.supp_area li {width: 100%; height: 100%;}
+.supp_area li:first-of-type {padding-top: 50px;}
+.supp_area a {
+  /* display: block; */
+  width: 80%; height: 100%; }
+
+.supp_area div {
+  margin: auto;
+  width: 80%; height: auto; min-height: 326px; background-color: #777;}
+/* img part----------- */
+  .supp_area dl {
+    margin: auto;
+    width: 80%; height: auto; min-height: 154px; background-color: #329A67;}
+  .supp_area dt {
+      margin: auto; width: 80%; height: auto; min-height: 50px; background-color: #D092BF;}
+  .supp_area dd {
+      margin: auto; width: 80%; height: auto; min-height: 90px; background-color: #3E2CA4;}
+/* ========================================= */
+#subsBox {width: 100%; height: auto; min-height: 690px; background-color: #555;}
+
+#subsBox h2 { margin: auto; padding-top: 132px; width: 80%; height: 50px; font-size: 2.25rem; border-bottom: 1px solid #333;}
+
+.aboutUs_wrap {
+  margin: auto;
+  width: 80%; height: auto; min-height: 527px;}
+
+.aboutUs_area {
+  /* float: left; */
+  width: 100%; height: 303px; background-color: #bbb;}
+
+  .aboutUs_area ul {width: 260px; height: 303px;}
+  .aboutUs_area li {padding-top: 20px; width: 100%; height: 17px;}
+  .aboutUs_area a {display: block; }
+  
+  .aboutUs_area span {width: 100%; height:100%; font-size: 1.5rem;}
+.subs_part{
+  /* float: left; */
+  width: 100%; height: auto; min-height: 146px;}
+
+/* ========================================= */
+#footBox{width: 100%; height: auto; min-height: 900px;
+  background-color: #BF981F;}
+
+.logo_info {
+  margin: auto;
+  width: 80%; min-width: 320px; min-height: 118px; height: auto;}
+
+.logo_info h2 {
+  float: left;
+  width: 68px; height: 88px; background-color: #fff;}
+
+.logo_info address {
+  float: right; ;
+  width: 182px; height: 118px; background-color: #fff;}
+/* ------------ */
+.fund_inc {
+  margin: auto; padding-top: 48px;
+  width:80%; height: 168px; background-color: #ddd;}
+
+.sns_wrap {
+  margin: auto;
+  width: 50%; min-width: 320px; height: 115px; background-color: #fff;}
+  .sns_wrap h3 {text-align: center;}
+
+.policy_area {
+  margin: auto;
+  width: 80%; min-width: 320px; height: auto; min-height: 94px;
+  padding-bottom: 30px;
+  background-color: #555;}
+
+  .policy_area ul {
+    /* display: flex; flex-flow: row; justify-content: space-around; */
+    margin: auto; width: 80%; height: auto;}
+  .policy_area li {    
+    margin: auto;
+    /* display:inline-flex; */
+    width: 100%; height: auto;}
+
+  .policy_area li:nth-of-type(2) a {width: 220px;}
+  .policy_area li a {
+    display: inline-block; width: 100%; height: 18px;
+    font-size: 1rem; text-align: center; line-height: 94px;}
+
+  .policy_area p { padding-top: 57px; text-align: center;}
+
+
+/* ========================================= */
