@@ -1,57 +1,60 @@
 <!DOCTYPE html>
-<!-- mediaQuery_02_result.html -->
+<!-- mediaQuery_02.html -->
 <html lang="ko-KR">
 <head>
   <meta charset="UTF-8">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../fonts/fontawesome/css/all.css">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;400;700&display=swap" rel="stylesheet">
+
+  <!--[if IE]>
+    <script src="../ie/modernizr-custom.js"></script>
+    <script src="../ie/ie11CustomProperties.js"></script>
+  <![endif]-->
+
   <link rel="stylesheet" href="../css/base/reset.css">
   <link rel="stylesheet" href="../css/base/common.css">
   <link rel="stylesheet" href="../css/src/mediaQuery_02_result.css">
   <title>Document</title>
+ <link rel="shortcut icon" href="../favicon.png" type="image/png">
+ <link rel="apple-touch-icon" href="../favicon.png">
 </head>
 <body>
-<!-- latout -->
+  <!-- layout -->
   <div id="wrap">
-    <header id="headBox">
-      <div class="imp">
-        <h1><span class="hidden_context">
-          sitelogo</span></h1>
-        <div class="userX">
-          <div class="login"></div>
-          <nav class="gnb_group">
-            <div class="nav_btn_mobile"><button>
-              <i class="fas fa-hamburger"></i>
-              <span class="hidden_context">전체메뉴확인</span>
-            </button></div>
-          </nav>
-        </div>
-      </div>
-    </header> <!--  headBox-->
+    <div class="headBox_wrap">
+      <header id="headBox">
+        <h1><a href="#">사이트이름</a></h1>
+        <nav id="navBox">
+          <h2 class="hidden_context">사용자 및 네비게이션</h2>
+          <div class="member_area">
+            <a href="#">
+              <i class="fas fa-person-booth"></i>
+              <span class="hidden_context">사용자 확인 버튼</span>
+            </a>
+          </div>
+          <div class="gnb_area">
+            <div class="nav_btn mobile">
+              <button type="button">
+                <i class="fas fa-hamburger"></i>
+                <span class="hidden_context">전체 메뉴 확인</span>
+              </button>
+            </div>
+            <ul class="gnb">
+              <li><a href="#">nav_01</a></li>
+              <li><a href="#">nav_02</a></li>
+              <li><a href="#">nav_03</a></li>
+              <li><a href="#">nav_04</a></li>
+            </ul>
+          </div>
+        </nav>
+      </header>
+    </div>
 
-    <section id="viewBox"></section> <!-- viewBox-->
-
-    <article id="contentBox">
-      <div class="title_shape"></div> 
-    </article> <!--contentBox-->
-
-    <article id="infoBox">
-      <div class="new_area"></div>
-      <div class="notice_area"></div>
-      <div class="more_content"></div>
-      </div>
-    </article> <!-- infoBox-->
-
-    
-    <footer id="footBox">
-      <div class="logo_wrap">
-        <h2><span class="hidden_context">
-          logo</span></h2>
-      </div>
-    </footer> <!--footBox-->
   </div>
-  </div>
-<!-- script-->
+
+  <!-- script -->
   <script></script>
-
 </body>
 </html>
+©
