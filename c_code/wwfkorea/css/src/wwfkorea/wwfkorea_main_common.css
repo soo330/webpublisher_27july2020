@@ -10,7 +10,7 @@
 /* ================================================ */
 #headBox {
   position: relative;
-  width: 100%; height: auto; min-height: 70px; background-color: var(--wwf-beige);}
+  width: 100%; height: auto; min-height: 45px; background-color: var(--wwf-beige);}
 
   #headBox::before {
     content: ""; display: block;
@@ -18,9 +18,10 @@
     width: 100%; height: 120px;
     background-color: #fa0;
   }
+.headWrap { margin: auto; width: 95%; height: auto; background-color: #fa0;}
 
-h1 {float: left; min-width: 38px; min-height: 48px;
-  width: 100%; height: 100%;
+h1 {float: left; min-width: 46px; min-height: 48px;
+  width: auto; height: 120%;
   background-color: #fff;}
 h1 a {
   display: block; width: 100%; height: 100%;
@@ -29,12 +30,12 @@ h1 a {
   background-position: 50% 50%;
   background-size: contain;
   }
-.headWrap { margin: auto; width: 80%; height:70px; background-color: #fa0;}
+
 
 /* 상위메뉴란 디자인 -------------- */
-.menuIconWrap {float:right; width: 140px; height: 100%; background-color: #fff;}
+.menuIconWrap {float:right; width: 90px; height: 100%; background-color: #fff;}
   /*검색 디자인 ------------- */
-  .searchIBox {float: left; width: 60px; height: 100%; background-color: #177636;
+  .searchIBox {float: left; width: 40px; height: 100%; background-color: #177636;
   }
   .search_btn{ width: 100%; height: 100%;}
   .search_btn a {
@@ -47,7 +48,7 @@ h1 a {
   
   /* 메뉴버튼 디자인 --------------- */
   .menuIBox {
-    float: right; width: 60px; height: 100%; background-color: #DE1DC1;
+    float: right; width: 40px; height: 100%; background-color: #DE1DC1;
   }
   .menu_btn {width: 100%; height: 100%;}
   .menu_btn button {
@@ -101,10 +102,12 @@ h1 a {
 
   
 /* ========================================= */
-#viewBox {width: 100%; height: auto; min-height: 720px; background-color: #38B4DC;}
-.view_area {width: 100%; height: 479px;}
+#viewBox {
+  width: 100%; height: auto; background-color: #38B4DC;}
+.view_wrap {width: 100%; height: 100%;}
+.view_area {width: 100%; height: 100%; }
 
-.img_part {width: 100%; height: 100%; background-color: #28AE83;}
+.img_part {width: 100%; min-height: 400px; height: auto; background-color: #D092BF;}
 
   .back_img {
     /* position: relative; */
@@ -122,11 +125,11 @@ h1 a {
       padding-top: 60px; width: 80%; min-height: 125px; height: auto; margin: auto;}
     .text_part dt {
       width: 100%; height: 56px;
-      font-size: 2.5rem;
+      font-size: 1.5rem;
       background-color: #0777B7;}
     .text_part dd {
       width: 100%; height: 84px;
-      font-size: 1.125rem;
+      font-size: 16px;
       background-color: #A4C579;}
     /* 더 보기 버튼 */
     .text_part .view_part_more {
@@ -220,7 +223,7 @@ h1 a {
 
 .logo_info {
   margin: auto;
-  width: 80%; min-width: 320px; min-height: 118px; height: auto;}
+  width: 80%; min-height: 118px; height: auto;}
 
 .logo_info h2 {
   float: left;
@@ -228,20 +231,20 @@ h1 a {
 
 .logo_info address {
   float: right; ;
-  width: 182px; height: 118px; background-color: #fff;}
+  width: 154px; height: 118px; background-color: #fff;}
 /* ------------ */
 .fund_inc {
-  margin: auto; padding-top: 48px;
+  margin: auto; margin-top: 48px;
   width:80%; height: 168px; background-color: #ddd;}
 
 .sns_wrap {
-  margin: auto;
-  width: 50%; min-width: 320px; height: 115px; background-color: #fff;}
+  margin: auto; margin-top: 30px;
+  width: 80%; height: 115px; background-color: #fff;}
   .sns_wrap h3 {text-align: center;}
 
 .policy_area {
   margin: auto;
-  width: 80%; min-width: 320px; height: auto; min-height: 94px;
+  width: 80%; min-width: 280px; height: auto; min-height: 94px;
   padding-bottom: 30px;
   background-color: #555;}
 

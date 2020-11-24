@@ -1,13 +1,20 @@
 /* wwfkorea_main_480_mediaQuery.css */
 
 
-@media screen and (max-width: 480px){
 
+/* @media screen and (max-width: 480px){
+  
   #headBox { min-height: 30px;}
-  .headWrap{ width:95%; height:35px;}
-  h1 {width: 6.25vw; height: 120%; min-width: 30px; min-height: 35%;}
+  .headWrap{ width: 95%; height:35px;}
+  h1 {width: 7.916666vw; height: 120%; min-width: 46px; min-height: 52px;}
   .menuIconWrap {width: 29.166666vw; height: 100%;}
   .searchIBox {width: 12.5vw;}
-  .menuIBox {width: 12.5vw;}
+  .menuIBox {width: 12.5vw;} */
 
+}
+@media screen and (max-width: 360px){
+  #wrap{ min-width:360px;}
+  #headBox { min-height: 30px;}
+
+  .img_part {width: 100%; min-height: 200px;max-height: 200px; height: auto; background-color: #ff5;}
 }
