@@ -1,0 +1,116 @@
+/* 1124_webstest.css */
+
+#wrap {width: 100%; height: auto; background-color: #dfdfdf;}
+/* ========================================= */
+
+#headBox{
+  position: absolute; top: 45px;  left: 50%; transform: translateX(-50%); z-index:900;
+  width: 960px; height: 90px; background-color: rgba(0,0,0,0.7);}
+
+/* -------------- */
+.navibar {width:100%; height: 100%; }
+h1 {
+  float: left; margin: 5px;
+  width: 200px; height: 80px; background-color: #fff;}
+
+.navibar ul {float: right; width: 70%; height: 100%;}
+
+.navibar ul li {
+  float: left; 
+  width: 100px; height: 100%; margin-left: 30px;
+  line-height: 90px; text-align: center; color: #fff; font-size: 1.5rem;
+}
+
+/* ========================================= */
+#viewBox{
+  position: relative; top: 0; left: 0; z-index: 700;
+  width: 100%; height: 100vh; background-color: #fa0;}
+
+.slide_indicator {
+  position: absolute; bottom: 30px; right: 30px; z-index: 800; padding: 5px;
+  width: 300px; height: 24px; border-radius: 50px; background-color: #777;
+}
+.slide_indicator ul {
+  float: left;
+  width: 220px; height: auto;}
+.slide_indicator ul li {
+  float: left; width: 24px; height: 24px;  margin-right: 15px;
+}
+.slide_indicator ul li:first-of-type{margin-left: 15px;}
+.slide_indicator a {
+  display: block;
+  border-radius: 100%; box-sizing: border-box; background-color: #fff;
+}
+
+.slide_indicator li.action a {background-color: #ff0;}
+
+/* ---------------- */
+.slide_btn {
+  float: right; width: 63px; height: 24px; margin-right: 15px;}
+.slide_btn>button{
+  display: block;
+  width: 24px; height: 24px;
+  margin-right: 5px; background-color: #fff; border-radius: 100%;}
+  .slide_btn>button:first-of-type{float: right; margin-right: 0;}
+
+/* ---------------- */
+
+.view_area {
+  position: relative; z-index: 100;
+  width: 100%; height: 100%;
+}
+.back_img {
+  position: relative; z-index: 100;
+  width: 500%; height: 100%;}
+.back_img li {
+  float: left; width: 20%; height: 100%;}
+
+  .adimg_01 {
+    background-image: url('../../img/adBanner/slide_01.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .adimg_02 {
+    background-image: url('../../img/adBanner/slide_02.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .adimg_03 {
+    background-image: url('../../img/adBanner/slide_03.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .adimg_04 {
+    background-image: url('../../img/adBanner/slide_04.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .adimg_05 {
+    background-image: url('../../img/adBanner/slide_05.png');
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+/* ========================================= */
+
+#contentBox {
+  width: 100%; height: 500px; margin: auto; background-color: #ccc;}
+.scrollBox{
+  float: left;
+  width: 80%; height: 100%; background-color: #555;}
+
+.top_btn {
+  position: fixed; bottom: 30px; right: 30px;
+  width: 100px; height: 100px; background-color: #333;}
+
+  .top_btn i {
+    padding: 15px; font-size: 5rem; color: #fff;}
+/* ========================================= */
+
+
+#footBox {
+  width: 100%; height: 300px;background-color: #333;}
