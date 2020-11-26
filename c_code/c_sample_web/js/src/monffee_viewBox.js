@@ -80,8 +80,8 @@
     //if*(){}else{} 콜백함수
     // if문 아래는 slide시
     backImg.stop().animate({'left': slideN * -100 + '%'},function(){
-      if(slideN >= backLi.length-1){
-        slideN = -1; // -1을 하는 이유는
+      if( slideN >= backLi.length-1){
+        slideN = -1; // -1로 이동해라
         // 아래 slideN*-100% 값에 -1*-100% 를 하는 격으로 답은 +100이나옴
         backImg.stop().css({'left': slideN * -100 + '%'});
         

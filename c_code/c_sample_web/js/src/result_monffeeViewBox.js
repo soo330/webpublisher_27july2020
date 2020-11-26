@@ -21,6 +21,7 @@
   backImg.css({ 'marginLeft':-100 + '%' , 'width': (reBackLi.length * 100) + '%'}); // 크기변경
   reBackLi.css({'width': (100 / reBackLi.length) + '%' }); // 내부요소 크기변경
 
+
   // 슬라이드 버튼
   var slideBtn = viewBox.find('.slide_btn');
   var nextSlideBtn = slideBtn.children('button').eq(0); // next버튼

@@ -22,7 +22,8 @@
 }
 
   .slide_indicator>ul { width: 100%; height: auto;}
-  .slide_indicator>ul>li { float: left; width: 40px; height: 40px; margin-right: 40px; }
+  .slide_indicator>ul>li {
+    float: left; width: 40px; height: 40px; margin-right: 40px; }
   .slide_indicator>ul>li:last-child { margin-right: 0;}
   .slide_indicator a {
     border-radius: 100%; box-sizing: border-box;
@@ -48,7 +49,9 @@
     /* back_img의 li가 5-1-2-3-4-5 순서이므로 총 600%여야한다 또한 하나의 크기만큼 밀어주어야함으로 margin-left:-100%로 밀어준다*/
   .back_img {
     position: relative; z-index: 100; /*차후에 li.view_$$들때문에 변하지않도록 위치제한을 걸어주는것*/
-    width: 500%; /*600%*/ height: 100%; margin-left: -100%; background-color: #acd;}
+    width: 500%; /*600%*/ height: 100%;
+    /* margin-left: -100%; */
+    background-color: #acd;}
   /* 실제로 6개임으로 100/6=16.666667%  */
   .back_img li {
     float: left; width:20%; /*16.666667% *//*li가 5개 나누기 100%한 값임*/ height: 100%; font-size: 3rem; text-align: right; box-sizing: border-box; padding-top: 100px; padding-right: 50px;}
