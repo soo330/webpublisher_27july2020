@@ -10,7 +10,8 @@
 /* ================================================ */
 #headBox {
   position: relative;
-  width: 100%; height: auto; min-height: 45px; background-color: var(--wwf-beige);}
+  /* 나중에 js로 fixed 변경 */
+  width: 100%; height: auto; min-height: 48px; background-color: var(--wwf-beige);}
 
   #headBox::before {
     content: ""; display: block;
@@ -18,10 +19,11 @@
     width: 100%; height: 120px;
     background-color: #fa0;
   }
-.headWrap { margin: auto; width: 95%; height: auto; background-color: #fa0;}
+.headWrap { margin: auto; width: 90%; height: 48px;}
 
-h1 {float: left; min-width: 46px; min-height: 48px;
-  width: auto; height: 120%;
+h1 {
+  position: absolute; z-index: 100;
+  float: left; width: 46px; height: 120%; min-height: 48px;
   background-color: #fff;}
 h1 a {
   display: block; width: 100%; height: 100%;
@@ -33,27 +35,27 @@ h1 a {
 
 
 /* 상위메뉴란 디자인 -------------- */
-.menuIconWrap {float:right; width: 90px; height: 100%; background-color: #fff;}
+.menuIconWrap {
+  float:right; width: 90px; height: 100%;}
   /*검색 디자인 ------------- */
-  .searchIBox {float: left; width: 40px; height: 100%; background-color: #177636;
-  }
-  .search_btn{ width: 100%; height: 100%;}
+  .searchIBox {
+    float: left; width: 40px; height: 48px;}
+  .search_btn{width: 100%; height: 100%}
   .search_btn a {
     display: block;
     width: 100%; height: 100%;
-    background-image: url('../../../img/icons/loupe_white.png');
+    background-image: url('../../../img/icons/loupe.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 50%;}
   
   /* 메뉴버튼 디자인 --------------- */
   .menuIBox {
-    float: right; width: 40px; height: 100%; background-color: #DE1DC1;
-  }
-  .menu_btn {width: 100%; height: 100%;}
+    float: right; width: 40px; height: 48px;}
+  .menu_btn {width: 100%; height: 100% }
   .menu_btn button {
     display: block; width: 100%; height: 100%;
-    background-image: url('../../../img/icons/menu_btn_white.png');
+    background-image: url('../../../img/icons/menu_btn.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 50%;
@@ -103,29 +105,68 @@ h1 a {
   
 /* ========================================= */
 #viewBox {
-  width: 100%; height: auto; background-color: #38B4DC;}
+  position: relative;
+  width: 100%; height: 100%; background-color: #38B4DC;}
 .view_wrap {width: 100%; height: 100%;}
-.view_area {width: 100%; height: 100%; }
+.view_area {
+  width: 100%; height: 100%; }
 
-.img_part {width: 100%; min-height: 400px; height: auto; background-color: #D092BF;}
+.img_part {
+  overflow: hidden;
+  width: 100%; height: 350px; background-color: #D092BF; }
 
   .back_img {
     /* position: relative; */
-    width: 100%; /* 500%로 수정 z-index:100%*/
-    height: 100%; background-color: rgba(0,0,0,0.7); }
- /* .back_img li{
-   float: left; width: 20%; height: 100%;
- } */
+    width: 500%; /* 500%로 수정 z-index:100%*/
+    height: 100%; }
+ .back_img li{
+   /* display: none; */
+   float: left; width: 20%; height: 350px;
+ }
+
+ .view_01 {
+   background-image: url('../../../img/wwfimg/viewBox_img/1.jpg');
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   background-size: cover;
+}
+ .view_02 {
+   background-image: url('../../../img/wwfimg/viewBox_img/2.jpg');
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   background-size: cover;
+}
+ .view_03 {
+   background-image: url('../../../img/wwfimg/viewBox_img/3.jpg');
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   background-size: cover;
+}
+ .view_04 {
+   background-image: url('../../../img/wwfimg/viewBox_img/4.jpg');
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   background-size: cover;
+}
+ .view_05 {
+   background-image: url('../../../img/wwfimg/viewBox_img/5.jpg');
+   background-repeat: no-repeat;
+   background-position: 50% 50%;
+   background-size: cover;
+}
+ 
+ /* -------------------------------------- */
 
   .text_part {
     /* position: relative; */
-    width: 100%; height: 240px; background-color: #DA0F1D;}
+    width: 100%; height: 240px; background-color: var(--wwf-beige);}
     .text_part dl {
-      position: relative;
-      padding-top: 60px; width: 80%; min-height: 125px; height: auto; margin: auto;}
+      position: relative; 
+      padding-top: 60px; width: 80%; min-height: 125px; max-width: 640px;
+      height: auto; margin: auto;}
     .text_part dt {
-      width: 100%; height: 56px;
-      font-size: 1.5rem;
+      width: 100%; height: 56px; 
+      font-size: 1.5rem; font-weight: bold;
       background-color: #0777B7;}
     .text_part dd {
       width: 100%; height: 84px;
@@ -141,10 +182,72 @@ h1 a {
 #contentBox{width: 100%; height: auto; min-height: 990px; background-color: #EBDB24;}
 
 #contentBox h2 {padding-top: 110px; width: 80%; height: 43px; margin: auto; text-align: center; border-bottom: 1px solid #333;}
-#contentBox p {padding: 22px 0 92px; width: 80%; height: 53px; margin: auto;text-align: center; line-height: 53px;}
+#contentBox p {padding: 22px 0 92px; width: 100%; height: 53px; margin: auto;text-align: center; line-height: 53px;}
 
 .missionBox {margin: auto; width: 80%; height: 100%;}
-.mission_img { margin-top: 90px; margin: auto; width: 80%; height: 556px; background-color: #fff;}
+
+.mission_img {
+  margin-top: 90px; margin: auto; width: 100%; height: 556px; background-color: #dfdfdf;}
+  
+.mission_img li {
+  float: left; margin-left: 9.16666vw; /*marginleft 44px*/
+  margin-top: 45px; width: 126px; height: 126px;}
+  .mission_img li a {
+    margin: auto; display: block; width: 100%; height: 100%;}
+  .mission_img li span {
+    width: 126px; height: 22px;
+    display: block; text-align: center;}
+.mission_img div {width: 126px; height: 126px;}
+
+.mission_01 {
+  width: 100%; height: 100%;
+  border-radius: 100%;
+  background-image: url('../../../img/wwfimg/mission_img/mission_01.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.mission_02 {
+  width: 100%; height: 100%;
+  border-radius: 100%;
+  background-image: url('../../../img/wwfimg/mission_img/mission_02.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.mission_03 {
+  width: 100%; height: 100%;
+  border-radius: 100%;
+  background-image: url('../../../img/wwfimg/mission_img/mission_03.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.mission_04 {
+  width: 100%; height: 100%;
+  border-radius: 100%;
+  background-image: url('../../../img/wwfimg/mission_img/mission_04.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.mission_05 {
+  width: 100%; height: 100%;
+  border-radius: 100%;
+  background-image: url('../../../img/wwfimg/mission_img/mission_05.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+
+.mission_06 {
+  width: 100%; height: 100%;
+  border-radius: 100%;
+  background-image: url('../../../img/WWF_logo_informal_477x700.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 50%;
+}
 
 /* ========================================= */
 #newsBox{width: 100%; height: auto; min-height: 4650px; background-color: #84D919;}

@@ -1,20 +1,21 @@
-/* wwfkorea_main_480_mediaQuery.css */
+/* wwfkorea_main_360_mediaQuery.css */
 
 
 
-/* @media screen and (max-width: 480px){
-  
-  #headBox { min-height: 30px;}
-  .headWrap{ width: 95%; height:35px;}
-  h1 {width: 7.916666vw; height: 120%; min-width: 46px; min-height: 52px;}
-  .menuIconWrap {width: 29.166666vw; height: 100%;}
-  .searchIBox {width: 12.5vw;}
-  .menuIBox {width: 12.5vw;} */
-
-}
 @media screen and (max-width: 360px){
-  #wrap{ min-width:360px;}
-  #headBox { min-height: 30px;}
+  #wrap{}
+  #headBox { min-height: 45px;}
+  h1 {width: 45px; min-height: 45px;}
+  .headWrap {height: 45px;}
+  .searchIBox {width: 45px;}
+  .menuIconWrap {min-height: 45px;}
+  .searchIBox {height: 45px;}
+  .menuIBox{height: 45px;}
 
-  .img_part {width: 100%; min-height: 200px;max-height: 200px; height: auto; background-color: #ff5;}
+
+  /* 앞으로 실제로 기능하는애 부모에 사이즈를 주자 */
+  /* ======================== */
+  
+  #viewBox{width: 100%; height: 100%;}
+
 }

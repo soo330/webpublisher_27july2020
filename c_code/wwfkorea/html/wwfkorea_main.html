@@ -22,11 +22,12 @@
   <div id="wrap">
     
     <header id="headBox">
-      <div class="headWrap">
+      <div class="headWrap clearfix">
+        <!-- clearfix는 embed하기위한 장치 -->
         <h1><a href="wwfkorea_main.html"><span class="hidden_context">logo</span></a></h1>
 
         <!-- 아이콘박스========================= -->
-        <div class="menuIconWrap">
+        <div class="menuIconWrap clearfix">
 
           <div class="searchIBox">
             <div class="search_btn"><a href="#"></a></div>
@@ -139,13 +140,15 @@
       <div class="view_area">
 
         <div class="view_wrap">
+          
           <div class="img_part">
-            <ul class="back_img">
-              <li><a href="#"><span class="hidden_context">1번째 이미지</span></a></li>
-              <li><a href="#"><span class="hidden_context">2번째 이미지</span></a></li>
-              <li><a href="#"><span class="hidden_context">3번째 이미지</span></a></li>
-              <li><a href="#"><span class="hidden_context">4번째 이미지</span></a></li>
-              <li><a href="#"><span class="hidden_context">5번째 이미지</span></a></li>
+            <ul class="back_img clearfix">
+              
+              <li class="view_01"><a href="#"><span class="hidden_context">1번째 이미지</span></a></li>
+              <li class="view_02"><a href="#"><span class="hidden_context">2번째 이미지</span></a></li>
+              <li class="view_03"><a href="#"><span class="hi   dden_context">3번째 이미지</span></a></li>
+              <li class="view_04"><a href="#"><span class="hidden_context">4번째 이미지</span></a></li>
+              <li class="view_05"><a href="#"><span class="hidden_context">5번째 이미지</span></a></li>
             </ul>
           </div>
           <!-- img_part -->
@@ -174,37 +177,43 @@
         다양성에 대한 가장 긴급한 위협을 줄이는 것이다.</p>
 
       <div class="missionBox">
-        <ul>
+        <ul class="mission_img">
           <li>
-            <dl class="mission_img">
-              <dt>lorem</dt>
-              <dd><a href="#"></a></dd>
-            </dl>
-          </li>
-          <!-- <li>
-            <dl>
-              <dt></dt>
-              <dd><a href=""></a></dd>
-            </dl>
+            <a href="#">
+              <div class="mission_01"></div>
+              <span>토양</span>
+            </a>
           </li>
           <li>
-            <dl>
-              <dt></dt>
-              <dd><a href=""></a></dd>
-            </dl>
+            <a href="#">
+              <div class="mission_02"></div>
+              <span>물</span>
+            </a>
           </li>
           <li>
-            <dl>
-              <dt></dt>
-              <dd><a href=""></a></dd>
-            </dl>
+            <a href="#">
+              <div class="mission_03"></div>
+              <span>야생동물</span>
+            </a>
           </li>
           <li>
-            <dl>
-              <dt></dt>
-              <dd><a href=""></a></dd>
-            </dl>
-          </li> -->
+            <a href="#">
+              <div class="mission_04"></div>
+              <span>산림</span>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <div class="mission_05"></div>
+              <span>해양</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="#">
+              <div class="mission_06"></div>
+            </a>
+          </li>
         </ul>
       </div>
     </section>
