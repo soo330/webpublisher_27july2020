@@ -6,7 +6,6 @@
   background-color: #dfdfdf;
   }
   
-
 /* ================================================ */
 #headBox {
   position: relative;
@@ -62,54 +61,123 @@ h1 a {
   }
 
   /* 메뉴안 닫기버튼 디자인 --------------- */
-  .close_btn {
+  .menu_close_btn {
     position: absolute; top: 0; right: 0;
+    margin-top: 5px; margin-right: 10px;
     width: 34px; height: 34px;
     
   }
 
-  .close_btn button {
-    /* display: block; */
+  .menu_close_btn button {
+    display: block;
     width: 100%; height: 100%;
-    background-image: url('../../../img/icons/delete.png');
+    background-image: url('../../../img/icons/delete_white.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: 80%;
+    background-size: 70%;
   }
   /* ----------------------- */
 
 .menu_area {
   display: none;
-  position: absolute; top: 0; left: 0;
+  position: absolute; top: 0; left: 0; z-index: 200;
   margin: auto; padding-bottom: 80px;
   width: 100%; height: auto; min-height: 460px;
-  background-color: #ddd;}
+  background-color: #333;}
 
   .menu_area ul{ margin: auto; width: 50%; height: auto;}
   .menu_area li{
-    padding-top: 4.166666vw;
+    padding-top: 20px;
     width: 100%; height: auto;}
 
     /* .menu_area li:first-child {padding-top: 27.083333vw;} */
 
-  .menu_area dl {  width: 100%; height: auto;}
+  .menu_area dl { width: 100%; height: auto;}
   .menu_area dt {
     padding-top: 30px;
-    width: 100%; height: auto; border-bottom: 1px solid #fff;
-    
+    width: 100%; height: auto; border-bottom: 1px solid #fff; color: #fff;    
     font-weight: bold; font-size: 1.6875rem;}
-  .menu_area dd {width: 100%; font-size: 1.125rem;}
+  .menu_area dd {width: 100%; height: auto; color: #fff; font-size: 1.125rem;}
   .menu_area a {display: block; padding-top: 20px;}
 
+  /* 검색하기---------------- */
+  .search_area{
+    /* display: none; */
+    position: absolute; top: 0; left: 0; z-index: 300;
+    width: 100%; height: 700px; background-color: #333}
 
+    
+
+  .search_close_btn {
+    position: absolute; top: 0; right: 0;
+    margin-top: 5px; margin-right: 10px;
+    width: 34px; height: 34px;
+  }
+
+  .search_close_btn button {
+    display: block;
+    width: 100%; height: 100%;
+    background-image: url('../../../img/icons/delete_white.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 70%;}
+
+  .search_area form {
+    margin: auto; padding-top: 100px;
+    width: 80%;}
+  .search_area fieldset{
+    width: 100%; height: 250px; margin: 0; padding: 0;  border: 0;}
+    .search_input_wrap h3 {
+      margin: auto; padding-top: 100px;
+      width: 80%; height: 40px;
+      font-size: 1.625rem; color: #fff;}
+
+  .search_input_wrap{
+    width: 100%; height: 50px;}
+
+  .search_input_wrap input {
+    float: left; margin-left: 20px;
+    width: 80%; height: 100%; border: 0; border-bottom: 1px solid #fff; background-color: transparent;}
+
+  .search_input_wrap button {
+    float: left;
+    display: block;
+    width: 50px; height: 50px;
+    background-image: url('../../../img/icons/loupe_white.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: 50%;}
   
 /* ========================================= */
 #viewBox {
   position: relative;
   width: 100%; height: 100%; background-color: #38B4DC;}
 .view_wrap {width: 100%; height: 100%;}
-.view_area {
-  width: 100%; height: 100%; }
+
+.slide_indicator {
+  position: absolute; bottom: 30%; left: 50%; transform: translateX(-50%);
+  z-index: 200; width: 80%; height: 30px;
+  margin-bottom: 10px;
+}
+
+.slide_indicator ul {
+  margin: auto; padding-top: 5px;
+  width: 50%; height: 30px;}
+
+.slide_indicator ul li {
+  float: left; width: 20px; height: 20px; margin-left: 15px; 
+  
+}
+.slide_indicator a {
+  display: block;
+  width: 100%; height: 100%; border-radius: 100%; box-sizing: border-box;
+  background-color: #555;
+  }
+.slide_indicator li.action a {background-color: #fa0;}
+
+/* ---------------------- */
+
+.view_area {width: 100%; height: 100%; }
 
 .img_part {
   overflow: hidden;
@@ -179,29 +247,28 @@ h1 a {
     border: 1px solid #333;
   }
 /* ========================================= */
-#contentBox{width: 100%; height: auto; min-height: 990px; background-color: #EBDB24;}
+#contentBox{width: 100%; height: auto; min-height: 1050px; background-color: #fff;}
 
-#contentBox h2 {padding-top: 110px; width: 80%; height: 43px; margin: auto; text-align: center; border-bottom: 1px solid #333;}
-#contentBox p {padding: 22px 0 92px; width: 100%; height: 53px; margin: auto;text-align: center; line-height: 53px;}
+#contentBox h2 {padding-top: 110px; width: 80%; height: 43px; margin: auto; text-align: center; border-bottom: 1px solid #333; font-size: 1.5rem;}
+#contentBox p {padding: 22px 0 92px; width: 80%; height: 53px; margin: auto; font-size: 1rem; text-align: center;}
 
 .missionBox {margin: auto; width: 80%; height: 100%;}
 
 .mission_img {
-  margin-top: 90px; margin: auto; width: 100%; height: 556px; background-color: #dfdfdf;}
+  margin-top: 90px; margin: auto; width: 100%; height:auto; min-height: 650px;  background-color: #dfdfdf;}
   
 .mission_img li {
-  float: left; margin-left: 9.16666vw; /*marginleft 44px*/
-  margin-top: 45px; width: 126px; height: 126px;}
+  float: left; margin-left: 50px; /*marginleft 44px*/ margin-top: 45px; width: 100px; height: 100px; padding-bottom: 50px;}
   .mission_img li a {
     margin: auto; display: block; width: 100%; height: 100%;}
   .mission_img li span {
+    margin-top: 10px;
     width: 126px; height: 22px;
-    display: block; text-align: center;}
+    display: block; text-align: center; font-size: 1rem; font-weight: bold;}
 .mission_img div {width: 126px; height: 126px;}
 
 .mission_01 {
   width: 100%; height: 100%;
-  border-radius: 100%;
   background-image: url('../../../img/wwfimg/mission_img/mission_01.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -209,7 +276,6 @@ h1 a {
 }
 .mission_02 {
   width: 100%; height: 100%;
-  border-radius: 100%;
   background-image: url('../../../img/wwfimg/mission_img/mission_02.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -217,7 +283,6 @@ h1 a {
 }
 .mission_03 {
   width: 100%; height: 100%;
-  border-radius: 100%;
   background-image: url('../../../img/wwfimg/mission_img/mission_03.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -225,7 +290,6 @@ h1 a {
 }
 .mission_04 {
   width: 100%; height: 100%;
-  border-radius: 100%;
   background-image: url('../../../img/wwfimg/mission_img/mission_04.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -233,7 +297,6 @@ h1 a {
 }
 .mission_05 {
   width: 100%; height: 100%;
-  border-radius: 100%;
   background-image: url('../../../img/wwfimg/mission_img/mission_05.jpg');
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -242,7 +305,6 @@ h1 a {
 
 .mission_06 {
   width: 100%; height: 100%;
-  border-radius: 100%;
   background-image: url('../../../img/WWF_logo_informal_477x700.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
@@ -250,10 +312,10 @@ h1 a {
 }
 
 /* ========================================= */
-#newsBox{width: 100%; height: auto; min-height: 4650px; background-color: #84D919;}
+#newsBox{width: 100%; height: auto; min-height: 4550px; background-color: #fff;}
 
 #newsBox h2 { margin: auto; padding-top: 35px; width: 80%; height: 45px; margin-bottom: 47px; text-align: center; border-bottom: 1px solid #333;}
-.news_area { margin-top: 48px; margin: auto; width: 80%; height: auto; background-color: #fff;}
+.news_area { margin-top: 48px; margin: auto; width: 80%; height: auto; background-color: #dfdfdf;}
 
 
 .news_area ul {width: 100%; height: 100%;}
@@ -269,20 +331,74 @@ h1 a {
   margin: auto; margin-bottom: 50px;
   width: 80%; height: auto; min-height: 154px; background-color: #329A67;}
 .news_area dt {
-   margin: auto; width: 80%; height: auto; min-height: 50px; background-color: #D092BF;}
+   margin: auto; width: 80%; height: auto; min-height: 50px;
+   font-size: 1.25rem; line-height: 50px; font-weight: bold;
+   background-color: #D092BF;}
 .news_area dd {
-   margin: auto; width: 80%; height: auto; min-height: 90px; background-color: #3E2CA4;}
+   margin: auto; width: 80%; height: auto; min-height: 90px; font-size: 1rem; background-color: #fa0;}
+
+.news_img_01{
+  background-image: url('../../../img/wwfimg/news_img/news_01.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.news_img_02{
+  background-image: url('../../../img/wwfimg/news_img/news_02.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.news_img_03{
+  background-image: url('../../../img/wwfimg/news_img/news_03.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.news_img_04{
+  background-image: url('../../../img/wwfimg/news_img/news_04.jpg');
+  background-repeat: no-repeat;
+  background-position: 10% 50%;
+  background-size: cover;
+}
+.news_img_05{
+  background-image: url('../../../img/wwfimg/news_img/news_05.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+
+}
+
+.news_img_06{
+  background-image: url('../../../img/wwfimg/news_img/news_06.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.news_img_07{
+  background-image: url('../../../img/wwfimg/news_img/news_07.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.news_img_08{
+  background-image: url('../../../img/wwfimg/news_img/news_08.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
 
 /* ========================================= */
-#supportBox{width: 100%; height: auto; min-height: 1300px; background-color: #D5C5E2;}
+#supportBox{width: 100%; height: auto; min-height: 1300px; background-color: #fff;}
 
 #supportBox h2 { margin: auto; padding-top: 35px; width: 80%; height: 55px; margin-bottom: 47px; text-align: center; border-bottom: 1px solid #333;}
 
-.supp_area { margin-top: 48px; margin: auto; width: 80%; height:100%; background-color: #fff;}
+.supp_area { margin-top: 48px; margin: auto; width: 80%; height:100%; background-color: #dfdfdf;}
 
 .supp_area ul {width: 100%; height: 100%; padding-bottom: 50px;}
 .supp_area li {width: 100%; height: 100%;}
-.supp_area li:first-of-type {padding-top: 50px;}
+.supp_area li:first-of-type
+{padding-top: 50px; margin-bottom: 50px;}
 .supp_area a {
   /* display: block; */
   width: 80%; height: 100%; }
@@ -290,18 +406,35 @@ h1 a {
 .supp_area div {
   margin: auto;
   width: 80%; height: auto; min-height: 326px; background-color: #777;}
+
+
+.supp_img_01{
+  background-image: url('../../../img/wwfimg/supp_img/supp_01.jpg');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
+.supp_img_02{
+  background-image: url('../../../img/wwfimg/supp_img/supp_02.jpg');
+  background-repeat: no-repeat;
+  background-position: 40% 50%;
+  background-size: cover;
+}
 /* img part----------- */
   .supp_area dl {
     margin: auto;
     width: 80%; height: auto; min-height: 154px; background-color: #329A67;}
   .supp_area dt {
-      margin: auto; width: 80%; height: auto; min-height: 50px; background-color: #D092BF;}
+      margin: auto; width: 80%; height: auto; min-height: 50px; 
+      font-size: 1.25rem; line-height: 50px; font-weight: bold;
+      background-color: #D092BF;}
   .supp_area dd {
-      margin: auto; width: 80%; height: auto; min-height: 90px; background-color: #3E2CA4;}
+      margin: auto; width: 80%; height: auto; min-height: 90px; font-size: 1rem; background-color: #A4C579}
 /* ========================================= */
 #subsBox {width: 100%; height: auto; min-height: 690px; background-color: #555;}
 
-#subsBox h2 { margin: auto; padding-top: 132px; width: 80%; height: 50px; font-size: 2.25rem; border-bottom: 1px solid #333;}
+#subsBox h2 { margin: auto; padding-top: 132px; width: 80%; height: 50px; font-size: 2.25rem; border-bottom: 1px solid #fff; color: #fff;
+}
 
 .aboutUs_wrap {
   margin: auto;
@@ -309,28 +442,49 @@ h1 a {
 
 .aboutUs_area {
   /* float: left; */
-  width: 100%; height: 303px; background-color: #bbb;}
+  width: 100%; height: 303px;}
 
   .aboutUs_area ul {width: 260px; height: 303px;}
   .aboutUs_area li {padding-top: 20px; width: 100%; height: 17px;}
   .aboutUs_area a {display: block; }
   
-  .aboutUs_area span {width: 100%; height:100%; font-size: 1.5rem;}
+  .aboutUs_area span {width: 100%; height:100%; font-size: 1.5rem; color: #fff;}
+
 .subs_part{
   /* float: left; */
-  width: 100%; height: auto; min-height: 146px;}
+  margin: auto;
+  width: 90%; height: auto; min-height: 100px;}
+.subs_part fieldset {
+  margin: auto;
+  width: 80%; height: auto; padding: 0; border: 0;}
+  
+  .subs_part h3 {width: 100%; height: 30px; text-align: center; color: #fff;}
+
+.subs_part fieldset input {
+  width: 100%; height: 20px; padding: 0px; border: 0;}
+
+  .subs_part fieldset:nth-of-type(2) input{
+    margin-top: 5px;
+    background-color: #fff; font-weight: bold;}
+  .subs_part span {color: #fff;}
 
 /* ========================================= */
 #footBox{width: 100%; height: auto; min-height: 900px;
   background-color: #BF981F;}
 
 .logo_info {
-  margin: auto;
+  margin: auto; padding-top: 50px;
   width: 80%; min-height: 118px; height: auto;}
 
 .logo_info h2 {
+  display: block;
   float: left;
-  width: 68px; height: 88px; background-color: #fff;}
+  width: 84px; height: 100px; background-color: #fff;
+  background-image: url('../../../img/wwf_informal_300x360.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
 
 .logo_info address {
   float: right; ;
@@ -338,33 +492,61 @@ h1 a {
 /* ------------ */
 .fund_inc {
   margin: auto; margin-top: 48px;
-  width:80%; height: 168px; background-color: #ddd;}
+  width:80%; height: 168px;
+  text-align: center;
+  background-color: #ddd;}
 
 .sns_wrap {
-  margin: auto; margin-top: 30px;
-  width: 80%; height: 115px; background-color: #fff;}
+  margin: auto; margin-top: 30px; margin-bottom: 30px; width: 80%; height: 115px; background-color: #fff;}
   .sns_wrap h3 {text-align: center;}
+
+.sns_wrap ul {
+  margin: auto;
+  padding-top: 30px; width: 70%; height: 32px;}
+.sns_wrap li {
+  float: left; margin-left: 45px;
+  width: 32px; height: 32px;}
+
+
+  .sns_01{
+    background-image: url('../../../img/sns_icon/faceBook.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .sns_02{
+    background-image: url('../../../img/sns_icon/instagram.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+  .sns_03{
+    background-image: url('../../../img/sns_icon/Twitter.png');
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
 
 .policy_area {
   margin: auto;
-  width: 80%; min-width: 280px; height: auto; min-height: 94px;
+  width: 80%; height: auto;
   padding-bottom: 30px;
   background-color: #555;}
 
   .policy_area ul {
     /* display: flex; flex-flow: row; justify-content: space-around; */
-    margin: auto; width: 80%; height: auto;}
-  .policy_area li {    
-    margin: auto;
+    margin: auto; width: 100%; height: 140px; padding: 30px 0;}
+  .policy_area ul li {    
+    margin: auto; 
     /* display:inline-flex; */
-    width: 100%; height: auto;}
+    width: 80%; height: 20px; padding: 10px 0;}
 
-  .policy_area li:nth-of-type(2) a {width: 220px;}
+  /* .policy_area li:nth-of-type(2) a {width: 220px;} */
   .policy_area li a {
-    display: inline-block; width: 100%; height: 18px;
-    font-size: 1rem; text-align: center; line-height: 94px;}
+    display: block; width: 100%; height: 20px;
+    font-size: 1rem; text-align: center; color: #fff;}
 
-  .policy_area p { padding-top: 57px; text-align: center;}
+  .policy_area p { text-align: center; color: #fff;}
 
 
 /* ========================================= */

@@ -31,18 +31,29 @@
 
           <div class="searchIBox">
             <div class="search_btn"><a href="#"></a></div>
-            <!-- 서치박스 나오는곳-->
 
+            <!-- 서치박스 나오는곳-->
             <div class="search_area">
-              <form action="#"> <!-- input창 정보파트-->
-                <!-- <fieldset>
-                  <label for="검색어를 입력하세요"></label>
-                  <input type="submit">
-                </fieldset> -->
+              
+              <div class="search_close_btn">
+                <button type="button"><span class="hidden_context">닫기버튼</span></button>
+              </div>
+
+              <form action="#">
+                <h3>검색어를 입력하세요.</h3>
+                <!-- input창 정보파트 -->
+                <fieldset>
+                  <div class="search_input_wrap">
+                    
+                    <label for="검색창"></label>
+                    <input type="text">
+                    <button type="button"></button>
+                  </div>
+                </fieldset>
               </form>
             </div>
           </div>
-          <!-- searchIBox -->
+          <!-- searchIBox-->
 
           <div class="menuIBox">
             <div class="menu_btn">
@@ -51,7 +62,7 @@
 
             <div class="menu_area">
 
-              <div class="close_btn">
+              <div class="menu_close_btn">
                 <button type="button"><span class="hidden_context">닫기버튼</span></button>
               </div>
               
@@ -118,7 +129,7 @@
 
       <div class="slide_indicator">
         <ul> <!-- clearfix-->
-          <li><a href="#"><span class="hidden_context">
+          <li class="action"><a href="#"><span class="hidden_context">
             1번째 인디케이터
           </span></a></li>
           <li><a href="#"><span class="hidden_context">
@@ -223,76 +234,77 @@
 
       <div class="news_area">
         <ul>
+          <!-- 18px -->
           <li>
             <a href="#">
-              <div class="new_img_01"></div>
+              <div class="news_img_01"></div>
               <dl>
                 <dt>lorem</dt>
-                <dd><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione ab, unde voluptatum doloribus  quod, voluptatibus a quasi impedit aliquid iusto dolor quibusdam aspernatur sint qui placeat nam! Velit, sunt eos?</a></dd>
+                <dd><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, corporis!</a></dd>
               </dl>
             </a>
           </li>
           
           <li>
             <a href="#">
-              <div class="new_img_02"></div>
+              <div class="news_img_02"></div>
               <dl>
-                <dt></dt>
-                <dd></dd>
+                <dt>lorem</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, corporis!</dd>
               </dl>
             </a>
           </li>
           <li>
             <a href="#">
-              <div class="new_img_03"></div>
+              <div class="news_img_03"></div>
               <dl>
-                <dt></dt>
-                <dd></dd>
+                <dt>lorem</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, corporis!</dd>
               </dl>
             </a>
           </li>
           <li>
             <a href="#">
-              <div class="new_img_04"></div>
+              <div class="news_img_04"></div>
               <dl>
-                <dt></dt>
-                <dd></dd>
+                <dt>lorem</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, corporis!</dd>
               </dl>
             </a>
           </li>
           <li>
             <a href="#">
-              <div class="new_img_05"></div>
+              <div class="news_img_05"></div>
               <dl>
-                <dt></dt>
-                <dd></dd>
+                <dt>lorem</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, corporis!</dd>
               </dl>
             </a>
           </li>
           <li>
             <a href="#">
-              <div class="new_img_06"></div>
+              <div class="news_img_06"></div>
               <dl>
-                <dt></dt>
-                <dd></dd>
+                <dt>lorem</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, veritatis.</dd>
               </dl>
             </a>
           </li>
           <li>
             <a href="#">
-              <div class="new_img_07"></div>
+              <div class="news_img_07"></div>
               <dl>
-                <dt></dt>
-                <dd></dd>
+                <dt>lorem</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, veritatis.</dd>
               </dl>
             </a>
           </li>
           <li>
             <a href="#">
-              <div class="new_img_08"></div>
+              <div class="news_img_08"></div>
               <dl>
-                <dt></dt>
-                <dd></dd>
+                <dt>lorem</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem, veritatis.</dd>
               </dl>
             </a>
           </li>
@@ -309,16 +321,16 @@
               <div class="supp_img_01"></div>
               <dl>
                 <dt>lorem</dt>
-                <dd>Lorem ipsum dolor sit amet consectetur, adipisicing elit. In fugit blanditiis nihil, soluta excepturi qui consectetur deserunt facilis quia quasi. Eos, accusantium provident. Enim quo blanditiis officia architecto porro repellendus.</dd>
+                <dd>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, fuga.</dd>
               </dl>
             </a>
           </li>
           <li>
             <a href="#">
-              <div class="supp_img"></div>
+              <div class="supp_img_02"></div>
               <dl>
-                <dt></dt>
-                <dd></dd>
+                <dt>lorem</dt>
+                <dd>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, eveniet.</dd>
               </dl>
             </a>
           </li>
@@ -328,7 +340,7 @@
     <!-- supprtBox -->
 
     <section id="subsBox">
-      <h2>about us</h2>
+      <h2>About us</h2>
       <div class="aboutUs_wrap">
         <div class="aboutUs_area">
           <ul>
@@ -340,14 +352,15 @@
         </div>
   
         <form action="#" method="POST" class="subs_part">
-          <!-- <fieldset>
-            <input type=" ">
+          <h3>WWF Koera의 소식을 받아보세요.</h3>
+          <fieldset>
             <label for="email"></label>
+            <input type="email">
           </fieldset>
   
           <fieldset>
             <input type="submit" value="Send">
-          </fieldset> -->
+          </fieldset>
         </form>
       </div>
     </section>
@@ -372,11 +385,11 @@
       <div class="sns_wrap">
         <h3>Contact With</h3>
         <ul>
-          <li><a href="#">
+          <li class="sns_01"><a href="#">
             <span class="hidden_context">facebook</span></a></li>
-          <li><a href="#">
+          <li class="sns_02"><a href="#">
             <span class="hidden_context">instagram</span></a></li>
-          <li><a href="#">
+          <li class="sns_03"><a href="#">
             <span class="hidden_context">twitter</span></a></li>
         </ul>
       </div>
@@ -384,9 +397,12 @@
 
       <div class="policy_area">
         <ul>
-          <li><a href="#">Site Terms</a></li>
-          <li><a href="#">Privacy / Your Privacy Rights</a></li>
-          <li><a href="#">State DisClosures</a></li>
+          <li>
+            <a href="#">Site Terms</span></a></li>
+          <li>
+            <a href="#">Privacy / Your Privacy Rights</a></li>
+          <li>
+            <a href="#">State DisClosures</a></li>
         </ul>
         <p>&copy; 2020 World Wildlife Fund</p>
       </div>
