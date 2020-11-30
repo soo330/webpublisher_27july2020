@@ -30,7 +30,11 @@
         } //if maxLen
         else{
           partUl.append(insertCord);
-          liEq =partUl.children('li').eq(i);
+          liEq = partUl.children('li').eq(i);
+          liEq.find('.num').text( people[i].id );
+          liEq.find('.image').css({ backgroundImage: 'url(' + people[i].image + ')'});
+          liEq.find('dt').text(people[i].first_name);
+          liEq.find('dd').text(people[i].address);
         } //else
       } //for
     }; //moreFn (){}
