@@ -12,7 +12,7 @@
     var i=0;
 
     var myLen = i; // = 0과 같은내용
-    var myViewLen = 5;
+    var myViewLen = 10;
     var maxLen = people.length;
     var part = $('.part');
     var partUl = part.find('ul');
@@ -21,8 +21,18 @@
     var moreBtn = more.children('button');
 
     var liEq;
-    var moreFn = function(){
-      myLen = i + myViewLen;
+    var moreFn = function(j){
+      // 변수값 j를 써줌으로
+      var k;
+      if( j === undefined ){
+        //j가 값이 없다면
+        k = myViewLen; // myViewLen(한번에 보이고자하는 변수)을 불러와라 
+      } //if j ===
+      else{
+        k = j;
+      } //else
+
+      myLen = i + k;
       for(; i < myLen ; i+=1){
         if( i >= maxLen ){
           more.remove();
@@ -38,7 +48,7 @@
         } //else
       } //for
     }; //moreFn (){}
-    moreFn();
+    moreFn(2); // 여기에 처음에 볼 숫자를 써주면 된다
 
     // myLen = i + myViewLen; 
     // for( ; i < myLen ; i+=1 ){
@@ -48,7 +58,7 @@
   // ----------------------------------------
     moreBtn.on('click', function(e){
       e.preventDefault();
-      moreFn();
+      moreFn(7); //여기엔 더보기 버튼을 눌렀을때 한번에 보고자하는 숫자를  숫자를 적어준다
     }); //moreBtn on
 
 
