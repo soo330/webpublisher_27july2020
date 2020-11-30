@@ -28,6 +28,7 @@
 
         <!-- 아이콘박스========================= -->
         <div class="menuIconWrap clearfix">
+          <h2><span class="hidden_context">메뉴아이콘</span></h2>
 
           <div class="searchIBox">
             <div class="search_btn"><a href="#"></a></div>
@@ -40,14 +41,15 @@
               </div>
 
               <form action="#">
-                <h3>검색어를 입력하세요.</h3>
+                <h3 class="hidden_context">자료검색</h3>
                 <!-- input창 정보파트 -->
                 <fieldset>
+                  <legend class="hidden_context">검색창</legend>
                   <div class="search_input_wrap">
                     
-                    <label for="검색창"></label>
-                    <input type="text">
-                    <button type="button"></button>
+                    <label for="search_bar">검색어를 입력하세요.</label>
+                    <input type="text" id="search_bar" name="search_bar" value="" placeholder="검색어를 입력하세요">
+                    <button type="button"><span class="hidden_context">검색</span></button>
                   </div>
                 </fieldset>
               </form>
@@ -60,6 +62,62 @@
               <button type="button"><span class="hidden_context">메뉴버튼</span></button>
             </div>
 
+            <div class="show_menu_wrap">
+              <!-- small pc ~ PC menu -->
+              <ul class="gnb">
+                <li>
+                  <dl>
+                    <dt>
+                      <a href="#">WWF</a>
+                    </dt>
+                    <dd>
+                      <a href="#">WWF Korea</a>
+                      <a href="#">About Us</a>
+                      <a href="#">연례보고서</a>
+                      <a href="#">채용</a>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>
+                      <a href="#">캠페인/활동</a>
+                    </dt>
+                    <dd><a href="#">국내활동</a>
+                      <a href="#">글로벌활동</a>
+                      <a href="#">멸종위기종 보전</a>
+                      <a href="#">생태 발자국 줄이기</a>
+                      <a href="#">행사참여</a>
+                      <a href="#">일상참여</a>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>
+                      <a href="#">최신근황</a>
+                    </dt>
+                    <dd>
+                      <a href="#">WWF 대외관련 뉴스</a>
+                      <a href="#">환경/동물 뉴스</a>
+                      <a href="#">판다 메일</a>
+                    </dd>
+                  </dl>
+                </li>
+                <li>
+                  <dl>
+                    <dt>
+                      <a href="#">후원하기</a>
+                    </dt>
+                    <dd>
+                      <a href="#">후원하기</a>
+                      <a href="#">자주묻는 질문</a>
+                    </dd>
+                  </dl>
+                </li>
+              </ul>
+            </div>
+
             <div class="menu_area">
 
               <div class="menu_close_btn">
@@ -67,6 +125,7 @@
               </div>
               
               <ul class="clearfix">
+                <!-- mobile~tablet menu -->
                 <li>
                   <dl>
                     <dt><a href="#">WWF</a></dt>
@@ -240,7 +299,7 @@
               <div class="news_img_01"></div>
               <dl>
                 <dt>lorem</dt>
-                <dd><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum, corporis!</a></dd>
+                <dd>Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!</dd>
               </dl>
             </a>
           </li>
@@ -344,10 +403,10 @@
       <div class="aboutUs_wrap">
         <div class="aboutUs_area">
           <ul>
-            <li><a href="#"><span>Careers</span></a></li>
-            <li><a href="#"><span>Contact</span></a></li>
-            <li><a href="#"><span>News And Press</span></a></li>
-            <li><a href="#"><span>Help</span></a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+            <li><a href="#">News And Press</a></li>
+            <li><a href="#">Help</a></li>
           </ul>
         </div>
   
@@ -398,7 +457,7 @@
       <div class="policy_area">
         <ul>
           <li>
-            <a href="#">Site Terms</span></a></li>
+            <a href="#">Site Terms</a></li>
           <li>
             <a href="#">Privacy / Your Privacy Rights</a></li>
           <li>

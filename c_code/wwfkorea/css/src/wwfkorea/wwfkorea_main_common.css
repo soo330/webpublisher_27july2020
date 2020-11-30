@@ -10,7 +10,7 @@
 #headBox {
   position: relative;
   /* 나중에 js로 fixed 변경 */
-  width: 100%; height: auto; min-height: 48px; background-color: var(--wwf-beige);}
+  width: 100%; height: auto; min-height: 45px; background-color: var(--wwf-beige);}
 
   #headBox::before {
     content: ""; display: block;
@@ -18,11 +18,11 @@
     width: 100%; height: 120px;
     background-color: #fa0;
   }
-.headWrap { margin: auto; width: 90%; height: 48px;}
+.headWrap { margin: auto; width: 90%; height: 45px;}
 
 h1 {
   position: absolute; z-index: 100;
-  float: left; width: 46px; height: 120%; min-height: 48px;
+  float: left; width: 46px; height: 120%; height: 48px;
   background-color: #fff;}
 h1 a {
   display: block; width: 100%; height: 100%;
@@ -46,7 +46,7 @@ h1 a {
     background-image: url('../../../img/icons/loupe.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
-    background-size: 50%;}
+    background-size: 40%;}
   
   /* 메뉴버튼 디자인 --------------- */
   .menuIBox {
@@ -65,7 +65,6 @@ h1 a {
     position: absolute; top: 0; right: 0;
     margin-top: 5px; margin-right: 10px;
     width: 34px; height: 34px;
-    
   }
 
   .menu_close_btn button {
@@ -78,6 +77,14 @@ h1 a {
   }
   /* ----------------------- */
 
+ .show_menu_wrap{
+   float: left;
+   width: 600px; height: 100%; z-index: 30;
+   background-color: #333;
+  }
+
+  .gnb {width: 100%; height: 48px;}
+
 .menu_area {
   display: none;
   position: absolute; top: 0; left: 0; z-index: 200;
@@ -85,7 +92,8 @@ h1 a {
   width: 100%; height: auto; min-height: 460px;
   background-color: #333;}
 
-  .menu_area ul{ margin: auto; width: 50%; height: auto;}
+  .menu_area ul{
+    margin: auto; width: 50%; height: auto;}
   .menu_area li{
     padding-top: 20px;
     width: 100%; height: auto;}
@@ -102,9 +110,9 @@ h1 a {
 
   /* 검색하기---------------- */
   .search_area{
-    /* display: none; */
+    display: none;
     position: absolute; top: 0; left: 0; z-index: 300;
-    width: 100%; height: 700px; background-color: #333}
+    width: 100%; height: 500px; background-color: #333}
 
     
 
@@ -124,9 +132,9 @@ h1 a {
 
   .search_area form {
     margin: auto; padding-top: 100px;
-    width: 80%;}
+    width: 80%; height: auto;}
   .search_area fieldset{
-    width: 100%; height: 250px; margin: 0; padding: 0;  border: 0;}
+    width: 100%; height: 100px; margin: 0; padding: 0;  border: 0;}
     .search_input_wrap h3 {
       margin: auto; padding-top: 100px;
       width: 80%; height: 40px;
@@ -147,6 +155,8 @@ h1 a {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: 50%;}
+
+
   
 /* ========================================= */
 #viewBox {
