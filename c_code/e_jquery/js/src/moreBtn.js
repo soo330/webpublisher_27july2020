@@ -12,14 +12,15 @@
     var i=0;
 
     var myLen = i; // = 0과 같은내용
-    var myViewLen = 4;
+    var myViewLen = 5;
     var maxLen = people.length;
     var part = $('.part');
     var partUl = part.find('ul');
-    var insertCord = '<li><div class="image"></div><dl><dt>title</dt><dd></dd></dl></li>';
+    var insertCord = '<li><div class="num"></div><div class="image"></div><dl><dt>title</dt><dd></dd></dl></li>';
     var more = $('.more_btn')
     var moreBtn = more.children('button');
 
+    var liEq;
     var moreFn = function(){
       myLen = i + myViewLen;
       for(; i < myLen ; i+=1){
@@ -29,6 +30,7 @@
         } //if maxLen
         else{
           partUl.append(insertCord);
+          liEq =partUl.children('li').eq(i);
         } //else
       } //for
     }; //moreFn (){}
@@ -44,6 +46,9 @@
       e.preventDefault();
       moreFn();
     }); //moreBtn on
+
+
+
 
   }); //jQuery end
 })(jQuery);
