@@ -23,14 +23,18 @@
     var liEq;
     var moreFn = function(j){
       // 변수값 j를 써줌으로
-      var k;
-      if( j === undefined ){
-        //j가 값이 없다면
-        k = myViewLen; // myViewLen(한번에 보이고자하는 변수)을 불러와라 
-      } //if j ===
-      else{
-        k = j;
-      } //else
+      // var k;
+      // if( j === undefined ){
+      //   //j가 값이 없다면
+      //   k = myViewLen; // myViewLen(한번에 보이고자하는 변수)을 불러와라 
+      // } //if j ===
+      // else{
+      //   k = j;
+      // } //else
+
+      // 위를 아래와같이 사용 할 수있다 ( j === undefined)? k = myViewLen : k = j;
+
+      k = j || myViewLen;
 
       myLen = i + k;
       for(; i < myLen ; i+=1){
@@ -48,7 +52,7 @@
         } //else
       } //for
     }; //moreFn (){}
-    moreFn(2); // 여기에 처음에 볼 숫자를 써주면 된다
+    moreFn(); // 여기에 처음에 볼 숫자를 써주면 된다
 
     // myLen = i + myViewLen; 
     // for( ; i < myLen ; i+=1 ){
@@ -58,9 +62,9 @@
   // ----------------------------------------
     moreBtn.on('click', function(e){
       e.preventDefault();
-      moreFn(7); //여기엔 더보기 버튼을 눌렀을때 한번에 보고자하는 숫자를  숫자를 적어준다
+      moreFn(7); //여기엔 더보기 버튼을 눌렀을때 한번에 보고자하는 숫자를 적어준다
     }); //moreBtn on
-
+  // ----------------------------------------
 
 
 
