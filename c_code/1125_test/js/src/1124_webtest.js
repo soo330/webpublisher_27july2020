@@ -112,6 +112,10 @@
     backImg.stop().animate({'marginLeft':slideN * -100 + '%'}); // 순번을 알았다면 focus를 통해 backImg인 ul을 marginLeft-100%씩 애니메이션으로 자연스럽게 넘겨줄수있다
     indiLi.eq(slideN).siblings().removeClass('action'); //반복 설명 .action을 제거함으로써 색깔 비활성화
     indiLi.eq(slideN).addClass('action'); // .action을 줌으로써 선택된 li 색깔 활성화
+
+
+
+
   }) //indiLi focus
 
 
