@@ -45,6 +45,17 @@
     } //for 
 
 
+
+    /*
+    
+    0: 0~ 70
+    1: 71~140
+    2: 141~210
+    3: 211~280
+    4: 281~350
+    
+    */
+
     // 내용 넣기
     var reSetting = function(){
       var i = 0;
@@ -69,9 +80,10 @@
     indiLiBtn.on('click', function(e){
       e.preventDefault();
       // var liN = $(this).text(); 텍스트로 바로 불러오지않고 밑에 parseInt를 통해 숫자로 변환한 상태에서 불러온다
-      var liN = parseInt( $(this).text() );
-      console.log( liN - 1 ); // liN-1을 해주는 이유는 js 첫번째는 0임으로
+      var liN = parseInt( $(this).text() ) -1;
+      console.log( liN ); // liN-1을 해주는 이유는 js 첫번째는 0임으로
     }) // indiLiBtn
+
 
 
 
