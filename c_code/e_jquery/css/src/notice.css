@@ -1,0 +1,57 @@
+/* notice.css */
+
+#wrap {
+  width: 60rem; height: auto; min-height: 500px; margin: auto;
+  box-sizing: border-box; padding: 0 2rem;
+  background-color: #dfdfdf
+;}
+
+h2{width: 100%; text-align: center; margin-bottom: 1rem;}
+.notice_board{
+  width: 100%; height: auto;
+  margin-top: 2rem; border: 0.0625rem solid #333;
+  box-sizing: border-box; padding: 1rem;
+}
+
+.context {
+  width: 100%; height: auto; 
+  box-sizing: border-box; padding: 0.5rem;
+  background-color: #fff;
+}
+
+.context >ul {width: 100%; height: auto;}
+.context li {
+  width: 100%; height: 1.875rem; border-bottom: 0.0625rem dotted #777; margin-bottom: 0.5rem; line-height: 1.875rem;
+}
+.context li:last-child{border: 0; margin-bottom: 0;}
+
+.context a {
+  display: block; width: 100%; height: 100%; text-indent: 1rem;
+}
+/* emphasize */
+.context em {
+  display: inline-block; width: 2rem; height: 100%;
+  text-align: right; font-style: normal; margin-right: 1rem;
+  font-weight: bold;
+}
+.context span { padding-left: 0.5rem; border-left: 0.0625rem solid #07a; color: #777;}
+
+
+/* 인디케이터 영역 =========================== */
+
+.indicator {
+  margin: auto; 
+  width: 50%; height: 25px; margin-top: 20rem; padding: 0.2rem; border-radius: 40px; background-color: #07a;}
+
+  .indicator ul { width: 100%; height: 100%; text-align: center;}
+  .indicator li {
+    display: inline-block; margin: 0 0.2rem; width: 25px; height: 25px; line-height: 25px;
+  }
+  .indicator a {
+    display: block; width: 100%; height: 100%; text-align: center;
+    box-sizing: border-box;
+    background-color: #fff; border-radius: 20px;
+  }
+
+  .indicator li.action a {
+    font-weight: bold; font-size: 1.1rem; color: #07a;}
