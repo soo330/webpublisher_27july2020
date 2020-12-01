@@ -42,7 +42,6 @@
 
   /* viewBox ------------------------------ */
   .view_wrap {width: 100%; min-height: 590px;}
-  .img_part{}
   .back_img li{
     /* display: none; */
     float: left; width: 20%; min-height: 350px; height: 72.916667vw;/*480기준*/
@@ -58,7 +57,16 @@
   .menuIBox {height: 48px;}
 
   /* viewBox ------------------------------ */
+  .img_part{float: left; width: 60%; height: auto; min-height: 450px;}
+  .back_img{height: auto; min-height: 450px;}
 
+  .text_part{ position: relative; float: left; width: 40%; height: auto; min-height: 450px;}
+  .text_part dl {
+    position: absolute; top: 20%; left: 30%; transform: translateX(-30%);
+  }
+
+  .text_part dt {height: 50px;}
+  .text_part dd {height: 100px;}
 
 }
 /* ============================== */
@@ -71,6 +79,7 @@
   .menuIBox {height: 50px;}
 
   /* viewBox ------------------------------ */
+  /* .show_menu_wrap {display: block;} */
 
 
 }

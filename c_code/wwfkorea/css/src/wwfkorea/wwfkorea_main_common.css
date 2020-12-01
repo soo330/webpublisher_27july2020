@@ -99,7 +99,7 @@ h1 a {
 .gnb dt{
   position:relative; width: 100%; height: 50px;
   color: #333; line-height: 48px; 
-  font-size: 1.7rem; font-weight: bold;
+  font-size: 68px; font-weight: bold;
   letter-spacing: -0.0125rem;
 }
 .gnb dd{
@@ -188,22 +188,24 @@ h1 a {
 #viewBox {
   position: relative;
   width: 100%; height: auto; background-color: #fa0;}
-.view_wrap { padding-bottom: 30px; width: 100%; height: 100%;}
+.view_wrap { width: 100%; height: 100%;}
 
 .slide_indicator {
   position: absolute; bottom: 30%; left: 50%; transform: translateX(-50%);
-  z-index: 200; width: 80%; height: 30px;
+  z-index: 200; width: 30%; height: 30px;
   margin-bottom: 10px;
 }
 
 .slide_indicator ul {
+  position: absolute; top: 0; left: 50%; transform: translateX(-50%);
   margin: auto; padding-top: 5px;
-  width: 50%; height: 30px;}
+  width: 205px; height: 30px;
+}
 
 .slide_indicator ul li {
-  float: left; width: 20px; height: 20px; margin-left: 15px; 
-  
+  float: left; width: 25px; height: 25px; margin-left: 20px;
 }
+.slide_indicator ul li:first-child{margin-left: 0;}
 .slide_indicator a {
   display: block;
   width: 100%; height: 100%; border-radius: 100%; box-sizing: border-box; border: 1px solid #fff;
@@ -213,7 +215,9 @@ h1 a {
 
 /* ---------------------- */
 
-.view_area { width: 100%; height: auto; }
+.view_area {
+  overflow: hidden;
+  width: 100%; height: auto; }
 
 .img_part {
   width: 100%; height: auto; background-color: #D092BF; }
@@ -262,11 +266,15 @@ h1 a {
 
   .text_part {
     /* position: relative; */
-    width: 100%; height: auto; background-color: var(--wwf-beige);}
+    float: left;
+    width: 100%; height: auto; background-color: rgba(246, 246, 239,0.7);;}
     .text_part dl {
       position: relative; 
-      padding-top: 60px; width: 80%; 
-      height: auto; margin: auto; min-height: 125px; max-width: 640px;}
+      padding-top: 60px; padding-bottom: 50px; width: 80%; 
+      height: auto; margin: auto;
+      /* min-height: 200px; max-width: 640px; */
+    }
+
     .text_part dt {
       width: 100%; height: 56px; 
       font-size: 1.5rem; font-weight: bold;
@@ -277,7 +285,7 @@ h1 a {
       background-color: #A4C579;}
     /* 더 보기 버튼 */
     .text_part .view_part_more {
-    position: absolute; bottom: 10px; right: 10px;
+    position: absolute; bottom: 25%; right: 2%;
     width: 70px; height: 26px;
     border: 1px solid #333;
   }
