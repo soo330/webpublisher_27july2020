@@ -11,10 +11,14 @@
   .menuIconWrap {width: 85px;}
   .searchIBox {height: 40px;}
   .menuIBox {height: 40px;}
+
+  /* viewBox ------------------------------ */
+
+
   
 }
 /* ============================== */
-/* 375~480px 모바일 */
+/* 375~480px common 모바일 */
 @media screen and (min-width:375px) and (max-width: 480px){
   #headBox { min-height: 45px;}
   .headWrap { margin: auto; width: 90%; height: 45px;}
@@ -22,15 +26,27 @@
   .searchIBox {height: 45px;}
   .menuIBox {height: 45px;}
 
+  /* viewBox ------------------------------ */
+
+
+
 }
 /* ============================== */
-/* 481~800px 모바일~태블릿 */
+/* 481~800px 480기준 모바일~태블릿 */
 @media screen and (min-width:481px) and (max-width: 800px){
   #headBox { min-height: 48px;}
   .headWrap { margin: auto; width: 90%; height: 48px;}
   h1 { width: 7.5vw; min-width: 46px; max-width: 54px; height: 56px;}
   .searchIBox {height: 48px;}
   .menuIBox {height: 48px;}
+
+  /* viewBox ------------------------------ */
+  .view_wrap {width: 100%; min-height: 590px;}
+  .img_part{}
+  .back_img li{
+    /* display: none; */
+    float: left; width: 20%; min-height: 350px; height: 72.916667vw;/*480기준*/
+  }
 }
 /* ============================== */
 /* 801~1024 태블릿 */
@@ -40,6 +56,10 @@
   h1 { width: 56px; height: 60px;}
   .searchIBox {height: 48px;}
   .menuIBox {height: 48px;}
+
+  /* viewBox ------------------------------ */
+
+
 }
 /* ============================== */
 /* 1440px PC */
@@ -49,6 +69,10 @@
   h1 { width: 60px; height: 65px;}
   .searchIBox {height: 50px;}
   .menuIBox {height: 50px;}
+
+  /* viewBox ------------------------------ */
+
+
 }
 /* ============================== */
 /* 1920px 큰PC */
@@ -56,4 +80,8 @@
   #headBox { min-height: 48px;}
   .headWrap { margin: auto; width: 90%; height: 48px;}
   h1 { width: 70px; height: 70px;}
+
+  /* viewBox ------------------------------ */
+
+
 }
