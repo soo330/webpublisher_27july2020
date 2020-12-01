@@ -35,6 +35,7 @@
       // 위를 아래와같이 사용 할 수있다 ( j === undefined)? k = myViewLen : k = j;
 
       k = j || myViewLen;
+      
 
       myLen = i + k;
       for(; i < myLen ; i+=1){
