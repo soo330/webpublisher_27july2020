@@ -36,7 +36,7 @@
     // 인디케이터 생성하기
     var indiLen = Math.ceil(dataFile.length / myViewLen); //전체 데이터 갯수에서 나누기 70 의 나머지를 올림
 
-    // 게시글 수만큼 인디케이터도 자동으로 생성하기
+    // 게시글 숫자(70) 만큼 인디케이터도 자동으로 생성하기
     var indiN = 0;
     for( ; indiN < indiLen ; indiN += 1 ){
       indiArea.append(indiCode);
@@ -56,19 +56,33 @@
     
     */
 
-    // 내용 넣기
-    var reSetting = function(){
-      var i = 0;
-      var noticeLi;
+    // 내용 넣기        (n)매개변수값을 써주면서 위에 페이지당 보이는 글수를조정한다
+    var reSetting = function(n){
+      // var i = 0;
+      // ( n !== undefined )? i = n : i = 0 ;
+      var i=0;
+      k = n || 0;
       noticeArea.empty();
+
+      var noticeLi;
+      // var settingLen = i + myViewLen ;
 
       // for( ; i< dataFile.length; i+=1 ){
       for( ; i< myViewLen ; i+=1 ){
         // datafile의 길이만큼 가지고오고 i에 1씩 더해라
-        noticeArea.append(noticeCode);
-        noticeLi = noticeArea.children('li').eq(i); //eq i번째
-        noticeLi.find('em').text(dataFile[i].id );
-        noticeLi.find('span').text(dataFile[i].address);
+
+        // 이걸 써주는 이유는 마지막 페이지 순서에서 
+        if( !!dataFile[i+k] === undefined ){
+          // !! -> 긍정이든 부정이든 
+          //값이 없다면 빠져나가라 break
+          break;
+        } // if
+        else{
+          noticeArea.append(noticeCode);
+          noticeLi = noticeArea.children('li').eq(i); //eq i번째
+          noticeLi.find('em').text( dataFile[i+k].id );
+          noticeLi.find('span').text( dataFile[i+k].address);
+        }//else
       }// for
     } //reSetting
 
@@ -81,7 +95,9 @@
       e.preventDefault();
       // var liN = $(this).text(); 텍스트로 바로 불러오지않고 밑에 parseInt를 통해 숫자로 변환한 상태에서 불러온다
       var liN = parseInt( $(this).text() ) -1;
+      var liSetN = liN * myViewLen;
       console.log( liN ); // liN-1을 해주는 이유는 js 첫번째는 0임으로
+      reSetting(liSetN);
     }) // indiLiBtn
 
 
