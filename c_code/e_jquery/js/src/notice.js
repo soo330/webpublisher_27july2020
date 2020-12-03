@@ -72,7 +72,7 @@
         // datafile의 길이만큼 가지고오고 i에 1씩 더해라
 
         // 이걸 써주는 이유는 마지막 페이지 순서에서 
-        if( !!dataFile[i+k] === undefined ){
+        if( dataFile[i+k] === undefined ){
           // !! -> 긍정이든 부정이든 
           //값이 없다면 빠져나가라 break
           break;
