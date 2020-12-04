@@ -45,24 +45,25 @@
     } //for
     //-------------------------------------
     // 인디케이터 보일 갯수 조정하기
-    var indiViewLen = 5;
-    var iv = 0;
+    var indiViewLen = 5; //보고싶은 갯수
+    var iv = 0; //최초값
     indiLi = indiArea.children('li');
-    var memoryN;
+    var memoryN; // 3) 변수를 준다
 
-
+    // indiLen: 인디갯수
     for( ; iv < indiLen ; iv += 1){
       if( iv < indiViewLen ){
-        memoryN = iv+1; // 기억할 n 는 iv와 같다
-        continue; // 계속 넘겨라
+        // 1)iv값이 1개씩 올라갈때 보이고자 하는 갯수5이면
+        // 
+        memoryN = iv+1; // 4) 3번을 언급 기억할 n 는 iv와 같다
+        continue; // 2) 5가 될때까지 계속 넘겨라(패스) 4번기능을 썼으므로 countinue는 지워줘도 된다
       } //if
       else {
-        indiLi.eq(iv).hide(); //indi iv번째 아이를 숨겨라
-        // 여기서의 hide는 display none을 말하는 것
+        indiLi.eq(iv).hide(); // 5) indi iv번째는 숨겨라 1~5까지는 보이게하는 기능 // 여기서의 hide는 display none을 말하는 것
       } //else
     } // for
 
-    // 5페이지까지 가더라도 더보기 버튼 나오기
+    // 5페이지까지 가더라도 더보기 버튼으로 다음으로가기
     var nBtn = indiCon.find('.next_notice');
     var pBtn = indiCon.find('.prev_notice');
 
