@@ -31,7 +31,7 @@
     var indiArea = indiCon.children('ul');
 
     // 기본셋팅
-    var myViewLen = 70; // 한번에 보일 갯수 
+    var myViewLen = 20; // 한번에 보일 갯수 
 
     // 인디케이터 생성하기
     var indiLen = Math.ceil(dataFile.length / myViewLen); //전체 데이터 갯수에서 나누기 70 의 나머지를 올림
@@ -42,7 +42,24 @@
       indiArea.append(indiCode);
       indiLi = indiArea.children('li').eq(indiN);
       indiLi.find('a').text( indiN + 1 );
-    } //for 
+    } //for
+    //-------------------------------------
+    // 인디케이터 보일 갯수 조정하기
+    var indiViewLen = 5;
+    var iv = 0;
+    indiLi = indiArea.children('li');
+
+
+    for( ; iv < indiLen ; iv += 1){
+      if( iv < indiViewLen ){
+        continue; // 계속 넘겨라
+      } //if
+      else {
+        indiLi.eq(iv).hide(); //indi iv번째 아이를 숨겨라
+      } //else
+    } // for
+
+    // 5페이지까지 가더라도 더보기 버튼 나오기
 
 
 
