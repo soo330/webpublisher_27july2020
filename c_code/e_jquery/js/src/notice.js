@@ -48,19 +48,35 @@
     var indiViewLen = 5;
     var iv = 0;
     indiLi = indiArea.children('li');
+    var memoryN;
 
 
     for( ; iv < indiLen ; iv += 1){
       if( iv < indiViewLen ){
+        memoryN = iv+1; // 기억할 n 는 iv와 같다
         continue; // 계속 넘겨라
       } //if
       else {
         indiLi.eq(iv).hide(); //indi iv번째 아이를 숨겨라
+        // 여기서의 hide는 display none을 말하는 것
       } //else
     } // for
 
     // 5페이지까지 가더라도 더보기 버튼 나오기
+    var nBtn = indiCon.find('.next_notice');
+    var pBtn = indiCon.find('.prev_notice');
 
+    nBtn.on('click', function(e){
+      e.preventDefault();
+      var nbn = memoryN;
+      indiLi.hide();
+      // nbn이 어디까지 기억하게 할것인지? 5개인 indiViewLen
+      for( ; nbn < memoryN + indiViewLen ; nbn += 1 ){
+        indiLi.eq(nbn).show();
+      }//for
+      //모든 처리가 끝났을 때에는 
+      memoryN = nbn;
+    }) //nBtn
 
 
     /*
