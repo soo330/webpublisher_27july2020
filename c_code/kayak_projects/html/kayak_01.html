@@ -4,7 +4,9 @@
 <head>
   <meta charset="UTF-8">
 
+  <link rel="stylesheet" href="../fontawesome/css/all.css">
   <link rel="stylesheet" href="../css/base/reset.css">
+  <link rel="stylesheet" href="../css/base/common.css">
 
   <link rel="stylesheet" href="../css/src/kayak_01.css">
   <title>kayak_01</title>
@@ -19,7 +21,7 @@
       </h1>
 
       <nav id="gnbBox">
-        <h2 class="hide">glbal navi</h2>
+        <h2 class="hide">global navi</h2>
         <div class="gnbGroup clearfix">
           <h3 class="hide">웹페이지 전체메뉴</h3>
           <ul class="gnb clearfix">
@@ -103,9 +105,9 @@
       <div id="covid19">
         <h2>Impact of Covid-19 on Flying</h2>
         <p>See how flight routes and prices are impacted from ICN - Incheon, South Korea - Incheon Intl (ICN) - Incheon Intl </p>
-        <div class="covid19Map">
+        <!-- <div class="covid19Map">
           <iframe src="https://www.arcgis.com/apps/opsdashboard/index.html#/bda7594740fd40299423467b48e9ecf6"
-          aria-hidden="false"></iframe></div>
+          aria-hidden="false"></iframe></div> -->
       </div> <!-- covid19 map -->
 
       <div id="top3Box">
@@ -234,18 +236,18 @@
       <div id="reckonBox">
         <h3>Best Deals in October</h3>
         <div class="reckonButton">
-          <button type="button"><img src="../img_kayak/left-arrow.png" alt="prev"></button>
-          <button type="button"><img src="../img_kayak/right-arrow.png" alt="next"></button> 
-        
+          <button type="button"><i class="fas fa-chevron-right"></i><span class="hidden_context">다음</span></button>
+          <button type="button"><i class="fas fa-chevron-left"><span class="hidden_context">이전</span></i></button> 
+        </div> <!-- reckonButton -->
         
           <div class="reckons">
             <ul>
-              <li>Bali</li>
-              <li>Seoul</li>
-              <li>London</li>
+              <li><span>Bali</span></li>
+              <li><span>Seoul</span></li>
+              <li><span>London</span></li>
             </ul>
           </div> <!-- reckons -->
-        </div> <!-- reckonButton -->
+        
       </div> <!-- reckonBox -->
 
       <div id="q_n_aBox">
