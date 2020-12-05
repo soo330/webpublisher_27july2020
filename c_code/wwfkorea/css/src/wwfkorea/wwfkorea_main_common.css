@@ -78,7 +78,7 @@ h1 a {
   /* ----------------------- */
 
 .show_menu_wrap{
-  /* display: none; */
+  display: none;
   position: absolute; top: 0; left:50%; transform:translate(-50%); z-index: 30;
   /*width: 850px;*/ width: 59.0277778vw; height: 250px;
   color: #fa0;
@@ -112,7 +112,7 @@ h1 a {
 
 
 .menu_area {
-  /* display: none; */
+  display: none;
   position: absolute; top: 0; left: 0; z-index: 200;
   margin: auto; padding-bottom: 80px;
   width: 100%; height: auto; min-height: 460px;
@@ -187,7 +187,7 @@ h1 a {
 /* ========================================= */
 #viewBox {
   position: relative;
-  width: 100%; height: auto; background-color: #;}
+  width: 100%; height: auto; background-color: #dfdfdf;}
 .view_wrap { width: 100%; height: auto;}
 
 .slide_indicator {
