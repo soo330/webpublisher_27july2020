@@ -161,10 +161,19 @@ h1>a {width: 603px; height: 604px; display: block;}
   
     .place_set li:nth-child(2){
     width: 60px; height: 95px;
-    background-image: url("../../img_kayak/exchange.png");
+    background-image: url("../../img_kayak/exchange_white.png");
     background-repeat: no-repeat;
-    background-size: contain;
-    background-position: 50%;}
+    background-size: 50%;
+    background-position: 50%;
+  }
+    .place_set li:nth-child(2):hover{
+      width: 60px; height: 95px;
+      background-image: url("../../img_kayak/exchange_white.png");
+      background-repeat: no-repeat;
+      background-size: 50%;
+      background-position: 50%;
+      background-color: var(--logobg);
+    }
 
 
 .date_set {
@@ -178,9 +187,9 @@ h1>a {width: 603px; height: 604px; display: block;}
     border: 1px solid #fff;}
   .date_set div:last-child {
   width: 60px; height: 95px; margin-right: 0;
-  background-image: url("../../img_kayak/magnify-white.png");
+  background-image: url("../../img_kayak/search_white.png");
   background-repeat: no-repeat;
-  background-size: 80%;
+  background-size: 50%;
   background-position: 50%;}
 
   .date_set div:last-child:hover{background-color: var(--logobg);}
@@ -226,19 +235,19 @@ h1>a {width: 603px; height: 604px; display: block;}
     width: 300px; height: 142px; background-color: #333;}
 
     .top3 ul li:first-child div:first-child {
-      background-image: url("../../img_kayak/top3_1.jpg");
+      background-image: url("../../img_kayak/top3/1.jpg");
       background-repeat: no-repeat;
       background-position: 80%;
       background-size: cover;}
 
     .top3 ul li:nth-child(2) div:first-child{
-      background-image: url("../../img_kayak/top3_2.jpg");
+      background-image: url("../../img_kayak/top3/2.jpg");
       background-repeat: no-repeat;
       background-position:50%;
       background-size: cover;}
 
     .top3 ul li:nth-child(3) div:first-child {
-      background-image: url("../../img_kayak/top3_3.jpg");
+      background-image: url("../../img_kayak/top3/3.jpg");
       background-repeat: no-repeat;
       background-position: 50%;
       background-size: cover;}
@@ -254,7 +263,7 @@ h1>a {width: 603px; height: 604px; display: block;}
 .subBox_img {
   float:left; margin-top: 42px;
   width: 300px; height: 142px;
-  background-image: url("../../img_kayak/flight.png");
+  background-image: url("../../img_kayak/tickets.png");
   background-repeat: no-repeat;
   background-size: contain;
   background-position: 50% 50%;}
@@ -270,7 +279,8 @@ h1>a {width: 603px; height: 604px; display: block;}
   
   .subBox_email_icon {
     float: left;
-    width: 50px; height: 40px;
+    width: 40px; height: 40px; margin-right: 10px;
+    padding: 10px; box-sizing: border-box;
     background-image: url("../../img_kayak/email.png");
     background-repeat: no-repeat;
     background-size: contain;
@@ -327,37 +337,37 @@ h1>a {width: 603px; height: 604px; display: block;}
   float:left; width: 160px; height: 200px;}
 
 .pop_i_1 {
-  background-image: url("../../img_kayak/paris.jpg");
+  background-image: url("../../img_kayak/popular/paris.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
 }
 .pop_i_2 {
-  background-image: url("../../img_kayak/italy.jpg");
+  background-image: url("../../img_kayak/popular/italy.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
 }
 .pop_i_3 {
-  background-image: url("../../img_kayak/thai.jpg");
+  background-image: url("../../img_kayak/popular/thai.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
 }
 .pop_i_4 {
-  background-image: url("../../img_kayak/newyork.jpg");
+  background-image: url("../../img_kayak/popular/newyork.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
 }
 .pop_i_5 {
-  background-image: url("../../img_kayak/sydney.jpg");
+  background-image: url("../../img_kayak/popular/sydney.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
 }
 .pop_i_6 {
-  background-image: url("../../img_kayak/amsterdam.jpg");
+  background-image: url("../../img_kayak/popular/amsterdam.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;
@@ -407,45 +417,52 @@ h1>a {width: 603px; height: 604px; display: block;}
   font-size: 1.5rem;
   width: 400px; height: 42px; padding-top: 40px; margin-left: 60px;}
 
-.reckonButton {width: 100%; margin-top: 90px; }
-.reckonButton>button:first-child{ float: left; margin-left: 50px;}
-.reckonButton>button:nth-child(2){ float: right; margin-right: 50px; }
+.reckonButton {
+  position: relative; top: 35%; left: 50%;
+  transform: translateX(-50%);
+  z-index: 50;
+  width: 80%; height: 0;}
+.reckonButton>button:first-child{ float: right;}
+.reckonButton>button:nth-child(2){ float: left;}
 
 .reckonButton>button>img { width: 20px; height: 20px;}
 
-.reckons {width: 100%; height: 300px; font-size: 1.3rem; font-weight: bold;}
+.reckons {
+  position: relative; top: 25%; left: 50%; transform: translateX(-50%);
+  width: 70%; height: 200px; font-size: 1.3rem; font-weight: bold;
+}
 
 
 .reckons ul li:nth-child(1) {
-  float: left; margin-left: 30px;
+  float: left; margin-left: 50px;
+  width: 150px; height: 150px;
+  background-color: #fff;
+  border-radius: 200px 200px 200px 200px;
+  background-image: url("../../img_kayak/reckon/reckon1.jpg");
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;  
+}
+
+.reckons ul li:nth-child(2) {
+  float: left; margin-left: 50px;
   width: 200px; height: 200px;
   background-color: #fff;
   border-radius: 200px 200px 200px 200px;
-  background-image: url("../../img_kayak/reckon1.jpg");
-  background-repeat: no-repeat;
-  background-position: 50%;
-  background-size: cover;}
-
-.reckons ul li:nth-child(2) {
-  float: left; margin-left: 30px;
-  width: 300px; height: 298px;
-  background-color: #fff;
-  border-radius: 200px 200px 200px 200px;
-  background-image: url("../../img_kayak/reckon2.jpg");
+  background-image: url("../../img_kayak/reckon/reckon2.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;}
 
 .reckons ul li:nth-child(3) {
-  float: left; margin-left: 30px;
-  width: 200px; height: 200px;
+  float: left; margin-left: 50px;
+  width: 150px; height: 150px;
   background-color: #fff;
   border-radius: 200px 200px 200px 200px;
-  background-image: url("../../img_kayak/reckon3.jpg");
+  background-image: url("../../img_kayak/reckon/reckon3.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;}
-
 
 
 /* reckonBox ========================================= */
