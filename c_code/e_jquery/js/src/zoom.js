@@ -17,13 +17,26 @@
     var viewA = viewLi.find('a');
     var scaleArea = $('.scale_area');
 
-    var i = 0;
+    
     // ++i = i+=1 같은뜻
-    for( ; i < viewLi.length ; ++i ){
+
+    // var i = 0; 를 아래와 같이 바꿀수 있다 아래가 처리가 조금 더 빠름
+    var i = viewLi.length-1;
+    var vLink;
+    for( ; i >=0 ; --i ){
       vLink = viewLi.eq(i).children('a');
       vLink.css({backgroundImage: 'url(' + imgUrl + imgData[i].thum +')'});
     } //for
 
+    var setImg = function(n){
+      var myN = n || 0;
+      product.css({ backgroundImage : 'url(' + imgUrl + imgData[n].detail + ')'});
+      scaleArea.css({ backgroundImage : 'url(' + imgUrl + imgData[n].detail + ')'});
+      
+    } //setImg
+
+    // console.log(i);
+   
 
   }) // $.ajax
   //jQuery end
