@@ -14,7 +14,7 @@
     var viewArea = $('.view_area');
     var product = viewArea.children('.product');
     var viewLi = viewArea.find('li');
-    var viewA = viewLi.find('a');
+    var viewLink = viewLi.find('a');
     var scaleArea = $('.scale_area');
 
     
@@ -28,14 +28,60 @@
       vLink.css({backgroundImage: 'url(' + imgUrl + imgData[i].thum +')'});
     } //for
 
+    // console.log(i);
+
     var setImg = function(n){
       var myN = n || 0;
-      product.css({ backgroundImage : 'url(' + imgUrl + imgData[n].detail + ')'});
-      scaleArea.css({ backgroundImage : 'url(' + imgUrl + imgData[n].detail + ')'});
+      product.css({ backgroundImage : 'url(' + imgUrl + imgData[myN].detail + ')'});
+      scaleArea.css({ backgroundImage : 'url(' + imgUrl + imgData[myN].detail + ')'});
       
     } //setImg
+    setImg();
 
-    // console.log(i);
+    // 2) viewLink 클릭
+    viewLink.on('click', function(e){
+      e.preventDefault();
+      var index = $(this).parent('li').index();
+      setImg(index);
+    }) // viewLink
+
+
+    scaleArea.hide(); // 없는상태에서 처리되기위해서 먼저 hide처리
+    //product 마우스 올렸을 때 처리
+    product.on('mouseenter', function(){
+      scaleArea.stop().fadeIn();
+    }) // fadeIn
+
+    product.on('mouseleave', function(){
+      scaleArea.stop().fadeOut();
+    }) // fadeOut
+
+
+    // product 마우스 움직일때 처리
+    product.on('mousemove', function(e){
+      e.preventDefault();
+
+      var thisWidth = $(this).outerWidth();
+      var thisHeight = $(this).outerHeight();
+
+      var x = e.originalEvent.offsetX;
+      var y = e.originalEvent.offsetY;
+      
+
+      var xPer = x / thisWidth * 100;
+      var yPer = y / thisHeight * 100;
+      // console.log(x,y);
+
+      scaleArea.css({ backgroundPosition: xPer + '%' + '  ' + yPer + '%'});
+    }) // clientX, screenX, offsetX
+
+
+    // offsetX  : 이벤트 대상을 기준으로 봄
+    // pageX    : 전체문서를 기준 (document)
+    // clientX  : 브라우저 크기를 기준 (window)
+    // screenX  : 보여지는 화면크기를 기준 (모니터)
+
+    
    
 
   }) // $.ajax
