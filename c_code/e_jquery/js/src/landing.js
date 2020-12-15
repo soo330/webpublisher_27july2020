@@ -9,16 +9,22 @@
 
   var conBoxOffset = conBox.offset().top;
   var moreBoxOffset = moreBox.offset().top;
-  console.log( conBoxOffset, moreBoxOffset );
+  // console.log( conBoxOffset, moreBoxOffset );
 
   win.on('scroll', function(e){
     var getScroll = win.scrollTop(); // 스크롤 값
     // console.log( getScroll );
 
+
+    var conScroll;
     // 스크롤값이, 
     // conBox의 offset().top (에서 브라우저 높이값 일부빠진만큼)보다 크면 수행
     if(getScroll >= conBoxOffset - winH){
       conBox.addClass('action');
+      conScroll = getScroll - (conBoxOffset - winH); // 스크롤 - (offset)
+      console.log('conScroll:')
+
+      conBox.css({'backgroundPositionY': (-conScroll/3) +'px'});
     }else{
       conBox.removeClass('action');
     }
