@@ -17,6 +17,7 @@
     // console.log(getScroll);
 
     // 스크롤 값이, conBox의 offset().top만큼에서 (브라우저 높이값 일부빠진만큼) 보다 크면 수행하라
+    // 더 값이 커졌을 때, moreBox offset값이 화면의 상단에 위치하면
     if(getScroll >= conBoxOffset-winH ){
       conBox.addClass('action');
     }else{
