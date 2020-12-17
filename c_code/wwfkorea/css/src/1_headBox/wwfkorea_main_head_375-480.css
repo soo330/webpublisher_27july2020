@@ -1,0 +1,11 @@
+/* 375~480px common 모바일 headBox */
+@media screen and (min-width:375px) and (max-width: 480px){
+  #headBox { min-height: 45px;}
+  .headWrap { margin: auto; width: 90%; height: 45px;}
+  h1 { width: 46px; height: 54px;}
+  .searchIBox {height: 45px;}
+  .menuIBox {height: 45px;}
+
+  .menuIconWrap {float:right; width: 90px; height: 100%;}
+
+}

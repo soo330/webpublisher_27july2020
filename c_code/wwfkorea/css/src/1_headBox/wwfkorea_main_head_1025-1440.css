@@ -1,0 +1,16 @@
+/* ============================== */
+/* 1025~1440px PC */
+@media screen and (min-width:1025px) and (max-width: 1440px){
+  #headBox { min-height: 50px;}
+  .headWrap { margin: auto; width: 90%; height: 48px;}
+  h1 { width: 60px; height: 65px;}
+  .searchIBox {height: 50px;}
+  .menuIBox {height: 50px;}
+
+  .show_menu_wrap{
+    /* display: none; */
+    position: absolute; top: 0; left:50%; transform:translate(-50%); z-index: 30;
+    /*width: 850px;*/ width: 59.0277778vw; height: 250px;
+    color: #fa0;
+  }
+}
