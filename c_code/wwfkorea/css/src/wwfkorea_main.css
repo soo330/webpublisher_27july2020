@@ -3,4 +3,22 @@
 @import url('../../fonts/tmoneyFont.css');
 
 @import url('./wwfkorea/wwfkorea_main_common.css');
+
+/* headBox */
+@import url('./1_headBox/wwfkorea_main_head_320-374.css');
+@import url('./1_headBox/wwfkorea_main_head_375-480.css');
+@import url('./1_headBox/wwfkorea_main_head_481-640.css');
+@import url('./1_headBox/wwfkorea_main_head_641-1024.css');
+@import url('./1_headBox/wwfkorea_main_head_1025-1440.css');
+@import url('./1_headBox/wwfkorea_main_head_1441-1920.css');
+
+/* viewBox */
+@import url('./2_viewBox/wwfkorea_main_view_320-374.css');
+@import url('./2_viewBox/wwfkorea_main_view_375-480.css');
+@import url('./2_viewBox/wwfkorea_main_view_480-640.css');
+@import url('./2_viewBox/wwfkorea_main_view_641-1024.css');
+@import url('./2_viewBox/wwfkorea_main_view_1025-1440.css');
+@import url('./2_viewBox/wwfkorea_main_view_1441-1920.css');
+
+
 @import url('./wwfkorea/wwfkorea_main_480.css');

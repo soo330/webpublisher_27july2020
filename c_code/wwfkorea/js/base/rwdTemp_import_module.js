@@ -17,6 +17,14 @@
   }
   // -----------------------------------------------
 
+  console.log(nowW);
+  if(nowW === deviceType[0] || nowW === deviceType[1]){
+    body.append('<script src="../js/src/main_viewbox_slide_mobile.js"></script>');
+  }else{
+    body.append('<script src="../js/src/main_viewbox_slide.js"></script>');
+  }
+
+  
 
   // if(nowW === deviceType[0]){
   //   headBox.load( url + 'rwdTemp_headBox_mobile.html', function(){
@@ -34,12 +42,7 @@
   //   headBox.load( url + 'rwdTemp_headBox_mobile.html')
   //   viewBox.load(url+ 'rwdTemp_mobile.html', viewImport );
   // } //else
-  console.log(nowW);
-  if(nowW === deviceType[0]){
 
-  }else{
-    body.append('<script src="../js/src/main_viewbox_slide.js"></script>');
-  }
-
+  
   //jQuery end
 })(jQuery);

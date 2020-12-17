@@ -37,44 +37,44 @@ h1 a {
 .menuIconWrap {
   float:right; width: 90px; height: 100%;}
   /*검색 디자인 ------------- */
-  .searchIBox {
-    float: left; width: 40px; height: 48px;}
-  .search_btn{width: 100%; height: 100%}
-  .search_btn a {
-    display: block;
-    width: 100%; height: 100%;
-    background-image: url('../../../img/icons/loupe.png');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 40%;}
-  
-  /* 메뉴버튼 디자인 --------------- */
-  .menuIBox {
-    float: right; width: 40px; height: 48px;}
-  .menu_btn {width: 100%; height: 100% }
-  .menu_btn button {
-    display: block; width: 100%; height: 100%;
-    background-image: url('../../../img/icons/menu_btn.png');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 50%;
-  }
+.searchIBox {
+  float: left; width: 40px; height: 48px;}
+.search_btn{width: 100%; height: 100%}
+.search_btn a {
+  display: block;
+  width: 100%; height: 100%;
+  background-image: url('../../../img/icons/loupe.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 40%;}
 
-  /* 메뉴안 닫기버튼 디자인 --------------- */
-  .menu_close_btn {
-    position: absolute; top: 0; right: 0;
-    margin-top: 5px; margin-right: 10px;
-    width: 34px; height: 34px;
-  }
+/* 메뉴버튼 디자인 --------------- */
+.menuIBox {
+  float: right; width: 40px; height: 48px;}
+.menu_btn {width: 100%; height: 100% }
+.menu_btn button {
+  display: block; width: 100%; height: 100%;
+  background-image: url('../../../img/icons/menu_btn.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 50%;
+}
 
-  .menu_close_btn button {
-    display: block;
-    width: 100%; height: 100%;
-    background-image: url('../../../img/icons/delete_white.png');
-    background-repeat: no-repeat;
-    background-position: 50% 50%;
-    background-size: 70%;
-  }
+/* 메뉴안 닫기버튼 디자인 --------------- */
+.menu_close_btn {
+  position: absolute; top: 0; right: 0;
+  /* margin-top: 5px; margin-right: 10px; */
+  width: 34px; height: 34px;
+}
+
+.menu_close_btn button {
+  display: block;
+  width: 100%; height: 100%;
+  background-image: url('../../../img/icons/delete_white.png');
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: 70%;
+}
   /* ----------------------- */
 
 .show_menu_wrap{
@@ -86,9 +86,11 @@ h1 a {
 
 .show_menu_wrap::before {
   position: absolute; top: 48px; left:50%; transform:translate(-50%); z-index: -2;
-  content: ""; display: block; width: 100vw; height: 100%; 
-  background-color: rgba(0,0,0,0.8);
+  content: ""; display: block; width: 100vw; height: 100%; background-color: rgba(0,0,0,0.8);
 }
+
+
+
 /* 상위메뉴란 디자인 -------------- */
 .gnb { width: 100%; height: 100%;}
 .gnb li {
@@ -111,28 +113,28 @@ h1 a {
 .gnb dd>a {display: block; margin-bottom: 10px; width: 100%;}
 
 
-.menu_area {
+/* .menu_area {
   display: none;
   position: absolute; top: 0; left: 0; z-index: 200;
   margin: auto; padding-bottom: 80px;
   width: 100%; height: auto; min-height: 460px;
-  background-color: #333;}
+  background-color: #333;} */
 
-  .menu_area ul{
+  .mobile_tablet{
     margin: auto; width: 50%; height: auto;}
-  .menu_area li{
+  .mobile_tablet li{
     padding-top: 20px;
     width: 100%; height: auto;}
 
     /* .menu_area li:first-child {padding-top: 27.083333vw;} */
 
-  .menu_area dl { width: 100%; height: auto;}
-  .menu_area dt {
+  .mobile_tablet dl { width: 100%; height: auto;}
+  .mobile_tablet dt {
     padding-top: 30px;
     width: 100%; height: auto; border-bottom: 1px solid #fff; color: #fff;    
     font-weight: bold; font-size: 1.6875rem;}
-  .menu_area dd {width: 100%; height: auto; color: #fff; font-size: 1.125rem;}
-  .menu_area a {display: block; padding-top: 20px;}
+  .mobile_tablet dd {width: 100%; height: auto; color: #fff; font-size: 1.125rem;}
+  .mobile_tablet a {display: block; padding-top: 20px;}
 
   /* 검색하기---------------- */
   .search_area{
@@ -194,19 +196,19 @@ h1 a {
   /* display: none; */
   position: absolute;
   /* bottom: 30%; left: 50%; transform: translateX(-50%); */
-  z-index: 200; width: 80%; height: 30px;
+  z-index: 200; width: 30%; height: 25px;
   /* margin-bottom: 10px; */
 }
 
 .slide_indicator ul {
   /* position: absolute; top: 0; left: 50%; transform: translateX(-50%); */
+  padding-top: 5px;
   margin: auto;
-  /* padding-top: 5px; */
-  width: 205px; height: 30px;
+  width: 175px; height: 15px;
 }
 
 .slide_indicator ul li {
-  float: left; width: 25px; height: 25px; margin-left: 20px;
+  float: left; width: 15px; height: 15px; margin-left: 25px;
 }
 .slide_indicator ul li:first-child{margin-left: 0;}
 .slide_indicator a {

@@ -9,7 +9,7 @@
   var IndicatorSet = function(){
     var tpLeft = textPart.offset().left;
     var tpWidth = textPart.outerWidth();
-    slideIndi.css({left:tpLeft + 'px', width:tpWidth + 'px', bottom:1 + 'rem'});
+    slideIndi.css({left:tpLeft + 'px', width:tpWidth + 'px', bottom: 1 + 'rem'});
   }; // IndicatorSet();
   IndicatorSet();
 

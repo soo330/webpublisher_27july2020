@@ -28,7 +28,7 @@ var deviceSize = function(){
     //기준 치를 설정
     // [480, 1024, 1440, 1920];
     var deviceType =[
-      {type: 'mobile', size: 480},
+      {type: 'mobile', size: 640},
       {type: 'tablet', size: 1024},
       {type: 'laptop', size: 1440},
       {type: 'pc', size: 1920},
