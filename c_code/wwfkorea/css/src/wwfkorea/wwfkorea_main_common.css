@@ -34,10 +34,10 @@ h1 a {
 
 
 /* 상위메뉴란 디자인 -------------- */
-.menuIconWrap {
-  float:right; width: 90px; height: 100%;}
+/* .menuIconWrap {
+  float:right; width: 90px; height: 100%;} */
   /*검색 디자인 ------------- */
-.searchIBox {
+/* .searchIBox {
   float: left; width: 40px; height: 48px;}
 .search_btn{width: 100%; height: 100%}
 .search_btn a {
@@ -46,10 +46,10 @@ h1 a {
   background-image: url('../../../img/icons/loupe.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 40%;}
+  background-size: 40%;} */
 
 /* 메뉴버튼 디자인 --------------- */
-.menuIBox {
+/* .menuIBox {
   float: right; width: 40px; height: 48px;}
 .menu_btn {width: 100%; height: 100% }
 .menu_btn button {
@@ -58,7 +58,7 @@ h1 a {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 50%;
-}
+} */
 
 /* 메뉴안 닫기버튼 디자인 --------------- */
 .menu_close_btn {
@@ -78,15 +78,16 @@ h1 a {
   /* ----------------------- */
 
 .show_menu_wrap{
-  display: none;
+  /* display: none; */
   position: absolute; top: 0; left:50%; transform:translate(-50%); z-index: 30;
   /*width: 850px;*/ width: 59.0277778vw; height: 250px;
   color: #fa0;
 }
 
 .show_menu_wrap::before {
+  display: none;
   position: absolute; top: 48px; left:50%; transform:translate(-50%); z-index: -2;
-  content: ""; display: block; width: 100vw; height: 100%; background-color: rgba(0,0,0,0.8);
+  content: "";  width: 100vw; height: 100%; background-color: rgba(0,0,0,0.8);
 }
 
 
@@ -101,10 +102,11 @@ h1 a {
 .gnb dt{
   position:relative; width: 100%; height: 50px;
   color: #333; line-height: 48px; 
-  font-size: 30px; font-weight: bold;
+  font-size: 1.5rem; font-weight: bold;
   letter-spacing: -0.0125rem;
 }
 .gnb dd{
+  display: none;
   padding-top: 10px;
   width: 100%; height: 20px;
   font-size: 1.125rem; 

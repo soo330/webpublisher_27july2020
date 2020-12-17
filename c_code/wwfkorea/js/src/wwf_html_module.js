@@ -20,8 +20,6 @@
     headBox.load('./headBox/wwf_pc_headBox.html');
   }
 
-  
-
   // console.log(nowW);
   if( nowW === deviceType[0]){
     mobileImport();
