@@ -1,7 +1,7 @@
 /* ============================== */
 /* 1025~1440px PC */
 @media screen and (min-width:1025px) and (max-width: 1440px){
-  #headBox { min-height: 50px;}
+  #headBox { min-height: 48px;}
   .headWrap { margin: auto; width: 90%; height: 48px;}
   h1 { width: 60px; height: 65px;}
   .searchIBox {height: 50px;}
@@ -29,13 +29,13 @@
   .gnb dt{
     position:relative; width: 100%; height: 50px;
     color: #333; line-height: 48px; 
-    font-size: 30px; font-weight: bold;
+    font-size: 20px; font-weight: bold;
     letter-spacing: -0.0125rem;
   }
   .gnb dd{
     padding-top: 10px;
     width: 100%; height: 20px;
-    font-size: 1.125rem; 
+    font-size: 1rem; 
     font-weight: bold;
   }
   .gnb dd>a {display: block; margin-bottom: 10px; width: 100%;}

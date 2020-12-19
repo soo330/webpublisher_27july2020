@@ -3,7 +3,7 @@
 @media screen and (min-width:641px) and (max-width: 1024px){
   /* viewBox ------------------------------ */
 
-  .slide_indicator { bottom: 10px; left: auto; right: 50px; width: 30%;}
+  .slide_indicator { bottom: 10px; left: auto; right: 50px; width: 30%; z-index: 10;}
 
   .img_part{
     overflow: hidden;
