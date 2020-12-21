@@ -13,13 +13,15 @@
   var sampleBox = $('#sampleBox');
   var sampleUl = sampleBox.children('ul');
   var sampleList = sampleUl.children('li');
+  var sampleBoxOffset = sampleBox.offset().top;
+  
 
   win.on('scroll', function(e){
     var winSt = win.scrollTop();
     var setScroll = winSt / 100;
     // 스크롤탑에 백분율한값을 사용하겠다
-
     // console.log(winSt); //scroll 위치파악
+
     // 1단계 ----------------------------------------------
     // viewDiv.eq(0).css({backgroundPositionY: winSt + 'px'});
     // viewDiv.eq(1).css({backgroundPositionY: (winSt/2) + 'px'});
@@ -51,6 +53,24 @@
       // viewDiv.length-1로 하나를 빼준다
 
     } //for.viewDiv.length
+
+    //sampleBox 영역 이미지
+    // height 가 해당하는 offset의 기준으로 봤을때
+    if(winSt + viewBoxHeight > sampleBoxOffset ){
+      
+      // 1) height 기준으로 offset만큼 떨어졌을때 나오는값
+      // var winR = ( winSt -sampleBoxOffset)
+      var winR = (( winSt + viewBoxHeight ) - sampleBoxOffset) / viewBoxHeight * 100;
+      // 2) 보이는 시점과 끝나는 시점을 계산해주어야함
+      // window에서 viewBox의 Height만큼을 더한 값(스크롤할때 하나 앞에서 스크롤 되기를 원함으로)에서 sampleBoxOffset 값을 빼준다
+
+      console.log(winR);
+      // sampleList.css({backgroundPositionY : -(winR/3) + '%' });
+      // 현재 움직이는 아이의 스크롤 % / px값
+      sampleList.css({backgroundPositionY:(100 - ( winR / 2 )) + '%' });
+      // 반대로 100에서 winR만큼을 빼준다면 반대로 적용됨
+
+    } //if winSt > sampleBoxOffset
 
   }) //win.scroll
 
