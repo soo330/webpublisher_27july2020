@@ -67,7 +67,7 @@
       console.log(winR);
       // sampleList.css({backgroundPositionY : -(winR/3) + '%' });
       // 현재 움직이는 아이의 스크롤 % / px값
-      sampleList.css({backgroundPositionY:(100 - ( winR / 2 )) + '%' });
+      sampleList.css({backgroundPosition: (winR / 2) + '%'+ ' ' +(100 - ( winR / 2 )) + '%' });
       // 반대로 100에서 winR만큼을 빼준다면 반대로 적용됨
 
     } //if winSt > sampleBoxOffset
