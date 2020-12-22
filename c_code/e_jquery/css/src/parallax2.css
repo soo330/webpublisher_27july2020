@@ -10,6 +10,10 @@
   width: 100%; height: 100vh; min-height: 37.5rem;
   background-color: #acf;}
 
+#headBox.default::before{
+  content: " "; display: block; position: absolute; top: 0; left: 0; z-index: 500;
+  width: 100%; height: 100%; background-color: rgba(255,255,255,0.7);
+} 
   /* h1의 기준은 headBox */
 h1{
   z-index: 100;
