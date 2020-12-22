@@ -15,18 +15,19 @@
 /* ============================== */
 /* 481~640px 480기준 모바일~태블릿 */
 @media screen and (min-width:481px) and (max-width: 640px){
-  #headBox { min-height: 48px;}
+  /* #headBox { min-height: 48px;}
   .headWrap { margin: auto; width: 90%; height: 48px;}
   h1 { width: 7.5vw; min-width: 46px; max-width: 54px; height: 56px;}
 
   .menuIconWrap {float:right; width: 90px; height: 100%;}
   .searchIBox {height: 48px;}
-  .menuIBox {height: 48px;}
-
-  .show_menu_wrap{
+  .menuIBox {height: 48px;} */
+  
+  /*width: 850px;*/
+  /* .show_menu_wrap{
     display: none;
     position: absolute; top: 0; left:50%; transform:translate(-50%); z-index: 30;
-    /*width: 850px;*/ width: 80%; height: auto;
+    width: 80%; height: auto;
     color: #fa0;
   }
 
@@ -34,10 +35,10 @@
     position: absolute; top: 0; left:50%; transform:translate(-50%); z-index: -1;
     content: ""; display: block; width: 100vw; height: 100%; background-color: rgba(0,0,0,0.9);
     padding-bottom: 80px;
-  }
+  } */
 
   /* 메뉴안 닫기버튼 디자인 --------------- */
-  .menu_close_btn {
+  /* .menu_close_btn {
     position: absolute; top: 0; right: 0;
     margin-top: 12.8px;
     width: 34px; height: 34px;
@@ -58,31 +59,31 @@
     width: 100%; height: auto; border-bottom: 1px solid #fff; color: #fff;    
     font-weight: bold; font-size: 1.25rem;}
   .mobile_tablet dd {width: 100%; height: auto; color: #fff; font-size: 1rem;}
-  .mobile_tablet a {display: block; padding-top: 20px;}
+  .mobile_tablet a {display: block; padding-top: 20px;} */
 
   /* viewBox ------------------------------ */
   /* display: none; */
-  .slide_indicator { bottom: 250px;
-    /* left: 50%; */
-  }
-    
+  /* .slide_indicator { bottom: 250px;
+  } */
+  /* left: 50%; */
   
-  .back_img li{
+  
+  /* .back_img li{
     width: 20%; height: 46.875vw; min-height: 250px; max-height: 300px;
-  } 
+  }  */
   /* .img_part{
     overflow: hidden;
     float: left; width: 60%; height: auto;}
   .back_img{ height: 43.945313vw; }
   .back_img li {height: 100%;} */
 
-  .text_part{
+  /* .text_part{
     position: relative; float: left;
     width: 100%; height: 300px;
     /* max-height: 250px; */
-    padding: 4.6875vw 0; box-sizing: border-box;
+    /* padding: 4.6875vw 0; box-sizing: border-box; */
     /* padding 30px */
-    padding-bottom: 50px;
+    /* padding-bottom: 50px;
   }
   .text_part dl {
     display: none;
@@ -101,22 +102,22 @@
   }
 
 
-}
+} */
 
 
 
 /* ============================== */
 /* 641px~1024 태블릿 */
-@media screen and (min-width:641px) and (max-width: 1024px){
-  #headBox { min-height: 48px;}
+@media screen and (min-width:641px) and (max-width: 1024px){}
+  /* #headBox { min-height: 48px;}
   .headWrap { margin: auto; width: 90%; height: 48px;}
   h1 { width: 56px; height: 60px;}
   .searchIBox {height: 48px;}
-  .menuIBox {height: 48px;}
+  .menuIBox {height: 48px;} */
 
   /* viewBox ------------------------------ */
 
-  .slide_indicator { bottom: 10px; left: auto; right: 50px; width: 30%;}
+  /* .slide_indicator { bottom: 10px; left: auto; right: 50px; width: 30%;}
 
   .img_part{
     overflow: hidden;
@@ -137,7 +138,7 @@
   .text_part dd:first-of-type{ padding-bottom: 50px}
   .text_part dd> span {
     display: block; width: 100%; height: 85px; overflow: hidden;}
-  .text_part .view_part_more {bottom: 10px; right: 10px;}
+  .text_part .view_part_more {bottom: 10px; right: 10px;} */
 
 
 
@@ -172,7 +173,7 @@
 
   /* viewBox ------------------------------ */
   /* .show_menu_wrap {display: block;} */
-  .slide_indicator { bottom: 3%; left: auto; right: 5%; width: 30%;}
+  /* .slide_indicator { bottom: 3%; left: auto; right: 5%; width: 30%;}
 
   .view_wrap {
     margin:auto;
@@ -200,16 +201,16 @@
   .text_part .view_part_more {bottom: 10px; right: 10px;}
 
 
-}
+} */
 /* ============================== */
 /* 1441~ 부터 1920 걸쳐서 계속 비율적으로만 커질거라면 min 1441 */
-@media screen and (min-width: 1441px){
-  #headBox { min-height: 48px;}
+@media screen and (min-width: 1441px){}
+  /* #headBox { min-height: 48px;}
   .headWrap { margin: auto; width: 90%; height: 48px;}
-  h1 { width: 70px; height: 70px;}
+  h1 { width: 70px; height: 70px;} */
 
   /* viewBox ------------------------------ */
-  .view_wrap {
+  /* .view_wrap {
     margin:auto;
     width:100%; max-width:75rem; height: auto;
   }
@@ -233,4 +234,4 @@
   .text_part dd:first-of-type {height: auto; padding-bottom: 50px;}
   .text_part dd> span {display: block; width: 100%; height: 85px; overflow: hidden;}
   .text_part .view_part_more {bottom: 10px; right: 10px;}
-}
+} */

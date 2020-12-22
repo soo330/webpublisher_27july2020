@@ -6,6 +6,12 @@
   .searchIBox {height: 45px;}
   .menuIBox {height: 45px;}
 
-  .menuIconWrap {float:right; width: 90px; height: 100%;}
+  .show_menu_wrap{
+    display: none;
+  }
 
+  /* 검색하기---------------- */
+  .search_area{
+    display: none;
+  }
 }

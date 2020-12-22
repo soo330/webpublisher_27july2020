@@ -13,7 +13,7 @@
   width: 100%; height: auto; min-height: 45px; background-color: var(--wwf-beige);}
 
   #headBox::before {
-    content: ""; display: block;
+    content: " "; display: block;
     position: absolute; top: 0; left: 0; z-index: -1;
     width: 100%; height: 120px; 
     background-color: #fa0;
@@ -34,10 +34,10 @@ h1 a {
 
 
 /* 상위메뉴란 디자인 -------------- */
-/* .menuIconWrap {
-  float:right; width: 90px; height: 100%;} */
+.menuIconWrap {
+  float:right; width: 90px; height: 100%;}
   /*검색 디자인 ------------- */
-/* .searchIBox {
+.searchIBox {
   float: left; width: 40px; height: 48px;}
 .search_btn{width: 100%; height: 100%}
 .search_btn a {
@@ -46,10 +46,10 @@ h1 a {
   background-image: url('../../../img/icons/loupe.png');
   background-repeat: no-repeat;
   background-position: 50% 50%;
-  background-size: 40%;} */
+  background-size: 40%;}
 
 /* 메뉴버튼 디자인 --------------- */
-/* .menuIBox {
+.menuIBox {
   float: right; width: 40px; height: 48px;}
 .menu_btn {width: 100%; height: 100% }
 .menu_btn button {
@@ -58,12 +58,11 @@ h1 a {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 50%;
-} */
+}
 
 /* 메뉴안 닫기버튼 디자인 --------------- */
 .menu_close_btn {
-  position: absolute; top: 0; right: 0;
-  /* margin-top: 5px; margin-right: 10px; */
+  position: absolute; top: 10px; right: 10px;
   width: 34px; height: 34px;
 }
 
@@ -80,8 +79,7 @@ h1 a {
 .show_menu_wrap{
   /* display: none; */
   position: absolute; top: 0; left:50%; transform:translate(-50%); z-index: 30;
-  /*width: 850px;*/ width: 59.0277778vw; height: 250px;
-  color: #fa0;
+  /*width: 850px;*/ width: 100%; height: 250px;
 }
 
 .show_menu_wrap::before {
@@ -115,12 +113,12 @@ h1 a {
 .gnb dd>a {display: block; margin-bottom: 10px; width: 100%;}
 
 
-/* .menu_area {
-  display: none;
+.menu_area {
+  /* display: none; */
   position: absolute; top: 0; left: 0; z-index: 200;
   margin: auto; padding-bottom: 80px;
   width: 100%; height: auto; min-height: 460px;
-  background-color: #333;} */
+  background-color: rgba(0,0,0,0.8);}
 
   .mobile_tablet{
     margin: auto; width: 50%; height: auto;}
@@ -138,18 +136,18 @@ h1 a {
   .mobile_tablet dd {width: 100%; height: auto; color: #fff; font-size: 1.125rem;}
   .mobile_tablet a {display: block; padding-top: 20px;}
 
-  /* 검색하기---------------- */
-  .search_area{
-    display: none;
-    position: absolute; top: 0; left: 0; z-index: 300;
-    width: 100%; height: 500px; background-color: #333}
+/* 검색하기---------------- */
+.search_area{
+  display: none;
+  position: absolute; top: 0; left: 0; z-index: 300;
+  width: 100%; height: 100vh; background-color: rgba(0,0,0,0.9);}
 
-    
+  
 
   .search_close_btn {
     position: absolute; top: 0; right: 0;
     margin-top: 5px; margin-right: 10px;
-    width: 34px; height: 34px;
+    width: 30px; height: 30px;
   }
 
   .search_close_btn button {
@@ -161,8 +159,9 @@ h1 a {
     background-size: 70%;}
 
   .search_area form {
-    margin: auto; padding-top: 100px;
-    width: 80%; height: auto;}
+    position: relative; top: 25%; left: 50%;
+    transform: translateX(-50%);
+    width: 70%; height: auto;}
   .search_area fieldset{
     width: 100%; height: 100px; margin: 0; padding: 0;  border: 0;}
     .search_input_wrap h3 {
@@ -171,16 +170,26 @@ h1 a {
       font-size: 1.625rem; color: #fff;}
 
   .search_input_wrap{
-    width: 100%; height: 50px;}
+    width: 100%; height: 50px; border-bottom: 1px solid #fff;}
 
   .search_input_wrap input {
-    float: left; margin-left: 20px;
-    width: 80%; height: 100%; border: 0; border-bottom: 1px solid #fff; background-color: transparent;}
+    float: left; margin-left: 10px;
+    width: 90%; height: 100%; border: 0;
+    color: #fff;
+    background-color: transparent;
+  }
+
+  .search_input_wrap input::placeholder{ color:#fff; font-size: 1rem;}
+
+  /* .search_input_wrap label{
+    width: 100%; height: 100%;
+    color: #fff;
+  } */
 
   .search_input_wrap button {
-    float: left;
+    float: right;
     display: block;
-    width: 50px; height: 50px;
+    width: 35px; height: 45px;
     background-image: url('../../../img/icons/loupe_white.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -198,7 +207,7 @@ h1 a {
   /* display: none; */
   position: absolute;
   /* bottom: 30%; left: 50%; transform: translateX(-50%); */
-  z-index: 200; width: 30%; height: 25px;
+  z-index: 10; width: 30%; height: 25px;
   /* margin-bottom: 10px; */
 }
 
