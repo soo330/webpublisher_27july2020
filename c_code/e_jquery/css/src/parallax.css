@@ -70,7 +70,7 @@ h1{width: 7rem; height: 100%; float: left; background-color: var(--c-orange); co
   margin-bottom: 1rem;
   background-color: #fff;
   background-repeat: no-repeat;
-  background-position: 50% 0;
+  background-position: 90% 0%;
   background-size: auto 200%; /* 아래/위 기준 200%*/
 }
 
