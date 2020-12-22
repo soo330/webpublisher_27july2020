@@ -5,11 +5,21 @@
   var viewBox = $('#viewBox');
   var slideIndi = viewBox.find('.slide_indicator');
   var textPart = viewBox.find('.text_part');
+
+  var contextBox = $('#contentBox');
+  var missionBox = contextBox.find('.missionBox');
+  var missionImg = missionBox.children('.mission_img');
+  var missionLi = missionImg.children('li');
+  var missionDiv = missionLi.find('div');
   
   var IndicatorSet = function(){
     var tpLeft = textPart.offset().left;
     var tpWidth = textPart.outerWidth();
-    slideIndi.css({left:tpLeft + 'px', width:tpWidth + 'px', bottom: 1 + 'rem'});
+    var msImgleft = missionBox.offset().left;
+    var msWidth = missionBox.outerWidth();
+    
+    slideIndi.css({ left : tpLeft + 'px', width:tpWidth + 'px', bottom: 1 + 'rem'});
+    
   }; // IndicatorSet();
   IndicatorSet();
 
