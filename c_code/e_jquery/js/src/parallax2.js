@@ -36,13 +36,6 @@
       else{
         headBox.removeClass('default');
       }
-    
-    // 6. frontImg의 투명도가 0이되면 headBox 사라지게 만들기
-    if(opacityR < 0 ){
-      headBox.hide();
-    }else{
-      headBox.show();
-    }
 
     // 1. frontImg가 점점 커지게( transform:scale() );
     // 2. 점점 사라지게
@@ -54,6 +47,14 @@
       opacityR = setN + 1 - per;
       frontImg.css({ opacity : opacityR });
     } // if scaleR <= setN
+
+    // 6. frontImg의 투명도가 0이되면 headBox 사라지게 만들기
+    if(opacityR < 0 ){
+      // console.log('사라진위치:' , win.scrollTop() );
+      headBox.hide();
+    }else{
+      headBox.show();
+    }
 
     // 3. 비행기 나타나면서 올라가기
     if( scaleR > setN ){

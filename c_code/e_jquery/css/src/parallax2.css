@@ -12,7 +12,7 @@
 
 #headBox.default::before{
   content: " "; display: block; position: absolute; top: 0; left: 0; z-index: 500;
-  width: 100%; height: 100%; background-color: rgba(255,255,255,0.7);
+  width: 100%; height: 100%;
 } 
   /* h1의 기준은 headBox */
 h1{
@@ -43,7 +43,7 @@ h1 a {
     background-image: url("../../img/parallax2/airplane.png");}
 
 .blink_area{
-  width: 100%; height: 3000px;
+  width: 100%; height: 2500px; /* js 에서 계산된 값 넣어주기*/
   background-color: #0184b7;
 }
 
