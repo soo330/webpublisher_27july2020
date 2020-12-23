@@ -317,28 +317,46 @@ h1 a {
 #contentBox h2 {padding-top: 110px; width: 80%; height: 43px; margin: auto; text-align: center; border-bottom: 1px solid #333; font-size: 1.25rem;}
 #contentBox p {padding: 22px 0 92px; width: 80%; height: 53px; margin: auto; font-size: 1rem; text-align: center;}
 
-.missionBox {margin: auto; width: 80%; height: 100%;}
+.missionBox {margin: auto; width: 100%; height:auto;}
 
+
+/*  min-height: 1050px;  */
 .mission_img {
-  padding-top: 50px; margin: auto; width: 100%; height:auto; min-height: 1050px;  background-color: #dfdfdf;}
-  
-.mission_img li {
-  float: left; margin-left: 50px; /*marginleft 44px*/ margin-top: 45px; width: 100px; height: 100px; padding-bottom: 50px;}
-  .mission_img li a {
-    margin: auto; display: block; width: 100%; height: 100%;}
-  .mission_img li span {
-    margin-top: 10px;
-    width: 126px; height: 22px;
-    display: block; text-align: center; font-size: 1rem; font-weight: bold;}
-.mission_img div {width: 126px; height: 126px;}
+  padding-top: 50px; margin: auto;
+  width: 80%; height: auto; background-color: #dfdfdf;}
 
-.mission_01 {
+  /*marginleft 44px*/
+
+.mission_img a {
+  margin: auto; display: block; width: 100%; height: 100%; }
+.mission_img li {
+  float: left; margin-left: 50px; margin-top: 45px;
+  width: 126px; height: 126px; padding-bottom: 50px;
+  overflow: hidden; background-color: #dfdfdf;
+}
+.mission_img a {
+  margin: auto; display: block; width: 100%; height: 100%; }
+  
+  .mission_img li span {
+    margin: auto;
+    margin-top: 10px;
+    width: 90%; height: 22px;
+    display: block; text-align: center; font-size: 1rem; font-weight: bold;}
+
+  .mission_img div {
+    width: 126px; height: 126px;
+    background-color: #fff; overflow: hidden;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-size: cover;
+  }
+/* 
+ .mission_01 {
   width: 100%; height: 100%;
   background-image: url('../../../img/wwfimg/mission_img/mission_01.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-}
+} */
+
+/*
 .mission_02 {
   width: 100%; height: 100%;
   background-image: url('../../../img/wwfimg/mission_img/mission_02.jpg');
@@ -374,7 +392,7 @@ h1 a {
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: 50%;
-}
+} */
 
 /* ========================================= */
 #newsBox{width: 100%; height: auto; min-height: 4550px; background-color: #fff;}
