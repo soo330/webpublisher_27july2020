@@ -6,9 +6,25 @@
   // todo List
   // [o] 1) 카드 js에서 구현
   // [x] 2) json파일 생성 후 불러오기 img list화 처리
-  // []  3) 생성된 ul의 가로 크기를 li 갯수만큼 담을 수 있도록 수정
+  // [o]  3) 생성된 ul의 가로 크기를 li 갯수만큼 담을 수 있도록 수정
 
  
+  var cardData = [];
+  var k = 0, l;
+  var url = '../img/pinterest/'
+  var imgT = 'random_';
+  for( ; k< 19 ; k+=1 ){
+    // if( k < 9){
+    //   l = '0' + (k+1) ; // 8->009 --> k=0임으로 사진은 1부터 시작하니까 =  k+1 
+    // }else if (k <99){ //9 ->010
+    //   l = (k+1);
+    // }
+    l = (k+1);
+    cardData[k] = imgT + l + '.jpg';
+  };
+  console.log(cardData );
+
+
   var win = $(window); //browser는 따옴표 없이 가져옴
   var cardBox = $('#cardBox');
   cardBox.append('<ul></ul>'); // 이때 ('ul');이 아닌 태그로써 불러옴
@@ -17,7 +33,8 @@
   var cardUl = cardBox.children('ul');
   var liText = '<li><a><div class="img_temp"><img /></div><span></span></a></li>';
 
-  var url = '../img/pinterest/'
+  
+
   // cardUl.append(liText);
  
   var s = 0;
@@ -27,6 +44,8 @@
     cardUl.append(liText);
   } //for 20개의 li tags
   var cardLi = cardUl.children('li');
+  var cardLiImg = cardLi.children('img');
+  cardLiImg.eq(s).append(url);
   
   
    // ★★★
@@ -87,11 +106,12 @@
   var liNth = Math.ceil( cardLi.length / liLen);
   var n; 
 
-  for( ; lin < liNth ; lin += 1 ){
+  for(; lin < liNth ; lin += 1 ){
     // cardLi.eq(lin * liLen - 1)
     n = liLen * lin -1;
     console.log(n);
     cardLi.eq(n).css({marginRight:0});
+    cardLi.eq(n-lin).css({left: lin*(cardLiWidth + cardMargin)});
 
   } // for
 
