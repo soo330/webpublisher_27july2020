@@ -8,21 +8,43 @@
   // [x] 2) json파일 생성 후 불러오기 img list화 처리
   // [o]  3) 생성된 ul의 가로 크기를 li 갯수만큼 담을 수 있도록 수정
 
- 
+  // 실제 데이터 형식에서는
+
+  /*
+  [
+    {"title": "카드제목", "content": "카드내용",
+      "imgSrc":"random_1.jpg", "imgAlt":'이미지설명'},
+  ]
+  */
+
+    
   var cardData = [];
-  var k = 0, l;
+  var k = 0, l, sampleObj = {};
   var url = '../img/pinterest/'
   var imgT = 'random_';
-  for( ; k< 19 ; k+=1 ){
+  for( ; k< 29 ; k+=1 ){
     // if( k < 9){
     //   l = '0' + (k+1) ; // 8->009 --> k=0임으로 사진은 1부터 시작하니까 =  k+1 
     // }else if (k <99){ //9 ->010
     //   l = (k+1);
     // }
     l = (k+1);
-    cardData[k] = imgT + l + '.jpg';
+
+    // cardData[k] = imgT + l + '.jpg';
+
+
+    // json 객체 만들기
+    // sampleObj.title = 'title' + l;
+    // sampleObj.imgSrc = imgT + l + '.jpg';
+    // sampleObj.imgAlt = imgT + l + '이미지설명';
+    // cardData[k] = {sampleObj};
+    
+    cardData[k] = {};
+    cardData[k].title = 'title' + l;
+    cardData[k].imgSrc = url + imgT + l + '.jpg';
+    cardData[k].imgAlt = imgT + l + '이미지설명'; 
   };
-  console.log(cardData );
+  console.log( cardData );
 
 
   var win = $(window); //browser는 따옴표 없이 가져옴
@@ -38,10 +60,16 @@
   // cardUl.append(liText);
  
   var s = 0;
+  var listEl;
                   // s++ / +=1 / ++1 모두 같음
   // li 이하 태그들 for문으로 만들기
   for( ; s < 20 ; s++ ){
     cardUl.append(liText);
+    listEl = cardUl.children('li').eq(s);
+    listEl.find('img').attr({'src' : cardData[s].imgSrc,
+                             'alt' : cardData[s].imgAlt});
+    listEl.find('span').text(cardData[s].title);
+    listEl.find('a').attr({"href" : '#'});
   } //for 20개의 li tags
   var cardLi = cardUl.children('li');
   var cardLiImg = cardLi.children('img');
