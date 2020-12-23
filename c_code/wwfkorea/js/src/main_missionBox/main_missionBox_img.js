@@ -43,24 +43,50 @@
 
 
     // =============================================
-    var msLiWidth = msLi.eq(0).outerWidth();
-    var msMargin = msLi.eq(0).outerWidth(true)-msLiWidth; // 작은 이미지 오른쪽 마진을 빼주기
 
-    var winW = win.outerWidth();
-    var liLen = parseInt( winW / (msLiWidth + msMargin)); //li개수값
-    
-    var ulWidth = ((msLiWidth+msMargin)*liLen)-msMargin;// 마지막 번째 마진을 빼주기
+    var BrowserSet = function(){
 
-    msUl.css({window: ulWidth+'px'});
-    var i = 0;
-    var liNth = Math.ceil( msLi.length / i);
-    var n;
+      msLi.removeAttr('style');
 
-    // for( ; i < liNth ; i++ ){
-    //   n = liLen*i-1;
-    //   console.log(n);
-    // }// for
+      var msLiWidth = msLi.eq(0).outerWidth();
+      var msMargin = msLi.eq(0).outerWidth(true)-msLiWidth; // 작은 이미지 오른쪽 마진을 빼주기
 
-  });
+      var winW = win.outerWidth();
+      //li개수값
+      var liLen = (function(){
+        var len;
+        len = parseInt( winW / (msLiWidth + msMargin)); 
+        if( len < 5){
+          liLen = len;
+        }else{
+          liLen = 5
+        }
+        return liLen;
+      })();
+
+      
+      
+      var ulWidth = ((msLiWidth+msMargin)*liLen)-msMargin;// 마지막 번째 마진을 빼주기
+
+      msUl.css({width: ulWidth + 'px'});
+      var i = 0;
+      var liNth = Math.ceil(msLi.length / liLen );
+      var n;
+
+      for( ; i < liNth ; i++ ){
+        n = liLen*(i+1)-1;
+        // console.log(n);
+        msLi.eq(n).css({marginRight:0});
+      //   msLi.eq(n-i).css({left: (msLiWidth+msMargin)*i});
+      }// for
+
+    }//BroswerSet
+    BrowserSet();
+
+    win.on('resize', function(){
+      BrowserSet();
+    })// resize
+
+  }); //$.ajax
   //jQuery end
 })(jQuery);
