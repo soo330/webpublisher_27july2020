@@ -15,7 +15,7 @@
 #cardBox{width: 100%; height: auto;}
 
 /* js로 카드의 가로값 변경할 것임 현재는 임시값 */
-  #cardBox ul {width: 90%; height: auto; margin: auto; background-color: #ddd; text-align: ;}
+  #cardBox ul {width: 90%; height: auto; margin: auto; background-color: #ddd; }
   #cardBox ul::after,
   #cardBox ul::after { content: " "; display: block; clear: both;
     width: 100%; height: 0;

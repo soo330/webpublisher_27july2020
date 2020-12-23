@@ -53,10 +53,13 @@
 
   // 브라우저 가로값 * 카드li의 가로값 - 카드마진값인b 를 빼주는 공식
   // cardUl.css({ width: (winW * cardLiWidth) - cardMargin });
-  var ulWidth = ( cardLiWidth - liLen ); // - cardMargin)
-
+  // var ulWidth =( (cardLiWidth + cardMargin) * liLen ) - cardMargin
+  var ulWidth =( (cardLiWidth + cardMargin) * liLen ) // - cardMargin;
+// 
+;
   cardUl.css({width: ulWidth + 'px'});
-  console.log(ulWidth)
+  console.log(ulWidth);
+  console.log(cardUl);
 
   //jQuery end
 })(jQuery);
