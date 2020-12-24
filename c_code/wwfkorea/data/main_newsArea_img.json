@@ -1,0 +1,75 @@
+[
+  { "title" : "news_01",
+    "img" : "news_01.jpg",
+    "text" : "newsBox_01_이미지",
+    "loremT" : "lorem",
+    "loremC" : "Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!"
+  },
+
+  { "title" : "news_02",
+    "img" : "news_02.jpg",
+    "text" : "newsBox_02_이미지",
+    "loremT" : "lorem",
+    "loremC" : "Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!"
+  },
+  { "title" : "news_03",
+    "img" : "news_03.jpg",
+    "text" : "newsBox_03_이미지",
+    "loremT" : "lorem",
+    "loremC" : "Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!"
+  },
+  { "title" : "news_04",
+    "img" : "news_04.jpg",
+    "text" : "newsBox_04_이미지",
+    "loremT" : "lorem",
+    "loremC" : "Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!"
+  },
+  { "title" : "news_05",
+    "img" : "news_05.jpg",
+    "text" : "newsBox_05_이미지",
+    "loremT" : "lorem",
+    "loremC" : "Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!"
+  },
+  { "title" : "news_06",
+    "img" : "news_06.jpg",
+    "text" : "newsBox_06_이미지",
+    "loremT" : "lorem",
+    "loremC" : "Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!"
+  },
+  { "title" : "news_02",
+    "img" : "news_02.jpg",
+    "text" : "newsBox_02_이미지",
+    "loremT" : "lorem",
+    "loremC" : "Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!"
+  },
+  { "title" : "news_02",
+    "img" : "news_02.jpg",
+    "text" : "newsBox_02_이미지",
+    "loremT" : "lorem",
+    "loremC" : "Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!"
+  },
+  { "title" : "news_02",
+    "img" : "news_02.jpg",
+    "text" : "newsBox_02_이미지",
+    "loremT" : "lorem",
+    "loremC" : "Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!"
+  },
+  { "title" : "news_02",
+    "img" : "news_02.jpg",
+    "text" : "newsBox_02_이미지",
+    "loremT" : "lorem",
+    "loremC" : "Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!"
+  },
+  { "title" : "news_02",
+    "img" : "news_02.jpg",
+    "text" : "newsBox_02_이미지",
+    "loremT" : "lorem",
+    "loremC" : "Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!"
+  },
+  { "title" : "news_02",
+    "img" : "news_02.jpg",
+    "text" : "newsBox_02_이미지",
+    "loremT" : "lorem",
+    "loremC" : "Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!"
+  }
+]
