@@ -326,7 +326,6 @@ h1 a {
   margin: auto;
   width: 100%; height: auto; 
   padding-top: 50px; padding-bottom: 50px;
-  background-color: #dfdfdf;
 }
   .mission_img::after {
     content: " "; display: block; clear: both;}
@@ -338,7 +337,7 @@ h1 a {
   margin-top: 20px;
   float: left; margin-right: 45px;
   width: 126px; height: 126px; padding-bottom: 50px;
-  overflow: hidden; background-color: #bbb;
+  overflow: hidden; border: 1px solid #333;
 }
 
 /* .mission_img li:first-child{margin-left: 60px;} */
@@ -349,6 +348,7 @@ h1 a {
     margin: auto;
     margin-top: 10px;
     width: 90%; height: 22px;
+    line-height: 22px;
     display: block; text-align: center; font-size: 1rem; font-weight: bold;}
 
   .mission_img div {
@@ -404,24 +404,37 @@ h1 a {
 } */
 
 /* ========================================= */
-#newsBox{width: 100%; height: auto; min-height: 4550px; background-color: #fff;}
+#newsBox{width: 100%; height: auto; min-height: 2000px; background-color: #fff;}
 
 #newsBox h2 { margin: auto; padding-top: 35px; width: 80%; height: 45px; margin-bottom: 47px; text-align: center; border-bottom: 1px solid #333;}
-.news_area { margin-top: 48px; margin: auto; width: 80%; height: auto; background-color: #dfdfdf;}
+.news_area { margin-top: 48px; width: 100%; height: auto; }
 
 
-.news_area ul {width: 100%; height: 100%;}
-.news_area li {width: 100%; height: auto;}
-.news_area li:first-of-type {padding-top: 100px;}
+.news_area ul {
+  margin: auto; padding-top: 100px; width: 80%; height: auto; background-color: #dfdfdf;}
+
+  .news_area ul::after{
+    content: " "; display: block; clear: both; width: 100%; height: 0;}
+
+/* js에서 첫번째 줄 첫번째 카드 마다/ 마지막번째 마지막 마다 margin */
+.news_area li {
+  float:left; width: 245px; height: 480px; padding-top: 20px;
+  margin-right: 20px;
+}
+
 .news_area a {width: 80%; height: 100%; }
 .news_area div {
   margin: auto;
-  width: 80%; height: auto; min-height: 326px; background-color: #777;}
+  width: 100%; height: auto; min-height: 326px; background-color: #777;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+}
 
 /* img part----------- */
 .news_area dl {
   margin: auto; margin-bottom: 50px;
-  width: 80%; height: auto; min-height: 154px; background-color: #329A67;}
+  width: 100%; height: auto; min-height: 154px; background-color: #329A67;}
 .news_area dt {
    margin: auto; width: 80%; height: auto; min-height: 50px;
    font-size: 1.25rem; line-height: 50px; font-weight: bold;
@@ -429,55 +442,32 @@ h1 a {
 .news_area dd {
    margin: auto; width: 80%; height: auto; min-height: 90px; font-size: 1rem; background-color: #fa0;}
 
+
+
 .news_img_01{
   background-image: url('../../../img/wwfimg/news_img/news_01.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
 }
 .news_img_02{
   background-image: url('../../../img/wwfimg/news_img/news_02.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
 }
 .news_img_03{
   background-image: url('../../../img/wwfimg/news_img/news_03.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
 }
 .news_img_04{
   background-image: url('../../../img/wwfimg/news_img/news_04.jpg');
-  background-repeat: no-repeat;
-  background-position: 10% 50%;
-  background-size: cover;
 }
 .news_img_05{
   background-image: url('../../../img/wwfimg/news_img/news_05.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
-
 }
 
 .news_img_06{
   background-image: url('../../../img/wwfimg/news_img/news_06.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
 }
 .news_img_07{
   background-image: url('../../../img/wwfimg/news_img/news_07.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
 }
 .news_img_08{
   background-image: url('../../../img/wwfimg/news_img/news_08.jpg');
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-  background-size: cover;
 }
 
 /* ========================================= */

@@ -35,7 +35,7 @@
 
     // json 객체 만들기
     // sampleObj.title = 'title' + l;
-    // sampleObj.imgSrc = imgT + l + '.jpg';
+    // sampleObj.imgSrc = imgT + l + '.jpg';  
     // sampleObj.imgAlt = imgT + l + '이미지설명';
     // cardData[k] = {sampleObj};
     
