@@ -92,7 +92,7 @@
 
     } //for
 
-    // 4-2 card높이값을 처리해준 이후 아래위 공백을 바꿔줘야함으로 float에서 position으로 바꿔줘야함
+    // 5. 4-2 card높이값을 처리해준 이후 아래위 공백을 바꿔줘야함으로 float에서 position으로 바꿔줘야함
     // $('.card').css({float:'left'});
 
 
