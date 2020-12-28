@@ -8,6 +8,7 @@
   // 5. 임시로 셋팅했던 .card의 float:left 삭제
   // 6. 화면상의 하나의 행에 들어갈 위치값 (left값 설정)
   // 7. 화면상의 열에 해당하는 위치값(top)값 설정 (position: relative로 수정)
+  // 8. .card_area의 높이값을 강제 재 설정
 
   // ===================================================
   // ===================================================
@@ -30,8 +31,10 @@
   //------------------------------------------
   //4-2. 높이값 (랜덤수치) 변경
 
+  var myRandomN = 7;
+  var myRandomH = 40;
   var RandomHeight = function(){
-    var h = parseInt(Math.random() * 7) * 40; // 7가지 * 40px씩 은 210
+    var h = parseInt(Math.random() * myRandomN) * myRandomH; // 7가지 * 40px씩 은 210
     return h;
   }// RandomHeight
   // console.log(h);
@@ -57,17 +60,20 @@
 
   // 추가 선택자
   var card; 
+  var cardWidthLen;
   // 1. card 생성
   // 3번에서 요구하는 카드생성 형태임으로 중복 수행하게되는 형태로써 함수화 처리
 
   var i=0; 
 
+  // 카드 전체 값
   var cardCount = 0;
   var randomColor = [];
   var cardRandomHeight = [];
   
-  // 4-2. var r1,r2,r3; //for문 안에서 정의해주기
+  // var r1,r2,r3; // 4-2.for문 안에서 정의해주기
 
+  //-----------------------------------------
   // 3-1 카드값 만들기
   var AppendCardFn = function(){
     cardCount += 50;
@@ -89,35 +95,116 @@
       // 4-2. card높이값을 기존값과 random 함수값을 합쳐서 처리
       cardRandomHeight[i] = card.outerHeight() + RandomHeight();
       card.css({height: cardRandomHeight[i] + 'px'});
-
     } //for
-
-    // 5. 4-2 card높이값을 처리해준 이후 아래위 공백을 바꿔줘야함으로 float에서 position으로 바꿔줘야함
+    // ---------------------
+    // 5. 삭제 // 4-2 card높이값을 처리해준 이후 아래위 공백을 바꿔줘야함으로 float에서 position으로 바꿔줘야함
     // $('.card').css({float:'left'});
-
-
+    card = $('.card');
+    //---------------------------------
   } // AppendCardFn
   AppendCardFn(); // 50개씩 늘어나게됨
 
-  
-  // ---------------------------------------------
+  // =======================================
   // .card_area의 가로값 세팅
   var cardEq0 = $('.card').eq(0);
   var cardWidth = cardEq0.outerWidth(); 
   //outerWidth = 가로+패딩+외곽선;
-
   var CardWidthSet = function(){
     cardWidthLen = 
     parseInt(cardBox.outerWidth() / cardWidth);
-    cardArea.css({width:cardWidth * cardWidthLen + 'px'});
-
-  } //cardWidthSet
+    cardArea.css({width:cardWidth * cardWidthLen + 'px'}); 
+    
+    return cardWidthLen;   
+  }// CardWidthSet();
   CardWidthSet();
+
+  // ======================================
+  // 6. 카드의 위치값 설정
+
+  // var j =0;
+  // for( ; j < cardCount ; j++ ){
+  // } // for
+
+  // var 1. ----------
+  var remainder;
+  var topArr = [];
+  // card = $('.card');
+  var CardPositionSettingFn = function(){
+    var j =0;
+    for( ; j < cardCount ; j++ ){
+      // 가로행에 들어가는 각각 n 번째 (나머지값에 해당하는 번째)
+      //6-4. 요소의 위치를(left값)배치
+      remainder = j % cardWidthLen; // 0, 1, 2
+      card.eq(j).css({left: cardWidth * remainder + 'px'}); // 6-2
+      // card
+      
+
+      // // 6-1 4번씩 만들어라
+      // var k=0;
+      // for( ; k < cardWidthLen ; k++ ){
+      //   // card의 k번째 css에 있는 left는 cardWidth * k번째 곱하기
+      //   card.eq(j).css({left: cardWidth * remainder + 'px'});
+      //   // console.log(j);
+      // }//for k < cardWidthLen
+
+      // --------------------------------
+      var setTop, setHeight; // 1번째줄 탑값만큼을-> 2번째열 하단에오는 탑값만큼으로 설정하기 위함
+
+      // 7. 요소의 추가위치(top값)배치
+      if( j < cardWidthLen ){ // cardWidthLen보다 j가 작다면
+        card.eq(j).css({top: 0}); // 카드(j번째) top값을 0으로 바꿔라
+        topArr[j] = 0;
+      }
+      else{
+        setTop = parseFloat(card.eq(j -cardWidthLen).css('top')); // top값 (속성값을 그대로 가져옴으로 문자로 가져옴으로 parseFloat으로 소수값으로 가져옴)
+        setHeight = card.eq(j-cardWidthLen).outerHeight(); // 높이값
+        topArr[j] = setTop + setHeight;
+        card.eq(j).css({top: setTop + setHeight + 'px'}); // 
+      } //if
+
+    } // for
+
+    // -------------------------
+    // 8. .card_area의 높이값 설정
+
+    // 각각의 카드 높이값(height) 중 가장 큰값
+    var randomHMax = card.eq(0).outerHeight()+ (myRandomN * myRandomH); // 최초의 높이값을 가져온후 
+    // (카드의 position의 위치인 top 값중의 최대값
+    var maxN = Math.max.apply(null, topArr); // max/ min사용가능
+    console.log(randomHMax, maxN);
+    cardArea.css({height: randomHMax + maxN + 'px'});
+    // console.log(randomHMax);
+  } // CardPositionSettingFn
+
+  // -------------------
+  // 6-1. 함수기능 수행
+  // AppendCardFn();
+  CardPositionSettingFn();
+  // console.log(topArr);
+  
+  
+  // ---------------------------------------------
+  // .card_area의 가로값 세팅
   
 
-  // 브라우저 크기 변경시 cardArea 사이즈 재수정
+  // 6.번 위로 올림
+  // var cardEq0 = $('.card').eq(0);
+  // var cardWidth = cardEq0.outerWidth(); 
+  // //outerWidth = 가로+패딩+외곽선;
+  // var cardWidthLen;
+  // // -------------
+  // var CardWidthSet = function(){
+  //   cardWidthLen = 
+  //   parseInt(cardBox.outerWidth() / cardWidth);
+  //   cardArea.css({width:cardWidth * cardWidthLen + 'px'});
+  // } //cardWidthSet
+  // CardWidthSet();
+
+  // ======================================
+  // 브라우저 크기 변경시 cardArea 사이즈 재수정 / 6-3 CardPositionSettingFn() 붙여넣기
   win.on('resize', function(){
     CardWidthSet();
+    CardPositionSettingFn();
   });
 
 
@@ -141,7 +228,7 @@
     // ----------------------------------------------------
     // 3. 일정 수치가 넘어가면 추가 카드를 생성
     // 카드를 생성한 영역을 재호출, 기존의 카드는 유지해야함
-    if( per >= 90 ){ // per가 90을 넘어가면
+    if( per >= 100 ){ // per가 90을 넘어가면
       AppendCardFn(); // 50개씩 생성해라
     }//if
 
