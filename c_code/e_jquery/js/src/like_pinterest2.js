@@ -230,6 +230,7 @@
     // 카드를 생성한 영역을 재호출, 기존의 카드는 유지해야함
     if( per >= 100 ){ // per가 90을 넘어가면
       AppendCardFn(); // 50개씩 생성해라
+      CardPositionSettingFn();
     }//if
 
   }); // win. scroll
