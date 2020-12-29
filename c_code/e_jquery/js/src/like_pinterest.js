@@ -136,10 +136,15 @@
 
   for(; lin < liNth ; lin += 1 ){
     // cardLi.eq(lin * liLen - 1)
-    n = liLen * lin -1;
+    n = liLen * (lin+1) -1; 
+    //화면에가로에배치되는 갯수 * 1 -1 
+    //4 * 1 -1 -> 첫줄 마지막번째 -. 제외
+    //4 * 2 -1 -> 두번째줄 마지막번째 -. 제외
+    //4 * 3 -1 -> 두번째줄 마지막번째 -. 제외
+
     console.log(n);
     cardLi.eq(n).css({marginRight:0});
-    cardLi.eq(n-lin).css({left: lin*(cardLiWidth + cardMargin)});
+    // cardLi.eq(n-lin).css({left: lin*(cardLiWidth + cardMargin)});
 
   } // for
 
