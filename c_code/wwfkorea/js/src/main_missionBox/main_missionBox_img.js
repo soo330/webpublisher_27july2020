@@ -18,7 +18,7 @@
     var msUl = msBox.children('ul');
     var liText = '<li><a><div></div><span></span></a></li>';
 
-    var url = '../../img/wwfimg/mission_img/';
+    var url = '../img/wwfimg/mission_img/';
 
     var s = 0;
     var listEl
