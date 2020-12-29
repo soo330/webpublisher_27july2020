@@ -59,7 +59,8 @@
       var newsLiWidth = newsLi.eq(0).outerWidth();
       var newsMargin = newsLi.eq(0).outerWidth(true)-newsLiWidth; //b를 빼주기위함
 
-      var winW = win.outerWidth();
+      // var winW = win.outerWidth();
+      var winW = $('#newsBox').find('.news_area').outerWidth();
       // 정수 ( browser W / ( liWidth + liMargin )) = li 갯수
       var liLen = parseInt(winW / (newsLiWidth + newsMargin) );
 

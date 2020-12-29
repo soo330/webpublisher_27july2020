@@ -51,7 +51,7 @@
       var msLiWidth = msLi.eq(0).outerWidth();
       var msMargin = msLi.eq(0).outerWidth(true)-msLiWidth; // 작은 이미지 오른쪽 마진을 빼주기
 
-      var winW = win.outerWidth();
+      var winW = $('#contentBox').find('.missionBox').outerWidth();
       //li개수값
       var liLen = (function(){
         var len;
