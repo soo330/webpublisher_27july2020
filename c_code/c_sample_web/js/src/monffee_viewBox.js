@@ -123,7 +123,7 @@
     e.preventDefault();
     var its = $(this); //$(this)는 click했을때 선택되는 것'들' 중복되는값
     slideN = its.index(); //.index는 순서를 확인하는 아이
-    // console.log(itI);
+    // console.log(its);
     backImg.stop().animate({'left': slideN * -100 + '%'});
     // indiLi.removeClass('action');
     /*↓↓권장*/
