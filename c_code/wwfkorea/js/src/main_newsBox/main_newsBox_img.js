@@ -89,7 +89,7 @@
         // 번째값 계산: (li갯수 * x)-1 
         // newsLi.eq( x * liLen - 1)
         k = liLen * x -1; 
-        console.log(k);
+        // console.log(k);
 
         newsLi.eq(k).css({marginRight:0}); // 1. 완료
 

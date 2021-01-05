@@ -19,9 +19,9 @@
 
   console.log(nowW);
   if(nowW === deviceType[0] || nowW === deviceType[1]){
-    body.append('<script src="../js/src/main_viewbox_slide_mobile.js"></script>');
+    body.append('<script src="../js/src/main_viewbox_indicator_mobile.js"></script>');
   }else{
-    body.append('<script src="../js/src/main_viewbox_slide.js"></script>');
+    body.append('<script src="../js/src/main_viewbox_indicator.js"></script>');
   }
 
   
