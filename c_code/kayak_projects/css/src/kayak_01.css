@@ -1,4 +1,3 @@
-@charset "uft-8";
 /* kayak_01.css */
 
 
@@ -44,7 +43,7 @@ hr {margin: 0; padding: 0; border-bottom: 1px solid #333;}
 
 /* design. css */
 
-#wrap {width: 1600px; height:auto; min-height: 4000px; margin: auto;}
+#wrap {width: 100%; height:auto; min-height: 4000px; margin: auto;}
 /* wrap */
 
 #headBox {width: 1260px; height: 112px; margin: auto; 
@@ -107,8 +106,8 @@ h1>a {width: 603px; height: 604px; display: block;}
   width: auto; height: 2774px;}
 
 #searchBox {
-  position: relative;
-  width: 100%; height: 264px;
+  position: relative; top: 100px;
+  width: 100%; height: 350px;
   margin: auto; font-size: 1.5rem;
   color: #fff;
   background-color:  #fa5f13;
@@ -124,7 +123,7 @@ h1>a {width: 603px; height: 604px; display: block;}
 .search_det {
   /* position: absolute; top: 50px; left: 80px; */
   width: 1100px; height: 45px;
-  margin-top: 10px;
+  padding-top: 40px; padding-bottom: 80px;
   box-sizing: border-box;}
 
 .search_det ul {
@@ -146,7 +145,6 @@ h1>a {width: 603px; height: 604px; display: block;}
 
 .place_date {
   position: absolute;
-  margin-top: 15px;
   width: auto; height: 95px;}
 
 .place_set {
@@ -197,9 +195,11 @@ h1>a {width: 603px; height: 604px; display: block;}
 #covid19>iframe {border: 0;}
 
 #covid19 {
+  padding-top: 300px;
   width: 1100px; height: auto;
   margin: auto;
   background-color: #fff;}
+
 
 #covid19 h2,
 #covid19 p {
@@ -215,19 +215,18 @@ h1>a {width: 603px; height: 604px; display: block;}
 
 #top3Box {
   margin: auto;
-  width: 980px; height: 320px; background-color: #ddd;}
+  width: 980px; height: auto;}
 
 #top3Box h2 {
-  padding-top: 30px; margin-left: 20px;
-  font-size: 2rem;}
+  padding-top: 300px; margin-left: 20px;
+  font-size: 2rem; margin-bottom: 100px;}
 
 .top3 {
-  margin: auto; margin-top: 28px;
-  width: 940px; height: 202px; background-color: #ccc;}
+  margin: auto;
+  width: 940px; height: 202px;}
 
 .top3 ul li {
-  float: left; margin-right: 20px;
-  width: 300px; height: 202px; background: #bbb;}
+  float: left; margin-right: 20px; box-sizing: border-box; width: 300px; height: 202px; border: 1px solid #333;}
 
   .top3 ul li:last-child {margin-right: 0;}
 
@@ -257,7 +256,7 @@ h1>a {width: 603px; height: 604px; display: block;}
 
 
 #subscBox {
-  margin: auto;
+  margin: auto; padding-top: 200px; padding-bottom: 150px;
   width: 940px; height: 220px;}
 
 .subBox_img {
@@ -293,9 +292,11 @@ h1>a {width: 603px; height: 604px; display: block;}
 
   .subBox_send_icon {
     float: left; margin-left: 15px;
+    width: 80px; height: 36px;
     border-radius: 10px 10px 10px;
     text-align: center; line-height: 36px;
-    width: 80px; height: 36px; background-color: #fff;}
+    font-weight: bold; border: 1px solid #333;
+    background-color: #fff;}
   
   .subBox_send_icon:hover,
   .subBox_send_icon:focus {
@@ -382,17 +383,16 @@ h1>a {width: 603px; height: 604px; display: block;}
 
 /* popBox============================================= */
 #downloadBox {
-  margin: auto;
+  margin: auto; padding-top: 200px; padding-bottom: 200px;
   width: 980px; height: 160px;}
 
 #downloadBox h3 {
   font-size: 1.5rem;
-  padding-top: 20px; margin-left: 70px;
-  width: 400px; height: 20px;}
+  padding-bottom: 80px; margin-left: 70px;
+  width: 400px; height: 34px;}
 
 .stores {
-  margin: auto;
-  width: 820px; height: 110px;}
+  margin: auto; width: 820px; height: 100%;}
 
 .googlePlay {
   float: left; margin-left: 50px;
@@ -429,47 +429,48 @@ h1>a {width: 603px; height: 604px; display: block;}
 
 .reckons {
   position: relative; top: 25%; left: 50%; transform: translateX(-50%);
-  width: 70%; height: 200px; font-size: 1.3rem; font-weight: bold;
+  width: 100%; height: 200px; font-size: 1.3rem; font-weight: bold;
 }
 
+.reckons ul{margin: auto; width: 80%; height: 100%;}
+.reckons ul li {
+  float: left; margin-left: 80px; width: 150px; height: 170px;}
 
-.reckons ul li:nth-child(1) {
-  float: left; margin-left: 50px;
-  width: 150px; height: 150px;
-  background-color: #fff;
-  border-radius: 200px 200px 200px 200px;
-  background-image: url("../../img_kayak/reckon/reckon1.jpg");
+.reckons span {display: block;
+  padding-top: 8px;
+  width: 100%; height: auto; text-align: center;}
+
+.reckons div {width: 150px; height: 150px;}
+
+
+.reckon_1 {
+  border-radius: 100%;
+  background-image: url("../../img_kayak/best/reckon1.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;  
 }
 
-.reckons ul li:nth-child(2) {
-  float: left; margin-left: 50px;
-  width: 200px; height: 200px;
-  background-color: #fff;
-  border-radius: 200px 200px 200px 200px;
-  background-image: url("../../img_kayak/reckon/reckon2.jpg");
+.reckon_2 {
+  border-radius: 100%;
+  background-image: url("../../img_kayak/best/reckon2.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;}
 
-.reckons ul li:nth-child(3) {
-  float: left; margin-left: 50px;
-  width: 150px; height: 150px;
-  background-color: #fff;
-  border-radius: 200px 200px 200px 200px;
-  background-image: url("../../img_kayak/reckon/reckon3.jpg");
+.reckon_3 {
+  border-radius: 100%;
+  background-image: url("../../img_kayak/best/reckon3.jpg");
   background-repeat: no-repeat;
   background-position: 50%;
   background-size: cover;}
+
 
 
 /* reckonBox ========================================= */
 
 #q_n_aBox {
-  margin: auto;
-  width: 980px; height: 500px;}
+  margin: auto; padding-top: 200px; padding-bottom: 150px; width: 980px; height: 500px;}
   
 #q_n_aBox h3 { font-size: 1.5rem;
   width: 400px; height: 42px; padding-top: 40px; margin-left: 60px;}
@@ -483,19 +484,15 @@ h1>a {width: 603px; height: 604px; display: block;}
   width: 400px; height: 100px;}
 
   .collapsible {
-    color: #333;
-    cursor: pointer;
-    padding: 20px;
-    width: 100%;
-    border: none;
-    text-align: left;
-    outline: none;
-    font-size: 15px;
+    color: #333; cursor: pointer; padding: 20px;
+    width: 100%; border: none; text-align: left;
+    outline: none; font-size: 1rem;
   }
   
   .active, .collapsible:hover {
     text-decoration: underline;
-    background-color: #bbb;
+    color: #fff;
+    background-color: #555;
   }
   
   .content {
