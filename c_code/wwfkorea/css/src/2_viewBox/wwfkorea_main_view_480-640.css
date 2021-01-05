@@ -2,7 +2,7 @@
 @media screen and (min-width:481px) and (max-width: 640px){
 /* viewBox ------------------------------ */
   /* display: none; */
-  .slide_indicator { bottom: 250px;}
+  .slide_indicator { bottom: 250px; width: 100%;}
     
     /* .slide_indicator ul {padding-top: 5px;} */
   /* .view_wrap {width: 100%; height: auto;} */

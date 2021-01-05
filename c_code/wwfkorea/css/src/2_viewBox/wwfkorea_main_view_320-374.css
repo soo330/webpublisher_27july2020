@@ -4,7 +4,7 @@
   /* 320~374px viewBox ------------------------------ */
 
   .slide_indicator{
-    bottom: 250px; width: 80%; height: 25px;}
+    bottom: 250px; width: 100%; height: 25px;}
   .slide_indicator ul{
     margin: auto; width: 175px; height: 15px;}
   .slide_indicator ul li {

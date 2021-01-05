@@ -17,6 +17,11 @@
   .text_part dl {
     position: absolute; top: 20%; left: 50%; transform: translateX(-50%); padding: 0; width: 90%;
   }
+  .text_part dl:nth-child(1){z-index: 10;}
+  .text_part dl:nth-child(2){z-index: 9;}
+  .text_part dl:nth-child(3){z-index: 8;}
+  .text_part dl:nth-child(4){z-index: 7;}
+  .text_part dl:nth-child(5){z-index: 6;}
 
   .text_part dt {height: 50px;}
   .text_part dd:first-of-type {height: auto; padding-bottom: 30px;}
