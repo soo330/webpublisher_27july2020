@@ -22,6 +22,8 @@
   var k = 0, l, sampleObj = {};
   var url = '../img/pinterest/'
   var imgT = 'random_';
+
+  // for문으로 객체 자동으로만들기
   for( ; k< 29 ; k+=1 ){
     // if( k < 9){
     //   l = '0' + (k+1) ; // 8->009 --> k=0임으로 사진은 1부터 시작하니까 =  k+1 
