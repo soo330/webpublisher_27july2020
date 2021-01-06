@@ -36,7 +36,6 @@
     // console.log(theLi);
 
     backImg.stop().animate({'left': slideN * -100 + '%'});
-    
 
     indiLi.eq(slideN).siblings().removeClass('action');// 선택된 li의 다른 형제li들에서 action 태그 제거
     indiLi.eq(slideN).addClass('action');
@@ -71,7 +70,6 @@
           // slideN이 마지막li길이-1보다 클때
           slideN = -1;
           backImg.stop().css({'left':slideN * -100 + '%'});
-          textDl.stop().animate({'zIndex': slideN});
 
         }//if
 
@@ -83,7 +81,7 @@
     },timed) //setInterval
   } //Start(){}
 
-  Start();
+  // Start();
 
   //============================
   // viewBox 마우스 올릴 시 일시정지

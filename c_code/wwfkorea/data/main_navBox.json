@@ -1,0 +1,41 @@
+[
+  {
+    "titleNav" : {
+      "tname" : "WWF", "tlink": "#", "target":"_self"},
+    "subNav" : [
+      {"sname" : "WWF Korea", "slink" : "#"},
+      {"sname" : "About Us", "slink" : "#"},
+      {"sname" : "연례보고서", "slink" : "#"},
+      {"sname" : "채용", "slink" : "#"}
+    ]},
+    
+    {
+      "titleNav" : {
+        "tname" : "캠페인/활동", "tlink": "#", "target":"_self"},
+      "subNav" : [
+        {"sname" : "국내활동",            "slink" : "#"},
+        {"sname" : "글로벌활동",          "slink" : "#"},
+        {"sname" : "멸종위기종",          "slink" : "#"},
+        {"sname" : "생태 발자국 줄이기",  "slink" : "#"},
+        {"sname" : "행사참여",            "slink" : "#"},
+        {"sname" : "일상참여",            "slink" : "#"}
+      ]},
+    
+    {
+      "titleNav" : {
+        "tname" : "최신근황", "tlink": "#", "target":"_self"},
+
+      "subNav" : [
+        {"sname" : "WWF 뉴스",         "slink" : "#"},
+        {"sname" : "환경/동물 뉴스",   "slink" : "#"},
+        {"sname" : "판다 메일",        "slink" : "#"}
+      ]},
+
+  {
+    "titleNav" : {
+      "tname" : "후원하기", "tlink": "#", "target":"_self"},
+    "subNav" : [
+      {"sname" : "후원하기",          "slink" : "#"},
+      {"sname" : "자주묻는 질문",     "slink" : "#"}
+    ]}
+]

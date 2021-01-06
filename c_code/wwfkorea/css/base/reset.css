@@ -21,8 +21,9 @@ main,figure,figcaption {display: block;}
 ul, ol, li {list-style: none;}
 a {text-decoration: none; color: inherit;}
 
-a:hover, a:focus,
-button:hover, button:focus {
+a:hover,button:hover{border-bottom: 2px solid #f70;}
+
+a:focus,button:focus {
   position: relative; z-index: 500; outline: 3px solid #f70;}
 
 button {
@@ -40,8 +41,9 @@ hr {border-bottom: 1px solid #333;}
 
 @supports (--var:100%){
   html, body {color: var(--c-font1);}
-  a:hover, a:focus,
-  button:hover, button:focus{
+  a:hover, button:hover {border-bottom: 3px solid var(--c-point);}
+  
+  a:focus,button:focus{
     outline: 3px solid var(--c-point);}
 }
 

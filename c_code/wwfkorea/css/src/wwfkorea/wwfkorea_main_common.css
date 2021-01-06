@@ -18,6 +18,9 @@
     width: 100%; height: 120px; 
     background-color: #fa0;
   }
+
+  /* #headBox::before:hover{} */
+
 .headWrap { margin: auto; width: 90%; height: 45px;}
 
 h1 {
@@ -82,9 +85,9 @@ h1 a {
   /*width: 850px;*/ width: 70%; height: 250px;
 }
 
-.show_menu_wrap::before {
-  display: none;
-  position: absolute; top: 48px; left:50%; transform:translate(-50%); z-index: -2;
+.hide:hover::before {
+  display: block;
+  position: absolute; top: 48px; left:50%; transform:translate(-50%); z-index: -1;
   content: "";  width: 100vw; height: 100%; background-color: rgba(0,0,0,0.8);
 }
 
@@ -100,15 +103,22 @@ h1 a {
 .gnb dt{
   position:relative; width: 100%; height: 50px;
   color: #333; line-height: 48px; 
-  font-size: 1.25rem; font-weight: bold;
+  font-size: 1.25rem;
+  font-weight: bold;
   letter-spacing: -0.0125rem;
 }
+
+.gnb dt>a{display: block; width: 100%; height: 100%;}
+
+
+
 .gnb dd{
-  display: none;
+  /* display: none; */
   padding-top: 10px;
   width: 100%; height: 20px;
   font-size: 1rem; 
-  font-weight: bold;
+  /* font-weight: bold; */
+  color: #fff;
 }
 .gnb dd>a {display: block; margin-bottom: 10px; width: 100%;}
 
@@ -315,9 +325,9 @@ h1 a {
     border: 1px solid #333;
   }
 /* ========================================= */
-#contentBox{width: 100%; height: auto; min-height: 1050px; background-color: #fff;}
+#contentBox{width: 100%; height: auto; min-height: 850px; background-color: #fff;}
 
-#contentBox h2 {padding-top: 110px; width: 80%; height: 43px; margin: auto; text-align: center; border-bottom: 1px solid #333; font-size: 1.25rem;}
+#contentBox h2 {padding-top: 150px; width: 80%; height: 43px; margin: auto; text-align: center; border-bottom: 1px solid #333; font-size: 1.25rem;}
 #contentBox p {padding: 22px 0 92px; width: 80%; height: 53px; margin: auto; font-size: 1rem; text-align: center;}
 
 .missionBox {
@@ -328,7 +338,7 @@ h1 a {
 .mission_img {
   margin: auto;
   width: 100%; height: auto; 
-  padding-top: 50px; padding-bottom: 50px;
+  padding-top: 80px; padding-bottom: 80px;
 }
   .mission_img::after {
     content: " "; display: block; clear: both;}
@@ -438,14 +448,15 @@ h1 a {
 /* ========================================= */
 #supportBox{width: 100%; height: auto; min-height: 1300px; background-color: #fff;}
 
-#supportBox h2 { margin: auto; padding-top: 35px; width: 80%; height: 55px; margin-bottom: 47px; text-align: center; border-bottom: 1px solid #333;}
+#supportBox h2 { margin: auto; padding-top: 300px; width: 80%; height: 55px; margin-bottom: 120px; text-align: center; border-bottom: 1px solid #333;}
 
-.supp_area { margin-top: 48px; margin: auto; width: 80%; height:100%; background-color: #dfdfdf;}
+.supp_area { margin-top: 48px; margin: auto; 
+  width: 80%; height:600px; background-color: #dfdfdf;}
 
-.supp_area ul {width: 100%; height: 100%; padding-bottom: 50px;}
-.supp_area li {width: 100%; height: 100%;}
+.supp_area ul {width: 100%; height: 100%; padding-top: 20px;}
+.supp_area li {padding-top: 50px; float: left; width: 50%; height: 480px;}
 .supp_area li:first-of-type
-{padding-top: 50px; margin-bottom: 50px;}
+{ margin-bottom: 50px;}
 .supp_area a {
   /* display: block; */
   width: 80%; height: 100%; }
@@ -470,13 +481,14 @@ h1 a {
 /* img part----------- */
   .supp_area dl {
     margin: auto;
-    width: 80%; height: auto; min-height: 154px; background-color: #329A67;}
+    width: 80%; height: auto; min-height: 154px;
+    color: #fff;
+     background-color: #333;}
   .supp_area dt {
       margin: auto; width: 80%; height: auto; min-height: 50px; 
-      font-size: 1.25rem; line-height: 50px; font-weight: bold;
-      background-color: #D092BF;}
+      font-size: 1.25rem; line-height: 50px; font-weight: bold;}
   .supp_area dd {
-      margin: auto; width: 80%; height: auto; min-height: 90px; font-size: 1rem; background-color: #A4C579}
+      margin: auto; width: 80%; height: auto; min-height: 90px; font-size: 1rem; }
 /* ========================================= */
 #subsBox {width: 100%; height: auto; min-height: 690px; background-color: #555;}
 /*  */
@@ -516,7 +528,7 @@ h1 a {
 
 /* ========================================= */
 #footBox{width: 100%; height: auto; min-height: 900px;
-  background-color: #BF981F;}
+  background-color: var(--wwf-beige);}
 
 .logo_info {
   margin: auto; padding-top: 50px;
@@ -550,7 +562,8 @@ h1 a {
 
 .sns_wrap ul {
   margin: auto;
-  padding-top: 30px; width: 70%; height: 32px;}
+  padding-top: 30px; width: 30%; height: 32px;
+}
 .sns_wrap li {
   float: left; margin-left: 45px;
   width: 32px; height: 32px;}
