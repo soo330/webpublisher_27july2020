@@ -22,9 +22,25 @@
     var loremT = 'Lorem';
     var loremC = 'Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!';
 
+
+
+    // ===========================================
+    // var myviewLen = 8;
+
+    // var moreFn = function(k){
+    //   var s;
+    //   if( k === undefined ){
+    //     s = myviewLen;
+    //   }//if
+    //   else{
+    //     s=k;
+    //   } //else
+    // } //moreFn
+
+    
+    // ===========================================
     var s = 0;
     var listEl;
-    
     // li이하 태그들 for문으로 형성
     // console.log( newsData );
     for( ; s < 30 ; s++ ){
@@ -72,10 +88,7 @@
       newsUl.css({width : ulWidth + 'px'});
       
       // 갯수값 도출
-      // console.log(ulWidth,liLen);
-      
-
-      
+      // console.log(ulWidth,liLen);  
 
       var x = 0;
       // 올림(newsLi총갯수 / 가로한줄에 들어갈 li갯수)

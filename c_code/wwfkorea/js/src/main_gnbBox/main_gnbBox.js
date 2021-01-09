@@ -38,7 +38,6 @@
       
       subNavLen = subNav.length; 
       // console.log(subNavLen)
-
       
       for( j=0 ; j < subNavLen ; j++ ){
         sNav = navBox[i].subNav[j];
@@ -57,21 +56,12 @@
 
     gnb.on('mouseenter', function(){
       menuDd.show();
-    })
+    });
 
     gnb.on('mouseleave', function(){
       menuDd.hide();
-    })
+    });
 
-    // gnb.on('mouseenter', navSlideShow);
-    // gnb.on('mouseleave', navSlideHide);
-
-    // var navSlideShow = function(){
-    //   menuDd.show();
-    // }
-    // var navSlideHide = function(){
-    //   menuDd.hide();
-    // }
 
   }) //done
   

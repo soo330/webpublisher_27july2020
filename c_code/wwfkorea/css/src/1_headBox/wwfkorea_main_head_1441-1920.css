@@ -32,6 +32,11 @@
     letter-spacing: -0.0125rem;
   }
 
+  .gnb dt>a:hover{
+    border-bottom: 2px solid var(--wwf-orange);
+  }
+
+
   .gnb dt>a::after{
     content:""; display:block;
     position: absolute; top:50%; margin-top:16px; left:50%; transform:translate(-50%);

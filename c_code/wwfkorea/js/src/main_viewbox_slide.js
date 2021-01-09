@@ -13,20 +13,24 @@
   var reLiLen = backImg.find('li'); // 복제 후 갯수 재파악
   // console.log(reLiLen); //-1번째로 복제된것을 알수 있음
 
-  backImg.css({'marginLeft': -100+'%', 'width' : reLiLen.length * 100 + '%'}); // backImg 크기변경
+  backImg.css({'marginLeft': -100 +'%', 'width' : reLiLen.length * 100 + '%'}); // backImg 크기변경
   reLiLen.css({'width': (100/ reLiLen.length) +'%'}); //내부 li갯수많큼 크기 변경되게하기
   // ===================================
 
   // text Part 마지막이미지 복제
-  var textPart = viewBox.find('text_part');
-  var textWrap = textPart.find('.text_wrap');
-  var textDl = textWrap.find('dl');
-  var actionDl = textDl.find('.action');
+  // var textPart = viewBox.find('text_part');
+  var textWrap = viewBox.find('.text_wrap'); //상위에서 .name찾기
+  var lastDiv = textWrap.find('div');
+
+  var lastDivLast = lastDiv.eq(-1).clone();
+  textWrap.prepend(lastDivLast);
+  var reDivLen = textWrap.find('div');
+  // console.log(reDivLen);
+
+  textWrap.css({'left': -100 + '%', 'width': reDivLen.length * 100+'%'});
+  reDivLen.css({'width': (100/ reDivLen.length)+'%'});//div갯수만큼 크기변경
 
   // ======================================
-  
- 
-
   var slideN = 0;
   var timed = 2000;
   var permission = true;
@@ -36,19 +40,30 @@
   var indicator = viewBox.find('.slide_indicator');
   var indiLi = indicator.find('li');
   
+  // 인디케이터 클릭 시 =======================
+  // textWrap.hide();
   indiLi.on('click', function(e){
     e.preventDefault();
     var theLi = $(this); // click시 선택된 해당 li
     slideN = theLi.index(); // 선택된 li의 순번확인
     // console.log(theLi);
 
-    backImg.stop().animate({'left': slideN * -100 + '%'});
-    textDl.stop().css({'left': slideN * -100 + '%'});
-
-
+    backImg.stop().animate({'marginLeft': slideN * -100 + '%'});
+    textWrap.css({'left': slideN * -100+ '%'}).fadeIn(timed/5);
+    //   textWrap.fadeOut();
+    // });
+    
     indiLi.eq(slideN).siblings().removeClass('action');// 선택된 li의 다른 형제li들에서 action 태그 제거
     indiLi.eq(slideN).addClass('action');
   }) //indiLi on click
+
+  // textWrap.hide()
+  // indiLi.on('click', function(e){
+  //   e.preventDefault();
+  //   var theDiv = $(this);
+  //   slideN = theDiv.index();
+  //   textWrap.fadeIn('marginLeft':)
+  // })
 
   // 인디케이터 포커스 시 ==============
   indiLi.children('a').on('focus',function(e){
@@ -56,8 +71,8 @@
     var theLi = $(this);
     slideN = theLi.parent().index(); // 포커스시 li가아닌 부모의 순서값을 가지고 와야한다
     // console.log(theLi);
-    backImg.stop().animate({'left' : slideN * -100 + '%'});
-    
+    backImg.stop().animate({'marginLeft' : slideN * -100 + '%'});
+    textWrap.css({'left': slideN * -100+ '%'}).fadeOut().fadeIn(timed/5);  
 
     indiLi.eq(slideN).siblings().removeClass('action');
     indiLi.eq(slideN).addClass('action');
@@ -74,19 +89,20 @@
     // 일정시간마다 실행되도록
     startInterval = setInterval(function(){
       slideN += 1;
-      backImg.stop().animate({'left' : slideN * -100 +'%'},function(){
+      // 여기부터 다시===================================================
+      backImg.stop().animate({'marginLeft' : slideN * -100 +'%'},function(){
         if ( slideN >= lastLi.length-1 ){
           // slideN이 마지막li길이-1보다 클때
           slideN = -1;
-          backImg.stop().css({'left':slideN * -100 + '%'});
-          text
+          backImg.stop().css({'left': slideN * -100 + '%'});
         }//if
-      }) //backimg
+      }); //backimg
+      textWrap.css({'left': slideN * -100+ '%'}).fadeOut(timed/5).fadeIn();
       // textDl.eq(slideN).silbling().removeClass('action');
       // textDl.eq(slideN).addClass('action');
       indiLi.eq(slideN).siblings().removeClass('action');
       indiLi.eq(slideN).addClass('action');
-    },timed) //setInterval
+    },timed*2); //setInterval
   } //Start(){}
   Start();
 
