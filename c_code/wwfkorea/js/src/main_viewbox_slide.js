@@ -133,4 +133,4 @@
     'mouseleave': Start
   });
 
-})(jQuery)
+})(jQuery);
