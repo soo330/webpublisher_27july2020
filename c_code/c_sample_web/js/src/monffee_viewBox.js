@@ -125,6 +125,7 @@
     slideN = its.index(); //.index는 순서를 확인하는 아이
     // console.log(its);
     backImg.stop().animate({'left': slideN * -100 + '%'});
+    //ul인 backImg를 -100%씩 옮겨라
     // indiLi.removeClass('action');
     /*↓↓권장*/
     indiLi.eq(slideN).siblings().removeClass('action');

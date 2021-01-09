@@ -250,7 +250,7 @@ h1 a {
 .img_part {
   width: 100%; height: auto; background-color: #D092BF; }
 
-
+/* .back_img{float: left; width: 100%; height: 31.25vw; } */
 .back_img li{
   /* display: none; */
   float: left; width: 20%; height: 450px;
