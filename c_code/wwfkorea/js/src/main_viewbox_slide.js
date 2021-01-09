@@ -27,7 +27,7 @@
   var reDivLen = textWrap.find('div');
   // console.log(reDivLen);
 
-  textWrap.css({'left': -100 + '%', 'width': reDivLen.length * 100+'%'});
+  textWrap.css({'marginLeft': -100 + '%', 'width': reDivLen.length * 100+'%'});
   reDivLen.css({'width': (100/ reDivLen.length)+'%'});//div갯수만큼 크기변경
 
   // ======================================
@@ -89,20 +89,21 @@
     // 일정시간마다 실행되도록
     startInterval = setInterval(function(){
       slideN += 1;
-      // 여기부터 다시===================================================
+      // 여기부터 다시============================================
       backImg.stop().animate({'marginLeft' : slideN * -100 +'%'},function(){
         if ( slideN >= lastLi.length-1 ){
           // slideN이 마지막li길이-1보다 클때
           slideN = -1;
           backImg.stop().css({'left': slideN * -100 + '%'});
+          textWrap.css({'left': slideN * -100+ '%'}).fadeOut().fadeIn();
         }//if
       }); //backimg
-      textWrap.css({'left': slideN * -100+ '%'}).fadeOut(timed/5).fadeIn();
-      // textDl.eq(slideN).silbling().removeClass('action');
-      // textDl.eq(slideN).addClass('action');
+      
       indiLi.eq(slideN).siblings().removeClass('action');
       indiLi.eq(slideN).addClass('action');
+
     },timed*2); //setInterval
+    
   } //Start(){}
   Start();
 
