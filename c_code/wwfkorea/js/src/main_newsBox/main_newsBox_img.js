@@ -9,6 +9,19 @@
     context: document.body
   }).done(function(data){
 
+
+    // var news =0;
+    // var myViewLen = 8;
+    // var moreFn = function(m){
+    //   var y;
+    //   if( m === undefined ){
+    //     y = myViewLen;
+    //   } //if
+    //   else {
+    //     y = m;
+    //   }//else
+    // } //moreFn
+
     var newsData = data;
 
     var win = $(window);

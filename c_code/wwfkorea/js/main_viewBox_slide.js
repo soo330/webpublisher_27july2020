@@ -90,14 +90,15 @@
     startInterval = setInterval(function(){
       slideN += 1;
       // 여기부터 다시============================================
-      backImg.stop().animate({'marginLeft' : slideN * -100 +'%'},function(){
+      backImg.stop().animate({'left' : slideN * -100 +'%'},function(){
         if ( slideN >= lastLi.length-1 ){
           // slideN이 마지막li길이-1보다 클때
           slideN = -1;
           backImg.stop().css({'left': slideN * -100 + '%'});
-          textWrap.css({'left': slideN * -100+ '%'}).fadeOut().fadeIn();
         }//if
       }); //backimg
+      textWrap.css({'left': slideN * -100+ '%'}).fadeOut().fadeIn();
+      
       
       indiLi.eq(slideN).siblings().removeClass('action');
       indiLi.eq(slideN).addClass('action');
