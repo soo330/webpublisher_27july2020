@@ -13,9 +13,9 @@
     
     var navList = '<li><dl><dt></dt><dd></dd></dl></li>';
 
-    var menuWrap = $('.show_menu_wrap');
-    var gnb = menuWrap.find('.gnb');
-    var gnbHide = menuWrap.find('.hide');
+    // var menuWrap = $('.show_menu_wrap');
+    var gnb = $('.gnb');
+    var gnbHide = $('.hide');
     var navLen = navBox.length;
 
     // gnb.append(navList)
@@ -47,9 +47,9 @@
 
     } // for
 
-    var menuDt = menuWrap.find('dt');
+    var menuDt = gnb.find('dt');
     var menuDtLink = menuDt.find('a');
-    var menuDd = menuWrap.find('dd');
+    var menuDd = gnb.find('dd');
     var menuDdLink = menuDd.find('a');
 
     menuDd.hide();

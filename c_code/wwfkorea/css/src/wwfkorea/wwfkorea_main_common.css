@@ -80,18 +80,22 @@ h1 a {
   /* ----------------------- */
 
 .show_menu_wrap{
-  /* display: none; */
-  position: absolute; top: 0; left:50%; transform:translate(-50%); z-index: 30;
-  /*width: 850px;*/ width: 70%; height: 250px;
+  position: absolute; top: 0; left:50%; transform:translate(-50%); z-index: 13;
+  /*width: 850px;*/ width: 100%; height: 250px;
 }
 
 .hide:hover::before {
-  display: block;
+  display: none;
   position: absolute; top: 48px; left:50%; transform:translate(-50%); z-index: -1;
   content: "";  width: 100vw; height: 100%; background-color: rgba(0,0,0,0.8);
 }
 
-
+.menu_area {
+  /* display: none; */
+  position: absolute; top: 0; left: 0; z-index: 200;
+  margin: auto; padding-bottom: 80px;
+  width: 100%; height: auto; min-height: 460px;
+  background-color: rgba(0,0,0,0.8);}
 
 /* 상위메뉴란 디자인 -------------- */
 .gnb { width: 100%; height: 100%;}
@@ -123,12 +127,6 @@ h1 a {
 .gnb dd>a {display: block; margin-bottom: 10px; width: 100%;}
 
 
-.menu_area {
-  /* display: none; */
-  position: absolute; top: 0; left: 0; z-index: 200;
-  margin: auto; padding-bottom: 80px;
-  width: 100%; height: auto; min-height: 460px;
-  background-color: rgba(0,0,0,0.8);}
 
   .mobile_tablet{
     margin: auto; width: 50%; height: auto;}
@@ -148,7 +146,7 @@ h1 a {
 
 /* 검색하기---------------- */
 .search_area{
-  display: none;
+  /* display: none; */
   position: absolute; top: 0; left: 0; z-index: 300;
   width: 100%; height: 100vh; background-color: rgba(0,0,0,0.9);}
 
@@ -304,7 +302,6 @@ h1 a {
       width: 500%; height: 100%;}
 
     .text_wrap div {
-      
       float: left;
       width: 20%; height: 100%;
     }
@@ -321,11 +318,11 @@ h1 a {
     .text_part dt {
       width: 100%; height: 56px; 
       font-size: 1.5rem; font-weight: bold;
-      background-color: #0777B7;}
+    }
     .text_part dd {
       width: 100%; height: 84px;
       font-size: 16px;
-      background-color: #A4C579;}
+      }
 
       .text_part dd> span {
         display: block;

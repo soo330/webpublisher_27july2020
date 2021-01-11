@@ -48,7 +48,7 @@
     slideN = theLi.index(); // 선택된 li의 순번확인
     // console.log(theLi);
 
-    backImg.stop().animate({'marginLeft': slideN * -100 + '%'});
+    backImg.stop().animate({'left': slideN * -100 + '%'});
     textWrap.css({'left': slideN * -100+ '%'}).fadeIn(timed/5);
     //   textWrap.fadeOut();
     // });
