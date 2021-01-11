@@ -85,7 +85,7 @@ h1 a {
 }
 
 .hide:hover::before {
-  display: none;
+  /* display: none; */
   position: absolute; top: 48px; left:50%; transform:translate(-50%); z-index: -1;
   content: "";  width: 100vw; height: 100%; background-color: rgba(0,0,0,0.8);
 }
@@ -332,6 +332,10 @@ h1 a {
     position: absolute; bottom: 20%; right: 5%;
     width: 70px; height: 26px;
     border: 1px solid #333;
+  }
+
+  .text_part .view_part_more:hover{
+    background-color: var(--wwf-orange);
   }
 /* ========================================= */
 #contentBox{width: 100%; height: auto; min-height: 850px; background-color: #fff;}

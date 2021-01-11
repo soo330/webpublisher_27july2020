@@ -25,9 +25,9 @@
       showMenuWrap.fadeOut();
     }
 
-    console.log(menuDp);
+    // console.log(menuDp);
   });
-  console.log(showMenuBtn)
+  // console.log(showMenuBtn)
 
   //  menuIBox.on('click', ['button'], function(e){
   //    e.preventDefault();
