@@ -555,24 +555,33 @@ h1 a {
   margin: auto;
   width: 90%; height: auto; min-height: 100px;}
 .subs_part fieldset {
-  margin: auto;
-  width: 80%; height: auto; padding: 0; border: 0;}
-  
-  .subs_part h3 {width: 100%; height: 30px; text-align: center; color: #fff;}
+  /* width: 80%; height: auto;  */
+  padding: 0; border: 0;}
+  .subs_part fieldset:nth-of-type(1){
+    float: left;
+     width: 60%; height: auto;}
+  .subs_part fieldset:nth-of-type(2){
+    float: left;
+    width: 30%; height: auto;}
+
+  .subs_part h3 {
+    margin-bottom: 30px;
+    width: 100%; height: 30px; text-align: center; color: #fff;}
 
 .subs_part fieldset input {
   width: 100%; height: 20px; padding: 0px; border: 0;}
 
   .subs_part fieldset:nth-of-type(2) input{
-    margin-top: 5px;
+    margin-left: 15px;
     background-color: #fff; font-weight: bold;}
   .subs_part span {color: #fff;}
 
 /* ========================================= */
 #footBox{width: 100%; height: auto; min-height: 900px;
-  background-color: var(--wwf-beige);}
+  background-color: #fff;}
 
 .logo_info {
+  display: flex; flex-flow: row; justify-content: space-around;
   margin: auto; padding-top: 50px;
   width: 80%; min-height: 118px; height: auto;}
 
@@ -587,31 +596,37 @@ h1 a {
 }
 
 .logo_info address {
-  float: right; ;
-  width: 154px; height: 118px;
+
+  margin-left: 50px;
+  width: 200px; height: 118px;
   font-style: normal;
   background-color: #fff;}
+
+
 /* ------------ */
 .fund_inc {
-  margin: auto; margin-top: 48px;
-  width:80%; height: 168px;
-  text-align: center;
-  background-color: #ddd;}
+  width:50%; height: auto;
+}
 
 .sns_wrap {
-  margin: auto; margin-top: 30px; margin-bottom: 30px; width: 80%; height: 115px; background-color: #fff;}
+  margin: auto; padding-top: 100px; margin-bottom: 30px; width: 80%; height: 115px; background-color: #fff;}
   .sns_wrap h3 {text-align: center;}
 
 .sns_wrap ul {
+  display: flex; flex-flow: row; justify-content: space-around;
   margin: auto;
   padding-top: 30px; width: 30%; height: 32px;
 }
 .sns_wrap li {
-  float: left; margin-left: 45px;
+  display:inline-flex;
+  /* margin-left: 45px; */
   width: 32px; height: 32px;}
+
+  .sns_wrap li a{width: 100%; height: 100%; display: block;}
 
 
   .sns_01{
+    display: block;
     background-image: url('../../../img/sns_icon/faceBook.png');
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -632,17 +647,19 @@ h1 a {
 
 .policy_area {
   margin: auto;
-  width: 80%; height: auto;
+  width: 100%; height: auto;
   padding-bottom: 30px;
   background-color: #555;}
 
   .policy_area ul {
-    /* display: flex; flex-flow: row; justify-content: space-around; */
+    display: flex; flex-flow: row; justify-content: space-around;
     margin: auto; width: 100%; height: 140px; padding: 30px 0;}
   .policy_area ul li {    
     margin: auto; 
-    /* display:inline-flex; */
-    width: 80%; height: 20px; padding: 10px 0;}
+    display:inline-flex;
+    width: 80%; height: 20px;
+     /* padding: 10px 0; */
+    }
 
   /* .policy_area li:nth-of-type(2) a {width: 220px;} */
   .policy_area li a {

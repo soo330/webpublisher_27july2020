@@ -1,0 +1,20 @@
+/* 375~480px footBox 모바일 */
+@media screen and (max-width: 374px){
+
+  .logo_info {
+    /* display: flex; flex-flow: row; justify-content: space-around; */
+    flex-wrap: wrap;
+    margin: auto; padding-top: 50px;
+    width: 80%; min-height: 118px; height: auto;}
+  
+  .logo_info address {
+    padding-top: 30px;
+    width: 200px; height: 118px;
+    font-style: normal;
+    background-color: #fff;}
+  
+  .fund_inc {
+    clear: both;
+    width:90%; height: auto;
+  }
+}
