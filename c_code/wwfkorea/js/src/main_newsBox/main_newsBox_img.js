@@ -31,7 +31,7 @@
 
     // -----------------------------
     var newsUl = newsArea.children('ul');
-    var liText = '<li><a href="#"><div></div><dl><dt></dt><dd><span></span></dd></dl></a></li>';
+    var liText = '<li><a href="#"><div><div></div></div><dl><dt></dt><dd><span></span></dd></dl></a></li>';
     var loremT = 'Lorem';
     var loremC = 'Lorem ipsum dolor sit amet consectetur adipsicing elit. Ipsum, corporis!';
 
@@ -59,7 +59,7 @@
     for( ; s < 30 ; s++ ){
       newsUl.append(liText);
       listEl = newsUl.children('li').eq(s);
-      var namedDiv = listEl.find('div').addClass(newsData[s].divClassName);
+      var namedDiv = listEl.find('div').children('div').addClass(newsData[s].divClassName);
       namedDiv.css({backgroundImage: 'url('+ newsData[s].imgT +')'});
 
       // console.log(divClassName +(s+1))

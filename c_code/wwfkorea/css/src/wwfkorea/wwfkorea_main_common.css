@@ -335,7 +335,7 @@ h1 a {
   }
 
   .text_part .view_part_more:hover{
-    background-color: var(--wwf-orange);
+    background-color: #fa0;
   }
 /* ========================================= */
 #contentBox{width: 100%; height: auto; min-height: 850px; background-color: #fff;}
@@ -369,6 +369,8 @@ h1 a {
   /* border: 1px solid #333; */
 }
 
+
+
 /* .mission_img li:first-child{margin-left: 60px;} */
 .mission_img a {
   margin: auto; display: block; width: 100%; height: 100%; }
@@ -386,8 +388,9 @@ h1 a {
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-size: cover;
-    
   }
+
+  .mission_img div:hover{background-position: 100% 100%;}
 
 
 /* ========================================= */
@@ -406,11 +409,14 @@ h1 a {
 
 /* js에서 첫번째 줄 첫번째 카드 마다/ 마지막번째 마지막 마다 margin */
 .news_area li {
-  float:left; width: 245px; height: 480px; padding: 8px; 
+  float:left; width: 245px; height: 480px; padding: 8px;
 }
 
-.news_area a {width: 80%; height: 100%; }
-.news_area div {
+.news_area a { width: 80%; height: 100%;}
+
+
+.news_area div{width: 100%; height: auto; overflow: hidden;}
+.news_area div>div {
   margin: auto;
   width: 100%; height: auto; min-height: 326px;
   background-color: #777;
@@ -419,10 +425,16 @@ h1 a {
   background-size: cover;
 }
 
+.news_area div>div:hover{
+  transform: scale(1.2);
+  transition: all 300ms ease;
+}
+
 /* img part----------- */
 .news_area dl {
   margin: auto; margin-bottom: 50px;  
   width: 100%; height: auto; min-height: 154px; box-sizing: border-box; border: 1px solid #777;  }
+
 .news_area dt {
    margin: auto; width: 80%; height: auto; min-height: 50px;
    font-size: 1.25rem; line-height: 50px; font-weight: bold;
