@@ -605,6 +605,7 @@ h1 a {
 
 /* ------------ */
 .fund_inc {
+  margin-left: 20px;
   width:50%; height: auto;
 }
 
@@ -615,7 +616,7 @@ h1 a {
 .sns_wrap ul {
   display: flex; flex-flow: row; justify-content: space-around;
   margin: auto;
-  padding-top: 30px; width: 30%; height: 32px;
+  padding-top: 30px; width: 50%; height: 32px;
 }
 .sns_wrap li {
   display:inline-flex;
@@ -648,7 +649,7 @@ h1 a {
 .policy_area {
   margin: auto;
   width: 100%; height: auto;
-  padding-bottom: 30px;
+  padding-bottom: 100px;
   background-color: #555;}
 
   .policy_area ul {
