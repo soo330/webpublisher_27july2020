@@ -1,9 +1,18 @@
 /* 1025~1440px PC footBox */
 @media screen and (min-width:1025px) and (max-width: 1440px){
 
-  .supp_area li{
-    padding-top: 50px; float: left; width: 50%; height: 480px;
+  .supp_area ul{
+    display: flex; flex-flow: row; justify-content: center;
   }
+    .supp_area li{
+    display: inline-flex;
+    padding-top: 50px; width: 260px; height: 480px;
+  }
+  .supp_area li:first-of-type
+{ margin-bottom: 50px; margin-right: 40px;}
+
+  .supp_area div{width: 100%;}
+  .supp_area dl{width: 100%;}
 
   .subs_part{
     /* float: left; */

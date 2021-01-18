@@ -3,8 +3,13 @@
 
   .supp_area li{
     float: none; margin: auto;
-    padding-top: 50px; width: 90%; height: 480px;
+    padding-top: 50px; width: 80%; height: 480px;
   }
+
+  .supp_area a{width: 80%;}
+
+  .supp_area div{width: 90%;}
+  .supp_area dl{width: 90%;}
 
   .subs_part{
     /* float: left; */
