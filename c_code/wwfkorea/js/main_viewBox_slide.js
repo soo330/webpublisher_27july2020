@@ -71,7 +71,7 @@
     var theLi = $(this);
     slideN = theLi.parent().index(); // 포커스시 li가아닌 부모의 순서값을 가지고 와야한다
     // console.log(theLi);
-    backImg.stop().animate({'marginLeft' : slideN * -100 + '%'});
+    backImg.stop().animate({'left' : slideN * -100 + '%'});
     textWrap.css({'left': slideN * -100+ '%'}).fadeOut().fadeIn(timed/5);  
 
     indiLi.eq(slideN).siblings().removeClass('action');
