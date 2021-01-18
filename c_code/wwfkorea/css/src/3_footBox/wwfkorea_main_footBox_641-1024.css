@@ -1,0 +1,13 @@
+@media screen and (min-width:641px) and (max-width: 1024px){
+
+  .subs_part{
+    /* float: left; */
+    margin: auto;
+    width: 60%; height: auto; min-height: 100px;}
+  
+  .policy_area ul {
+    flex-flow: row;
+    justify-content: space-evenly;
+    margin: auto; width: 70%; height: 140px; padding: 30px 0;
+  }
+}

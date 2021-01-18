@@ -533,7 +533,7 @@ border: 1px solid #333;
 .subs_part{
   /* float: left; */
   margin: auto;
-  width: 90%; height: auto; min-height: 100px;}
+  width: 80%; height: auto; min-height: 100px;}
 .subs_part fieldset {
   margin: auto;
   width: 80%; height: auto; padding: 0; border: 0;}

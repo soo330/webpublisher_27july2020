@@ -1,6 +1,11 @@
 /* 375~480px footBox 모바일 */
 @media screen and (min-width:375px) and (max-width: 480px){
 
+  .subs_part{
+    /* float: left; */
+    margin: auto;
+    width: 90%; height: auto; min-height: 100px;}
+
   .logo_info {
     /* display: flex; flex-flow: row; justify-content: space-around; */
     flex-wrap: wrap;
