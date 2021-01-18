@@ -16,7 +16,7 @@
     msBox.append('<ul class="mission_img"></ul>');
 
     var msUl = msBox.children('ul');
-    var liText = '<li><a><div></div><span></span></a></li>';
+    var liText = '<li><a><div><div></div></div><span></span></a></li>';
 
     var url = '../img/wwfimg/mission_img/';
 
@@ -30,8 +30,8 @@
       var msDiv = msLi.children('div');
 
       listEl.find('a').attr({"href": '#'});
-      listEl.find('div').addClass(msImgData[s].title);
-      listEl.find('div').css({backgroundImage: 'url('+ url+ msImgData[s].img + ')'});
+      listEl.find('div').children('div').addClass(msImgData[s].title);
+      listEl.find('div').children('div').css({backgroundImage: 'url('+ url+ msImgData[s].img + ')'});
       listEl.find('span').text( msImgData[s].spanText);
 
       // msDiv.eq(s).append(url+msImgData[s].img);
@@ -43,11 +43,8 @@
 
 
     // =============================================
-
     var BrowserSet = function(){
-
       msLi.removeAttr('style');
-
       var msLiWidth = msLi.eq(0).outerWidth();
       var msMargin = msLi.eq(0).outerWidth(true)-msLiWidth; // 작은 이미지 오른쪽 마진을 빼주기
 
@@ -63,9 +60,6 @@
         }
         return liLen;
       })();
-
-      
-      
       var ulWidth = ((msLiWidth+msMargin)*liLen)-msMargin;// 마지막 번째 마진을 빼주기
 
       msUl.css({width: ulWidth + 'px'});
@@ -79,10 +73,8 @@
         msLi.eq(n).css({marginRight:0});
       //   msLi.eq(n-i).css({left: (msLiWidth+msMargin)*i});
       }// for
-
     }//BroswerSet
     BrowserSet();
-
     win.on('resize', function(){
       BrowserSet();
     })// resize

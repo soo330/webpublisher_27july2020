@@ -1,6 +1,12 @@
 /* 375~480px footBox 모바일 */
 @media screen and (min-width:375px) and (max-width: 480px){
 
+
+  .supp_area li{
+    float: none; margin: auto;
+    padding-top: 50px; width: 90%; height: 480px;
+  }
+
   .subs_part{
     /* float: left; */
     margin: auto;

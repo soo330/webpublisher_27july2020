@@ -390,7 +390,8 @@ h1 a {
     background-size: cover;
   }
 
-  .mission_img div:hover{background-position: 100% 100%;}
+  .mission_img div>div:hover{transform: scale(1.2);
+    transition: all 300ms ease;}
 
 
 /* ========================================= */
@@ -460,15 +461,21 @@ h1 a {
 
 
 /* ========================================= */
-#supportBox{width: 100%; height: auto; min-height: 1300px; background-color: #fff;}
+#supportBox{width: 100%; height: auto; min-height: 1300px; background-color: #fff;
+padding-bottom: 100px;
+}
 
 #supportBox h2 { margin: auto; padding-top: 300px; width: 80%; height: 55px; margin-bottom: 120px; text-align: center; border-bottom: 1px solid #333;}
 
 .supp_area { margin-top: 48px; margin: auto; 
-  width: 80%; height:600px; background-color: #dfdfdf;}
+  width: 80%; height: 100%; background-color: #dfdfdf;
+  padding-bottom: 30px;
+}
 
-.supp_area ul {width: 100%; height: 100%; padding-top: 20px;}
-.supp_area li {padding-top: 50px; float: left; width: 245px; height: 480px;}
+.supp_area ul {
+  width: 100%; height: auto; padding-top: 20px;}
+.supp_area li {
+  padding-top: 50px; float: left; width: 50%; height: 480px;}
 .supp_area li:first-of-type
 { margin-bottom: 50px;}
 .supp_area a {
@@ -478,6 +485,15 @@ h1 a {
 .supp_area div {
   margin: auto;
   width: 80%; height: auto; min-height: 326px; background-color: #777;}
+
+  .supp_area div>div{
+    width: 100%; height: 100%;}
+
+    .supp_area div>div:hover{
+      transform: scale(120%);
+      transition: all 300ms ease;
+    }
+
 
 
 .supp_img_01{
